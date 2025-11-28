@@ -1,0 +1,181 @@
+@Metadata.layer: #CORE
+annotate entity ZC_BC_XNT_hv with
+{
+  @EndUserText.label: 'Từ ngày'
+  @UI: {
+  selectionField: [{ position: 10 }]
+  }
+  @Consumption.filter.mandatory: true
+  @Consumption.filter.selectionType: #SINGLE
+  DateFR;
+
+  @EndUserText.label: 'Đến ngày'
+  @UI: {
+  selectionField: [{ position: 12 }]
+  }
+  @Consumption.filter.mandatory: true
+  @Consumption.filter.selectionType: #SINGLE
+  DateTo;
+
+  //  @EndUserText.label: 'Kỳ'
+  //  @UI: {
+  //    selectionField: [{ position: 12 }]
+  //   }
+  //  @Consumption.filter.mandatory: true
+  //  @Consumption.filter.selectionType: #SINGLE
+  //  zper;
+  @Consumption.filter.hidden: true
+  @UI.hidden: true
+  zper;
+
+  @EndUserText.label: 'Mã hàng'
+  @UI: {
+  selectionField: [{ position: 15 }]
+  }
+  @UI.lineItem: [{ position: 15 , label: 'Mã hàng'}]
+  material;
+
+  @EndUserText.label: 'Tên hàng'
+  @UI: {
+selectionField: [{ position: 20 }]
+}
+  @UI.lineItem: [{ position: 20 , label: 'Tên hàng'}]
+  ProductDescription;
+
+  @UI: {
+  selectionField: [{ position: 30 }]
+  }
+  @UI.lineItem: [{ position: 30 }]
+  productgroup;
+
+  @EndUserText.label: 'Product Group Name'
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 35 }]
+  ProductGroupName;
+
+  @EndUserText.label: 'Plant'
+  @UI: {
+  selectionField: [{ position: 40 }]
+  }
+  @UI.lineItem: [{ position: 40 , label: 'Plant'}]
+  plant;
+
+  @EndUserText.label: 'Mã nhà gia công'
+  @UI: {
+  selectionField: [{ position: 50 }]
+  }
+  @UI.lineItem: [{ position: 50 , label: 'Mã nhà gia công'}]
+  supplier;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 60 , label: 'Tên nhà gia công'}]
+  SupplierName;
+
+  @EndUserText.label: 'Mã lệnh gia công'
+  @UI: {
+  selectionField: [{ position: 70 }]
+  }
+  @UI.lineItem: [{ position: 70 , label: 'Mã lệnh gia công'}]
+  orderid;
+
+
+  @UI: {
+  selectionField: [{ position: 75 }]
+  }
+  @UI.lineItem: [{ position: 75 }]
+  Batch;
+
+  @UI: {
+  selectionField: [{ position: 77 }]
+  }
+  @UI.lineItem: [{ position: 77 }]
+  InventoryValuationType;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 80 , label: 'Tồn đầu'}]
+  DauKy;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 90 , label: 'Xuất trong kỳ'}]
+  XuatTKy;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 93 , label: 'Nhập trong kỳ'}]
+  NhapTKy;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 96 , label: 'SL BTP/NVL đã nhập về (theo BTP nhận về sau may)'}]
+  SLBTPNVLDaNhapVe;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 100 , label: 'Nhập trả BTP đạt'}]
+  NhapTraBTPDat;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 102 , label: 'Tổng nhập trả BTP lỗi (do cty & nhà GC)'}]
+  BTPLoi;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 104 , label: 'Nhập trả BTP lỗi do công ty'}]
+  NhapTraBTPLoiCTy;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 106 , label: 'Nhập trả BTP lỗi do gia công'}]
+  NhapTraBTPLoiGC;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 108 , label: 'Tồn trước đơn hàng vét'}]
+  CT11C;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 109 , label: 'Số lượng trừ đơn hàng vét'}]
+  NhapTruBTPThieu;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 110 , label: 'Tồn cuối'}]
+  TonCuoi;
+
+//  @Consumption.filter.hidden: true
+//  @UI.lineItem: [{ position: 111 , label: 'Số lượng BTP/NVL quy đổi theo định mức'}]
+//  CT18A;
+//
+//  @Consumption.filter.hidden: true
+//  @UI.lineItem: [{ position: 112 , label: 'Số lượng BTP trả thừa theo TP'}]
+//  CT18;
+//
+//  @Consumption.filter.hidden: true
+//  @UI.lineItem: [{ position: 113 , label: 'Số lượng BTP trả thừa (BTP rời)'}]
+//  CT19;
+//
+//  @Consumption.filter.hidden: true
+//  @UI.lineItem: [{ position: 114 , label: 'Tổng số lượng BTP trả thừa'}]
+//  CT20;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 116 , label: 'UoM'}]
+  materialbaseunit;
+
+  @EndUserText.label: 'Đơn hàng vét'
+  @UI: {
+  selectionField: [{ position: 117 }]
+  }
+  @UI.lineItem: [{ position: 117 , label: 'Đơn hàng vét'}]
+  DonHangVet;
+
+  @EndUserText.label: 'Mã đơn hàng'
+  @UI: {
+  selectionField: [{ position: 118 }]
+  }
+  @UI.lineItem: [{ position: 118 , label: 'Mã đơn hàng'}]
+  SalesOrder;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 119 , label: 'Mã BTP sau may'}]
+  BTPSauMay;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 120 , label: 'Tên BTP sau may'}]
+  TenBTPSauMay;
+
+
+}

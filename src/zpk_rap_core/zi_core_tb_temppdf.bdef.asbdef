@@ -1,0 +1,35 @@
+managed implementation in class zbp_i_core_tb_temppdf unique;
+strict ( 2 );
+
+with draft;
+define behavior for ZI_CORE_TB_TEMPPDF alias CORE_TB_TEMPPDF
+persistent table zcore_tb_temppdf
+draft table zcore_temppdf_d
+lock master total etag Lastchangedat
+authorization master ( instance )
+etag master Lastchangedat
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly : update ) Id;
+  field ( mandatory : create ) Id;
+
+
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+
+  draft determine action Prepare;
+
+  mapping for zcore_tb_temppdf
+    {
+      Id            = id;
+      FileContent   = file_content;
+      FileName      = file_name;
+      FileType      = file_type;
+      Lastchangeby  = lastchangeby;
+      Lastchangedat = lastchangedat;
+    }
+}

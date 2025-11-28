@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Definition Upload FI'
+@ObjectModel.leadingEntity.name: 'ZC_USER_UPLOAD_FI'
+define service ZUI_UPLOAD_FI_SRVD {
+  expose ZC_USER_UPLOAD_FI  as file;
+  expose ZC_UUID_DATA_FILE1 as previewData;
+}

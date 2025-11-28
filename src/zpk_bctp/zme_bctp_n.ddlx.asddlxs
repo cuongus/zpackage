@@ -1,0 +1,168 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Sales Order',
+    typeNamePlural: 'Sales Orders',
+    title: {
+      type: #STANDARD,
+      value: 'SalesOrder'
+    }
+  }
+
+annotate entity ZDD_BCTP with
+{
+
+  /* ============================================================
+        FACETS — Định nghĩa các nhóm section trên Object Page
+     ============================================================ */
+  @UI.facet: [
+    { id: 'SOGroup',        type: #FIELDGROUP_REFERENCE, label: 'Sales Order',         position: 10, targetQualifier: 'SOGroup' },
+    { id: 'MaterialGroup',  type: #FIELDGROUP_REFERENCE, label: 'Thông tin TP',         position: 20, targetQualifier: 'MaterialGroup' },
+    { id: 'QuantityGroup',  type: #FIELDGROUP_REFERENCE, label: 'Chi tiết số lượng',    position: 40, targetQualifier: 'QuantityGroup' },
+    { id: 'ScrapGroup',     type: #FIELDGROUP_REFERENCE, label: 'Thông tin lỗi & phế',  position: 50, targetQualifier: 'ScrapGroup' }
+  //    { id: 'AuditGroup',     type: #FIELDGROUP_REFERENCE, label: 'Thông tin hệ thống',   position: 60, targetQualifier: 'AuditGroup' }
+  ]
+
+  /* ============================================================
+        GROUP 1 — SALES ORDER
+     ============================================================ */
+
+  @EndUserText.label: 'Sales Order'
+  @UI.lineItem:       [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  SalesOrder;
+
+  @EndUserText.label: 'Sales Order Item'
+  @UI.selectionField: [{ position: 20 }]
+  @UI.lineItem:       [{ position: 20 }]
+  @UI.fieldGroup:     [{ qualifier: 'SOGroup', position: 20 }]
+  SalesOrderItem;
+
+  @EndUserText.label: 'Trạng thái SO'
+  @UI.lineItem:       [{ position: 30 }]
+  @UI.fieldGroup:     [{ qualifier: 'SOGroup', position: 30 }]
+  SDProcessStatus;
+
+  @EndUserText.label: 'Plant'
+  @UI.lineItem:       [{ position: 40 }]
+  @UI.fieldGroup:     [{ qualifier: 'SOGroup', position: 40 }]
+  zPlant;
+  
+  @EndUserText.label: 'PlantName'
+  @UI.lineItem:       [{ position: 50 }]
+  @UI.fieldGroup:     [{ qualifier: 'SOGroup', position: 50 }]
+  PlantName;
+
+  /* ============================================================
+        GROUP 2 — MATERIAL INFO
+     ============================================================ */
+  @EndUserText.label: 'Số PO'
+  @UI.lineItem:       [{ position: 60 }]
+  @UI.fieldGroup:     [{ qualifier: 'MaterialGroup', position: 10 }]
+  PurchaseOrder;
+
+  @EndUserText.label: 'Mã TP'
+  @UI.lineItem:       [{ position: 70 }]
+  @UI.fieldGroup:     [{ qualifier: 'MaterialGroup', position: 20 }]
+  Material;
+
+  @EndUserText.label: 'Tên TP'
+  @UI.lineItem:       [{ position: 80 }]
+  @UI.fieldGroup:     [{ qualifier: 'MaterialGroup', position: 30 }]
+  MaterialName;
+
+  @EndUserText.label: 'Số lượng SO'
+  @UI.lineItem:       [{ position: 90 }]
+  @UI.fieldGroup:     [{ qualifier: 'MaterialGroup', position: 40 }]
+  OrderQuantity;
+
+  @EndUserText.label: 'Mã nhà gia công'
+  @UI.lineItem:       [{ position: 100 }]
+  @UI.fieldGroup:     [{ qualifier: 'MaterialGroup', position: 50 }]
+  Supplier;
+
+  @EndUserText.label: 'Tên nhà gia công'
+  @UI.lineItem:       [{ position: 110 }]
+  @UI.fieldGroup:     [{ qualifier: 'MaterialGroup', position: 60 }]
+  SupplierName;
+
+  /* ============================================================
+        GROUP 4 — QUANTITY DETAILS
+     ============================================================ */
+  @EndUserText.label: 'Số lượng đồng bộ BTP'
+  @UI.lineItem:       [{ position: 120 }]
+  @UI.fieldGroup:     [{ qualifier: 'QuantityGroup', position: 10 }]
+  sl_dong_bo_btp;
+
+  @EndUserText.label: 'Số lượng BTP trả về'
+  @UI.lineItem:       [{ position: 130 }]
+  @UI.fieldGroup:     [{ qualifier: 'QuantityGroup', position: 20 }]
+  sl_btp_tra_ve;
+
+
+  @EndUserText.label: 'Số lượng xuất đồng bộ'
+  @UI.lineItem:       [{ position: 140 }]
+  @UI.fieldGroup:     [{ qualifier: 'QuantityGroup', position: 30 }]
+  sl_xuat_dong_bo;
+
+  @EndUserText.label: 'Số lượng thu về (tổng cái)'
+  @UI.lineItem:       [{ position: 150 }]
+  @UI.fieldGroup:     [{ qualifier: 'QuantityGroup', position: 40 }]
+  sl_thu_ve_tong_cai;
+
+  @EndUserText.label: 'Tổng cộng'
+  @UI.lineItem:       [{ position: 160 }]
+  @UI.fieldGroup:     [{ qualifier: 'QuantityGroup', position: 50 }]
+  tong_cong;
+
+  @EndUserText.label: 'Số lượng còn lại NGC chưa trả'
+  @UI.lineItem:       [{ position: 160 }]
+  @UI.fieldGroup:     [{ qualifier: 'QuantityGroup', position: 60 }]
+  sl_con_lai_ngc;
+
+
+
+
+  /* ============================================================
+        GROUP 5 — SCRAP / DEFECT
+     ============================================================ */
+  @EndUserText.label: 'Hàng phế'
+  @UI.lineItem:       [{ position: 150 }]
+  @UI.fieldGroup:     [{ qualifier: 'ScrapGroup', position: 10 }]
+  hang_phe;
+
+  @EndUserText.label: 'Hàng lỗi phế'
+  @UI.lineItem:       [{ position: 160 }]
+  @UI.fieldGroup:     [{ qualifier: 'ScrapGroup', position: 20 }]
+  hang_loi_phe;
+
+
+
+  //  /* ============================================================
+  //        GROUP 6 — AUDIT INFO
+  //     ============================================================ */
+  //  @EndUserText.label: 'Created By'
+  //  @UI.lineItem:       [{ position: 170 }]
+  //  @UI.fieldGroup:     [{ qualifier: 'AuditGroup', position: 10 }]
+  //  created_by;
+  //
+  //  @EndUserText.label: 'Created On'
+  //  @UI.lineItem:       [{ position: 180 }]
+  //  @UI.fieldGroup:     [{ qualifier: 'AuditGroup', position: 20 }]
+  //  created_on;
+  //
+  //  @EndUserText.label: 'Created At'
+  //  @UI.lineItem:       [{ position: 190 }]
+  //  @UI.fieldGroup:     [{ qualifier: 'AuditGroup', position: 30 }]
+  //  created_at;
+  //
+  //  @EndUserText.label: 'Changed By'
+  //  @UI.identification: [{ position: 200 }]
+  //  @UI.fieldGroup:     [{ qualifier: 'AuditGroup', position: 40 }]
+  //  changed_by;
+  //
+  //  @EndUserText.label: 'Changed On'
+  //  @UI.identification: [{ position: 210 }]
+  //  @UI.fieldGroup:     [{ qualifier: 'AuditGroup', position: 50 }]
+  //  changed_on;
+
+}

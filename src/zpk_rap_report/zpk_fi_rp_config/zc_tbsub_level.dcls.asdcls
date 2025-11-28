@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_TBSUB_LEVEL'
+@MappingRole: true
+define role ZC_TBSUB_LEVEL {
+  grant select on ZC_TBSUB_LEVEL
+  where INHERITING CONDITIONS FROM ENTITY ZR_TBSUB_LEVEL REPLACING { ROOT WITH _BaseEntity };
+}

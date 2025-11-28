@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_TBDGPHAT_LTUI'
+@MappingRole: true
+define role ZC_TBDGPHAT_LTUI {
+  grant select on ZC_TBDGPHAT_LTUI
+  where INHERITING CONDITIONS FROM ENTITY ZR_TBDGPHAT_LTUI REPLACING { ROOT WITH _BaseEntity };
+}

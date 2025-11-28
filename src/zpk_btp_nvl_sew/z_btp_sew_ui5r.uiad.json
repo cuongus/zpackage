@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Bảng theo dõi đồng bộ BTP/NVL may"
+  },
+  "ui5AppDetails": {
+    "appId": "zbtpsew"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_3252E5354EAFCC8678FC666FAD8E352126133D18_TM",
+    "semanticObject": "z_btp_sew",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_3252E5354EAFCC8678FC666FAD8E352126133D18_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Bảng theo dõi đồng bộ BTP/NVL may"
+      }
+    }
+  ]
+}

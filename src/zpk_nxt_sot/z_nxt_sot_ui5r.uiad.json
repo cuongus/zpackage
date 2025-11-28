@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Báo cáo NXT (cho Sọt)"
+  },
+  "ui5AppDetails": {
+    "appId": "znxtsot"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A935A176548B4404BAC7740F70A831B8603E00DC_TM",
+    "semanticObject": "ZBC_XNT_SOT",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A935A176548B4404BAC7740F70A831B8603E00DC_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Báo cáo NXT (cho Sọt)"
+      }
+    }
+  ]
+}

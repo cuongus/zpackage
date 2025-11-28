@@ -1,0 +1,99 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'Document Details',
+                  typeNamePlural: 'Document Details',
+                  title: { type: #STANDARD, label: 'Items', value: 'LegderGLItem' },
+                  description: { value: 'DocumentItemText', targetElement: 'DocumentItemText'}
+    },
+    presentationVariant: [{ sortOrder: [{ by: 'LegderGLItem', direction: #ASC }] }]
+}
+annotate entity ZJP_C_PHIEUKETOAN_ITEMS with
+{
+
+  @UI.facet          : [
+  {id                : 'Items',
+  purpose            : #STANDARD,
+  position           : 10,
+  label              : 'Items',
+  type               : #IDENTIFICATION_REFERENCE
+  }
+  ]
+
+  @UI.identification : [{ position: 10 }]
+  @UI.lineItem       : [{ position: 10  }]
+
+  @UI.hidden: true
+  CompanyCode;
+
+  @UI.identification : [{ position: 20 }]
+  @UI.lineItem       : [{ position: 20  }]
+  @UI.hidden: true
+  AccountingDocument;
+
+  @UI.identification : [{ position: 30 }]
+  @UI.lineItem       : [{ position: 30  }]
+  @UI.hidden: true
+  FiscalYear;
+
+  @UI.identification : [{ position: 40 }]
+  @UI.lineItem       : [{ position: 40  }]
+  LegderGLItem;
+
+  @UI.identification : [{ position: 50 }]
+  @UI.lineItem       : [{ position: 50  }]
+  GLAccount;
+
+  @UI.identification : [{ position: 60 }]
+  @UI.lineItem       : [{ position: 60  }]
+  DocumentItemText;
+
+  @UI.identification : [{ position: 70 }]
+  @UI.lineItem       : [{ position: 70  }]
+  @EndUserText.label: 'Debit Amount In CompanyCode'
+  DebitAmountInCompanyCode;
+
+  @UI.identification : [{ position: 80 }]
+  @UI.lineItem       : [{ position: 80  }]
+  @EndUserText.label: 'Credit Amount In CompanyCode'
+  CreditAmountInCompanyCode;
+
+  @UI.identification : [{ position: 90 }]
+  @UI.lineItem       : [{ position: 90  }]
+  @EndUserText.label: 'CompanyCode Currency'
+  CompanyCodeCurrency;
+
+  @UI.identification : [{ position: 100 }]
+  @UI.lineItem       : [{ position: 100  }]
+  @EndUserText.label: 'Debit Amount In Transaction'
+  DebitAmountInTransaction;
+
+  @UI.identification : [{ position: 110 }]
+  @UI.lineItem       : [{ position: 110  }]
+  @EndUserText.label: 'Credit Amount In Transaction'
+  CreditAmountInTransaction;
+
+  @UI.identification : [{ position: 120 }]
+  @UI.lineItem       : [{ position: 120  }]
+  @EndUserText.label: 'Transaction Currency'
+  TransactionCurrency;
+
+  @UI.identification : [{ position: 130 }]
+  @UI.lineItem       : [{ position: 130  }]
+  Customer;
+
+  @UI.identification : [{ position: 140 }]
+  @UI.lineItem       : [{ position: 140  }]
+  Supplier;
+  
+  @UI.identification : [{ position: 150 }]
+  @UI.lineItem       : [{ position: 150  }]
+  DebitCreditCode;
+
+  @UI.identification : [{ position: 160 }]
+  @UI.lineItem       : [{ position: 160  }]
+  @EndUserText.label: 'Is Negative Posting'
+  IsNegativePosting;
+  /* Associations */
+  //    _Phieuketoan;
+
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'BC xnt'
+define service Zsd_bc_xnt_hv {
+  expose ZC_BC_XNT_hv;
+}

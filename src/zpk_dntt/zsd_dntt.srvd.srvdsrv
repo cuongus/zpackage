@@ -1,0 +1,4 @@
+@EndUserText.label: 'đề nghị thanh toán'
+define service ZSD_DNTT {
+  expose ZC_DNTT;
+}

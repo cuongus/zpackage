@@ -1,0 +1,403 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'gen_rap1_dtl', 
+    typeNamePlural: 'gen_rap1_dtls', 
+    title: {
+      type: #STANDARD, 
+      label: 'gen_rap1_dtl', 
+      value: 'DtlID'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'DtlID', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_gen_rap1_dtl02TP with
+{
+  @UI.facet: [ {
+    id: 'idgen_rap1_dtl', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'gen_rap1_dtl', 
+    position: 10 
+  } ]
+  @UI.hidden: true
+  DtlID;
+  
+  @UI.hidden: true
+  HdrID;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'Ngaynhaphang'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Ngaynhaphang'
+  } ]
+  Ngaynhaphang;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  Sobbgc;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 50 
+  } ]
+  Sopo;
+  
+  @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'Ct09'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Ct09'
+  } ]
+  Ct09;
+  
+  @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH, 
+    label: 'Ct10'
+  } ]
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Ct10'
+  } ]
+  Ct10;
+  
+  @UI.lineItem: [ {
+    position: 80 , 
+    importance: #HIGH, 
+    label: 'Ct11'
+  } ]
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Ct11'
+  } ]
+  Ct11;
+  
+  @UI.lineItem: [ {
+    position: 90 , 
+    importance: #HIGH, 
+    label: 'Ct12'
+  } ]
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Ct12'
+  } ]
+  Ct12;
+  
+  @UI.lineItem: [ {
+    position: 100 , 
+    importance: #HIGH, 
+    label: 'Ct13'
+  } ]
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Ct13'
+  } ]
+  Ct13;
+  
+  @UI.lineItem: [ {
+    position: 110 , 
+    importance: #HIGH, 
+    label: 'Ct14'
+  } ]
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Ct14'
+  } ]
+  Ct14;
+  
+  @UI.lineItem: [ {
+    position: 120 , 
+    importance: #HIGH, 
+    label: 'Ct15'
+  } ]
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Ct15'
+  } ]
+  Ct15;
+  
+  @UI.lineItem: [ {
+    position: 130 , 
+    importance: #HIGH, 
+    label: 'Ct16'
+  } ]
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Ct16'
+  } ]
+  Ct16;
+  
+  @UI.lineItem: [ {
+    position: 140 , 
+    importance: #HIGH, 
+    label: 'Ct17'
+  } ]
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Ct17'
+  } ]
+  Ct17;
+  
+  @UI.lineItem: [ {
+    position: 150 , 
+    importance: #HIGH, 
+    label: 'Ct18'
+  } ]
+  @UI.identification: [ {
+    position: 150 , 
+    label: 'Ct18'
+  } ]
+  Ct18;
+  
+  @UI.lineItem: [ {
+    position: 160 , 
+    importance: #HIGH, 
+    label: 'Ct19'
+  } ]
+  @UI.identification: [ {
+    position: 160 , 
+    label: 'Ct19'
+  } ]
+  Ct19;
+  
+  @UI.lineItem: [ {
+    position: 170 , 
+    importance: #HIGH, 
+    label: 'Ct20'
+  } ]
+  @UI.identification: [ {
+    position: 170 , 
+    label: 'Ct20'
+  } ]
+  Ct20;
+  
+  @UI.lineItem: [ {
+    position: 180 , 
+    importance: #HIGH, 
+    label: 'Ct21'
+  } ]
+  @UI.identification: [ {
+    position: 180 , 
+    label: 'Ct21'
+  } ]
+  Ct21;
+  
+  @UI.lineItem: [ {
+    position: 190 , 
+    importance: #HIGH, 
+    label: 'Ct22'
+  } ]
+  @UI.identification: [ {
+    position: 190 , 
+    label: 'Ct22'
+  } ]
+  Ct22;
+  
+  @UI.lineItem: [ {
+    position: 200 , 
+    importance: #HIGH, 
+    label: 'Ct23'
+  } ]
+  @UI.identification: [ {
+    position: 200 , 
+    label: 'Ct23'
+  } ]
+  Ct23;
+  
+  @UI.lineItem: [ {
+    position: 210 , 
+    importance: #HIGH, 
+    label: 'Ct24'
+  } ]
+  @UI.identification: [ {
+    position: 210 , 
+    label: 'Ct24'
+  } ]
+  Ct24;
+  
+  @UI.lineItem: [ {
+    position: 220 , 
+    importance: #HIGH, 
+    label: 'Ct25'
+  } ]
+  @UI.identification: [ {
+    position: 220 , 
+    label: 'Ct25'
+  } ]
+  Ct25;
+  
+  @UI.lineItem: [ {
+    position: 230 , 
+    importance: #HIGH, 
+    label: 'Ct26'
+  } ]
+  @UI.identification: [ {
+    position: 230 , 
+    label: 'Ct26'
+  } ]
+  Ct26;
+  
+  @UI.lineItem: [ {
+    position: 240 , 
+    importance: #HIGH, 
+    label: 'Ct27'
+  } ]
+  @UI.identification: [ {
+    position: 240 , 
+    label: 'Ct27'
+  } ]
+  Ct27;
+  
+  @UI.lineItem: [ {
+    position: 250 , 
+    importance: #HIGH, 
+    label: 'Ct27a'
+  } ]
+  @UI.identification: [ {
+    position: 250 , 
+    label: 'Ct27a'
+  } ]
+  Ct27a;
+  
+  @UI.lineItem: [ {
+    position: 260 , 
+    importance: #HIGH, 
+    label: 'Ct27b'
+  } ]
+  @UI.identification: [ {
+    position: 260 , 
+    label: 'Ct27b'
+  } ]
+  Ct27b;
+  
+  @UI.lineItem: [ {
+    position: 270 , 
+    importance: #HIGH, 
+    label: 'Ct28'
+  } ]
+  @UI.identification: [ {
+    position: 270 , 
+    label: 'Ct28'
+  } ]
+  Ct28;
+  
+  @UI.lineItem: [ {
+    position: 280 , 
+    importance: #HIGH, 
+    label: 'Ct29'
+  } ]
+  @UI.identification: [ {
+    position: 280 , 
+    label: 'Ct29'
+  } ]
+  Ct29;
+  
+  @UI.lineItem: [ {
+    position: 290 , 
+    importance: #HIGH, 
+    label: 'Ct30'
+  } ]
+  @UI.identification: [ {
+    position: 290 , 
+    label: 'Ct30'
+  } ]
+  Ct30;
+  
+  @UI.lineItem: [ {
+    position: 300 , 
+    importance: #HIGH, 
+    label: 'Ct31'
+  } ]
+  @UI.identification: [ {
+    position: 300 , 
+    label: 'Ct31'
+  } ]
+  Ct31;
+  
+  @UI.lineItem: [ {
+    position: 310 , 
+    importance: #HIGH, 
+    label: 'Ct32'
+  } ]
+  @UI.identification: [ {
+    position: 310 , 
+    label: 'Ct32'
+  } ]
+  Ct32;
+  
+  @UI.lineItem: [ {
+    position: 320 , 
+    importance: #HIGH, 
+    label: 'Ct33'
+  } ]
+  @UI.identification: [ {
+    position: 320 , 
+    label: 'Ct33'
+  } ]
+  Ct33;
+  
+  @UI.lineItem: [ {
+    position: 330 , 
+    importance: #HIGH, 
+    label: 'Ghichu'
+  } ]
+  @UI.identification: [ {
+    position: 330 , 
+    label: 'Ghichu'
+  } ]
+  Ghichu;
+  
+  @UI.lineItem: [ {
+    position: 340 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 340 
+  } ]
+  CreatedBy;
+  
+  @UI.lineItem: [ {
+    position: 350 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 350 
+  } ]
+  CreatedAt;
+  
+  @UI.lineItem: [ {
+    position: 360 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 360 
+  } ]
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedAt;
+}

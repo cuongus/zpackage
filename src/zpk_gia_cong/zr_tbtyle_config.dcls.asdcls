@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZR_TBTYLE_CONFIG'
+@MappingRole: true
+define role ZR_TBTYLE_CONFIG {
+  grant select on ZR_TBTYLE_CONFIG
+  where TRUE;
+}

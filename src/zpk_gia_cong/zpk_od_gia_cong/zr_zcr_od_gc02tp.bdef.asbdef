@@ -1,0 +1,113 @@
+unmanaged implementation in class ZBP_R_ZCR_OD_GC02TP unique;
+strict ( 2 );
+define behavior for ZR_ZCR_OD_GC02TP alias ZCR_OD_GC
+implementation in class ZBP_R_ZCR_OD_GC02TP unique
+etag master PurchaseOrder
+lock master
+authorization master( global )
+{
+  field ( readonly )
+   PurchaseOrder,
+   PurchaseOrderItem;
+
+
+  create;
+  update;
+  delete;
+
+  association _ZCR_OD_2 { create; }
+
+}
+
+define behavior for ZR_ZCR_OD_201TP alias ZCR_OD_2
+implementation in class ZBP_R_ZCR_OD_201TP unique
+//etag dependent by _ZCR_OD_GC
+lock dependent by _ZCR_OD_GC
+authorization dependent by _ZCR_OD_GC
+{
+  field ( readonly )
+   PurchaseOrder,
+   PurchaseOrderItem,
+   OutboundDelivery;
+
+
+  update;
+  delete;
+  action ( features : instance ) Set_SL_DongBo parameter ZC_SL_DongBo ;
+  action ( features : instance ) Update_OD;
+
+  association _ZCR_OD_GC;
+  association _ZCR_OD_21 { create; }
+  association _ZCR_OD_3 { create; }
+
+
+  side effects {
+  action Set_SL_DongBo affects $self, entity _ZCR_OD_3, entity _ZCR_OD_21, entity _ZCR_OD_GC ;
+}
+
+}
+
+define behavior for ZR_ZCR_OD_21TP alias ZCR_OD_21
+implementation in class ZBP_R_ZCR_OD_21TP unique
+//etag dependent by _ZCR_OD_GC
+lock dependent by _ZCR_OD_GC
+authorization dependent by _ZCR_OD_GC
+{
+  field ( readonly )
+   PurchaseOrder,
+   PurchaseOrderItem,
+   OutboundDelivery,
+   OutboundDeliveryItem;
+
+
+  update;
+  delete;
+
+  association _ZCR_OD_2;
+  association _ZCR_OD_GC;
+
+}
+
+define behavior for ZR_ZCR_OD_301TP alias ZCR_OD_3
+implementation in class ZBP_R_ZCR_OD_301TP unique
+//etag dependent by _ZCR_OD_GC
+lock dependent by _ZCR_OD_GC
+authorization dependent by _ZCR_OD_GC
+{
+  field ( readonly )
+   PurchaseOrder,
+   PurchaseOrderItem,
+   OutboundDelivery,
+   OutboundDeliveryItem;
+
+
+  update;
+  delete;
+
+  association _ZCR_OD_2;
+  association _ZCR_OD_GC;
+  association _ZCR_OD_4 { create; }
+
+}
+
+define behavior for ZR_ZCR_OD_4TP alias ZCR_OD_4
+implementation in class ZBP_R_ZCR_OD_4TP unique
+//etag dependent by _ZCR_OD_GC
+lock dependent by _ZCR_OD_GC
+authorization dependent by _ZCR_OD_GC
+{
+  field ( readonly )
+   PurchaseOrder,
+   PurchaseOrderItem,
+   OutboundDelivery,
+   OutboundDeliveryItem,
+   OutboundDeliveryBS;
+
+
+  update;
+  delete;
+
+  association _ZCR_OD_3;
+  association _ZCR_OD_GC;
+
+}

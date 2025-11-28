@@ -1,0 +1,112 @@
+@Metadata.layer: #CORE
+//@UI: {
+//  headerInfo: {
+//    typeName: 'Nhập xuất tồn cho sọt',
+//                  typeNamePlural: 'Nhập xuất tồn cho sọt'
+////                  title: { type: #STANDARD, label: 'Items', value: 'AccountingDocumentItem' },
+////                  description: { value: 'DocumentItemText', targetElement: 'Longtext' }
+//  }
+//}
+@UI: {
+  headerInfo: {
+    typeName: 'Nhập xuất tồn cho sọt',
+    typeNamePlural: 'Nhập xuất tồn cho sọt',
+    title: { type: #STANDARD, value: 'ct01' },
+    description: { value: 'ct02' }
+  }
+}
+annotate entity ZC_NXT_SOT_HDR with
+{
+
+  @UI.facet: [
+
+  //{    id                 : 'General',
+  //   purpose            : #STANDARD,
+  //   position           : 10,
+  //   label              : 'General',
+  //   type               : #COLLECTION,
+  //   targetQualifier    : 'General'
+  //   },
+  {
+  id: 'Items',
+        purpose: #STANDARD,
+        position: 20,
+        label: 'Chi tiết báo cáo',
+        type: #LINEITEM_REFERENCE,
+        targetElement: '_dtl'
+  } ]
+
+
+  @EndUserText.label: 'Material'
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10 }]
+  ct01;
+  @EndUserText.label: 'Material Description'
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 20 }]
+  ct02;
+  @EndUserText.label: 'Base UoM'
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 30 }]
+  ct03;
+  @EndUserText.label: 'Plant'
+//    @Consumption.filter.mandatory: true
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem: [{ position: 40 }]
+//  @UI.identification: [{ position: 40 }]
+  
+  ct04;
+  @EndUserText.label: 'Plant Name'
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 50 }]
+  ct05;
+  @EndUserText.label: 'Storage Location'
+  @UI.selectionField: [{ position: 40 }]
+  @UI.lineItem: [{ position: 60 }]
+  ct06;
+  @EndUserText.label: 'Storage Location Name'
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 70 }]
+  ct07;
+  @EndUserText.label: 'Tồn Đầu'
+  @Consumption.filter.hidden: true
+  @UI.selectionField: [{ position: 20 }]
+  @UI.lineItem: [{ position: 80 }]
+  ct08;
+  @EndUserText.label: 'Nhập'
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 90 }]
+  ct09;
+  @EndUserText.label: 'Xuất'
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 100 }]
+  ct10;
+  @EndUserText.label: 'Tồn Cuối'
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 110 }]
+  ct11;
+  @EndUserText.label: 'Vendor'
+  @UI.selectionField: [{ position: 50 }]
+  @UI.lineItem: [{ position: 120 }]
+  ct12;
+  @EndUserText.label: 'Vendor Name'
+  @Consumption.filter.hidden: true
+  @UI.lineItem: [{ position: 130 }]
+  ct13;
+  @EndUserText.label: 'Từ Ngày'
+  @UI.selectionField: [{ position: 60 }]
+  //  @Consumption.filter.mandatory: true
+  @Consumption.filter.selectionType: #SINGLE
+  @UI.lineItem: [{ hidden: true }]
+  DateFR;
+  @EndUserText.label: 'Đến ngày'
+  @UI.selectionField: [{ position: 70 }]
+  //  @Consumption.filter.mandatory: true
+  @Consumption.filter.selectionType: #SINGLE
+  @UI.lineItem: [{ hidden: true }]
+  DateTo;
+
+  @UI.lineItem: [{ hidden: true }]
+  @Consumption.filter.hidden: true
+  doc_date;
+}

@@ -1,0 +1,143 @@
+managed;
+strict ( 2 );
+with draft;
+define behavior for ZR_demo_gen102TP alias demo_gen1
+implementation in class ZBP_R_demo_gen102TP unique
+persistent table ZTB_GEN1_HDR
+draft table ZDEMO_GEN101D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   HdrID,
+   Sumdatetime,
+   CreatedBy,
+   CreatedAt;
+
+  field ( numbering : managed )
+   HdrID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTB_GEN1_HDR
+  {
+    HdrID = HDR_ID;
+    Zper = ZPER;
+    Zperdesc = ZPERDESC;
+    Lan = LAN;
+    Bukrs = BUKRS;
+    Ngaylapbang = NGAYLAPBANG;
+    Trangthai = TRANGTHAI;
+    Supplier = SUPPLIER;
+    Partnerfunc = PARTNERFUNC;
+    Sumdate = SUMDATE;
+    Sumdatetime = SUMDATETIME;
+    Ct01 = CT01;
+    Ct011 = CT011;
+    Ct02 = CT02;
+    Ct021 = CT021;
+    Ct03 = CT03;
+    Ct031 = CT031;
+    Ct03a = CT03A;
+    Ct03a1 = CT03A1;
+    Ct03b = CT03B;
+    Ct03b1 = CT03B1;
+    Ct04 = CT04;
+    Ct05 = CT05;
+    Ct06 = CT06;
+    Ct07 = CT07;
+    Ct08 = CT08;
+    Ct09 = CT09;
+    Ct10 = CT10;
+    Ct11 = CT11;
+    Ct12 = CT12;
+    Ct13 = CT13;
+    Ctcongtrukhac = CTCONGTRUKHAC;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+  association _gen_rap1_dtl { create; with draft; }
+
+  determination CalculateHdrID on save { create; }
+
+}
+
+define behavior for ZR_gen_rap1_dtl02TP alias gen_rap1_dtl
+implementation in class ZBP_R_gen_rap1_dtl02TP unique
+persistent table ZTB_GEN1_DTL
+draft table ZGEN_RAP1_DTL01D
+etag master LastChangedAt
+lock dependent by _demo_gen1
+authorization dependent by _demo_gen1
+{
+  field ( readonly )
+   DtlID,
+   HdrID,
+   LastChangedAt;
+
+  field ( numbering : managed )
+   DtlID;
+
+
+  update;
+  delete;
+
+  mapping for ZTB_GEN1_DTL
+  {
+    DtlID = DTL_ID;
+    HdrID = HDR_ID;
+    Ngaynhaphang = NGAYNHAPHANG;
+    Sobbgc = SOBBGC;
+    Sopo = SOPO;
+    Ct09 = CT09;
+    Ct10 = CT10;
+    Ct11 = CT11;
+    Ct12 = CT12;
+    Ct13 = CT13;
+    Ct14 = CT14;
+    Ct15 = CT15;
+    Ct16 = CT16;
+    Ct17 = CT17;
+    Ct18 = CT18;
+    Ct19 = CT19;
+    Ct20 = CT20;
+    Ct21 = CT21;
+    Ct22 = CT22;
+    Ct23 = CT23;
+    Ct24 = CT24;
+    Ct25 = CT25;
+    Ct26 = CT26;
+    Ct27 = CT27;
+    Ct27a = CT27A;
+    Ct27b = CT27B;
+    Ct28 = CT28;
+    Ct29 = CT29;
+    Ct30 = CT30;
+    Ct31 = CT31;
+    Ct32 = CT32;
+    Ct33 = CT33;
+    Ghichu = GHICHU;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+  association _demo_gen1 { with draft; }
+
+  determination CalculateDtlID on save { create; }
+
+}

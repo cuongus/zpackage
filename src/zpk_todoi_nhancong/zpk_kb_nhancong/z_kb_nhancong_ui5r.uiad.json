@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Bảng khai báo nhân công theo xưởng"
+  },
+  "ui5AppDetails": {
+    "appId": "zkbnhancong"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_277D90EA7BE5DD65A8E67598C76692E8196FD5AB_TM",
+    "semanticObject": "z_kb_nhancong",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_277D90EA7BE5DD65A8E67598C76692E8196FD5AB_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Bảng khai báo nhân công theo xưởng"
+      }
+    }
+  ]
+}

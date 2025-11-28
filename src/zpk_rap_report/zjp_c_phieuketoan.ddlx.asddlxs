@@ -1,0 +1,128 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'General',
+                  typeNamePlural: 'Document',
+                  title: { value: 'AccountingDocument' }
+    },
+    presentationVariant: [{ sortOrder: [{ by: 'CompanyCode', direction: #ASC },
+                                        { by: 'AccountingDocument', direction: #ASC },
+                                        { by: 'FiscalYear', direction: #ASC },
+                                        { by: 'PostingDate', direction: #ASC },
+                                        { by: 'DocumentDate', direction: #ASC }] }]
+}
+annotate entity ZJP_C_PHIEUKETOAN with
+{
+
+  @UI.facet          : [
+   {
+   id                 : 'General',
+   purpose            : #STANDARD,
+   position           : 10,
+   isPartOfPreview    : true,
+   label              : 'General',
+   type               : #COLLECTION,
+   targetQualifier    : 'General'
+   },
+  {
+   id                 : 'BasicInfo',
+   purpose            : #STANDARD,
+   parentId           : 'General',
+   position           : 10,
+   isPartOfPreview    : true,
+   label              : 'Basic Info',
+   type               : #FIELDGROUP_REFERENCE,
+   targetQualifier    : 'QFBasicInfo'
+   },
+   {
+   id                 : 'Items',
+   purpose            : #STANDARD,
+   type               : #LINEITEM_REFERENCE,
+   label              : 'Items',
+   position           : 20,
+   targetElement      : '_PhieuketoanItems'
+   }
+   ]
+
+  @UI.identification : [{ position: 10 }]
+  @UI.lineItem       : [{ position: 10 }]
+  @UI.selectionField : [{ position: 10 }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 10 ,  qualifier: 'QFBasicInfo'  }]
+  CompanyCode;
+
+  @UI.identification : [{ position: 20 }]
+  @UI.lineItem       : [{ position: 20 }]
+  @UI.selectionField : [{ position: 20 }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 20 ,  qualifier: 'QFBasicInfo'  }]
+  AccountingDocument;
+
+  @UI.identification : [{ position: 30 }]
+  @UI.lineItem       : [{ position: 30 }]
+  @UI.selectionField : [{ position: 30 }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 30 ,  qualifier: 'QFBasicInfo'  }]
+  FiscalYear;
+
+  @UI.identification : [{ position: 40 }]
+  @UI.lineItem       : [{ position: 40 }]
+  @UI.selectionField : [{ position: 40 }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 40 ,  qualifier: 'QFBasicInfo'  }]
+  PostingDate;
+
+  @UI.identification : [{ position: 50 }]
+  @UI.lineItem       : [{ position: 50 }]
+  @UI.selectionField : [{ position: 40 }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 50 ,  qualifier: 'QFBasicInfo'  }]
+  DocumentDate;
+
+  @UI.identification : [{ position: 60 }]
+  @UI.lineItem       : [{ position: 60 }]
+  //@UI.selectionField : [{ position: 50 }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 60 ,  qualifier: 'QFBasicInfo'  }]
+  AccountingDocumentType;
+
+  @UI.identification : [{ position: 70 }]
+  @UI.lineItem       : [{ position: 70 }]
+  @EndUserText.label: 'CompanyCode Currency'
+  CompanyCodeCurrency;
+
+  @UI.identification : [{ position: 80 }]
+  @UI.lineItem       : [{ position: 80 }]
+  @EndUserText.label: 'Transaction Currency'
+  TransactionCurrency;
+
+  @UI.identification : [{ position: 90 }]
+  @UI.lineItem       : [{ position: 90 }]
+  @EndUserText.label: 'Is Negative Posting'
+  IsNegativePosting;
+
+  @UI.identification : [{ position: 100 }]
+  @UI.lineItem       : [{ position: 100 }]
+  Customer;
+
+  @UI.identification : [{ position: 110 }]
+  @UI.lineItem       : [{ position: 110 }]
+  Supplier;
+
+  @UI.identification : [{ position: 120 }]
+  @UI.lineItem       : [{ position: 120 }]
+
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 120 ,  qualifier: 'QFBasicInfo'  }]
+  @EndUserText.label: 'Creation By User'
+  CreationByUser;
+
+  @UI.identification : [{ position: 130 }]
+  @UI.lineItem       : [{ position: 130 }]
+
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 130 ,  qualifier: 'QFBasicInfo'  }]
+  @UI.hidden: true
+  CreationDate;
+
+  @UI.identification : [{ position: 140 }]
+  @UI.lineItem       : [{ position: 140 }]
+
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 140 ,  qualifier: 'QFBasicInfo'  }]
+  @EndUserText.label: 'Creation Date time'
+  CreationDateTime;
+  /* Associations */
+  //    _PhieuketoanItems;
+
+}

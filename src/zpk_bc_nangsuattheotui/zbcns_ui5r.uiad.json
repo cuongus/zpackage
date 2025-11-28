@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Báo cáo năng suất tháng theo loại túi"
+  },
+  "ui5AppDetails": {
+    "appId": "bcns"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_44AEE6F6B2BF28992AAA16AAADBECA1F90A36F95_TM",
+    "semanticObject": "ZBCNS",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_44AEE6F6B2BF28992AAA16AAADBECA1F90A36F95_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Báo cáo năng suất tháng theo loại túi"
+      }
+    }
+  ]
+}

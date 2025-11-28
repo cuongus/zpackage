@@ -1,0 +1,61 @@
+unmanaged implementation in class zbp_i_btp_sew unique;
+//strict ( 2 );
+
+define behavior for ZI_BTP_SEW //alias <alias_name>
+//persistent table ztb_btl_sew
+//late numbering
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Uuid, SalesOrder, SalesOrderItem, Component , Stt;
+
+  field ( readonly )
+  BomQty,
+  Material,
+  MaterialName,
+  Quantity,
+  Plant,
+  Status,
+  MaterialBtp,
+  MaterialBtpName,
+  RequiredQty,
+  Uom,
+  StockCurrent,
+  QtyReceived,
+  MaterialType,
+  NvlWeek,
+
+  DeliveryWeek;
+
+
+  mapping for ztb_btl_sew
+    {
+      Uuid            = uuid;
+      SalesOrder      = sales_order;
+      SalesOrderItem  = sales_order_item;
+      Material        = material;
+      MaterialName    = material_name;
+      Plant           = plant;
+      Quantity        = quantity;
+      Status          = status;
+      MaterialBtp     = material_btp;
+      MaterialBtpName = material_btp_name;
+      Component       = component;
+      BomQty          = bom_qty;
+      RequiredQty     = required_qty;
+      Uom             = uom;
+      StockCurrent    = stock_current;
+      QtyReceived     = qty_received;
+      ProdWeek        = prod_week;
+      NvlWeek         = nvl_week;
+      DeliveryWeek    = delivery_week;
+      EstimatedDate   = estimated_date;
+      EstimatedQty    = estimated_qty;
+      MaterialType    = material_type;
+      Stt = stt;
+    }
+}

@@ -1,0 +1,17 @@
+unmanaged implementation in class zbp_dd_bctp unique;
+strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZDD_BCTP //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+//  create ( authorization : global );
+  update;
+//  delete;
+  field ( readonly ) SalesOrder, SalesOrderItem, SDProcessStatus,
+                     Material, MaterialName, Supplier, SupplierName, PurchaseOrder,
+                     hang_phe, tong_cong, sl_thu_ve_tong_cai, sl_con_lai_ngc, sl_xuat_dong_bo,
+                     OrderQuantity;
+}

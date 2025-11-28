@@ -1,0 +1,252 @@
+@Metadata.layer: #CORE
+
+annotate entity ZC_XUAT_QTGC with
+{
+
+
+  //  @UI.hidden: true
+  @UI: {
+  lineItem: [{ position: 10 }]
+  }
+  @EndUserText.label: 'Số UUID'
+  hdr_id;
+
+  @UI: {
+  lineItem: [{ position: 10 }],
+  selectionField: [{ position: 10 }]}
+  @EndUserText.label: 'Kỳ'
+  //  @Consumption.valueHelpDefinition: [{ entity: { name: 'zr_tbdcgc_hdr', element: 'zper' } }]
+  @Search.defaultSearchElement: true
+  zper;
+  @UI: {
+  lineItem: [{ position: 20 }],
+  selectionField: [{ position: 20 }]}
+  @EndUserText.label: 'Lần'
+  //  @Consumption.valueHelpDefinition: [{ entity: { name: 'zr_tbdcgc_hdr', element: 'lan' } }]
+  @Search.defaultSearchElement: true
+  lan;
+  @UI: {
+  lineItem: [{ position: 30 }],
+  selectionField: [{ position: 30 }]}
+  @EndUserText.label: 'Company Code'
+  //  @Consumption.valueHelpDefinition: [{ entity: { name: 'zr_tbdcgc_hdr', element: 'bukrs' } }]
+  @Search.defaultSearchElement: true
+  bukrs;
+  @UI: {
+  lineItem: [{ position: 40 }],
+  selectionField: [{ position: 40 }]}
+  @EndUserText.label: 'Mã nhà gia công'
+  //  @Consumption.valueHelpDefinition: [{ entity: { name: 'zr_tbdcgc_hdr', element: 'supplier' } }]
+  @Search.defaultSearchElement: true
+  giacong_id;
+  @UI: {
+  lineItem: [{ position: 50 }] }
+  @EndUserText.label: 'Tên nhà gia công'
+  giacongname;
+  @UI: {
+  lineItem: [{ position: 60 }],
+  selectionField: [{ position: 50 }]}
+  @EndUserText.label: 'Ngày lập bảng'
+  //  @Consumption.valueHelpDefinition: [{ entity: { name: 'zr_tbdcgc_hdr', element: 'ngaylapbang' } }]
+  @Search.defaultSearchElement: true
+  datelapbang;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  datenhaphang;
+  @UI: {
+  lineItem: [{ position:  70}] }
+  sobb;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  sopo;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  lenhsanxuat;
+
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  saleorder;
+
+
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  material_id;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  production_name;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct09;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct10;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct11;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct12;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct13;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct14;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct15;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct16;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct17;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct18;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct19;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct20;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct21;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_gc_name;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct22;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct23;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct24;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct25;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct26;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct27;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct28;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct29;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct30;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct31;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct32;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dc_ct33;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  trutien_btp;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  tile_btp;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  tongtien_bs;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  vobao;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  congtrukhac;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  hotro;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  tongcongno;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  chenhlechno;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  tongtienthanhtoan;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  sotienxhd;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  congnocanxuat;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  chitietcongtru;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  mahang;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  tenhang;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  materialgroup;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  materialgroupname;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  materialdescription;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  tondau;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  xuattky;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  nhaptky;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  btpdanhapve;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  nhaptrabtpdat;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  btploi;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  btploicty;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  btploigc;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  btpthieu;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  toncuoi;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  mbaseunit;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  donhangvet;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  poitem;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  congdoan;
+  @UI: {
+  lineItem: [{ hidden: true }] }
+  dongia;
+
+}

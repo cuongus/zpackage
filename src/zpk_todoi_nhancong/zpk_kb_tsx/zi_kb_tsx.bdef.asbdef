@@ -1,0 +1,38 @@
+managed implementation in class zbp_i_kb_tsx unique;
+strict ( 2 );
+
+define behavior for ZI_KB_TSX //alias <alias_name>
+persistent table ztb_kb_tsx
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  field ( numbering : managed, readonly ) UuidTsx;
+  field ( mandatory : create ) WorkCenter, Plant, TeamId, TeamName, FromDate, ToDate;
+
+  validation validateTeamId on save { field TeamId; create; update; }
+  validation validateDates on save { field FromDate, ToDate; create; update; }
+  validation validateWorkCenter on save { field WorkCenter; create; update; }
+  validation validatePlant on save { field Plant; create; update; }
+  validation validateWorkCenterPlant on save { field WorkCenter, Plant; create; update; }
+
+  mapping for ztb_kb_tsx
+    {
+      UuIDTsx            = uuid_tsx;
+      WorkCenter         = work_center;
+      Plant              = plant;
+      TeamId             = team_id;
+      TeamName           = team_name;
+      FromDate           = from_date;
+      ToDate             = to_date;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LastChangedBy      = last_changed_by;
+      LastChangedAt      = last_changed_at;
+      LocalLastChangedAt = local_last_changed_at;
+    }
+}

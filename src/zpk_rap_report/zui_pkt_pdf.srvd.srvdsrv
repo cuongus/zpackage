@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition PKT PDF'
+define service ZUI_PKT_PDF {
+  expose ZJP_C_PKT_PDFDOC as pktPDF;
+}

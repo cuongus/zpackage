@@ -1,0 +1,52 @@
+managed implementation in class ZBP_R_TBSUB_LEVEL unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBSUB_LEVEL alias ZrTbsubLevel
+persistent table ZTB_SUB_LEVEL
+extensible
+draft table ZTBSUB_LEVEL_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   Sublevel,
+   GlAccount;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Sublevel,
+   GlAccount;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  static action Upload parameter ZI_FILE_ABS;
+  static action Download result [1] ZI_FILE_ABS;
+
+  mapping for ZTB_SUB_LEVEL corresponding extensible
+  {
+    Sublevel = sublevel;
+    GlAccount = gl_account;
+    Ztext = ztext;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+}

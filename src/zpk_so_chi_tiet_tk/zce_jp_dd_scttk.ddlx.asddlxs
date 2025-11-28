@@ -1,0 +1,118 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'SỔ CHI TIẾT TÀI KHOẢN',
+                  typeNamePlural: 'SỔ CHI TIẾT TÀI KHOẢN',
+                  title: { type: #STANDARD, label: 'Accouting Document' } }
+    }
+
+annotate entity ZCE_JP_DD_SCTTK with
+{
+  @UI.facet: [ { id : 'General',
+                 purpose: #STANDARD,
+                 position: 10,
+                 label : 'Chỉ tiêu',
+                 type  : #IDENTIFICATION_REFERENCE } ]
+
+  @UI.selectionField: [{ position: 05 }]
+  @Consumption.filter: { mandatory: true, multipleSelections: false, selectionType: #SINGLE }
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+        name: 'I_CompanyCode',
+        element: 'CompanyCode'
+    }
+   }] 
+  bukrs;
+  @UI.selectionField: [{ position: 10 }]
+  @EndUserText.label: 'G/L Account'
+  @Consumption.filter: { mandatory: true }
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+        name: 'I_GLaccount',
+        element: 'GLAccount'
+    }
+   }]
+  racct;
+
+  @UI.selectionField: [{ position: 30 }]
+  @UI.identification : [{ position: 30 }]
+  @Consumption.filter: { mandatory: true, multipleSelections: false }
+  @EndUserText.label: 'Posting date'
+  date_ts;
+  
+  @UI.selectionField: [{ position: 35 } ]
+  @Consumption.filter: {
+                         multipleSelections: false,
+                         selectionType: #SINGLE
+                         }
+  @EndUserText.label: 'Loại chứng từ cấn trừ'
+  can_tru;
+
+  @UI.selectionField: [{ position: 40 } ]
+  @Consumption.filter: {
+                         multipleSelections: false,
+                         selectionType: #SINGLE
+                         }
+  @EndUserText.label: 'Người lập biểu'
+  tenNL;
+
+  @UI.selectionField: [{ position: 50 } ]
+  @Consumption.filter: {
+                         multipleSelections: false,
+                         selectionType: #SINGLE
+                         }
+  @EndUserText.label: 'Kế toán trưởng'
+  tenKT;
+
+
+  @UI.lineItem       : [{ position: 20 }]
+  @UI.identification : [{ position: 20 }]
+  @UI.lineItem: [{ label: 'Ngày, tháng ghi sổ' }]
+  @EndUserText.label: 'Ngày, tháng ghi sổ'
+  budat;
+  @UI.lineItem       : [{ position: 30 }]
+  @UI.identification : [{ position: 30 }]
+  @UI.lineItem: [{ label: 'Số hiệu' }]
+  @EndUserText.label: 'Số hiệu'
+  belnr;
+//  @UI.lineItem       : [{ position: 40 }]
+//  @UI.identification : [{ position: 40 }]
+//  @UI.lineItem: [{ label: 'Loại chứng từ' }]
+//  @EndUserText.label: 'Loại chứng từ'
+//  blart;
+//  @UI.lineItem       : [{ position: 50 }]
+//  @UI.identification : [{ position: 50 }]
+//  @UI.lineItem: [{ label: 'Ngày, tháng' }]
+//  @EndUserText.label: 'Ngày, tháng'
+//  bldat;
+  @UI.lineItem       : [{ position: 60 }]
+  @UI.identification : [{ position: 60 }]
+  @UI.lineItem: [{ label: 'Diễn giải' }]
+  @EndUserText.label: 'Diễn giải'
+  sgtxt;
+  @UI.lineItem       : [{ position: 70 }]
+  @UI.identification : [{ position: 70 }]
+  @UI.lineItem: [{ label: 'TK đối ứng' }]
+  @EndUserText.label: 'TK đối ứng'
+  hkont;
+  @UI.lineItem       : [{ position: 80 }]
+  @UI.identification : [{ position: 80 }]
+  @UI.lineItem: [{ label: 'Số đầu kỳ' }]
+  @EndUserText.label: 'Số đầu kỳ'
+  SoDK;
+  @UI.lineItem       : [{ position: 90 }]
+  @UI.identification : [{ position: 90 }]
+  @UI.lineItem: [{ label: 'Phát sinh nợ' }]
+  @EndUserText.label: 'Phát sinh nợ'
+  PsNo;
+  @UI.lineItem       : [{ position: 100 }]
+  @UI.identification : [{ position: 100 }]
+  @UI.lineItem: [{ label: 'Phát sinh có' }]
+  @EndUserText.label: 'Phát sinh có'
+  PsCo;
+  @UI.lineItem       : [{ position: 110 }]
+  @UI.identification : [{ position: 110 }]
+  @UI.lineItem: [{ label: 'Số cuối kỳ' }]
+  @EndUserText.label: 'Số cuối kỳ'
+  SoCK;
+
+}

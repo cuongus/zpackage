@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Bảng kê hóa đơn hàng hóa dịch vụ mua vào"
+  },
+  "ui5AppDetails": {
+    "appId": "bangkevat.bangkevat"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_59981FFA7EA151EF12C2BB21A2EDBFCFA06A821C_TM",
+    "semanticObject": "ZBANGKEVAT",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_59981FFA7EA151EF12C2BB21A2EDBFCFA06A821C_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Bảng kê hóa đơn hàng hóa dịch vụ mua vào"
+      }
+    }
+  ]
+}

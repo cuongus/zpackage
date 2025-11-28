@@ -1,0 +1,29 @@
+projection;
+strict ( 2 );
+use draft;
+define behavior for ZC_demo_gen102TP alias demo_gen1
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+  use association _gen_rap1_dtl { create; with draft; }
+
+}
+
+define behavior for ZC_gen_rap1_dtl02TP alias gen_rap1_dtl
+use etag
+{
+  use update;
+  use delete;
+
+  use association _demo_gen1 { with draft; }
+
+}

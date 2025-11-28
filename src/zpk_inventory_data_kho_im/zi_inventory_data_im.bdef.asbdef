@@ -1,0 +1,70 @@
+unmanaged implementation in class zbp_i_inventory_data_im unique;
+//strict ( 2 );
+
+define behavior for ZI_INVENTORY_DATA_IM //alias <alias_name>
+//persistent table ztb_inven_im1
+//late numbering
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  //delete;
+
+  field ( readonly ) Uuid;
+
+  action Count;
+  //action CreatePI;
+  action ( features : instance ) UpdateCount parameter ZBR_PARAM_UPDATECOUNT_IM result [1] $self;
+
+  static action CreatePI parameter ZBR_INVENTORY_IM result [1] ZABS_INVENTORY_IM;
+  static action UploadFile parameter ZI_FILE_ABS;
+  static action DownloadFile parameter ZBR_PARAM_DOWNLOADFILE_IM result [1] ZI_FILE_ABS;
+
+  //  validation check_editable on save { update; }
+
+  field ( readonly )
+  Plant,
+  Storagelocation,
+  Material,
+  DocDate,
+  PdaDate,
+  ConvertSapNo,
+  Pid,
+  Pid_item,
+  DocumantYear,
+  Plantcountdate,
+  MaterialDescription,
+  Batch,
+  Spestok,
+  Spestoknum,
+  Salesorder,
+  SalesOrderItem,
+  StockType,
+  BookQty,
+  BookQtyUom,
+  PdaQty,
+  CountedQtyUom,
+  EnteredQtyPi,
+  EnteredQtyUom,
+  ZeroCount,
+  DiffQty,
+  ApiStatus,
+  ApiMessage,
+  PdaTime,
+  Counter,
+  ApiDate,
+  ApiTime,
+  PiStatus,
+  UserUpload,
+  UploadTime,
+  UploadDate,
+  UploadStatus,
+  UploadMessage;
+
+  //  mapping for ztb_inven_im1
+  //    {
+  //
+  //    }
+}

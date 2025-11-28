@@ -1,0 +1,31 @@
+projection;
+strict ( 2 );
+use draft;
+
+define behavior for ZC_MN_RESERVATION alias ManageFile
+{
+  use create;
+  use update;
+  use delete;
+
+  use action fileUpload;
+  use action downloadFile;
+
+  use action Activate;
+  use action Discard;
+  use action Edit;
+  use action Resume;
+  use action Prepare;
+
+  use association _DataReservation { create; with draft; }
+}
+
+define behavior for ZC_DATA_RESERVATION alias DataReservation
+{
+  use update;
+  use delete;
+
+  use action PostReser;
+
+  use association _ManageFile { with draft; }
+}

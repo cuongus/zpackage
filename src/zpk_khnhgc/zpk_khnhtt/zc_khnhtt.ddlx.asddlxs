@@ -1,0 +1,52 @@
+@Metadata.layer: #CORE
+annotate entity ZC_KHNHTT
+    with 
+{
+@UI: {
+lineItem: [{position: 10}],
+selectionField: [{position: 10}]
+}
+@EndUserText.label: 'Product Hierarchy 3'
+ct01;
+
+@UI: {
+lineItem: [{position: 20}],
+selectionField: [{position: 20}]
+}
+@EndUserText.label: 'Plant'
+ct03;
+
+@UI.lineItem: [{position: 30}]
+@EndUserText.label: 'Product Hierarchy Name'
+ct02;
+
+@UI.lineItem: [{position: 40}]
+@EndUserText.label: 'Plant Name'
+ct04;
+
+@UI.lineItem: [{position: 50}]
+@EndUserText.label: 'Tháng'
+ct05;
+
+@UI.lineItem: [{position: 60}]
+@EndUserText.label: 'Tuần'
+ct06;
+
+@UI.lineItem: [{position: 70}]
+@EndUserText.label: 'Kế hoạch nhận hàng'
+ct07;
+
+@UI.lineItem: [{position: 80}]
+@EndUserText.label: 'Năng lực nhà gia công'
+ct08;
+
+@UI.lineItem: [{position: 90}]
+@EndUserText.label: 'Chênh lệch'
+ct09;
+
+@UI.selectionField: [{position: 30}]
+@UI.lineItem: [{ hidden: true }]
+@EndUserText.label: 'Month (From)'
+month_from;
+    
+}

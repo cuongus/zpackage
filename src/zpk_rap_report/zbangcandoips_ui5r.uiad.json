@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Bảng cân đối số phát sinh"
+  },
+  "ui5AppDetails": {
+    "appId": "zbangcandoiphatsinh"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_FA52343FCFB9BACFE008D92143843C729FBC3295_TM",
+    "semanticObject": "zbangcandoips",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_FA52343FCFB9BACFE008D92143843C729FBC3295_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Bảng cân đối số phát sinh"
+      }
+    }
+  ]
+}

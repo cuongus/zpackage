@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBUPLOAD_BOMIT'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBUPLOAD_BOMIT'
+  }
+}
+define service ZUI_TBUPLOAD_BOMIT_O4 provider contracts odata_v4_ui {
+  expose ZC_TBUPLOAD_BOMIT;
+}

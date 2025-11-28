@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition PBKHNH'
+define service ZUI_PBKHNH_SRVD {
+  expose ZC_UI_PBKHNH as DataPBKHNH;
+}

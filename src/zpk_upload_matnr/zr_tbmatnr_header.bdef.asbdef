@@ -1,0 +1,130 @@
+managed implementation in class zbp_r_tbmatnr_header unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_TBMATNR_HEADER alias Zrtbmatnrheader
+persistent table ztb_matnr_header
+draft table ztbmtnr_header_d
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+//with unmanaged save
+//etag master <field_name>
+{
+
+  field ( readonly ) Uuid;
+
+  field ( numbering : managed )
+  Uuid;
+
+
+  create ( authorization : global );
+  update;
+  delete;
+
+  static action UploadFile parameter ZI_FILE_ABS;
+  static action UploadFile_1 parameter ZI_FILE_ABS;
+  static action DownloadFile result [1] ZI_FILE_ABS;
+  static action DownloadFile_1 result [1] ZI_FILE_ABS;
+
+  //    static action Post parameter ZBR_UPLOAD_MIGO result [1]  ZABS_INVENTORY_IM;
+  action Count;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+
+  mapping for ztb_matnr_header corresponding
+    {
+      Uuid          = uuid;
+      FileName      = file_name;
+      Attachment    = attachment;
+      Mimetype      = mimetype;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedAt = last_changed_at;
+      LastChangedBy = last_changed_by;
+      Message       = message;
+    }
+
+  association _dtl { create ( features : instance ); with draft; }
+}
+
+define behavior for ZR_TBUPLOAD_MATNR alias Zrtbuploadmatnr
+persistent table ztb_upload_matnr
+draft table ztbpload_matnr_d
+
+lock dependent by _hdr
+authorization dependent by _hdr
+//with unmanaged save
+//etag master <field_name>
+{
+
+  update;
+    delete;
+  field ( readonly ) UUID, Dtlid;
+
+  field ( numbering : managed )
+  Dtlid;
+
+  mapping for ztb_upload_matnr corresponding
+    {
+      UUID             = uuid;
+      Dtlid            = dtlid;
+      MatnrSequeNumr   = matnr_seque_numr;
+      OptionName       = option_name;
+      MatnrDoc         = matnr_doc;
+      MatnrItem        = matnr_item;
+      DocDate          = doc_date;
+      PostDate         = post_date;
+      MatnrHeaderText  = matnr_header_text;
+      CtrlPost         = ctrl_post;
+      GoodCode         = good_code;
+      Resevation       = resevation;
+      ResevationItem   = resevation_item;
+      GoodType         = good_type;
+      Matnr            = matnr;
+      Plant            = plant;
+      StorageLocation  = storage_location;
+      Batch            = batch;
+      ValuationType    = valuation_type;
+      Quantity         = quantity;
+      Unit             = unit;
+      CostCenter       = cost_center;
+      FixedAsset       = fixed_asset;
+      SalesOrder       = sales_order;
+      SalesOrderItem   = sales_order_item;
+      SpeStok          = spe_stok;
+      MatnrDocItemText = matnr_doc_item_text;
+      WarehouseNumber  = warehouse_number;
+      StoreBin         = store_bin;
+      FormMatnr        = form_matnr;
+      FormPlant        = form_plant;
+      FormSloc         = form_sloc;
+      FormBatch        = form_batch;
+      FormValueType    = form_value_type;
+      FormSaleOrder    = form_sale_order;
+      FormSaleItem     = form_sale_item;
+      ToMatnr          = to_matnr;
+      ToPlant          = to_plant;
+      ToSloc           = to_sloc;
+      ToBatch          = to_batch;
+      ToValueType      = to_value_type;
+      ToSaleOrder      = to_sale_order;
+      ToSaleItem       = to_sale_item;
+      Vendor           = vendor;
+      ManuOrder        = manu_order;
+      ManuOrderItem    = manu_order_item;
+      ReturnType       = return_type;
+      MachiningOrders  = machining_orders;
+      CreatedBy        = created_by;
+      CreatedAt        = created_at;
+      LastChangedBy    = last_changed_by;
+      LastChangedAt    = last_changed_at;
+    }
+
+  association _hdr { with draft; }
+}

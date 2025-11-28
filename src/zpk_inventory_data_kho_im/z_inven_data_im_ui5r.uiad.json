@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Bảng xử lý dữ liệu kiểm kê Kho IM"
+  },
+  "ui5AppDetails": {
+    "appId": "zinventorydataim"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_C5594C0230D58960C6651FA83BC2EC7E89738676_TM",
+    "semanticObject": "z_inventory_data_im",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_C5594C0230D58960C6651FA83BC2EC7E89738676_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Bảng xử lý dữ liệu kiểm kê Kho IM"
+      }
+    }
+  ]
+}

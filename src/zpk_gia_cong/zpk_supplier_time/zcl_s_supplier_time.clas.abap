@@ -1,0 +1,10 @@
+CLASS zcl_s_supplier_time DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_supplier_time.
+
+protected section.
+private section.
+ENDCLASS.
+
+
+
+CLASS ZCL_S_SUPPLIER_TIME IMPLEMENTATION.
+ENDCLASS.

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - Khai báo danh sách tsx theo xưởng'
+define service ZUI_KB_SOMAY_API {
+  expose ZC_KB_SOMAY as Khai_Bao_So_May_API;
+}

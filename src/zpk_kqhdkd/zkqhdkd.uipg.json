@@ -1,0 +1,25 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "launchpach page",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "launchpach page kqhdkd"
+  },
+  "sections": [
+    {
+      "id": "SECTION_1",
+      "visualizations": [
+        {
+          "id": "SECTION_1_VIZ_1",
+          "ladiAssignment": {
+            "ladiId": "ZKQHDKD_UI5R",
+            "tileId": "UI5R_643A6FDD548DD8CD4DA6379CA3BAF2088C8F6233_AL"
+          }
+        }
+      ]
+    }
+  ]
+}

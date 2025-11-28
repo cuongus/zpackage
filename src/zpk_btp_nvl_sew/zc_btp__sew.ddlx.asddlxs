@@ -1,0 +1,164 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Bảng theo dõi đồng bộ BTP/NVL may',
+//  typeNamePlural: 'Penalty Prices',
+  title: { type: #STANDARD }
+}
+annotate entity ZC_BTP_SEW with
+{
+
+  @UI.facet: [
+    { label: 'Kết quả hiển thị', id: 'RESULT',  position: 20, type: #FIELDGROUP_REFERENCE,targetQualifier: 'RESULT' }
+   ]
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 10 }]
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  @EndUserText.label: 'Sales Order'
+  SalesOrder;
+
+
+  @UI.selectionField: [{ position: 20 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 20 }]
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @EndUserText.label: 'Sales Order Item'
+  SalesOrderItem;
+
+
+  @UI.selectionField: [{ position: 30 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 30 }]
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @EndUserText.label: 'Mã thành phẩm'
+  Material;
+
+  @UI.selectionField: [{ position: 40 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 40 }]
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  @EndUserText.label: 'Tên thành phẩm'
+  MaterialName;
+
+
+  @UI.selectionField: [{ position: 50 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 50 }]
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @EndUserText.label: 'Trạng thái SO'
+  Status;
+
+  @UI.selectionField: [{ position: 55 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 55 }]
+  @UI.lineItem: [{ position: 55 }]
+  @UI.identification: [{ position: 55 }]
+  @EndUserText.label: 'Material Type'
+  MaterialType;
+
+  @UI.selectionField: [{ position: 60 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 60 }]
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @EndUserText.label: 'Mã BTP sau may'
+  MaterialBtp;
+
+  @UI.lineItem: [{ position: 65 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 65 }]
+  @UI.identification: [{ position: 65 }]
+  @EndUserText.label: 'Plant '
+  Plant;
+
+
+  @UI.selectionField: [{ position: 70 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 70 }]
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  @EndUserText.label: 'Tên mã BTP sau may'
+  MaterialBtpName;
+
+  @UI.selectionField: [{ position: 75 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 75 }]
+  @UI.lineItem: [{ position: 75 }]
+  @UI.identification: [{ position: 75 }]
+  @EndUserText.label: 'Tuần NVL'
+  NvlWeek;
+
+
+  @UI.lineItem: [{ position: 80 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  @EndUserText.label: 'Component của BTP sau may'
+  Component;
+
+
+  @UI.selectionField: [{ position: 90 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 90 }]
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @EndUserText.label: 'Tuần sản xuất'
+  ProdWeek;
+
+
+  @UI.selectionField: [{ position: 100 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 100 }]
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  @EndUserText.label: 'Tuần giao hàng'
+  DeliveryWeek;
+
+  @UI.lineItem: [{ position: 110 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 110 }]
+  @UI.identification: [{ position: 110 }]
+  @EndUserText.label: 'Số lượng trên SO'
+  Quantity;
+
+
+  @UI.lineItem: [{ position: 120 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 120 }]
+  @UI.identification: [{ position: 120 }]
+  @EndUserText.label: 'Định mức trong BOM'
+  BomQty;
+
+
+  @UI.lineItem: [{ position: 130 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 130 }]
+  @UI.identification: [{ position: 130 }]
+  @EndUserText.label: 'Nhu cầu NVL cần'
+  RequiredQty;
+
+
+  @UI.lineItem: [{ position: 140 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 140 }]
+  @UI.identification: [{ position: 140 }]
+  @EndUserText.label: 'Đơn vị tính'
+  Uom;
+
+
+  @UI.lineItem: [{ position: 150 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 150 }]
+  @UI.identification: [{ position: 150 }]
+  @EndUserText.label: 'Tồn kho hiện tại'
+  StockCurrent;
+
+
+  @UI.lineItem: [{ position: 160 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 160 }]
+  @UI.identification: [{ position: 160 }]
+  @EndUserText.label: 'Số lượng hàng đã về'
+  QtyReceived;
+
+
+  @UI.lineItem: [{ position: 170 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 170 }]
+  @UI.identification: [{ position: 170 }]
+  @EndUserText.label: 'Số lượng dự kiến hàng'
+  EstimatedQty;
+
+
+  @UI.lineItem: [{ position: 180 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 180 }]
+  @UI.identification: [{ position: 180 }]
+  @EndUserText.label: 'Ngày dự kiến về'
+  EstimatedDate;
+}

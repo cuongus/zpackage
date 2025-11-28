@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Xuất hóa đơn"
+  },
+  "ui5AppDetails": {
+    "appId": "zsuathd1"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_C692AFCEB757B97B22B9B7BEED50090447199AAF_TM",
+    "semanticObject": "zxuathd1",
+    "action": "manager",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_C692AFCEB757B97B22B9B7BEED50090447199AAF_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Xuất hóa đơn"
+      }
+    }
+  ]
+}

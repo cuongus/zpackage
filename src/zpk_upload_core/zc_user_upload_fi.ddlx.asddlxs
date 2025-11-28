@@ -1,0 +1,67 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Upload Files',
+    typeNamePlural: 'Upload Files'
+  }
+}
+annotate entity ZC_USER_UPLOAD_FI with
+{
+  @UI.facet: [{ id:            'File',
+                purpose:       #STANDARD,
+                type:          #IDENTIFICATION_REFERENCE,
+                label:         'File',
+                position:      10 },
+              { id:            'Preview',
+                purpose:       #STANDARD,
+                type:          #LINEITEM_REFERENCE,
+                label:         'Preview',
+                position:      20,
+                targetElement: '_previewData'}]
+  @UI.hidden: true
+  Uuid;
+  
+  @UI.lineItem: [{ position: 10 , importance: #MEDIUM }]
+  @UI.identification: [{ position: 10 }]
+  EndUser;
+  
+  @UI.lineItem: [{ position: 20 , importance: #MEDIUM }]
+  @UI.identification: [{ position: 20 }]
+  ZCount;
+  
+  @UI.lineItem: [{ position: 30 , importance: #MEDIUM }]
+  @UI.identification: [{ position: 30 }]
+  Status;
+  
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  Attachment;
+  
+  @UI.lineItem: [{ position: 50  }]
+  @UI.identification: [{ position: 50 }]
+  Mimetype;
+  
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  Filename;
+  
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  Createdbyuser;
+  
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  Createddate;
+  
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  Changedbyuser;
+  
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  Changeddate;
+  /* Associations */
+//  _OverallStatus;
+//  _previewData;
+
+}

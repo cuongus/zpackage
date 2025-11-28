@@ -1,0 +1,25 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Page Template - Khai báo danh sách tổ đội, nhân công",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "Khai báo danh sách tổ đội, nhân công"
+  },
+  "sections": [
+    {
+      "id": "SECTION_1",
+      "visualizations": [
+        {
+          "id": "SECTION_1_VIZ_1",
+          "ladiAssignment": {
+            "ladiId": "Z_TW_LIST_UI5R",
+            "tileId": "UI5R_A900EB563884177818219BA8E1B9DF4BFA9FA209_AL"
+          }
+        }
+      ]
+    }
+  ]
+}

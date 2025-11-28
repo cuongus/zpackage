@@ -1,0 +1,4 @@
+@EndUserText.label: 'LCTTGT'
+define service ZSD_LCTTGT {
+  expose ZDD_LCTTGT;
+}

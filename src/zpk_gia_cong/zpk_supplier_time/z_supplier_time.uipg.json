@@ -1,0 +1,25 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Launchpad Page Template",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "Travel App"
+  },
+  "sections": [
+    {
+      "id": "SECTION_1",
+      "visualizations": [
+        {
+          "id": "SECTION_1_VIZ_1",
+          "ladiAssignment": {
+            "ladiId": "Z_SUPPLIER_TIME_UI5R",
+            "tileId": "UI5R_38734734F14B65821CB90E2B2289D13AD3BB49B3_AL"
+          }
+        }
+      ]
+    }
+  ]
+}

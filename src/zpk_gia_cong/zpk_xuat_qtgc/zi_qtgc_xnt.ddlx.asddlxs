@@ -1,0 +1,55 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Tồn kho BTP',
+    typeNamePlural: 'Tồn kho BTP'
+  }
+}
+
+annotate entity ZI_QTGC_XNT with
+{
+  @UI.hidden: true
+  hdr_id;
+
+  @UI.hidden: true
+  zper;
+
+  @UI.hidden: true
+  datelapbang;
+
+  @UI.lineItem: [{ position: 10 }]
+  @EndUserText.label: 'Mã hàng'
+  mahang;
+
+  @UI.lineItem: [{ position: 20 }]
+  @EndUserText.label: 'Tên hàng'
+  tenhang;
+
+  @UI.lineItem: [{ position: 30 }]
+  @EndUserText.label: 'Nhóm hàng'
+  materialgroup;
+
+  @UI.lineItem: [{ position: 40 }]
+  @EndUserText.label: 'Tồn đầu'
+  tondau;
+
+  @UI.lineItem: [{ position: 50 }]
+  @EndUserText.label: 'Xuất TKỳ'
+  xuattky;
+
+  @UI.lineItem: [{ position: 60 }]
+  @EndUserText.label: 'Nhập TKỳ'
+  nhaptky;
+
+  @UI.lineItem: [{ position: 70 }]
+  @EndUserText.label: 'BTP đã nhập về'
+  btpdanhapve;
+
+  @UI.lineItem: [{ position: 80 }]
+  @EndUserText.label: 'Tồn cuối'
+  toncuoi;
+
+  @UI.lineItem: [{ position: 90 }]
+  @EndUserText.label: 'ĐVT'
+  mbaseunit;
+}

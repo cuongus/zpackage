@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZR_TBYEAR'
+@MappingRole: true
+define role ZR_TBYEAR {
+  grant select on ZR_TBYEAR
+  where TRUE;
+}

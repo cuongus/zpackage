@@ -1,0 +1,152 @@
+managed implementation in class zbp_r_xml_form_cfg unique;
+strict ( 2 );
+extensible;
+with draft;
+
+define behavior for ZR_XML_FORM_CFG alias XMLFormConfig
+persistent table zxml_form_cfg
+
+extensible
+draft table zxmlformcfg_d
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+
+{
+  create;
+  update;
+  delete;
+
+  field ( mandatory : create, readonly : update ) FormId;
+
+  field ( readonly ) CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action ( features : instance ) Edit with additional implementation;
+  draft action Resume;
+
+  draft determine action Prepare;
+
+  association _XML_FormRow_Map { create ( features : instance ); with draft; }
+  association _XML_FormTable_CFG { create ( features : instance ); with draft; }
+  association _XML_FormKV_Map { create ( features : instance ); with draft; }
+
+  mapping for zxml_form_cfg corresponding extensible
+    {
+      FormId        = form_id;
+      ReportName    = report_name;
+      RootOpen      = root_open;
+      RootClose     = root_close;
+      HeaderOpen    = header_open;
+      HeaderClose   = header_close;
+      FooterOpen    = footer_open;
+      FooterClose   = footer_close;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    }
+}
+
+define behavior for ZR_XML_FORMROW_MAP alias XMLFormRowMap
+persistent table zxml_formrow_map
+draft table zxmlformrowmap_d
+lock dependent by _XML_Form_CFG
+authorization dependent by _XML_Form_CFG
+//etag master <field_name>
+{
+  update;
+  delete;
+
+  field ( mandatory : create, readonly : update ) TableId, Rowkind, Seq;
+
+  field ( readonly ) FormId, CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+
+  association _XML_Form_CFG { with draft; }
+
+  mapping for zxml_formrow_map corresponding
+    {
+      FormId        = form_id;
+      TableId       = table_id;
+      Rowkind       = row_kind;
+      Seq           = seq;
+      XmlName       = xml_name;
+      SrcType       = src_type;
+      SrcName       = src_name;
+      Fmt           = fmt;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    }
+}
+
+define behavior for ZR_XML_FORMTABLE_CFG alias XMLFormTableConfig
+persistent table zxmlformtablecfg
+draft table zxmlformtblcfg_d
+lock dependent by _XML_Form_CFG
+authorization dependent by _XML_Form_CFG
+//etag master <field_name>
+{
+  update;
+  delete;
+
+  field ( mandatory : create, readonly : update ) TableId, ContainerId, Seq;
+
+  field ( readonly ) FormId, CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+
+  association _XML_Form_CFG { with draft; }
+
+  mapping for zxmlformtablecfg corresponding
+    {
+      FormId        = form_id;
+      TableId       = table_id;
+      ContainerId   = container_id;
+      Seq           = seq;
+      OpenMode      = open_mode;
+      Location      = location;
+      TableOpen     = table_open;
+      RowOpen       = row_open;
+      RowClose      = row_close;
+      TableClose    = table_close;
+      Name          = name;
+      PrefixXml     = prefix_xml;
+      SuffixXml     = suffix_xml;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    }
+}
+
+define behavior for ZR_XML_FORM_KV_MAP alias XMLFormKVMap
+persistent table zxml_form_kv_map
+draft table zxmlformkvmap_d
+lock dependent by _XML_Form_CFG
+authorization dependent by _XML_Form_CFG
+//etag master <field_name>
+{
+  update;
+  delete;
+
+  field ( mandatory : create, readonly : update ) Zsection, Seq;
+
+  field ( readonly ) FormId, CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+  association _XML_Form_CFG { with draft; }
+
+  mapping for zxml_form_kv_map corresponding
+    {
+      FormId        = form_id;
+      Zsection      = zsection;
+      Seq           = seq;
+      NodeName      = node_name;
+      SrcType       = src_type;
+      SrcName       = src_name;
+      Fmt           = fmt;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    }
+}

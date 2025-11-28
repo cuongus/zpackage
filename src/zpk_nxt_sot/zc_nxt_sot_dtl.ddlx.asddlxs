@@ -1,0 +1,86 @@
+@Metadata.layer: #CORE
+//@UI: {
+//  headerInfo: {
+//    typeName: 'Nhập xuất tồn cho sọt',
+//                  typeNamePlural: 'Nhập xuất tồn cho sọt'
+////                  title: { type: #STANDARD, label: 'Items', value: 'AccountingDocumentItem' },
+////                  description: { value: 'DocumentItemText', targetElement: 'Longtext' }
+//  }
+//}
+@UI: {
+  headerInfo: {
+    typeName: 'Nhập xuất tồn cho sọt',
+    typeNamePlural: 'Nhập xuất tồn cho sọt',
+    title: { type: #STANDARD, value: 'ct06' }
+  }
+}
+annotate entity ZC_NXT_SOT_DTL with
+{
+@UI.facet: [ {
+  id: 'Items',
+  purpose: #STANDARD,
+  position: 10,
+  label: 'Material: {ct06}',
+  type: #IDENTIFICATION_REFERENCE
+} ]
+
+  @UI.lineItem: [{ position: 5 }]
+  @EndUserText.label: 'Material Document Year'
+  ct01;
+  
+  @UI.lineItem: [{ position: 60 }]
+  @EndUserText.label: 'Material'
+  ct06;
+
+  @UI.lineItem: [{ position: 20 }]
+  @EndUserText.label: 'Material Document'
+  ct03;
+
+  @UI.lineItem: [{ hidden: true }]
+  DateFR;
+
+  @UI.lineItem: [{ hidden: true }]
+  DateTo;
+
+  @UI.lineItem: [{ position: 80 }]
+  @EndUserText.label: 'Plant'
+  ct08;
+
+  @UI.lineItem: [{ position: 90 }]
+  @EndUserText.label: 'Storage Location'
+  ct09;
+
+  @UI.lineItem: [{ hidden: true }]
+  zper;
+
+  @UI.lineItem: [{ position: 100 }]
+  @EndUserText.label: 'Vendor'
+  ct10;
+  
+    @UI.lineItem: [{ position: 110 }]
+  @EndUserText.label: 'Vendor name'
+  ct11;
+  
+    @UI.lineItem: [{ position: 120 }]
+  @EndUserText.label: 'Doc.Header Text'
+  ct12;
+
+  @UI.lineItem: [{ position: 10 }]
+  @EndUserText.label: 'Posting Date'
+    @Consumption.filter.hidden: true
+  ct02;
+
+  @UI.lineItem: [{ position: 40 }]
+  @EndUserText.label: 'Material Document Item'
+  ct04;
+
+  @UI.lineItem: [{ position: 50 }]
+  @EndUserText.label: 'Movement Type'
+  ct05;
+
+  @UI.lineItem: [{ position: 70 }]
+  @EndUserText.label: 'Stock Quantity'
+  ct07;
+  @UI.lineItem: [{ hidden: true }]
+  materialbaseunit;
+}

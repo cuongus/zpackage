@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Subtotal level config"
+  },
+  "ui5AppDetails": {
+    "appId": "zsubglaccconfig"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_994D668CAA6352923DC1BEF338195708F1A52C50_TM",
+    "semanticObject": "zsub_gl_acc_",
+    "action": "manager",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_994D668CAA6352923DC1BEF338195708F1A52C50_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Subtotal level config"
+      }
+    }
+  ]
+}

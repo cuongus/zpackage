@@ -1,0 +1,4 @@
+@EndUserText.label: 'Báo cáo bb gia công'
+define service Zsd_bc_bbgc {
+  expose zc_bc_bbgc;
+}

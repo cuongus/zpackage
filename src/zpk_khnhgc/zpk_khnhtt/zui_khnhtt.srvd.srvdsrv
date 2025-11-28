@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for KHNHTT'
+define service ZUI_KHNHTT {
+  expose ZC_KHNHTT;
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Manager app"
+  },
+  "ui5AppDetails": {
+    "appId": "zappmn"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_B83A98EA82858B47E7F3C61C9CC6A0E577D8BE22_TM",
+    "semanticObject": "zapp_mn",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_B83A98EA82858B47E7F3C61C9CC6A0E577D8BE22_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Manager app"
+      }
+    }
+  ]
+}

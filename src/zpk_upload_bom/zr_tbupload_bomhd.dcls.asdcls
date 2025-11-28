@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZR_TBUPLOAD_BOMHD'
+@MappingRole: true
+define role ZR_TBUPLOAD_BOMHD {
+  grant select on ZR_TBUPLOAD_BOMHD
+  where TRUE;
+}

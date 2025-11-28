@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Sổ chi tiết tài khoản"
+  },
+  "ui5AppDetails": {
+    "appId": "sochitiet"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A225A75E24D165B1B20DCDD83F8908F10C0F845F_TM",
+    "semanticObject": "ZSOCTTK",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A225A75E24D165B1B20DCDD83F8908F10C0F845F_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sổ chi tiết tài khoản"
+      }
+    }
+  ]
+}

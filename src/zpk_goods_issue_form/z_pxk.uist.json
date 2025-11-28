@@ -1,0 +1,17 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Z_pxk",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "Phiếu xuất kho",
+    "sortPriority": 100.0
+  },
+  "pages": [
+    {
+      "name": "ZLP_PXK"
+    }
+  ]
+}

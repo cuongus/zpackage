@@ -1,0 +1,13 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBYEAR'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBYEAR'
+  }
+}
+define service ZUI_TBYEAR_O4
+  provider contracts odata_v4_ui {
+  expose ZC_TBYEAR;
+  expose ZC_TBPERIOD;
+}

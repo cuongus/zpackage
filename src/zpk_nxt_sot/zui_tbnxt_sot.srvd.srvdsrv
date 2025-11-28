@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition for TBNXT SOT'
+define service ZUI_TBNXT_SOT
+  provider contracts odata_v4_ui {
+  expose ZC_TBNXT_SOT;
+}

@@ -1,0 +1,59 @@
+managed implementation in class ZBP_R_TBRP_ITEM unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBRP_ITEM alias ZrTbrpItem
+persistent table ZTB_RP_ITEM
+extensible
+draft table ZTBRP_ITEM_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   RpID,
+   ItemID;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   RpID,
+   ItemID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTB_RP_ITEM corresponding extensible
+  {
+    RpID = rp_id;
+    ItemID = item_id;
+    ItemCode1 = item_code1;
+    ItemCode = item_code;
+    DisplayCode = display_code;
+    ItemDesc = item_desc;
+    ItemCond = item_cond;
+    ItemCond2 = item_cond2;
+    ItemCond3 = item_cond3;
+    ItemCond4 = item_cond4;
+    Formula = formula;
+    Display = display;
+    Font = font;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+}

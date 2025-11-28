@@ -1,0 +1,52 @@
+managed implementation in class ZBP_R_TBCROD_2 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBCROD_2 alias ZrTbcrod2
+persistent table ZTB_CROD_2
+extensible
+draft table ZTBCROD_2_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   Purchaseorder,
+   Purchaseorderitem,
+   Outbounddelivery;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Purchaseorder,
+   Purchaseorderitem,
+   Outbounddelivery;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTB_CROD_2 corresponding extensible
+  {
+    Purchaseorder = purchaseorder;
+    Purchaseorderitem = purchaseorderitem;
+    Outbounddelivery = outbounddelivery;
+    Sldongbo = sldongbo;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+}

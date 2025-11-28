@@ -1,0 +1,18 @@
+projection;
+strict ( 2 );
+use draft;
+
+define behavior for ZC_UI_PBKHNH alias DataPBKHNH
+{
+  use create;
+  use update;
+  use delete;
+
+  use action savedata;
+
+  use action Activate;
+  use action Discard;
+  use action Edit;
+  use action Resume;
+  use action Prepare;
+}

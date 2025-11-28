@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBUSER_ROLE'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBUSER_ROLE'
+  }
+}
+define service ZUI_TBUSER_ROLE_O4 provider contracts odata_v4_ui {
+  expose ZC_TBUSER_ROLE;
+}

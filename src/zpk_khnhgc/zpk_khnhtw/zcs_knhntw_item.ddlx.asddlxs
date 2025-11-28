@@ -1,0 +1,887 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'General',
+                  typeNamePlural: 'General',
+                  title: { value: 'versionname' }
+    },
+    presentationVariant: [{ sortOrder: [{ by: 'createdat', direction: #ASC },
+                                        { by: 'createdby', direction: #ASC }
+                                       ] }]
+}
+annotate entity ZCS_KNHNTW_ITEM with
+{
+  @UI.facet          : [
+   {
+   id                 : 'Details',
+   purpose            : #STANDARD,
+   position           : 10,
+   label              : 'Details',
+   type               : #IDENTIFICATION_REFERENCE
+   }
+   ]
+
+  @UI.hidden: true
+  companycode;
+
+  @UI.hidden: true
+  version;
+
+  @UI.hidden: true
+  versionname;
+
+  @UI.hidden: true
+  weekfrom;
+
+  @UI.hidden: true
+  weekto;
+
+  @UI.lineItem       : [{ position: 1 }]
+  @UI.identification : [{ position: 1 }]
+  @UI.selectionField : [{ position: 1 }]
+  producthierarchy3;
+
+  @UI.lineItem       : [{ position: 2 }]
+  @UI.identification : [{ position: 2 }]
+  @Consumption.filter.hidden: true
+  producthierarchy3name;
+
+  @UI.lineItem       : [{ position: 3 }]
+  @UI.identification : [{ position: 3 }]
+  @UI.selectionField : [{ position: 3 }]
+  plant;
+
+  @UI.lineItem       : [{ position: 4 }]
+  @UI.identification : [{ position: 4 }]
+  @Consumption.filter.hidden: true
+  plantname;
+
+  @UI.lineItem       : [{ position: 6 }]
+  @UI.identification : [{ position: 6 }]
+  @Consumption.filter.hidden: true
+  w1receivingplan;
+
+  @UI.lineItem       : [{ position: 7 }]
+  @UI.identification : [{ position: 7 }]
+  @Consumption.filter.hidden: true
+  w1dailyproductivity;
+
+  @UI.lineItem       : [{ position: 8 }]
+  @UI.identification : [{ position: 8 }]
+  @Consumption.filter.hidden: true
+  w1Variance;
+
+  @UI.lineItem       : [{ position: 9 }]
+  @UI.identification : [{ position: 9 }]
+  @Consumption.filter.hidden: true
+  w2receivingplan;
+
+  @UI.lineItem       : [{ position: 10 }]
+  @UI.identification : [{ position: 10 }]
+  @Consumption.filter.hidden: true
+  w2dailyproductivity;
+
+  @UI.lineItem       : [{ position: 11 }]
+  @UI.identification : [{ position: 11 }]
+  @Consumption.filter.hidden: true
+  w2Variance;
+
+  @UI.lineItem       : [{ position: 12 }]
+  @UI.identification : [{ position: 12 }]
+  @Consumption.filter.hidden: true
+  w3receivingplan;
+
+  @UI.lineItem       : [{ position: 13 }]
+  @UI.identification : [{ position: 13 }]
+  @Consumption.filter.hidden: true
+  w3dailyproductivity;
+
+  @UI.lineItem       : [{ position: 14 }]
+  @UI.identification : [{ position: 14 }]
+  @Consumption.filter.hidden: true
+  w3Variance;
+
+  @UI.lineItem       : [{ position: 15 }]
+  @UI.identification : [{ position: 15 }]
+  @Consumption.filter.hidden: true
+  w4receivingplan;
+
+  @UI.lineItem       : [{ position: 16 }]
+  @UI.identification : [{ position: 16 }]
+  @Consumption.filter.hidden: true
+  w4dailyproductivity;
+
+  @UI.lineItem       : [{ position: 17 }]
+  @UI.identification : [{ position: 17 }]
+  @Consumption.filter.hidden: true
+  w4Variance;
+
+  @UI.lineItem       : [{ position: 18 }]
+  @UI.identification : [{ position: 18 }]
+  @Consumption.filter.hidden: true
+  w5receivingplan;
+
+  @UI.lineItem       : [{ position: 19 }]
+  @UI.identification : [{ position: 19 }]
+  @Consumption.filter.hidden: true
+  w5dailyproductivity;
+
+  @UI.lineItem       : [{ position: 20 }]
+  @UI.identification : [{ position: 20 }]
+  @Consumption.filter.hidden: true
+  w5Variance;
+
+  @UI.lineItem       : [{ position: 21 }]
+  @UI.identification : [{ position: 21 }]
+  @Consumption.filter.hidden: true
+  w6receivingplan;
+
+  @UI.lineItem       : [{ position: 22 }]
+  @UI.identification : [{ position: 22 }]
+  @Consumption.filter.hidden: true
+  w6dailyproductivity;
+
+  @UI.lineItem       : [{ position: 23 }]
+  @UI.identification : [{ position: 23 }]
+  @Consumption.filter.hidden: true
+  w6Variance;
+
+  @UI.lineItem       : [{ position: 24 }]
+  @UI.identification : [{ position: 24 }]
+  @Consumption.filter.hidden: true
+  w7receivingplan;
+
+  @UI.lineItem       : [{ position: 25 }]
+  @UI.identification : [{ position: 25 }]
+  @Consumption.filter.hidden: true
+  w7dailyproductivity;
+
+  @UI.lineItem       : [{ position: 26 }]
+  @UI.identification : [{ position: 26 }]
+  @Consumption.filter.hidden: true
+  w7Variance;
+
+  @UI.lineItem       : [{ position: 27 }]
+  @UI.identification : [{ position: 27 }]
+  @Consumption.filter.hidden: true
+  w8receivingplan;
+
+  @UI.lineItem       : [{ position: 28 }]
+  @UI.identification : [{ position: 28 }]
+  @Consumption.filter.hidden: true
+  w8dailyproductivity;
+
+  @UI.lineItem       : [{ position: 29 }]
+  @UI.identification : [{ position: 29 }]
+  @Consumption.filter.hidden: true
+  w8Variance;
+
+  @UI.lineItem       : [{ position: 30 }]
+  @UI.identification : [{ position: 30 }]
+  @Consumption.filter.hidden: true
+  w9receivingplan;
+
+  @UI.lineItem       : [{ position: 31 }]
+  @UI.identification : [{ position: 31 }]
+  @Consumption.filter.hidden: true
+  w9dailyproductivity;
+
+  @UI.lineItem       : [{ position: 32 }]
+  @UI.identification : [{ position: 32 }]
+  @Consumption.filter.hidden: true
+  w9Variance;
+
+  @UI.lineItem       : [{ position: 33 }]
+  @UI.identification : [{ position: 33 }]
+  @Consumption.filter.hidden: true
+  w10receivingplan;
+
+  @UI.lineItem       : [{ position: 34 }]
+  @UI.identification : [{ position: 34 }]
+  @Consumption.filter.hidden: true
+  w10dailyproductivity;
+
+  @UI.lineItem       : [{ position: 35 }]
+  @UI.identification : [{ position: 35 }]
+  @Consumption.filter.hidden: true
+  w10Variance;
+
+  @UI.lineItem       : [{ position: 36 }]
+  @UI.identification : [{ position: 36 }]
+  @Consumption.filter.hidden: true
+  w11receivingplan;
+
+  @UI.lineItem       : [{ position: 37 }]
+  @UI.identification : [{ position: 37 }]
+  @Consumption.filter.hidden: true
+  w11dailyproductivity;
+
+  @UI.lineItem       : [{ position: 38 }]
+  @UI.identification : [{ position: 38 }]
+  @Consumption.filter.hidden: true
+  w11Variance;
+
+  @UI.lineItem       : [{ position: 39 }]
+  @UI.identification : [{ position: 39 }]
+  @Consumption.filter.hidden: true
+  w12receivingplan;
+
+  @UI.lineItem       : [{ position: 40 }]
+  @UI.identification : [{ position: 40 }]
+  @Consumption.filter.hidden: true
+  w12dailyproductivity;
+
+  @UI.lineItem       : [{ position: 41 }]
+  @UI.identification : [{ position: 41 }]
+  @Consumption.filter.hidden: true
+  w12Variance;
+
+  @UI.lineItem       : [{ position: 42 }]
+  @UI.identification : [{ position: 42 }]
+  @Consumption.filter.hidden: true
+  w13receivingplan;
+
+  @UI.lineItem       : [{ position: 43 }]
+  @UI.identification : [{ position: 43 }]
+  @Consumption.filter.hidden: true
+  w13dailyproductivity;
+
+  @UI.lineItem       : [{ position: 44 }]
+  @UI.identification : [{ position: 44 }]
+  @Consumption.filter.hidden: true
+  w13Variance;
+
+  @UI.lineItem       : [{ position: 45 }]
+  @UI.identification : [{ position: 45 }]
+  @Consumption.filter.hidden: true
+  w14receivingplan;
+
+  @UI.lineItem       : [{ position: 46 }]
+  @UI.identification : [{ position: 46 }]
+  @Consumption.filter.hidden: true
+  w14dailyproductivity;
+
+  @UI.lineItem       : [{ position: 47 }]
+  @UI.identification : [{ position: 47 }]
+  @Consumption.filter.hidden: true
+  w14Variance;
+
+  @UI.lineItem       : [{ position: 48 }]
+  @UI.identification : [{ position: 48 }]
+  @Consumption.filter.hidden: true
+  w15receivingplan;
+
+  @UI.lineItem       : [{ position: 49 }]
+  @UI.identification : [{ position: 49 }]
+  @Consumption.filter.hidden: true
+  w15dailyproductivity;
+
+  @UI.lineItem       : [{ position: 50 }]
+  @UI.identification : [{ position: 50 }]
+  @Consumption.filter.hidden: true
+  w15Variance;
+
+  @UI.lineItem       : [{ position: 51 }]
+  @UI.identification : [{ position: 51 }]
+  @Consumption.filter.hidden: true
+  w16receivingplan;
+
+  @UI.lineItem       : [{ position: 52 }]
+  @UI.identification : [{ position: 52 }]
+  @Consumption.filter.hidden: true
+  w16dailyproductivity;
+
+  @UI.lineItem       : [{ position: 53 }]
+  @UI.identification : [{ position: 53 }]
+  @Consumption.filter.hidden: true
+  w16Variance;
+
+  @UI.lineItem       : [{ position: 54 }]
+  @UI.identification : [{ position: 54 }]
+  @Consumption.filter.hidden: true
+  w17receivingplan;
+
+  @UI.lineItem       : [{ position: 55 }]
+  @UI.identification : [{ position: 55 }]
+  @Consumption.filter.hidden: true
+  w17dailyproductivity;
+
+  @UI.lineItem       : [{ position: 56 }]
+  @UI.identification : [{ position: 56 }]
+  @Consumption.filter.hidden: true
+  w17Variance;
+
+  @UI.lineItem       : [{ position: 57 }]
+  @UI.identification : [{ position: 57 }]
+  @Consumption.filter.hidden: true
+  w18receivingplan;
+
+  @UI.lineItem       : [{ position: 58 }]
+  @UI.identification : [{ position: 58 }]
+  @Consumption.filter.hidden: true
+  w18dailyproductivity;
+
+  @UI.lineItem       : [{ position: 59 }]
+  @UI.identification : [{ position: 59 }]
+  @Consumption.filter.hidden: true
+  w18Variance;
+
+  @UI.lineItem       : [{ position: 60 }]
+  @UI.identification : [{ position: 60 }]
+  @Consumption.filter.hidden: true
+  w19receivingplan;
+
+  @UI.lineItem       : [{ position: 61 }]
+  @UI.identification : [{ position: 61 }]
+  @Consumption.filter.hidden: true
+  w19dailyproductivity;
+
+  @UI.lineItem       : [{ position: 62 }]
+  @UI.identification : [{ position: 62 }]
+  @Consumption.filter.hidden: true
+  w19Variance;
+
+  @UI.lineItem       : [{ position: 63 }]
+  @UI.identification : [{ position: 63 }]
+  @Consumption.filter.hidden: true
+  w20receivingplan;
+
+  @UI.lineItem       : [{ position: 64 }]
+  @UI.identification : [{ position: 64 }]
+  @Consumption.filter.hidden: true
+  w20dailyproductivity;
+
+  @UI.lineItem       : [{ position: 65 }]
+  @UI.identification : [{ position: 65 }]
+  @Consumption.filter.hidden: true
+  w20Variance;
+
+  @UI.lineItem       : [{ position: 66 }]
+  @UI.identification : [{ position: 66 }]
+  @Consumption.filter.hidden: true
+  w21receivingplan;
+
+  @UI.lineItem       : [{ position: 67 }]
+  @UI.identification : [{ position: 67 }]
+  @Consumption.filter.hidden: true
+  w21dailyproductivity;
+
+  @UI.lineItem       : [{ position: 68 }]
+  @UI.identification : [{ position: 68 }]
+  @Consumption.filter.hidden: true
+  w21Variance;
+
+  @UI.lineItem       : [{ position: 69 }]
+  @UI.identification : [{ position: 69 }]
+  @Consumption.filter.hidden: true
+  w22receivingplan;
+
+  @UI.lineItem       : [{ position: 70 }]
+  @UI.identification : [{ position: 70 }]
+  @Consumption.filter.hidden: true
+  w22dailyproductivity;
+
+  @UI.lineItem       : [{ position: 71 }]
+  @UI.identification : [{ position: 71 }]
+  @Consumption.filter.hidden: true
+  w22Variance;
+
+  @UI.lineItem       : [{ position: 72 }]
+  @UI.identification : [{ position: 72 }]
+  @Consumption.filter.hidden: true
+  w23receivingplan;
+
+  @UI.lineItem       : [{ position: 73 }]
+  @UI.identification : [{ position: 73 }]
+  @Consumption.filter.hidden: true
+  w23dailyproductivity;
+
+  @UI.lineItem       : [{ position: 74 }]
+  @UI.identification : [{ position: 74 }]
+  @Consumption.filter.hidden: true
+  w23Variance;
+
+  @UI.lineItem       : [{ position: 75 }]
+  @UI.identification : [{ position: 75 }]
+  @Consumption.filter.hidden: true
+  w24receivingplan;
+
+  @UI.lineItem       : [{ position: 76 }]
+  @UI.identification : [{ position: 76 }]
+  @Consumption.filter.hidden: true
+  w24dailyproductivity;
+
+  @UI.lineItem       : [{ position: 77 }]
+  @UI.identification : [{ position: 77 }]
+  @Consumption.filter.hidden: true
+  w24Variance;
+
+  @UI.lineItem       : [{ position: 78 }]
+  @UI.identification : [{ position: 78 }]
+  @Consumption.filter.hidden: true
+  w25receivingplan;
+
+  @UI.lineItem       : [{ position: 79 }]
+  @UI.identification : [{ position: 79 }]
+  @Consumption.filter.hidden: true
+  w25dailyproductivity;
+
+  @UI.lineItem       : [{ position: 80 }]
+  @UI.identification : [{ position: 80 }]
+  @Consumption.filter.hidden: true
+  w25Variance;
+
+  @UI.lineItem       : [{ position: 81 }]
+  @UI.identification : [{ position: 81 }]
+  @Consumption.filter.hidden: true
+  w26receivingplan;
+
+  @UI.lineItem       : [{ position: 82 }]
+  @UI.identification : [{ position: 82 }]
+  @Consumption.filter.hidden: true
+  w26dailyproductivity;
+
+  @UI.lineItem       : [{ position: 83 }]
+  @UI.identification : [{ position: 83 }]
+  @Consumption.filter.hidden: true
+  w26Variance;
+
+  @UI.lineItem       : [{ position: 84 }]
+  @UI.identification : [{ position: 84 }]
+  @Consumption.filter.hidden: true
+  w27receivingplan;
+
+  @UI.lineItem       : [{ position: 85 }]
+  @UI.identification : [{ position: 85 }]
+  @Consumption.filter.hidden: true
+  w27dailyproductivity;
+
+  @UI.lineItem       : [{ position: 86 }]
+  @UI.identification : [{ position: 86 }]
+  @Consumption.filter.hidden: true
+  w27Variance;
+
+  @UI.lineItem       : [{ position: 87 }]
+  @UI.identification : [{ position: 87 }]
+  @Consumption.filter.hidden: true
+  w28receivingplan;
+
+  @UI.lineItem       : [{ position: 88 }]
+  @UI.identification : [{ position: 88 }]
+  @Consumption.filter.hidden: true
+  w28dailyproductivity;
+
+  @UI.lineItem       : [{ position: 89 }]
+  @UI.identification : [{ position: 89 }]
+  @Consumption.filter.hidden: true
+  w28Variance;
+
+  @UI.lineItem       : [{ position: 90 }]
+  @UI.identification : [{ position: 90 }]
+  @Consumption.filter.hidden: true
+  w29receivingplan;
+
+  @UI.lineItem       : [{ position: 91 }]
+  @UI.identification : [{ position: 91 }]
+  @Consumption.filter.hidden: true
+  w29dailyproductivity;
+
+  @UI.lineItem       : [{ position: 92 }]
+  @UI.identification : [{ position: 92 }]
+  @Consumption.filter.hidden: true
+  w29Variance;
+
+  @UI.lineItem       : [{ position: 93 }]
+  @UI.identification : [{ position: 93 }]
+  @Consumption.filter.hidden: true
+  w30receivingplan;
+
+  @UI.lineItem       : [{ position: 94 }]
+  @UI.identification : [{ position: 94 }]
+  @Consumption.filter.hidden: true
+  w30dailyproductivity;
+
+  @UI.lineItem       : [{ position: 95 }]
+  @UI.identification : [{ position: 95 }]
+  @Consumption.filter.hidden: true
+  w30Variance;
+
+  @UI.lineItem       : [{ position: 96 }]
+  @UI.identification : [{ position: 96 }]
+  @Consumption.filter.hidden: true
+  w31receivingplan;
+
+  @UI.lineItem       : [{ position: 97 }]
+  @UI.identification : [{ position: 97 }]
+  @Consumption.filter.hidden: true
+  w31dailyproductivity;
+
+  @UI.lineItem       : [{ position: 98 }]
+  @UI.identification : [{ position: 98 }]
+  @Consumption.filter.hidden: true
+  w31Variance;
+
+  @UI.lineItem       : [{ position: 99 }]
+  @UI.identification : [{ position: 99 }]
+  @Consumption.filter.hidden: true
+  w32receivingplan;
+
+  @UI.lineItem       : [{ position: 100 }]
+  @UI.identification : [{ position: 100 }]
+  @Consumption.filter.hidden: true
+  w32dailyproductivity;
+
+  @UI.lineItem       : [{ position: 101 }]
+  @UI.identification : [{ position: 101 }]
+  @Consumption.filter.hidden: true
+  w32Variance;
+
+  @UI.lineItem       : [{ position: 102 }]
+  @UI.identification : [{ position: 102 }]
+  @Consumption.filter.hidden: true
+  w33receivingplan;
+
+  @UI.lineItem       : [{ position: 103 }]
+  @UI.identification : [{ position: 103 }]
+  @Consumption.filter.hidden: true
+  w33dailyproductivity;
+
+  @UI.lineItem       : [{ position: 104 }]
+  @UI.identification : [{ position: 104 }]
+  @Consumption.filter.hidden: true
+  w33Variance;
+
+  @UI.lineItem       : [{ position: 105 }]
+  @UI.identification : [{ position: 105 }]
+  @Consumption.filter.hidden: true
+  w34receivingplan;
+
+  @UI.lineItem       : [{ position: 106 }]
+  @UI.identification : [{ position: 106 }]
+  @Consumption.filter.hidden: true
+  w34dailyproductivity;
+
+  @UI.lineItem       : [{ position: 107 }]
+  @UI.identification : [{ position: 107 }]
+  @Consumption.filter.hidden: true
+  w34Variance;
+
+  @UI.lineItem       : [{ position: 108 }]
+  @UI.identification : [{ position: 108 }]
+  @Consumption.filter.hidden: true
+  w35receivingplan;
+
+  @UI.lineItem       : [{ position: 109 }]
+  @UI.identification : [{ position: 109 }]
+  @Consumption.filter.hidden: true
+  w35dailyproductivity;
+
+  @UI.lineItem       : [{ position: 110 }]
+  @UI.identification : [{ position: 110 }]
+  @Consumption.filter.hidden: true
+  w35Variance;
+
+  @UI.lineItem       : [{ position: 111 }]
+  @UI.identification : [{ position: 111 }]
+  @Consumption.filter.hidden: true
+  w36receivingplan;
+
+  @UI.lineItem       : [{ position: 112 }]
+  @UI.identification : [{ position: 112 }]
+  @Consumption.filter.hidden: true
+  w36dailyproductivity;
+
+  @UI.lineItem       : [{ position: 113 }]
+  @UI.identification : [{ position: 113 }]
+  @Consumption.filter.hidden: true
+  w36Variance;
+
+  @UI.lineItem       : [{ position: 114 }]
+  @UI.identification : [{ position: 114 }]
+  @Consumption.filter.hidden: true
+  w37receivingplan;
+
+  @UI.lineItem       : [{ position: 115 }]
+  @UI.identification : [{ position: 115 }]
+  @Consumption.filter.hidden: true
+  w37dailyproductivity;
+
+  @UI.lineItem       : [{ position: 116 }]
+  @UI.identification : [{ position: 116 }]
+  @Consumption.filter.hidden: true
+  w37Variance;
+
+  @UI.lineItem       : [{ position: 117 }]
+  @UI.identification : [{ position: 117 }]
+  @Consumption.filter.hidden: true
+  w38receivingplan;
+
+  @UI.lineItem       : [{ position: 118 }]
+  @UI.identification : [{ position: 118 }]
+  @Consumption.filter.hidden: true
+  w38dailyproductivity;
+
+  @UI.lineItem       : [{ position: 119 }]
+  @UI.identification : [{ position: 119 }]
+  @Consumption.filter.hidden: true
+  w38Variance;
+
+  @UI.lineItem       : [{ position: 120 }]
+  @UI.identification : [{ position: 120 }]
+  @Consumption.filter.hidden: true
+  w39receivingplan;
+
+  @UI.lineItem       : [{ position: 121 }]
+  @UI.identification : [{ position: 121 }]
+  @Consumption.filter.hidden: true
+  w39dailyproductivity;
+
+  @UI.lineItem       : [{ position: 122 }]
+  @UI.identification : [{ position: 122 }]
+  @Consumption.filter.hidden: true
+  w39Variance;
+
+  @UI.lineItem       : [{ position: 123 }]
+  @UI.identification : [{ position: 123 }]
+  @Consumption.filter.hidden: true
+  w40receivingplan;
+
+  @UI.lineItem       : [{ position: 124 }]
+  @UI.identification : [{ position: 124 }]
+  @Consumption.filter.hidden: true
+  w40dailyproductivity;
+
+  @UI.lineItem       : [{ position: 125 }]
+  @UI.identification : [{ position: 125 }]
+  @Consumption.filter.hidden: true
+  w40Variance;
+
+  @UI.lineItem       : [{ position: 126 }]
+  @UI.identification : [{ position: 126 }]
+  @Consumption.filter.hidden: true
+  w41receivingplan;
+
+  @UI.lineItem       : [{ position: 127 }]
+  @UI.identification : [{ position: 127 }]
+  @Consumption.filter.hidden: true
+  w41dailyproductivity;
+
+  @UI.lineItem       : [{ position: 128 }]
+  @UI.identification : [{ position: 128 }]
+  @Consumption.filter.hidden: true
+  w41Variance;
+
+  @UI.lineItem       : [{ position: 129 }]
+  @UI.identification : [{ position: 129 }]
+  @Consumption.filter.hidden: true
+  w42receivingplan;
+
+  @UI.lineItem       : [{ position: 130 }]
+  @UI.identification : [{ position: 130 }]
+  @Consumption.filter.hidden: true
+  w42dailyproductivity;
+
+  @UI.lineItem       : [{ position: 131 }]
+  @UI.identification : [{ position: 131 }]
+  @Consumption.filter.hidden: true
+  w42Variance;
+
+  @UI.lineItem       : [{ position: 132 }]
+  @UI.identification : [{ position: 132 }]
+  @Consumption.filter.hidden: true
+  w43receivingplan;
+
+  @UI.lineItem       : [{ position: 133 }]
+  @UI.identification : [{ position: 133 }]
+  @Consumption.filter.hidden: true
+  w43dailyproductivity;
+
+  @UI.lineItem       : [{ position: 134 }]
+  @UI.identification : [{ position: 134 }]
+  @Consumption.filter.hidden: true
+  w43Variance;
+
+  @UI.lineItem       : [{ position: 135 }]
+  @UI.identification : [{ position: 135 }]
+  @Consumption.filter.hidden: true
+  w44receivingplan;
+
+  @UI.lineItem       : [{ position: 136 }]
+  @UI.identification : [{ position: 136 }]
+  @Consumption.filter.hidden: true
+  w44dailyproductivity;
+
+  @UI.lineItem       : [{ position: 137 }]
+  @UI.identification : [{ position: 137 }]
+  @Consumption.filter.hidden: true
+  w44Variance;
+
+  @UI.lineItem       : [{ position: 138 }]
+  @UI.identification : [{ position: 138 }]
+  @Consumption.filter.hidden: true
+  w45receivingplan;
+
+  @UI.lineItem       : [{ position: 139 }]
+  @UI.identification : [{ position: 139 }]
+  @Consumption.filter.hidden: true
+  w45dailyproductivity;
+
+  @UI.lineItem       : [{ position: 140 }]
+  @UI.identification : [{ position: 140 }]
+  @Consumption.filter.hidden: true
+  w45Variance;
+
+  @UI.lineItem       : [{ position: 141 }]
+  @UI.identification : [{ position: 141 }]
+  @Consumption.filter.hidden: true
+  w46receivingplan;
+
+  @UI.lineItem       : [{ position: 142 }]
+  @UI.identification : [{ position: 142 }]
+  @Consumption.filter.hidden: true
+  w46dailyproductivity;
+
+  @UI.lineItem       : [{ position: 143 }]
+  @UI.identification : [{ position: 143 }]
+  @Consumption.filter.hidden: true
+  w46Variance;
+
+  @UI.lineItem       : [{ position: 144 }]
+  @UI.identification : [{ position: 144 }]
+  @Consumption.filter.hidden: true
+  w47receivingplan;
+
+  @UI.lineItem       : [{ position: 145 }]
+  @UI.identification : [{ position: 145 }]
+  @Consumption.filter.hidden: true
+  w47dailyproductivity;
+
+  @UI.lineItem       : [{ position: 146 }]
+  @UI.identification : [{ position: 146 }]
+  @Consumption.filter.hidden: true
+  w47Variance;
+
+  @UI.lineItem       : [{ position: 147 }]
+  @UI.identification : [{ position: 147 }]
+  @Consumption.filter.hidden: true
+  w48receivingplan;
+
+  @UI.lineItem       : [{ position: 148 }]
+  @UI.identification : [{ position: 148 }]
+  @Consumption.filter.hidden: true
+  w48dailyproductivity;
+
+  @UI.lineItem       : [{ position: 149 }]
+  @UI.identification : [{ position: 149 }]
+  @Consumption.filter.hidden: true
+  w48Variance;
+
+  @UI.lineItem       : [{ position: 150 }]
+  @UI.identification : [{ position: 150 }]
+  @Consumption.filter.hidden: true
+  w49receivingplan;
+
+  @UI.lineItem       : [{ position: 151 }]
+  @UI.identification : [{ position: 151 }]
+  @Consumption.filter.hidden: true
+  w49dailyproductivity;
+
+  @UI.lineItem       : [{ position: 152 }]
+  @UI.identification : [{ position: 152 }]
+  @Consumption.filter.hidden: true
+  w49Variance;
+
+  @UI.lineItem       : [{ position: 153 }]
+  @UI.identification : [{ position: 153 }]
+  @Consumption.filter.hidden: true
+  w50receivingplan;
+
+  @UI.lineItem       : [{ position: 154 }]
+  @UI.identification : [{ position: 154 }]
+  @Consumption.filter.hidden: true
+  w50dailyproductivity;
+
+  @UI.lineItem       : [{ position: 155 }]
+  @UI.identification : [{ position: 155 }]
+  @Consumption.filter.hidden: true
+  w50Variance;
+
+  @UI.lineItem       : [{ position: 156 }]
+  @UI.identification : [{ position: 156 }]
+  @Consumption.filter.hidden: true
+  w51receivingplan;
+
+  @UI.lineItem       : [{ position: 157 }]
+  @UI.identification : [{ position: 157 }]
+  @Consumption.filter.hidden: true
+  w51dailyproductivity;
+
+  @UI.lineItem       : [{ position: 158 }]
+  @UI.identification : [{ position: 158 }]
+  @Consumption.filter.hidden: true
+  w51Variance;
+
+  @UI.lineItem       : [{ position: 159 }]
+  @UI.identification : [{ position: 159 }]
+  @Consumption.filter.hidden: true
+  w52receivingplan;
+
+  @UI.lineItem       : [{ position: 160 }]
+  @UI.identification : [{ position: 160 }]
+  @Consumption.filter.hidden: true
+  w52dailyproductivity;
+
+  @UI.lineItem       : [{ position: 161 }]
+  @UI.identification : [{ position: 161 }]
+  @Consumption.filter.hidden: true
+  w52Variance;
+
+  @UI.lineItem       : [{ position: 162 }]
+  @UI.identification : [{ position: 162 }]
+  @Consumption.filter.hidden: true
+  w53receivingplan;
+
+  @UI.lineItem       : [{ position: 163 }]
+  @UI.identification : [{ position: 163 }]
+  @Consumption.filter.hidden: true
+  w53dailyproductivity;
+
+  @UI.lineItem       : [{ position: 164 }]
+  @UI.identification : [{ position: 164 }]
+  @Consumption.filter.hidden: true
+  w53Variance;
+
+  @UI.lineItem       : [{ position: 165 }]
+  @UI.identification : [{ position: 165 }]
+  @Consumption.filter.hidden: true
+  w54receivingplan;
+
+  @UI.lineItem       : [{ position: 166 }]
+  @UI.identification : [{ position: 166 }]
+  @Consumption.filter.hidden: true
+  w54dailyproductivity;
+
+  @UI.lineItem       : [{ position: 167 }]
+  @UI.identification : [{ position: 167 }]
+  @Consumption.filter.hidden: true
+  w54Variance;
+
+  @UI.lineItem       : [{ position: 168 }]
+  @UI.identification : [{ position: 168 }]
+  createdby;
+  @UI.lineItem       : [{ position: 169 }]
+  @UI.identification : [{ position: 169 }]
+  createdat;
+  @UI.lineItem       : [{ position: 170 }]
+  @UI.identification : [{ position: 170 }]
+  locallastchangedby;
+  @UI.lineItem       : [{ position: 171 }]
+  @UI.identification : [{ position: 171 }]
+  locallastchangedat;
+  @UI.lineItem       : [{ position: 172 }]
+  @UI.identification : [{ position: 172 }]
+  //  @UI.hidden: true
+  lastchangedat;
+  /* Associations */
+  //   _Header;
+
+}

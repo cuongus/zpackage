@@ -1,0 +1,50 @@
+managed implementation in class ZBP_R_TBTYLE_CONFIG unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBTYLE_CONFIG alias ZrTbtyleConfig
+persistent table ZTB_TYLE_CONFIG
+extensible
+draft table ZTBTYLE_CONFIG_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   UUID,
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( numbering : managed )
+   UUID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTB_TYLE_CONFIG corresponding extensible
+  {
+    UUID = uuid;
+    Type = type;
+    Zdesc = zdesc;
+    material = material;
+    productgroup = productgroup;
+    Tyle = tyle;
+    Validfrom = validfrom;
+    Validto = validto;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+}

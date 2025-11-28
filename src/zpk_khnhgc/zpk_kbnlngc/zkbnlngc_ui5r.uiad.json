@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Khai báo năng lực nhà gia công"
+  },
+  "ui5AppDetails": {
+    "appId": "zkbnlngc"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_876B3DB1B1A4C2C205307B7C08DDF493FB6050F9_TM",
+    "semanticObject": "zkbnlngc",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_876B3DB1B1A4C2C205307B7C08DDF493FB6050F9_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Khai báo năng lực nhà gia công"
+      }
+    }
+  ]
+}

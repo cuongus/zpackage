@@ -1,0 +1,4 @@
+@EndUserText.label: 'Accounts Receivable Detail RP Service'
+define service ZSD_ACCREC_Detail {
+  expose ZC_ACCREC_DETAIL;
+}

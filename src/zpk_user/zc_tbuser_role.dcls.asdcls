@@ -1,0 +1,5 @@
+@EndUserText.label: 'ZC_TBUSER_ROLE'
+@MappingRole: true
+define role ZC_TBUSER_ROLE {
+  grant select on ZC_TBUSER_ROLE;
+}

@@ -1,0 +1,907 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Ccode'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Ccode'
+annotate view ZC_UIIN_FAGLFCV with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Ccode;
+  
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  DocNumber;
+  
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  FiscalYear;
+  
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  DocLine;
+  
+//  @EndUserText.label: 'Ledger'
+//  @UI.identification: [ {
+//    position: 50 , 
+//    label: 'Ledger'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 50 , 
+//    label: 'Ledger'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 50 
+//  } ]
+//  Ledger;
+  
+//  @EndUserText.label: 'LedgerGroup'
+//  @UI.identification: [ {
+//    position: 60 , 
+//    label: 'LedgerGroup'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 60 , 
+//    label: 'LedgerGroup'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 60 
+//  } ]
+//  LedgerGroup;
+  
+//  @EndUserText.label: 'TargetCcode'
+//  @UI.identification: [ {
+//    position: 70 , 
+//    label: 'TargetCcode'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 70 , 
+//    label: 'TargetCcode'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 70 
+//  } ]
+//  TargetCcode;
+  
+  @EndUserText.label: 'ValuationGroup'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'ValuationGroup'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'ValuationGroup'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  ValuationGroup;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  AccountType;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  GlAccount;
+  
+  @EndUserText.label: 'GroupAccount'
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'GroupAccount'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'GroupAccount'
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  GroupAccount;
+  
+  @EndUserText.label: 'Mã BP'
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  Account;
+  
+//  @UI.identification: [ {
+//    position: 130 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 130 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 130 
+//  } ]
+//  Nr;
+  
+//  @UI.identification: [ {
+//    position: 140 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 140 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 140 
+//  } ]
+//  Ja;
+  
+//  @UI.identification: [ {
+//    position: 150 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 150 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 150 
+//  } ]
+//  Buz;
+  
+  @UI.identification: [ {
+    position: 160 
+  } ]
+  @UI.lineItem: [ {
+    position: 160 
+  } ]
+  @UI.selectionField: [ {
+    position: 160 
+  } ]
+  DebcredInd;
+  
+//  @EndUserText.label: 'SourceAmount'
+//  @UI.identification: [ {
+//    position: 170 , 
+//    label: 'SourceAmount'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 170 , 
+//    label: 'SourceAmount'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 170 
+//  } ]
+//  SourceAmount;
+  
+//  @EndUserText.label: 'TargetAmount'
+//  @UI.identification: [ {
+//    position: 180 , 
+//    label: 'TargetAmount'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 180 , 
+//    label: 'TargetAmount'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 180 
+//  } ]
+//  TargetAmount;
+  
+  @UI.identification: [ {
+    position: 190 
+  } ]
+  @UI.lineItem: [ {
+    position: 190 
+  } ]
+  @UI.selectionField: [ {
+    position: 190 
+  } ]
+  TargetCurrency;
+  
+  @EndUserText.label: 'LcAmountVal'
+  @UI.identification: [ {
+    position: 200 , 
+    label: 'LcAmountVal'
+  } ]
+  @UI.lineItem: [ {
+    position: 200 , 
+    label: 'LcAmountVal'
+  } ]
+  @UI.selectionField: [ {
+    position: 200 
+  } ]
+  LcAmountVal;
+  
+//  @EndUserText.label: 'HedgedAmount'
+//  @UI.identification: [ {
+//    position: 210 , 
+//    label: 'HedgedAmount'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 210 , 
+//    label: 'HedgedAmount'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 210 
+//  } ]
+//  HedgedAmount;
+  
+//  @EndUserText.label: 'HedgedRate'
+//  @UI.identification: [ {
+//    position: 220 , 
+//    label: 'HedgedRate'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 220 , 
+//    label: 'HedgedRate'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 220 
+//  } ]
+//  HedgedRate;
+  
+  @EndUserText.label: 'ValuationRate'
+  @UI.identification: [ {
+    position: 230 , 
+    label: 'ValuationRate'
+  } ]
+  @UI.lineItem: [ {
+    position: 230 , 
+    label: 'ValuationRate'
+  } ]
+  @UI.selectionField: [ {
+    position: 230 
+  } ]
+  ValuationRate;
+  
+//  @EndUserText.label: 'ValuXuseMdFxr'
+//  @UI.identification: [ {
+//    position: 240 , 
+//    label: 'ValuXuseMdFxr'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 240 , 
+//    label: 'ValuXuseMdFxr'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 240 
+//  } ]
+//  ValuXuseMdFxr;
+  
+//  @EndUserText.label: 'SpecialGlInd'
+//  @UI.identification: [ {
+//    position: 250 , 
+//    label: 'SpecialGlInd'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 250 , 
+//    label: 'SpecialGlInd'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 250 
+//  } ]
+//  SpecialGlInd;
+  
+//  @EndUserText.label: 'OrigRate'
+//  @UI.identification: [ {
+//    position: 260 , 
+//    label: 'OrigRate'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 260 , 
+//    label: 'OrigRate'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 260 
+//  } ]
+//  OrigRate;
+//  
+  @UI.identification: [ {
+    position: 270 
+  } ]
+  @UI.lineItem: [ {
+    position: 270 
+  } ]
+  @UI.selectionField: [ {
+    position: 270 
+  } ]
+  DocType;
+  
+  @UI.identification: [ {
+    position: 280 
+  } ]
+  @UI.lineItem: [ {
+    position: 280 
+  } ]
+  @UI.selectionField: [ {
+    position: 280 
+  } ]
+  PostingDate;
+  
+  @UI.identification: [ {
+    position: 290 
+  } ]
+  @UI.lineItem: [ {
+    position: 290 
+  } ]
+  @UI.selectionField: [ {
+    position: 290 
+  } ]
+  DocumentDate;
+  
+  @UI.identification: [ {
+    position: 300 
+  } ]
+  @UI.lineItem: [ {
+    position: 300 
+  } ]
+  @UI.selectionField: [ {
+    position: 300 
+  } ]
+  ClearingDocument;
+  
+  @EndUserText.label: 'Customer'
+  @UI.identification: [ {
+    position: 310 , 
+    label: 'Customer'
+  } ]
+  @UI.lineItem: [ {
+    position: 310 , 
+    label: 'Customer'
+  } ]
+  @UI.selectionField: [ {
+    position: 310 
+  } ]
+  Customer;
+  
+  @EndUserText.label: 'Supplier'
+  @UI.identification: [ {
+    position: 320 , 
+    label: 'Supplier'
+  } ]
+  @UI.lineItem: [ {
+    position: 320 , 
+    label: 'Supplier'
+  } ]
+  @UI.selectionField: [ {
+    position: 320 
+  } ]
+  Supplier;
+  
+  @EndUserText.label: 'PostingAmount'
+  @UI.identification: [ {
+    position: 330 , 
+    label: 'PostingAmount'
+  } ]
+  @UI.lineItem: [ {
+    position: 330 , 
+    label: 'PostingAmount'
+  } ]
+  @UI.selectionField: [ {
+    position: 330 
+  } ]
+  PostingAmount;
+  
+//  @EndUserText.label: 'RealDiff'
+//  @UI.identification: [ {
+//    position: 340 , 
+//    label: 'RealDiff'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 340 , 
+//    label: 'RealDiff'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 340 
+//  } ]
+//  RealDiff;
+  
+//  @EndUserText.label: 'Vbund'
+//  @UI.identification: [ {
+//    position: 350 , 
+//    label: 'Vbund'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 350 , 
+//    label: 'Vbund'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 350 
+//  } ]
+//  Vbund;
+  
+//  @UI.identification: [ {
+//    position: 360 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 360 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 360 
+//  } ]
+//  AccountText;
+  
+//  @EndUserText.label: 'ValuDiffRem2'
+//  @UI.identification: [ {
+//    position: 370 , 
+//    label: 'ValuDiffRem2'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 370 , 
+//    label: 'ValuDiffRem2'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 370 
+//  } ]
+//  ValuDiffRem2;
+//  
+//  @EndUserText.label: 'ValuDiffRem3'
+//  @UI.identification: [ {
+//    position: 380 , 
+//    label: 'ValuDiffRem3'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 380 , 
+//    label: 'ValuDiffRem3'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 380 
+//  } ]
+//  ValuDiffRem3;
+//  
+//  @EndUserText.label: 'ValuDiffRem4'
+//  @UI.identification: [ {
+//    position: 390 , 
+//    label: 'ValuDiffRem4'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 390 , 
+//    label: 'ValuDiffRem4'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 390 
+//  } ]
+//  ValuDiffRem4;
+//  
+//  @EndUserText.label: 'ValuDiffRem5'
+//  @UI.identification: [ {
+//    position: 400 , 
+//    label: 'ValuDiffRem5'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 400 , 
+//    label: 'ValuDiffRem5'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 400 
+//  } ]
+//  ValuDiffRem5;
+//  
+//  @EndUserText.label: 'ValuDiffRem6'
+//  @UI.identification: [ {
+//    position: 410 , 
+//    label: 'ValuDiffRem6'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 410 , 
+//    label: 'ValuDiffRem6'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 410 
+//  } ]
+//  ValuDiffRem6;
+//  
+//  @EndUserText.label: 'ValuDiffRem7'
+//  @UI.identification: [ {
+//    position: 420 , 
+//    label: 'ValuDiffRem7'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 420 , 
+//    label: 'ValuDiffRem7'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 420 
+//  } ]
+//  ValuDiffRem7;
+//  
+//  @EndUserText.label: 'ValuDiffRem8'
+//  @UI.identification: [ {
+//    position: 430 , 
+//    label: 'ValuDiffRem8'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 430 , 
+//    label: 'ValuDiffRem8'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 430 
+//  } ]
+//  ValuDiffRem8;
+//  
+//  @EndUserText.label: 'ValuDiffRem9'
+//  @UI.identification: [ {
+//    position: 440 , 
+//    label: 'ValuDiffRem9'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 440 , 
+//    label: 'ValuDiffRem9'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 440 
+//  } ]
+//  ValuDiffRem9;
+//  
+//  @EndUserText.label: 'ValuDiffRem10'
+//  @UI.identification: [ {
+//    position: 450 , 
+//    label: 'ValuDiffRem10'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 450 , 
+//    label: 'ValuDiffRem10'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 450 
+//  } ]
+//  ValuDiffRem10;
+//  
+//  @EndUserText.label: 'Xloss'
+//  @UI.identification: [ {
+//    position: 460 , 
+//    label: 'Xloss'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 460 , 
+//    label: 'Xloss'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 460 
+//  } ]
+//  Xloss;
+//  
+//  @UI.identification: [ {
+//    position: 470 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 470 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 470 
+//  } ]
+//  CustvendName;
+//  
+//  @EndUserText.label: 'Hrate'
+//  @UI.identification: [ {
+//    position: 480 , 
+//    label: 'Hrate'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 480 , 
+//    label: 'Hrate'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 480 
+//  } ]
+//  Hrate;
+//  
+//  @EndUserText.label: 'Htext'
+//  @UI.identification: [ {
+//    position: 490 , 
+//    label: 'Htext'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 490 , 
+//    label: 'Htext'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 490 
+//  } ]
+//  Htext;
+//  
+//  @EndUserText.label: 'Maturity'
+//  @UI.identification: [ {
+//    position: 500 , 
+//    label: 'Maturity'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 500 , 
+//    label: 'Maturity'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 500 
+//  } ]
+//  Maturity;
+//  
+//  @EndUserText.label: 'MaturityUnit'
+//  @UI.identification: [ {
+//    position: 510 , 
+//    label: 'MaturityUnit'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 510 , 
+//    label: 'MaturityUnit'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 510 
+//  } ]
+//  MaturityUnit;
+//  
+//  @EndUserText.label: 'IntValurateC'
+//  @UI.identification: [ {
+//    position: 520 , 
+//    label: 'IntValurateC'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 520 , 
+//    label: 'IntValurateC'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 520 
+//  } ]
+//  IntValurateC;
+//  
+//  @EndUserText.label: 'Accas'
+//  @UI.identification: [ {
+//    position: 530 , 
+//    label: 'Accas'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 530 , 
+//    label: 'Accas'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 530 
+//  } ]
+//  Accas;
+//  
+//  @UI.identification: [ {
+//    position: 540 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 540 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 540 
+//  } ]
+//  Pprctr;
+//  
+//  @UI.identification: [ {
+//    position: 550 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 550 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 550 
+//  } ]
+//  Prctr;
+//  
+//  @UI.identification: [ {
+//    position: 560 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 560 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 560 
+//  } ]
+//  Psegment;
+//  
+//  @UI.identification: [ {
+//    position: 570 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 570 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 570 
+//  } ]
+//  Rbusa;
+//  
+//  @UI.identification: [ {
+//    position: 580 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 580 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 580 
+//  } ]
+//  Rfarea;
+//  
+//  @EndUserText.label: 'Sbusa'
+//  @UI.identification: [ {
+//    position: 590 , 
+//    label: 'Sbusa'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 590 , 
+//    label: 'Sbusa'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 590 
+//  } ]
+//  Sbusa;
+//  
+//  @UI.identification: [ {
+//    position: 600 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 600 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 600 
+//  } ]
+//  Segment;
+//  
+//  @EndUserText.label: 'Valobjtype'
+//  @UI.identification: [ {
+//    position: 610 , 
+//    label: 'Valobjtype'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 610 , 
+//    label: 'Valobjtype'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 610 
+//  } ]
+//  Valobjtype;
+//  
+//  @EndUserText.label: 'ValobjID'
+//  @UI.identification: [ {
+//    position: 620 , 
+//    label: 'ValobjID'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 620 , 
+//    label: 'ValobjID'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 620 
+//  } ]
+//  ValobjID;
+//  
+  @EndUserText.label: 'Key date'
+  @UI.identification: [ {
+    position: 630 , 
+    label: 'Key date'
+  } ]
+  @UI.lineItem: [ {
+    position: 630 , 
+    label: 'Key date'
+  } ]
+  @UI.selectionField: [ {
+    position: 630 
+  } ]
+  Keydate;
+  
+  @UI.identification: [ {
+    position: 640 
+  } ]
+  @UI.lineItem: [ {
+    position: 640 
+  } ]
+  @UI.selectionField: [ {
+    position: 640 
+  } ]
+  
+  @EndUserText.label: 'Doc Number CL'
+  DocNumberCl;
+  
+  @UI.identification: [ {
+    position: 650 
+  } ]
+  @UI.lineItem: [ {
+    position: 650 
+  } ]
+  @UI.selectionField: [ {
+    position: 650 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 660 
+  } ]
+  @UI.lineItem: [ {
+    position: 660 
+  } ]
+  @UI.selectionField: [ {
+    position: 660 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 670 
+  } ]
+  @UI.lineItem: [ {
+    position: 670 
+  } ]
+  @UI.selectionField: [ {
+    position: 670 
+  } ]
+  LocalLastChangedBy;
+  
+  @UI.identification: [ {
+    position: 680 
+  } ]
+  @UI.lineItem: [ {
+    position: 680 
+  } ]
+  @UI.selectionField: [ {
+    position: 680 
+  } ]
+  LocalLastChangedAt;
+  
+  @UI.identification: [ {
+    position: 690 
+  } ]
+  @UI.lineItem: [ {
+    position: 690 
+  } ]
+  @UI.selectionField: [ {
+    position: 690 
+  } ]
+  LastChangedAt;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 700 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 700 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 700 
+  } ]
+  _BaseEntity;
+}

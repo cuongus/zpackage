@@ -1,0 +1,20 @@
+projection implementation in class ZBP_C_TBNXT_SOT unique;
+strict ( 2 );
+use draft;
+extensible;
+use side effects;
+define behavior for ZC_TBNXT_SOT alias ZCTBNXTSOT
+extensible
+use etag
+{
+//  use create;
+  use update;
+  use delete;
+
+  use action CreateXNT;
+  use action Activate;
+  use action Discard;
+  use action Edit;
+  use action Resume;
+  use action Prepare;
+}

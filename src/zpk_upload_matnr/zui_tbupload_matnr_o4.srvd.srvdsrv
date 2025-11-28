@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBUPLOAD_MATNR'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBUPLOAD_MATNR'
+  }
+}
+define service ZUI_TBUPLOAD_MATNR_O4 {
+  expose ZC_TBMATNR_HEADER;
+  expose ZC_TBUPLOAD_MATNR;
+}

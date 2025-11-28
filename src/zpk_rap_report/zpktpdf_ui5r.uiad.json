@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Service PKT PDF"
+  },
+  "ui5AppDetails": {
+    "appId": "zpktpdf"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_1976365EC6EA3113A4CBD93AEB83442ABFF6A948_TM",
+    "semanticObject": "zpktpdf",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_1976365EC6EA3113A4CBD93AEB83442ABFF6A948_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Service PKT PDF"
+      }
+    }
+  ]
+}

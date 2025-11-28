@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Period"
+  },
+  "ui5AppDetails": {
+    "appId": "zperiod"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_FD17D32E712B192AD34F1ECA434261E24A532831_TM",
+    "semanticObject": "zperiod",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_FD17D32E712B192AD34F1ECA434261E24A532831_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Period"
+      }
+    }
+  ]
+}

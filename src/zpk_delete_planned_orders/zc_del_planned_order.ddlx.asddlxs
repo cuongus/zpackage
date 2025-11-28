@@ -1,0 +1,46 @@
+@Metadata.layer: #CORE
+annotate entity ZC_DEL_PLANNED_ORDER with
+{
+  @UI.lineItem: [
+                    // ==== BUTTON ACTION ====
+                    { position: 10, type: #FOR_ACTION, dataAction: 'delete', label: 'Delete ' }
+                ]
+  btnDelete;
+
+  @EndUserText.label: 'Order'
+  @UI.lineItem: [{
+  position: 20
+   }]
+  @UI.selectionField: [{
+  position:10 }]
+  planned_Order;
+
+  @EndUserText.label: 'MRP Controller'
+  @UI.lineItem: [{
+  position: 30
+   }]
+  @Consumption.filter: { mandatory: false, multipleSelections: true }
+  @UI.selectionField: [{
+  position: 20
+   }]
+  mrp_controller;
+
+  @EndUserText.label: 'Production Plant'
+  @UI.lineItem: [{
+  position: 30
+   }]
+  @Consumption.filter: { mandatory: false, multipleSelections: true }
+  @UI.selectionField: [{
+  position: 30
+   }]
+  production_plant;
+
+  @EndUserText.label: 'Sale Order'
+  @UI.lineItem: [{
+  position: 40
+   }]
+  @UI.selectionField: [{
+  position: 40
+   }]
+  sale_order;
+}

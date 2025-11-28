@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Thông tin xác thực API"
+  },
+  "ui5AppDetails": {
+    "appId": "zapiauht"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A820D6DAD41C8A146239CD68B842BF3979B13A92_TM",
+    "semanticObject": "zapi_auth",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A820D6DAD41C8A146239CD68B842BF3979B13A92_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Thông tin xác thực API"
+      }
+    }
+  ]
+}

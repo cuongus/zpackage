@@ -1,0 +1,4 @@
+@EndUserText.label: 'Serv Definition BCDKT'
+define service ZSD_BCDKT {
+  expose ZI_BCDKT;
+}

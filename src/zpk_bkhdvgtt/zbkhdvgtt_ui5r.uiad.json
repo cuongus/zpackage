@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Bảng kê hóa đầu vào ghép thanh toán"
+  },
+  "ui5AppDetails": {
+    "appId": "bangkehdvgtt.bangkehdvgtt"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_7419B8850AA8C43C49A303C73C117A9DB0CE444F_TM",
+    "semanticObject": "ZBKHDVGTT",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_7419B8850AA8C43C49A303C73C117A9DB0CE444F_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Bảng kê hóa đầu vào ghép thanh toán"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+projection implementation in class zbp_c_kb_somay unique;
+strict ( 2 );
+
+define behavior for ZC_KB_SOMAY //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+}

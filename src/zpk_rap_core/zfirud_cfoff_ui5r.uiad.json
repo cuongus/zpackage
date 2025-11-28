@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Display Determine Offsetting Accounts"
+  },
+  "ui5AppDetails": {
+    "appId": "zfirudcfoff"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_9AA4CDE7EDCEF8925154BF9686D338AEE8592B64_TM",
+    "semanticObject": "zfirud_cfoff",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_9AA4CDE7EDCEF8925154BF9686D338AEE8592B64_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Display Determine Offsetting Accounts"
+      }
+    }
+  ]
+}

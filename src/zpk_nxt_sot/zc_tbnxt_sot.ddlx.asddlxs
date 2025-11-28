@@ -1,0 +1,123 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Material'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Material'
+annotate view ZC_TBNXT_SOT
+    with 
+{
+   @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  
+ @EndUserText.label: 'Kỳ'
+  @UI: {
+ selectionField: [{ position: 10 }]
+ }
+ 
+  @UI.lineItem: [ {
+    position: 10 
+  }, { type: #FOR_ACTION, dataAction: 'CreateXNT', label: 'Tính tồn kho' } ]
+  
+  @Consumption.filter.selectionType: #SINGLE
+  Zper;
+
+    @UI: {
+  selectionField: [{ position: 20 }]
+  }
+  @UI.lineItem: [{ position: 20 , label: 'Material'}]
+  Material;
+  
+  @UI: {
+  selectionField: [{ position: 30 }]
+  }
+  @UI.lineItem: [{ position: 30 , label: 'Plant'}]
+  Plant;
+
+  @UI: {
+  selectionField: [{ position: 40 }]
+  }
+  @UI.lineItem: [{ position: 40 , label: 'Storage Location'}]
+  Sloc;
+  
+    @UI: {
+  selectionField: [{ position: 50 }]
+  }
+  @UI.lineItem: [{ position: 50 }]
+  Vendor;
+  
+ 
+  @UI: {
+  selectionField: [{ position: 60 }]
+  }
+  @UI.lineItem: [{ position: 60 , label: 'Tồn'}]
+  StockQty;
+
+    @UI: {
+  selectionField: [{ position: 70 }]
+  }
+  @UI.lineItem: [{ position: 70 , label: 'UoM'}]
+  Materialbaseunit;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 100
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  LastChangedAt;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 120 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  _BaseEntity;
+}

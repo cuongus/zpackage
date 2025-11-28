@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition KB Số ngày làm việc'
+define service ZUI_KBSN_LAMVIEC {
+  expose ZC_KBSN_LAMVIEC as KBSNLamViec;
+}

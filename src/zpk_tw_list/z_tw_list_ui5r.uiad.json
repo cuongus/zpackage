@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Khai báo danh sách tổ đội, nhân công"
+  },
+  "ui5AppDetails": {
+    "appId": "ztwlist"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A900EB563884177818219BA8E1B9DF4BFA9FA209_TM",
+    "semanticObject": "z_tw_list",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A900EB563884177818219BA8E1B9DF4BFA9FA209_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Khai báo danh sách tổ đội, nhân công"
+      }
+    }
+  ]
+}

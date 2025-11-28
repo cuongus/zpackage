@@ -1,0 +1,4 @@
+@EndUserText.label: 'ủy nhiệm chi'
+define service ZSD_UNC {
+  expose ZC_UNC;
+}

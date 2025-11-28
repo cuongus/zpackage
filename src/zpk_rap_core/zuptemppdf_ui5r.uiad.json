@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Upload Template PDF"
+  },
+  "ui5AppDetails": {
+    "appId": "zuptemppdf"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D21AE7A05110FF1551F3A4FFF15008C129769057_TM",
+    "semanticObject": "zuptemppdf",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D21AE7A05110FF1551F3A4FFF15008C129769057_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Upload Template PDF"
+      }
+    }
+  ]
+}

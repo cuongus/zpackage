@@ -1,0 +1,65 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'Lưu chuyển tiền tệ gián tiếp',
+                  typeNamePlural: 'Lưu chuyển tiền tệ gián tiếp',
+                  title: { type: #STANDARD }
+    }
+}
+annotate entity ZDD_LCTTGT with
+{
+
+  @UI.selectionField: [{ position: 10 }]
+  @Consumption.filter: { mandatory: true, multipleSelections: false, selectionType: #SINGLE }
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+        name: 'I_CompanyCode',
+        element: 'CompanyCode'
+    }
+   }]
+  bukrs;
+
+  @UI.selectionField: [{ position: 30 } ]
+  @Consumption.filter: { mandatory: true,
+                        multipleSelections: false,
+                        selectionType: #SINGLE
+                         }
+  gjahr;
+
+  @EndUserText.label: 'Kỳ báo cáo'
+  @UI.selectionField: [{ position: 50 } ]
+  @Consumption.filter: { mandatory: true,
+                         multipleSelections: false,
+                         selectionType: #SINGLE
+                         }
+
+  @Consumption.valueHelpDefinition: [{ entity:
+  {name: 'ZDD_DM_KYBAOCAO' , element: 'value_low' },
+  distinctValues: true
+  }]
+  type;
+  
+
+  @UI.lineItem       : [{ position: 10 }]
+  @UI.identification : [{ position: 10 }]
+  @UI.lineItem: [{ label:'Tên chỉ tiêu' }]
+  @EndUserText.label: 'Tên chỉ tiêu'
+  HierarchyNode_TXT;
+ 
+  @UI.lineItem       : [{ position: 20 }]
+  @UI.identification : [{ position: 20 }]
+  @UI.lineItem: [{ label: 'Mã chỉ tiêu' }]
+  @EndUserText.label: 'Mã chỉ tiêu'
+  HierarchyNode; 
+  
+  @UI.lineItem       : [{ position: 40 }]
+  @UI.identification : [{ position: 40 }]
+  @UI.lineItem: [{ label: 'Số kỳ này' }]
+  @EndUserText.label: 'Số kỳ này'
+  sokynay;
+  @UI.lineItem       : [{ position: 50 }]
+  @UI.identification : [{ position: 50 }]
+  @UI.lineItem: [{ label: 'Số kỳ trước' }]
+  @EndUserText.label: 'Số kỳ trước'
+  sokytruoc;
+
+}

@@ -1,0 +1,9 @@
+CLASS zbp_error_rate_rp DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_error_rate_rp.
+protected section.
+private section.
+ENDCLASS.
+
+
+
+CLASS ZBP_ERROR_RATE_RP IMPLEMENTATION.
+ENDCLASS.

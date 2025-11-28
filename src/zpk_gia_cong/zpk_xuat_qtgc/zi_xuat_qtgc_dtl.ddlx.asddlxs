@@ -1,0 +1,59 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Chi tiết',
+    typeNamePlural: 'Chi tiết'
+  }
+}
+
+annotate entity ZI_XUAT_QTGC_DTL with
+{
+  @UI.hidden: true
+  hdr_id;
+
+  @UI.hidden: true
+  zper;
+
+  @UI.hidden: true
+  datelapbang;
+
+  @UI.lineItem: [{ position: 10 }]
+  @EndUserText.label: 'Ngày nhập hàng'
+  datenhaphang;
+
+  @UI.lineItem: [{ position: 20 }]
+  @EndUserText.label: 'Số biên bản'
+  sobb;
+
+  @UI.lineItem: [{ position: 30 }]
+  @EndUserText.label: 'Số PO'
+  sopo;
+
+  @UI.lineItem: [{ position: 40 }]
+  @EndUserText.label: 'Sales Order'
+  saleorder;
+
+  @UI.lineItem: [{ position: 50 }]
+  @EndUserText.label: 'LSX'
+  lenhsanxuat;
+
+  @UI.lineItem: [{ position: 60 }]
+  @EndUserText.label: 'Mã hàng'
+  material_id;
+
+  @UI.lineItem: [{ position: 70 }]
+  @EndUserText.label: 'Tên hàng'
+  production_name;
+
+  @UI.lineItem: [{ position: 80 }]
+  @EndUserText.label: 'SL đạt'
+  dc_ct09;
+
+  @UI.lineItem: [{ position: 90 }]
+  @EndUserText.label: 'Bảng 1'
+  dc_ct10;
+
+  @UI.lineItem: [{ position: 100 }]
+  @EndUserText.label: 'Tổng tiền'
+  dc_ct28;
+}

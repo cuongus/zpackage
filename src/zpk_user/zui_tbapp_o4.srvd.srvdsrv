@@ -1,0 +1,13 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBAPP'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBAPP'
+  }
+}
+define service ZUI_TBAPP_O4
+  provider contracts odata_v4_ui {
+  expose ZC_TBAPP;
+  expose ZC_TBAPP_FUNC;
+}

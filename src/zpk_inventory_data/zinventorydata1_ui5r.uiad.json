@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Xử lý dữ liệu kiểm kê kho WM"
+  },
+  "ui5AppDetails": {
+    "appId": "zinventorydata1"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_3958CFC8882E74A4D708036CD78C7217AEB62757_TM",
+    "semanticObject": "zinventorydata1",
+    "action": "manger",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_3958CFC8882E74A4D708036CD78C7217AEB62757_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Xử lý dữ liệu kiểm kê kho WM"
+      }
+    }
+  ]
+}

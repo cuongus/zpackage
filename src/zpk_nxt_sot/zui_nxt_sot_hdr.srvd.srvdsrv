@@ -1,0 +1,10 @@
+@EndUserText.label: 'Service Definition for NXT Sọt Hdr'
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_NXT_SOT_HDR'
+  }
+}
+define service ZUI_NXT_SOT_HDR {
+  expose ZC_NXT_SOT_HDR;
+  expose ZC_NXT_SOT_DTL;
+}

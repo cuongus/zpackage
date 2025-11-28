@@ -1,0 +1,40 @@
+managed implementation in class zbp_i_firud_cf_off_odata unique;
+strict ( 2 );
+
+define behavior for ZI_FIRUD_CF_OFF_ODATA //alias <alias_name>
+persistent table zfirud_cf_off
+lock master
+authorization master ( global )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+//  field ( mandatory : create ) Rldnr, Bukrs, Gjahr, Belnr, Docln, OffsItem;
+  field ( readonly : update ) Rldnr, Bukrs, Gjahr, Belnr, Docln, OffsItem;
+
+  mapping for zfirud_cf_off
+    {
+      Rldnr    = rldnr;
+      Bukrs    = bukrs;
+      Gjahr    = gjahr;
+      Belnr    = belnr;
+      Docln    = docln;
+      OffsItem = offs_item;
+      Drcrk    = drcrk;
+      Racct    = racct;
+      Lokkt    = lokkt;
+      Ktop2    = ktop2;
+      Blart    = blart;
+      Budat    = budat;
+      Rmvct    = rmvct;
+      Mwskz    = mwskz;
+      Rfarea   = rfarea;
+      Buzei    = buzei;
+      Hsl      = hsl;
+      Rhcur    = rhcur;
+      Ksl      = ksl;
+      Rkcur    = rkcur;
+    }
+}

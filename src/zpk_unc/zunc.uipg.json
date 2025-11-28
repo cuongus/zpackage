@@ -1,0 +1,25 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "launchpach page",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "UNC"
+  },
+  "sections": [
+    {
+      "id": "SECTION_1",
+      "visualizations": [
+        {
+          "id": "SECTION_1_VIZ_1",
+          "ladiAssignment": {
+            "ladiId": "ZUNC_UI5R",
+            "tileId": "UI5R_AF9C00AF42A5DEA6254CCB5467FF5F96FE2D0A0A_AL"
+          }
+        }
+      ]
+    }
+  ]
+}

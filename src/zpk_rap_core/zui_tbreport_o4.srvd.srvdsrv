@@ -1,0 +1,14 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBREPORT'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBREPORT'
+  }
+}
+define service ZUI_TBREPORT_O4
+  provider contracts odata_v4_ui {
+  expose ZC_TBREPORT;
+  expose ZC_TBRP_ITEM;
+  expose ZC_TBRP_COL;
+}

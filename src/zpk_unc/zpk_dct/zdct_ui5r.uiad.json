@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Điều chuyển tiền",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Ủy nhiệm chi (Điều chuyển tiền)"
+  },
+  "ui5AppDetails": {
+    "appId": "zdct"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_94DD77EF2446694369DBF228402EF570BFF9225D_TM",
+    "semanticObject": "ZDCT",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_94DD77EF2446694369DBF228402EF570BFF9225D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Ủy nhiệm chi (Điều chuyển tiền)"
+      }
+    }
+  ]
+}

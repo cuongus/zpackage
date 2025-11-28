@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition Tính toán NS tuần'
+define service ZUI_KBSN_NSWEEK {
+  expose ZCS_KBSN_LAMVIEC as WeekDailyProductivity;
+}

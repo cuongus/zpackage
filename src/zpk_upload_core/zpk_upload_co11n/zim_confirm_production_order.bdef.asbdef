@@ -1,0 +1,110 @@
+managed implementation in class zbp_im_confirm_production_orde unique;
+strict ( 2 );
+
+with draft;
+define behavior for ZIM_CONFIRM_PRODUCTION_ORDER alias ManageFile
+persistent table zui_mco11n
+draft table zud_mco11n
+etag master Changedbyuser
+lock master total etag Changedbyuser
+authorization master ( global )
+early numbering
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) Uuid, ZCount, Countline, Createdbyuser, Createddate, Changedbyuser, Changeddate;
+  association _DataFile { with draft; create; }
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  static action fileUpload parameter ZI_FILE_ABS;
+
+  determination getExcelData on save { field Filename; }
+  determination setStatusToOpen on modify { create; }
+
+  static action downloadFile result [1] ZI_FILE_ABS;
+
+  mapping for zui_mco11n
+    {
+      Uuid          = uuid;
+      Zcount        = zcount;
+      Status        = status;
+      Attachment    = attachment;
+      Mimetype      = mimetype;
+      Filename      = filename;
+      Countline     = countline;
+      Createdbyuser = createdbyuser;
+      Createddate   = createddate;
+      Changedbyuser = changedbyuser;
+      Changeddate   = changeddate;
+    }
+}
+
+define behavior for ZIU_Confirm_Production_Order alias DataFile
+persistent table zdataco11n
+draft table zdataco11n_d
+lock dependent by _ManageFile
+authorization dependent by _ManageFile
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( numbering : managed, readonly ) Uuid;
+  field ( readonly ) Uuidfile, CreatedBy, CreatedAt, LocalLastChangedAt, LastChangedAt, LastChangedBy;
+  association _ManageFile { with draft; }
+
+  action ( features : instance ) PostConfirm result [1] $self;
+
+  determination setStatusToUpdate on modify { field MessageType; }
+
+  mapping for zdataco11n
+    {
+      Uuid                        = uuid;
+      Uuidfile                    = uuidfile;
+      MessageType                 = messagetype;
+      Message                     = message;
+      Productionplant             = productionplant;
+      Postingdate                 = postingdate;
+      Manufacturingorder          = manufacturingorder;
+      Manufacturingorderoperation = manufacturingorderoperation;
+      Workcenter                  = workcenter;
+      Optotalconfirmedyieldqty    = optotalconfirmedyieldqty;
+      Quantity                    = yy1_quantity_cfm;
+      BaseUnit                    = YY1_Quantity_CFMU;
+      Finalconfirmationtype       = finalconfirmationtype;
+      Variancereasoncode          = variancereasoncode;
+      Confirmationtext            = confirmationtext;
+      Confirmedexecutionstartdate = confirmedexecutionstartdate;
+      Confirmedexecutionstarttime = confirmedexecutionstarttime;
+      Confirmedexecutionenddate   = confirmedexecutionenddate;
+      Confirmedexecutionendtime   = confirmedexecutionendtime;
+      MachineID                   = yy1_somay_cfm;
+      Shift                       = yy1_casx_cfm;
+      TeamID                      = yy1_tosanxuat_cfm;
+      WorkerID                    = yy1_nhancong_cfm;
+      ConfirmationUnit            = confirmationunit;
+      OpConfirmedWorkQuantity1    = opcfworkqty1;
+      OpConfirmedWorkQuantity2    = opcfworkqty2;
+      OpConfirmedWorkQuantity3    = opcfworkqty3;
+      OpConfirmedWorkQuantity4    = opcfworkqty4;
+      OpConfirmedWorkQuantity5    = opcfworkqty5;
+      OpConfirmedWorkQuantity6    = opcfworkqty6;
+      OpWorkQuantityUnit1         = opworkqtyunit1;
+      OpWorkQuantityUnit2         = opworkqtyunit2;
+      OpWorkQuantityUnit3         = opworkqtyunit3;
+      OpWorkQuantityUnit4         = opworkqtyunit4;
+      OpWorkQuantityUnit5         = opworkqtyunit5;
+      OpWorkQuantityUnit6         = opworkqtyunit6;
+      CreatedBy                   = created_by;
+      CreatedAt                   = created_at;
+      LastChangedBy               = last_changed_by;
+      LocalLastChangedAt          = local_last_changed_at;
+      LastChangedAt               = last_changed_at;
+    }
+
+}

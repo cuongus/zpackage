@@ -1,0 +1,7 @@
+@EndUserText.label: 'Service Definition Upload CO11N'
+define service ZUI_UPLOAD_CO11N_SRVD {
+  expose ZCM_CONFIRM_PRODUCTION_ORDER as ManageFile;
+  expose ZIC_CONFIRM_PRODUCTION_ORDER as DataFile;
+  expose ZC_TW_LIST                   as TW_LIST_VH;
+  expose ZI_REQ_STA_VH                as StatusVH;
+}

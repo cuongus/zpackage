@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - Container'
+define service ZUI_CONTAINER {
+  expose ZC_CONTAINER;
+}

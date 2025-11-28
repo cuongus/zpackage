@@ -1,0 +1,212 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+//    typeName: 'Báo cáo xuất quyết toán gia công',
+//    typeNamePlural: 'Báo cáo xuất quyết toán gia công',
+    title: { value: 'giacongname' },
+    description: { value: 'zper' }
+  },
+  presentationVariant: [{
+    sortOrder: [{ by: 'zper', direction: #DESC }]
+  }]
+}
+
+annotate entity ZC_XUAT_QTGC_1 with
+{
+  @UI.facet: [
+    {
+      id: 'HeaderInfo',
+      purpose: #HEADER,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'HeaderGroup'
+    },
+    {
+      id: 'GeneralInfo',
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Thông tin chung',
+      targetQualifier: 'GeneralInfo',
+      position: 10
+    },
+    {
+      id: 'DetailSection',
+      purpose: #STANDARD,
+      type: #LINEITEM_REFERENCE,
+      label: 'Chi tiết gia công',
+  //      targetElement: '_dtl',
+      position: 20
+    },
+    {
+      id: 'XNTSection',
+      purpose: #STANDARD,
+      type: #LINEITEM_REFERENCE,
+      label: 'Xuất nhập tồn BTP',
+  //      targetElement: '_xnt',
+      position: 30
+    },
+    {
+      id: 'DongiaSection',
+      purpose: #STANDARD,
+      type: #LINEITEM_REFERENCE,
+      label: 'Đơn giá công đoạn',
+  //      targetElement: '_dg',
+      position: 40
+    }
+  ]
+  @EndUserText.label: 'LineItems1'
+  LineItemsJson;
+  @EndUserText.label: 'LineItems2'
+  LineItemsJson2;
+  @EndUserText.label: 'LineItems3'
+  LineItemsJson3;
+
+  //  @UI.hidden: true
+  @EndUserText.label: 'uuid'
+  hdr_id;
+
+  @UI: {
+    lineItem: [{ position: 10, importance: #HIGH }],
+    selectionField: [{ position: 10 }],
+    fieldGroup: [{ qualifier: 'HeaderGroup', position: 10 }]
+  }
+  @Consumption.filter: { mandatory: true, selectionType: #RANGE }
+  @Consumption.valueHelpDefinition:[
+   { entity : { name : 'ZVI_PERIOD' , element: 'Zper' } }
+   ]
+  @EndUserText.label: 'Kỳ'
+  zper;
+
+  @UI: {
+    lineItem: [{ position: 20, importance: #HIGH }],
+    selectionField: [{ position: 20 }],
+    fieldGroup: [{ qualifier: 'HeaderGroup', position: 20 }]
+  }
+   @Consumption.filter: { mandatory: true, selectionType: #SINGLE }
+  @EndUserText.label: 'Lần'
+  lan;
+
+  @UI: {
+    lineItem: [{ position: 25, importance: #HIGH }],
+    selectionField: [{ position: 25 }],
+    fieldGroup: [{ qualifier: 'HeaderGroup', position: 25 }]
+  }
+//  @Consumption.filter: { mandatory: true, selectionType: #RANGE }
+//  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZC_TBDCGC_HDR', element: 'ngaylapbang' } }]
+  @EndUserText.label: 'Ngày lập bảng'
+  datelapbang;
+
+  @UI: {
+    lineItem: [{ position: 30, importance: #HIGH }],
+    selectionField: [{ position: 30 }],
+    fieldGroup: [{ qualifier: 'HeaderGroup', position: 30 }]
+  }
+  @EndUserText.label: 'Công ty'
+  bukrs;
+
+  @UI: {
+    lineItem: [{ position: 40, importance: #HIGH }],
+    selectionField: [{ position: 40 }],
+    fieldGroup: [{ qualifier: 'HeaderGroup', position: 40 }]
+  }
+  @EndUserText.label: 'Mã gia công'
+  giacong_id;
+
+  @UI: {
+    lineItem: [{ position: 50, importance: #HIGH }],
+    selectionField: [{ position: 50 }],
+    fieldGroup: [{ qualifier: 'HeaderGroup', position: 50 }]
+  }
+  @EndUserText.label: 'Tên gia công'
+  giacongname;
+
+  @UI: {
+    lineItem: [{ position: 60 }],
+    fieldGroup: [{ qualifier: 'GeneralInfo', position: 10 }]
+  }
+  @EndUserText.label: 'Tổng cộng công nợ phát sinh trong kỳ (chưa VAT)'
+  tongcongno;
+
+  @UI: {
+    lineItem: [{ position: 70 }],
+    fieldGroup: [{ qualifier: 'GeneralInfo', position: 20 }]
+  }
+  @EndUserText.label: 'Tổng số tiền phải thanh toán cho công nợ trong kỳ'
+  tongtienthanhtoan;
+
+  @UI: {
+    lineItem: [{ position: 80 }],
+    fieldGroup: [{ qualifier: 'GeneralInfo', position: 30 }]
+  }
+  @EndUserText.label: 'Công nợ cần xuất hóa đơn'
+  congnocanxuat;
+
+  @UI: {
+  lineItem: [{ position: 90 }],
+  fieldGroup: [{ qualifier: 'GeneralInfo', position: 40 }]
+  }
+  @EndUserText.label: 'Trừ tiền BTP thiếu trong tháng'
+  trutien_btp;
+
+  @UI: {
+  lineItem: [{ position: 100 }],
+  fieldGroup: [{ qualifier: 'GeneralInfo', position: 50 }]
+  }
+  @EndUserText.label: 'Tỉ lệ'
+  tile_btp;
+
+  @UI: {
+  lineItem: [{ position: 110 }],
+  fieldGroup: [{ qualifier: 'GeneralInfo', position: 30 }]
+  }
+  @EndUserText.label: 'Chênh lệch công nợ chưa xuất hóa đơn kỳ trước chuyển sang'
+  chenhlechno;
+
+  @UI: {
+  lineItem: [{ position: 120 }],
+  fieldGroup: [{ qualifier: 'GeneralInfo', position: 40 }]
+  }
+  @EndUserText.label: 'Chi tiết cộng trừ khác'
+  chitietcongtru;
+
+  @UI: {
+  lineItem: [{ position: 130 }],
+  fieldGroup: [{ qualifier: 'GeneralInfo', position: 50 }]
+  }
+  @EndUserText.label: 'Cộng trừ khác (Trừ lưu cont lưu ca..)'
+  congtrukhac;
+
+  @UI: {
+  lineItem: [{ position: 140 }],
+  fieldGroup: [{ qualifier: 'GeneralInfo', position: 60 }]
+  }
+  @EndUserText.label: 'Hỗ trợ'
+  hotro;
+
+  @UI: {
+  lineItem: [{ position: 150 }],
+  fieldGroup: [{ qualifier: 'GeneralInfo', position: 70 }]
+  }
+  @EndUserText.label: 'Số tiền đã xuất hóa đơn trong kỳ'
+  sotienxhd;
+
+  @UI: {
+  lineItem: [{ position: 160 }],
+  fieldGroup: [{ qualifier: 'GeneralInfo', position: 80 }]
+  }
+  @EndUserText.label: 'Tổng tiền cấp bổ sung trong tháng'
+  tongtien_bs;
+
+  @UI: {
+  lineItem: [{ position: 170 }],
+  fieldGroup: [{ qualifier: 'GeneralInfo', position: 90 }]
+  }
+  @EndUserText.label: 'Trừ tiền lỗi biên bản (côn trùng, dị vật, chỉ nhúng dầu)'
+  truloibb;
+
+  @UI: {
+  lineItem: [{ position: 180 }],
+  fieldGroup: [{ qualifier: 'GeneralInfo', position: 100 }]
+  }
+  @EndUserText.label: 'vỏ bao'
+  vobao;
+}

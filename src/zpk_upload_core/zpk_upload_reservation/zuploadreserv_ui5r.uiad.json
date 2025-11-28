@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Upload Reservation"
+  },
+  "ui5AppDetails": {
+    "appId": "zuploadreserv"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_6E7A55D5A44E09A06FD7EA49655AF8FB9094F73E_TM",
+    "semanticObject": "zuploadreserv",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_6E7A55D5A44E09A06FD7EA49655AF8FB9094F73E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Upload Reservation"
+      }
+    }
+  ]
+}

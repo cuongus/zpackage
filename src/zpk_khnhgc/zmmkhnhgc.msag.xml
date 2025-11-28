@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZMMKHNHGC</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Message Class for Kế hoạch nhận hàng gia công</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMMKHNHGC</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Week/Year from lớn hơn Week/Year to</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMMKHNHGC</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Khoảng thời gian vượt quá 54 tuần</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMMKHNHGC</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Đã tồn tại bản ghi WC &amp;1, Plant &amp;2, Week &amp;3, Year &amp;4</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

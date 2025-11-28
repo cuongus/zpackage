@@ -1,0 +1,48 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Bảng thời gian hoạt động nhà cung cấp',
+  typeNamePlural: 'Supplier time',
+  title: { type: #STANDARD }
+}
+annotate entity ZC_SUPPLIER_TIME with
+{
+  @UI.facet: [{
+     id: 'MainSection',
+     type: #IDENTIFICATION_REFERENCE,
+     label: 'Bảng thời gian hoạt động nhà cung cấp',
+     position: 10
+   }]
+
+  @UI.lineItem: [{ hidden: true }]
+  LineId;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.selectionField: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @EndUserText.label:'Mã nhà gia công'
+  CodeProcessing;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.selectionField: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @EndUserText.label:'Tên nhà gia công'
+  NameProcrssing;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.selectionField: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  @EndUserText.label:'Thời gian bắt đầu hoạt động'
+  ValidFrom;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.selectionField: [{ position: 50 }]
+  @UI.identification: [{ position: 50}]
+  @EndUserText.label:'Số năm hoạt động'
+  YearProcessing;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.selectionField: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @EndUserText.label:'Ghi chú'
+  Note;
+}

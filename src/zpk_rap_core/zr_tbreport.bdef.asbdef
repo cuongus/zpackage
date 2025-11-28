@@ -1,0 +1,141 @@
+managed implementation in class ZBP_R_TBREPORT unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBREPORT alias ZrTbreport
+persistent table ZTB_REPORT
+extensible
+draft table ZTBREPORT_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   RpID;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   RpID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTB_REPORT corresponding extensible
+  {
+    RpID = rp_id;
+    RpCode = rp_code;
+    RpName = rp_name;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+    association _dtl { create ( features : instance ); with draft; }
+    association _col { create ( features : instance ); with draft; }
+}
+
+define behavior for ZR_TBRP_ITEM alias ZrTbappFunc
+persistent table ZTB_RP_ITEM
+draft table ZTBRP_ITEM_D
+lock dependent by _hdr
+authorization dependent by _hdr
+{
+  field ( mandatory : create )
+   ItemID;
+
+  field ( readonly )
+  RpID,
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+
+   ItemID;
+
+  update;
+  delete;
+
+   mapping for ZTB_RP_ITEM corresponding
+  {
+    RpID = rp_id;
+    ItemID = item_id;
+    ItemCode1 = item_code1;
+    ItemCode = item_code;
+    DisplayCode = display_code;
+    ItemDesc = item_desc;
+    ItemCond = item_cond;
+    ItemCond2 = item_cond2;
+    ItemCond3 = item_cond3;
+    ItemCond4 = item_cond4;
+    Formula = formula;
+    Display = display;
+    Font = font;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+  association _hdr { with draft; }
+
+}
+
+
+define behavior for ZR_TBRP_COL alias ZrTbrpCol
+persistent table ZTB_RP_COL
+draft table ZTBRP_COL_D
+lock dependent by _hdr
+authorization dependent by _hdr
+{
+//  field ( mandatory : create )
+//   RpID;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt, ColUUID;
+
+  field ( readonly : update )
+   RpID;
+  field ( numbering : managed )
+  ColUUID;
+
+  update;
+  delete;
+
+    mapping for ZTB_RP_COL corresponding
+  {
+    RpID = rp_id;
+    ColUUID = ColUUID;
+    ColID = col_id;
+    ColDesc = col_desc;
+    ColCond = col_cond;
+    ColCond2 = col_cond2;
+    ColCond3 = col_cond3;
+    ColCond4 = col_cond4;
+    Formula = formula;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+  association _hdr { with draft; }
+
+}

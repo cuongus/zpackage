@@ -1,0 +1,94 @@
+managed with additional save implementation in class zbp_i_mn_reservation unique;
+strict ( 2 );
+
+with draft;
+define behavior for ZI_MN_RESERVATION alias ManageFile
+persistent table zui_mreservation
+draft table zud_mreservation
+etag master ChangedByUser
+lock master total etag ChangedByUser
+authorization master ( global )
+early numbering
+{
+  create ( authorization : global );
+  update ( features : instance );
+  delete;
+  field ( readonly ) Uuid, ZCount, Countline, Createdbyuser, Createddate, Changedbyuser, Changeddate;
+  association _DataReservation { create; with draft; }
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  static action fileUpload parameter ZI_FILE_ABS;
+
+  determination getExcelData on save { field Filename; }
+
+  determination setStatusToOpen on modify { create; }
+
+  static action downloadFile result [1] ZI_FILE_ABS;
+
+  mapping for zui_mreservation
+    {
+      Uuid          = uuid;
+      ZCount        = zcount;
+      Status        = status;
+      Attachment    = attachment;
+      Mimetype      = mimetype;
+      Filename      = filename;
+      Countline     = countline;
+      Createdbyuser = createdbyuser;
+      Createddate   = createddate;
+      Changedbyuser = changedbyuser;
+      Changeddate   = changeddate;
+    }
+}
+
+define behavior for ZI_DATA_RESERVATION alias DataFile
+persistent table zui_reservation
+draft table zud_reservation
+lock dependent by _ManageFile
+authorization dependent by _ManageFile
+//etag master <field_name>
+{
+  update ( features : instance );
+  delete ( features : instance );
+  field ( numbering : managed, readonly ) Uuid;
+  field ( readonly ) Uuidfile, Criticality, CreatedByUser, CreatedDate, ChangedByUser, ChangedDate;
+  association _ManageFile { with draft; }
+
+  static action PostReser parameter ZPR_SELECT_RESER result [1] ZPR_RESULT_RESER;
+
+  determination setStatusToUpdate on modify { field Reservation; }
+
+  mapping for zui_reservation
+    {
+      Uuid               = uuid;
+      Uuidfile           = uuidfile;
+      Reservation        = reservation;
+      MessageType        = msgtype;
+      MessageText        = msgtext;
+      Documentsequenceno = documentsequenceno;
+      Basedate           = basedate;
+      Costcenter         = costcenter;
+      Goodsmovementtype  = goodsmovementtype;
+      Plant              = plant;
+      Receivingissuing   = receivingissuing;
+      Storagelocation    = storagelocation;
+      Materialnumber     = materialnumber;
+      Quantity           = quantity;
+      Unitofmeasure      = unitofmeasure;
+      Batch              = batch;
+      Salesorder         = salesorder;
+      Salesorderitem     = salesorderitem;
+      ValuationType      = valuationtype;
+      Requirementdate    = requirementdate;
+      Glaccount          = glaccount;
+      CreatedByUser      = createdbyuser;
+      CreatedDate        = createddate;
+      ChangedByUser      = changedbyuser;
+      ChangedDate        = changeddate;
+    }
+}

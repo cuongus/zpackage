@@ -1,0 +1,101 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Supplier'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Supplier'
+annotate view ZC_TBTRU_BS_DT1 with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  
+  @EndUserText.label: 'Mã nhà gia công'
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Supplier;
+  
+  @EndUserText.label: 'Tên nhà gia công'
+    @UI.identification: [ {
+    position: 35 
+  } ]
+  @UI.lineItem: [ {
+    position: 35 
+  } ]
+  SupplierName;
+  
+  
+  @EndUserText.label: 'Tổng tiền trừ chi tiết phụ (100%)'
+  @UI.identification: [ {
+    position: 130 
+  } ]
+  @UI.lineItem: [ {
+    position: 130 
+  } ]
+  @UI.selectionField: [ {
+    position: 130 
+  } ]
+  ct04;
+  
+  @EndUserText.label: 'Số tiền được giảm trừ chi tiết phụ'
+  @UI.identification: [ {
+    position: 135 , 
+    label: 'Số tiền được giảm trừ chi tiết phụ'
+  } ]
+  @UI.lineItem: [ {
+    position: 135 , 
+    label: 'Số tiền được giảm trừ chi tiết phụ'
+  } ]
+  @UI.selectionField: [ {
+    position: 135 
+  } ]
+  ct05;
+  
+    @EndUserText.label: 'Tổng tiền trừ chi tiết phụ'
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Tổng tiền trừ chi tiết phụ'
+  } ]
+  @UI.lineItem: [ {
+    position: 140 , 
+    label: 'Tổng tiền trừ chi tiết phụ'
+  } ]
+  @UI.selectionField: [ {
+    position: 140 
+  } ]
+  ct05a;
+  
+    @EndUserText.label: 'Tổng tiền trừ chi tiết chính'
+  @UI.identification: [ {
+    position: 150 
+  } ]
+  @UI.lineItem: [ {
+    position: 150 
+  } ]
+  @UI.selectionField: [ {
+    position: 150 
+  } ]
+  ct05b;
+  
+   @EndUserText.label: 'Tổng tiền trừ'
+  @UI.identification: [ {
+    position: 160 
+  } ]
+  @UI.lineItem: [ {
+    position: 160 
+  } ]
+  @UI.selectionField: [ {
+    position: 160 
+  } ]
+  ct06;
+}

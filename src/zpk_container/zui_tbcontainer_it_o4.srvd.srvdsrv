@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBCONTAINER_IT'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBCONTAINER_IT'
+  }
+}
+define service ZUI_TBCONTAINER_IT_O4 provider contracts odata_v4_ui {
+  expose ZC_TBCONTAINER_IT;
+}

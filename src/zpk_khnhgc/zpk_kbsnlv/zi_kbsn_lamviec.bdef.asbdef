@@ -1,0 +1,57 @@
+managed with additional save implementation in class zbp_i_kbsn_lamviec unique;
+strict ( 2 );
+
+with draft;
+define behavior for ZI_KBSN_LAMVIEC alias KBSNLamViec
+persistent table zui_kbsnlv
+draft table zud_kbsnlv
+
+authorization master ( global )
+etag master LastChangedAt
+lock master total etag LocalLastChangedAt
+early numbering
+{
+  create { default function GetDefaultsForCreate; }
+  update;
+  delete;
+  field ( readonly ) Uuid, CreatedBy, CreatedAt, LocalLastChangedBy, LocalLastChangedAt, LastChangedAt;
+
+  field ( mandatory : create ) Workcenter, Plant, Week, Zyear;
+  field ( readonly : update ) Workcenter, Plant, Week, Zyear;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  static action PrecheckData parameter ZI_FILE_ABS result [1] ZI_FILE_RES;
+
+  static action fileUpload parameter ZI_FILE_ABS;
+
+  static action downloadFile result [1] ZI_FILE_ABS;
+
+  determination Workingdays on save { field Workingdays; create; }
+
+  determination LWeek on save { field Week; create; }
+
+  validation CheckData on save { field Workcenter, Plant, Week, Zyear; create; }
+
+  validation CheckWorkingdays on save { field Workingdays; create; update; }
+
+  mapping for zui_kbsnlv
+    {
+      Uuid               = uuid;
+      Workcenter         = workcenter;
+      Plant              = plant;
+      Week               = week;
+      LWeek              = lweek;
+      Zyear              = zyear;
+      Workingdays        = workingdays;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+    }
+}

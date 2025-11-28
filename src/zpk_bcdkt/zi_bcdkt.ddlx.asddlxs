@@ -1,0 +1,129 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'Bảng cân đối kế toán',
+                  typeNamePlural: 'Bảng cân đối kế toán',
+                  title: { type: #STANDARD, label: 'Accouting Document', value: 'HierarchyNode_TXT' }
+    }
+}
+annotate entity ZI_BCDKT with
+{
+  @UI.facet: [ { id : 'General',
+                 purpose: #STANDARD,
+                 position: 10,
+                 label : 'Chỉ tiêu',
+                 type  : #IDENTIFICATION_REFERENCE } ]
+
+  @UI.selectionField: [{ position: 10 }]
+  @Consumption.filter: { mandatory: true, multipleSelections: false, selectionType: #SINGLE }
+  @Consumption.valueHelpDefinition: [{
+    entity: { 
+        name: 'I_CompanyCode',
+        element: 'CompanyCode'
+    }
+   }]
+  bukrs;
+  @UI.selectionField: [{ position: 20 } ]
+  @Consumption.filter.defaultValue: '0L'
+  @EndUserText.label: 'Ledger'
+  @Consumption.filter: { mandatory: true ,
+                        multipleSelections: false,
+                        selectionType: #SINGLE
+                                   }
+  rldnr;
+  @UI.selectionField: [{ position: 30 } ]
+  @Consumption.filter: { mandatory: true,
+                        multipleSelections: false,
+                        selectionType: #SINGLE
+                         }
+  gjahr;
+  @UI.selectionField: [{ position: 40 } ]
+  @EndUserText.label: 'Tháng'
+  @Consumption.filter.defaultValue: '01'
+  @Consumption.filter: {
+                        multipleSelections: false,
+                        selectionType: #SINGLE
+                         }
+  monat;
+  @EndUserText.label: 'Loại báo cáo'
+  @UI.selectionField: [{ position: 50 } ]
+  @Consumption.filter: { mandatory: true,
+                         multipleSelections: false,
+                         selectionType: #SINGLE
+                         }
+  @Consumption.filter.defaultValue: '01'
+  @Consumption.valueHelpDefinition: [{ entity:
+  {name: 'ZI_DOMAIN_FIX_VAL' , element: 'value_low' },
+  distinctValues: true
+  }]
+  type;
+  @UI.selectionField: [{ position: 60 } ]
+  @Consumption.filter: {
+                         multipleSelections: false,
+                         selectionType: #SINGLE
+                         }
+  @EndUserText.label: 'Chi tiết'
+  ShowDetail;
+  
+  @UI.selectionField: [{ position: 80 } ]
+  @Consumption.filter: {
+                         multipleSelections: false,
+                         selectionType: #SINGLE
+                         }
+  @EndUserText.label: 'Người lập biểu'
+  tenNL;
+  
+  @UI.selectionField: [{ position: 90 } ]
+  @Consumption.filter: {
+                         multipleSelections: false,
+                         selectionType: #SINGLE
+                         }
+  @EndUserText.label: 'Kế toán trưởng'
+  tenKT;
+  
+  @UI.selectionField: [{ position: 100 } ]
+  @Consumption.filter: {
+                         multipleSelections: false,
+                         selectionType: #SINGLE
+                         }
+  @EndUserText.label: 'Giám đốc'
+  tenGD;
+  
+  
+  @UI.lineItem       : [{ position: 10 }]
+  @UI.identification : [{ position: 10 }]
+  @UI.lineItem: [{ label: 'Item' }]
+  @EndUserText.label: 'Item'
+  HierarchyNode;
+  @UI.lineItem       : [{ position: 20 }]
+  @UI.identification : [{ position: 20 }]
+  @UI.lineItem: [{ label:'Tên chỉ tiêu' }]
+  @EndUserText.label: 'Tên chỉ tiêu'
+  HierarchyNode_TXT;
+  @UI.lineItem       : [{ position: 40 }]
+  @UI.identification : [{ position: 40 }]
+  @UI.lineItem: [{ label: 'Mã KH/NCC' }]
+  @EndUserText.label: 'Mã KH/NCC'
+  kunnr;
+  @UI.lineItem       : [{ position: 30 }]
+  @UI.identification : [{ position: 30 }]
+  @UI.lineItem: [{ label: 'GL Account' }]
+  @EndUserText.label: 'GL Account'
+  glaccount;
+  @UI.lineItem       : [{ position: 50 }]
+  @UI.identification : [{ position: 50 }] 
+  @UI.lineItem: [{ label: 'Số cuối kỳ' }]
+  @EndUserText.label: 'Số cuối kỳ'
+  SoCK;
+  @UI.lineItem       : [{ position: 60 }]
+  @UI.identification : [{ position: 60 }]
+  @UI.lineItem: [{ label: 'Số đầu kỳ' }]
+  @EndUserText.label: 'Số đầu kỳ'
+  SoDK;
+  @EndUserText.label: 'Tên công ty'
+  CCname;
+  @EndUserText.label: 'Địa chỉ'
+  CCadrr;
+
+  
+
+}

@@ -1,0 +1,13 @@
+@EndUserText.label: 'Access control ZR_UI_PBKHNH'
+@MappingRole: true
+define role ZR_UI_PBKHNH {
+    grant
+        select
+            on
+                ZR_UI_PBKHNH
+                    where
+//                        entity_element_1 = 'literal_value'
+//                        or entity_element_2 = aspect user;
+            ( Companycode ) = ASPECT pfcg_auth( 'F_BKPF_BUK', ACTVT = '03', BUKRS );
+                        
+}

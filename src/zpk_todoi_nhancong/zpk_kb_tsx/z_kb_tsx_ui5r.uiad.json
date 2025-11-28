@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Khai báo danh sách tổ sản xuất theo xưởng"
+  },
+  "ui5AppDetails": {
+    "appId": "zkbtsx"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A1B2C3736B2FAE17389CA94D07673B88E191B971_TM",
+    "semanticObject": "z_kb_tsx",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A1B2C3736B2FAE17389CA94D07673B88E191B971_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Khai báo danh sách tổ sản xuất theo xưởng"
+      }
+    }
+  ]
+}

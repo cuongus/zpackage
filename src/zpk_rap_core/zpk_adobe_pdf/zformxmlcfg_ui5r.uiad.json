@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "XML Form Config"
+  },
+  "ui5AppDetails": {
+    "appId": "zformxmlconfig"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_28127E6866E6212E43614BC2B9EE9C3047308646_TM",
+    "semanticObject": "zformxmlcfg",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_28127E6866E6212E43614BC2B9EE9C3047308646_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "XML Form Config"
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'Bảng cân đối số phát sinh',
+                  typeNamePlural: 'Bảng cân đối số phát sinh',
+                  title: { type: #STANDARD, value: 'GLAccount' }
+    },
+    presentationVariant: [{ sortOrder: [{ by: 'CompanyCode', direction: #ASC },
+                                        { by: 'GLAccount', direction: #ASC }] }]
+}
+annotate entity ZJP_C_BANGCANDOIPHATSINH with
+{
+  @UI.facet          : [
+     {
+     id                 : 'Bangcandoiphatsinh',
+     purpose            : #STANDARD,
+     position           : 10,
+     isPartOfPreview    : true,
+     label              : 'General',
+     type               : #IDENTIFICATION_REFERENCE
+     }
+     ]
+
+  @UI.selectionField : [{ position: 10 }]
+  @UI.lineItem       : [{ position: 10  }]
+  //@UI.lineItem       : [{ position: 10  }, { label: 'Export to Excel', dataAction: 'btnExportExcel', type: #FOR_ACTION }]
+  @UI.identification : [{ position: 10  }]
+  CompanyCode;
+
+  @UI.selectionField : [{ position: 20 }]
+  @UI.lineItem       : [{ position: 20  }]
+  @UI.identification : [{ position: 20  }]
+  GLAccount;
+
+  @UI.lineItem       : [{ position: 30  }]
+  @UI.identification : [{ position: 30  }]
+  CompanyCodeCurrency;
+
+  @UI.lineItem       : [{ position: 40  }]
+  @UI.identification : [{ position: 40  }]
+  @EndUserText.label: 'G/L Account Name'
+  GLAccountName;
+
+  @UI.lineItem       : [{ position: 50  }]
+  @UI.identification : [{ position: 50  }]
+  @EndUserText.label: 'Starting Balance In CompanyCode'
+  StartingBalanceInCompanyCode;
+
+  @UI.lineItem       : [{ position: 60  }]
+  @UI.identification : [{ position: 60  }]
+  @EndUserText.label: 'Debit Balance In CompanyCode'
+  DebitBalanceofReportingPeriod;
+
+  @UI.lineItem       : [{ position: 70  }]
+  @UI.identification : [{ position: 70  }]
+  @EndUserText.label: 'Credit Balance In CompanyCode'
+  CreditBalanceofReportingPeriod;
+
+  @UI.lineItem       : [{ position: 80  }]
+  @UI.identification : [{ position: 80  }]
+  @EndUserText.label: 'Ending Balance In CompanyCode'
+  EndingBalanceInCompanyCode;
+
+  @UI.lineItem       : [{ position: 90  }]
+  @UI.identification : [{ position: 90  }]
+  @UI.hidden: true
+  FinancialStatementItem;
+
+  @UI.lineItem       : [{ position: 100  }]
+  @UI.identification : [{ position: 100  }]
+  @UI.selectionField : [{ position: 100 }]
+  @EndUserText.label: 'PostingdateFrom'
+  PostingdateFrom;
+
+  @UI.lineItem       : [{ position: 110  }]
+  @UI.identification : [{ position: 110  }]
+  @UI.selectionField : [{ position: 110 }]
+  @EndUserText.label: 'PostingdateTo'
+  PostingdateTo;
+  
+  @UI.lineItem       : [{ position: 120  }]
+  @UI.identification : [{ position: 120  }]
+  CompanyCodeName;
+  
+  @UI.lineItem       : [{ position: 130  }]
+  @UI.identification : [{ position: 130  }]
+  CompanyCodeAddr;
+  
+  @UI.lineItem       : [{ position: 140  }]
+  @UI.identification : [{ position: 140  }]
+  PeriodText;
+}

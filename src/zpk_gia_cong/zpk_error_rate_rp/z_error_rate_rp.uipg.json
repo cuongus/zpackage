@@ -1,0 +1,25 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Page for error rate report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "Bảng khai báo duyệt tỷ lệ lỗi"
+  },
+  "sections": [
+    {
+      "id": "SECTION_1",
+      "visualizations": [
+        {
+          "id": "Z_ERROR_RATE_RP",
+          "ladiAssignment": {
+            "ladiId": "Z_ERROR_RATE_RP_UI5R",
+            "tileId": "UI5R_DF344EA062F91A9EF06A45069460B1D92FA397B3_AL"
+          }
+        }
+      ]
+    }
+  ]
+}

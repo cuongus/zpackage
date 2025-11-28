@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Phiếu kế toán"
+  },
+  "ui5AppDetails": {
+    "appId": "zphieuketoan2"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_C69869EC7373D03C2EB3862914F8C1F7076F2093_TM",
+    "semanticObject": "zphieuketoan2",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_C69869EC7373D03C2EB3862914F8C1F7076F2093_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Phiếu kế toán"
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_UIIN_FAGLFCV'
+@MappingRole: true
+define role ZC_UIIN_FAGLFCV {
+  grant select on ZC_UIIN_FAGLFCV
+  where INHERITING CONDITIONS FROM ENTITY ZR_UIIN_FAGLFCV REPLACING { ROOT WITH _BaseEntity };
+}

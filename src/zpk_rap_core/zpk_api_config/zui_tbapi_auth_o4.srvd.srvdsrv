@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBAPI_AUTH'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBAPI_AUTH'
+  }
+}
+define service ZUI_TBAPI_AUTH_O4 provider contracts odata_v4_ui {
+  expose ZC_TBAPI_AUTH;
+}

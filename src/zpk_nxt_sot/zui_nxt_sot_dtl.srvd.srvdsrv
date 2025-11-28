@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for NXT Sọt Dtl'
+define service ZUI_NXT_SOT_DTL {
+  expose ZC_NXT_SOT_DTL;
+}

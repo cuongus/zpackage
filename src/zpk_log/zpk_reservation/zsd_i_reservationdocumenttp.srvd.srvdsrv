@@ -1,0 +1,4 @@
+@EndUserText.label: 'I_RESERVATIONDOCUMENTTP'
+define service Zsd_I_RESERVATIONDOCUMENTTP {
+  expose I_ReservationDocumentTP;
+}

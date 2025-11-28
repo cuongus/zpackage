@@ -1,0 +1,137 @@
+managed implementation in class ZBP_R_UIIN_FAGLFCV unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_UIIN_FAGLFCV alias ZrUiinFaglfcv
+persistent table zui_in_faglfcv
+extensible
+draft table zuiin_faglfcv_d
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+{
+  field ( mandatory : create )
+  Ccode,
+  DocNumber,
+  FiscalYear,
+  DocLine,
+  DocNumberCl,
+  FiscalYearCl,
+  Keydate;
+
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  LocalLastChangedBy,
+  LocalLastChangedAt,
+  LastChangedAt;
+
+  field ( readonly : update )
+  Ccode,
+  DocNumber,
+  FiscalYear,
+  DocLine,
+  DocNumberCl,
+  FiscalYearCl,
+  Keydate;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  static action MatchPostedDocs parameter ZI_FILE_RES;
+
+  mapping for zui_in_faglfcv corresponding extensible
+    {
+      Ccode              = ccode;
+      DocNumber          = doc_number;
+      FiscalYear         = fiscal_year;
+      DocLine            = doc_line;
+      DocNumberCl        = doc_number_cl;
+      FiscalYearCl       = fiscal_yearcl;
+      Keydate            = keydate;
+      Ledger             = ledger;
+      LedgerGroup        = ledger_group;
+      TargetCcode        = target_ccode;
+      ValuationGroup     = valuation_group;
+      AccountType        = account_type;
+      GlAccount          = gl_account;
+      GroupAccount       = group_account;
+      Account            = account;
+      Currency           = currency;
+      Nr                 = nr;
+      Ja                 = ja;
+      Buz                = buz;
+      DebcredInd         = debcred_ind;
+      SourceAmount       = source_amount;
+      TargetAmount       = target_amount;
+      TargetCurrency     = target_currency;
+      LcAmountVal        = lc_amount_val;
+      HedgedAmount       = hedged_amount;
+      HedgedRate         = hedged_rate;
+      ValuationRate      = valuation_rate;
+      ValuXuseMdFxr      = valu_xuse_md_fxr;
+      SpecialGlInd       = special_gl_ind;
+      OrigRate           = orig_rate;
+      DocType            = doc_type;
+      DocHeaderText      = doc_header_text;
+      PostingDate        = posting_date;
+      DocumentDate       = document_date;
+      ClearingDocument   = clearing_document;
+      ValuDiffOld        = valu_diff_old;
+      ValuDiffNew        = valu_diff_new;
+      PostingAmount      = posting_amount;
+      RealDiff           = real_diff;
+      Vbund              = vbund;
+      AccountText        = account_text;
+      ValuDiffRem2       = valu_diff_rem2;
+      CurrRem2           = curr_rem2;
+      ValuDiffRem3       = valu_diff_rem3;
+      CurrRem3           = curr_rem3;
+      ValuDiffRem4       = valu_diff_rem4;
+      CurrRem4           = curr_rem4;
+      ValuDiffRem5       = valu_diff_rem5;
+      CurrRem5           = curr_rem5;
+      ValuDiffRem6       = valu_diff_rem6;
+      CurrRem6           = curr_rem6;
+      ValuDiffRem7       = valu_diff_rem7;
+      CurrRem7           = curr_rem7;
+      ValuDiffRem8       = valu_diff_rem8;
+      CurrRem8           = curr_rem8;
+      ValuDiffRem9       = valu_diff_rem9;
+      CurrRem9           = curr_rem9;
+      ValuDiffRem10      = valu_diff_rem10;
+      CurrRem10          = curr_rem10;
+      Xloss              = xloss;
+      CustvendName       = custvend_name;
+      Hrate              = hrate;
+      Htext              = htext;
+      Maturity           = maturity;
+      MaturityUnit       = maturity_unit;
+      IntValurateC       = int_valurate_c;
+      Accas              = accas;
+      Pprctr             = pprctr;
+      Prctr              = prctr;
+      Psegment           = psegment;
+      Rbusa              = rbusa;
+      Rfarea             = rfarea;
+      Sbusa              = sbusa;
+      Segment            = segment;
+      Valobjtype         = valobjtype;
+      ValobjID           = valobj_id;
+      ValsobjID          = valsobj_id;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+    }
+
+}

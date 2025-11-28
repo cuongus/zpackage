@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition'
+define service ZDS_KQHDKD {
+  expose ZC_KQHDKD;
+}

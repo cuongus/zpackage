@@ -1,0 +1,7 @@
+@EndUserText.label: 'Service definition XML Form Config'
+define service ZUI_XML_FORM_CFG_SRVD {
+  expose ZC_XML_FORM_CFG      as xmlFormCFG;
+  expose ZC_XML_FORM_KV_MAP   as xmlFormKVmap;
+  expose ZC_XML_FORMTABLE_CFG as xmlFormTblCFG;
+  expose ZC_XML_FORMROW_MAP   as xmlFormRowmap;
+}

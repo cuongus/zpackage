@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Phiếu xuất kho"
+  },
+  "ui5AppDetails": {
+    "appId": "zphieuxuatkho"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_26553866B56AC96528FC9DB44A2B28A63555477E_TM",
+    "semanticObject": "z_phieuxuatkho",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_26553866B56AC96528FC9DB44A2B28A63555477E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Phiếu xuất kho"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+projection implementation in class zbp_c_kb_tsx unique;
+strict ( 2 );
+
+define behavior for ZC_KB_TSX //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+}

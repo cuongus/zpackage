@@ -1,0 +1,111 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'FormId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'FormId'
+annotate entity ZC_XML_FORMTABLE_CFG with
+{
+  @UI.facet          : [
+  {id                : 'XMLFormTblCFG',
+  purpose            : #STANDARD,
+  position           : 10,
+  label              : 'XML formTable Config',
+  type               : #IDENTIFICATION_REFERENCE
+  }
+  ]
+
+//  @UI.hidden: true
+//  FormId;
+  
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  @EndUserText.label: 'Table Id'
+  TableId;
+  
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @EndUserText.label: 'Container Id'
+  ContainerId;
+  
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @EndUserText.label: 'Sequence'
+  Seq;
+  
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Open Mode'
+  OpenMode;
+  
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Location'
+  Location;
+    
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Table Open'
+  TableOpen;
+  
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Row Open'
+  RowOpen;
+    
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Row Close'
+  RowClose;
+  
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Table Close'
+  TableClose;
+  
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Name'
+  Name;
+  
+  @UI.lineItem: [{ position: 110 }]
+  @UI.identification: [{ position: 110 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Prefix XML'
+  PrefixXml;
+  
+  @UI.lineItem: [{ position: 120 }]
+  @UI.identification: [{ position: 120 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Suffix XML'
+  SuffixXml;
+  
+  @UI.lineItem: [{ position: 130 }]
+  @UI.identification: [{ position: 130 }]
+  @Consumption.filter.hidden: true
+  CreatedBy;
+  
+  @UI.lineItem: [{ position: 140 }]
+  @UI.identification: [{ position: 140 }]
+  @Consumption.filter.hidden: true
+  CreatedAt;
+  
+  @UI.lineItem: [{ position: 150 }]
+  @UI.identification: [{ position: 150 }]
+  @Consumption.filter.hidden: true
+  LastChangedBy;
+  
+  @UI.lineItem: [{ position: 160 }]
+  @UI.identification: [{ position: 160 }]
+  @Consumption.filter.hidden: true
+  LastChangedAt;
+  /* Associations */
+//  _XML_Form_CFG;
+
+}

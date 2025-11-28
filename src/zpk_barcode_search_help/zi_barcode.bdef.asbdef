@@ -1,0 +1,31 @@
+managed implementation in class zbp_i_barcode unique;
+strict ( 2 );
+
+define behavior for ZI_BARCODE //alias <alias_name>
+persistent table ztb_barcode
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create (authorization : global);
+  update;
+  delete;
+  field ( numbering : managed, readonly ) LineId;
+  field ( readonly : update ) MaNv, Plant, StorageLocation;
+
+  validation validateUniqueMaNv on save { field MaNv; create; update;  }
+  validation require on save { create; }
+  validation validatePlantSloc on save { create; update; }
+  validation role on save { create; update; }
+//  validation uniqueMaNv on save { create; update; }
+
+  mapping for ztb_barcode
+    {
+      MaNv            = ma_nv;
+      NameNv          = name_nv;
+      LineId          = line_id;
+      Plant           = plant;
+      StorageLocation = storage_location;
+      Role            = role;
+    }
+}

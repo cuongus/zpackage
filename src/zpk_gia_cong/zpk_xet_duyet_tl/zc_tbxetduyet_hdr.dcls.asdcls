@@ -1,0 +1,5 @@
+@EndUserText.label: 'ZC_TBXETDUYET_HDR'
+@MappingRole: true
+define role ZC_TBXETDUYET_HDR {
+  grant select on ZC_TBXETDUYET_HDR;
+}

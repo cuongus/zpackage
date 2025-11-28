@@ -1,0 +1,59 @@
+projection;
+strict ( 2 );
+define behavior for ZC_ZCR_OD_GC02TP alias ZCR_OD_GC
+use etag
+{
+//  use create;
+//  use update;
+//  use delete;
+
+  use association _ZCR_OD_2 { }
+
+}
+
+define behavior for ZC_ZCR_OD_201TP alias ZCR_OD_2
+use etag
+{
+//  use update;
+//  use delete;
+
+  use association _ZCR_OD_GC;
+  use association _ZCR_OD_21 {  }
+  use association _ZCR_OD_3 {  }
+   use action Set_SL_DongBo;
+   use action Update_OD;
+}
+
+define behavior for ZC_ZCR_OD_21TP alias ZCR_OD_21
+use etag
+{
+//  use update;
+//  use delete;
+
+  use association _ZCR_OD_GC;
+  use association _ZCR_OD_2;
+
+}
+
+define behavior for ZC_ZCR_OD_301TP alias ZCR_OD_3
+use etag
+{
+//  use update;
+//  use delete;
+
+  use association _ZCR_OD_GC;
+  use association _ZCR_OD_2;
+  use association _ZCR_OD_4 {  }
+
+}
+
+define behavior for ZC_ZCR_OD_4TP alias ZCR_OD_4
+use etag
+{
+//  use update;
+//  use delete;
+
+  use association _ZCR_OD_GC;
+  use association _ZCR_OD_3;
+
+}

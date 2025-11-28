@@ -1,0 +1,216 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'In tem hàng',
+    typeNamePlural: 'In tem hàng',
+    title: { type: #STANDARD, value: 'Delivery' }
+  },
+  presentationVariant: [
+    { sortOrder: [ { by: 'Delivery', direction: #ASC } ] }
+  ]
+}
+annotate entity ZC_BARCODE with
+{
+  // --- Filter fields (Selection) ---
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem:       [{ position: 130 }]
+  @UI.identification: [{ position: 130 }]
+  @EndUserText.label: 'Plant'
+  plant;
+
+  @UI.selectionField: [{ position: 20 }]
+  //  @UI.lineItem:       [{ position: 20 }]
+  //  @UI.identification: [{ position: 20 }]
+  @EndUserText.label: 'Inbound delivery'
+  Delivery;
+
+  @UI.selectionField: [{ position: 30 }]
+  //  @UI.lineItem:       [{ position: 30 }]
+  //  @UI.identification: [{ position: 30 }]
+  @EndUserText.label: 'Production Order'
+  Production_Order;
+
+  @UI.selectionField: [{ position: 40 }]
+  //  @UI.lineItem:       [{ position: 40 }]
+  //  @UI.identification: [{ position: 40 }]
+  @EndUserText.label: 'Material Document'
+  matnr_document;
+
+  @UI.selectionField: [{ position: 50 }]
+  @UI.lineItem:       [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  @EndUserText.label: 'Material Number'
+  matnr_number;
+
+  @UI: {
+   selectionField: [{ position: 60 }]
+  }
+  @Consumption.filter.mandatory: true
+  @Consumption.filter.selectionType: #SINGLE
+  OPTION_NAME;
+
+  @UI.selectionField: [{ position: 70 }]
+  //  @UI.lineItem:       [{ position: 70 }]
+  //  @UI.identification: [{ position: 70 }]
+  @Consumption.filter.selectionType: #SINGLE
+  @EndUserText.label: 'Thủ kho'
+  keeper;
+
+  @UI.selectionField: [{ position: 80 }]
+  //  @UI.lineItem:       [{ position: 80 }]
+  //  @UI.identification: [{ position: 80 }]
+  @Consumption.filter.selectionType: #SINGLE
+  @EndUserText.label: 'QC'
+  qc;
+
+  @UI: {
+  selectionField: [{ position: 90 }]
+  }
+  @Consumption.filter.mandatory: true
+  @Consumption.filter.selectionType: #SINGLE
+  @EndUserText.label: 'Loại tem'
+  header_type;
+
+  @UI: {
+  selectionField: [{ position: 100 }]
+  }
+  @Consumption.filter.mandatory: true
+  @Consumption.filter.selectionType: #SINGLE
+  @EndUserText.label: 'Quy cách'
+  print_multi;
+
+  @UI: {
+  selectionField: [{ position: 110 }]
+  }
+  @UI.lineItem:       [{ position: 130 }]
+  @UI.identification: [{ position: 130 }]
+  Storage_Location;
+
+
+  // --- Result list fields ---
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 130 }]
+  @UI.identification: [{ position: 130 }]
+  @EndUserText.label: 'Batch'
+  batch;
+
+  //  @UI.lineItem:       [{ position: 70 }]
+  //  @UI.identification: [{ position: 70 }]
+  //  @EndUserText.label: 'Document type'
+  //  Document_type;
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  Document;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @EndUserText.label: 'Document item'
+  Document_Item;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 260 }]
+  @UI.identification: [{ position: 260 }]
+  @EndUserText.label: 'Create on'
+  Create_on;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 270 }]
+  @UI.identification: [{ position: 270 }]
+  @EndUserText.label: 'Create by'
+  Create_by;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 120 }]
+  @UI.identification: [{ position: 120 }]
+  Material_description;
+
+
+  @UI.lineItem:       [{ position: 140 }]
+  @UI.identification: [{ position: 140 }]
+  @Consumption.filter.hidden: true
+  Quantity;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 150 }]
+  @UI.identification: [{ position: 150 }]
+  Unit;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 160 }]
+  @UI.identification: [{ position: 160 }]
+  Sale_Order;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 170 }]
+  @UI.identification: [{ position: 170 }]
+  Sale_Order_item;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 180 }]
+  @UI.identification: [{ position: 180 }]
+  @EndUserText.label: 'Production Order Status'
+  Production_Order_Status;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 190 }]
+  @UI.identification: [{ position: 190 }]
+  @EndUserText.label: ' Start date'
+  Start_date;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 200 }]
+  @UI.identification: [{ position: 200 }]
+  @EndUserText.label: 'End date'
+  End_date;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 210 }]
+  @UI.identification: [{ position: 210 }]
+  @EndUserText.label: 'Delivery date'
+  Delivery_date;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 220 }]
+  @UI.identification: [{ position: 220 }]
+  Supplier;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 230 }]
+  @UI.identification: [{ position: 230 }]
+  @EndUserText.label: ' Supplier name'
+  Supplier_name;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 240 }]
+  @UI.identification: [{ position: 240 }]
+  @EndUserText.label: ' Status'
+  status;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 250 }]
+  @UI.identification: [{ position: 250 }]
+  Posting_Date;
+
+  @Consumption.filter.hidden: true
+  @UI.lineItem:       [{ position: 260 }]
+  @UI.identification: [{ position: 260 }]
+  ValuationType;
+  @Consumption.filter.hidden: true
+  AreaType;
+  @Consumption.filter.hidden: true
+  CURRENCCY;
+  @Consumption.filter.hidden: true
+  customer;
+  @Consumption.filter.hidden: true
+  Document_type;
+  @Consumption.filter.hidden: true
+  lineindex;
+  @Consumption.filter.hidden: true
+  StockOwner;
+  @Consumption.filter.hidden: true
+  StockType;
+  @Consumption.filter.hidden: true
+  vas;
+}

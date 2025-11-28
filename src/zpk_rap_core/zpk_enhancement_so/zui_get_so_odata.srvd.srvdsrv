@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition Get SO'
+define service ZUI_GET_SO_ODATA {
+  expose ZI_ReservationDocumentItemTP;
+}

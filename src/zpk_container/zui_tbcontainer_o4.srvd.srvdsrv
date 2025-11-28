@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBCONTAINER'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBCONTAINER'
+  }
+}
+define service ZUI_TBCONTAINER_O4 {
+  expose ZC_TBCONTAINER;
+  expose ZC_TBCONTAINER_IT;
+}

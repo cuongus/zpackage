@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Hạch toán thuế suất 0%"
+  },
+  "ui5AppDetails": {
+    "appId": "zkbthue0"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_563E2F205B8A07E9D07A4725717D4D651C9ED69D_TM",
+    "semanticObject": "zkbthue0",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_563E2F205B8A07E9D07A4725717D4D651C9ED69D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Hạch toán thuế suất 0%"
+      }
+    }
+  ]
+}

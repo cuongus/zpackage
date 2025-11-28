@@ -1,0 +1,4 @@
+@EndUserText.label: 'Receipt Voucher - Phieu Thu'
+define service ZSD_RECEIPT_VOUCHER {
+  expose ZC_RECEIPT_VOUCHER;
+}

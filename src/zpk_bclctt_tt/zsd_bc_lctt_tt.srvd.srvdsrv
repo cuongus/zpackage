@@ -1,0 +1,4 @@
+@EndUserText.label: 'Báo cáo lưu chuyển tiền tệ trực tiếp'
+define service ZSD_BC_LCTT_TT {
+  expose ZC_BC_LCTT_TT;
+}

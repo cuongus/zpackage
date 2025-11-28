@@ -1,0 +1,342 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: ' Xử lý dữ liệu kiểm kê kho WM',
+                  typeNamePlural: 'Xử lý dữ liệu kiểm kê kho WM',
+
+                  title: {
+                      type: #STANDARD,
+                      label: 'PID',
+                      value: 'Pid'
+                  },
+
+                  description: {
+                      type: #STANDARD,
+                      label: 'PID Item',
+                      value: 'Pid_item'
+                  }
+    }
+}
+annotate entity ZC_INVENTORY_DATA with
+{
+  @UI.facet: [
+    { label: 'Tham số', id: 'PARAMS', purpose: #STANDARD, position: 10, type: #FIELDGROUP_REFERENCE, targetQualifier: 'PARAMS' },
+    { label: 'Kết quả hiển thị', id: 'RESULT', purpose: #STANDARD, position: 20, type: #FIELDGROUP_REFERENCE, targetQualifier: 'RESULT' }
+  ]
+
+  @UI.lineItem: [
+    // ==== DỮ LIỆU CHÍNH ====
+    { position: 10, value: 'ConvertSapNo', label: 'Convert SAP No' },
+    { position: 20, value: 'Pid', label: 'PID' },
+    { position: 30, value: 'Pid_item', label: 'PID Item' },
+    { position: 40, value: 'DocumentYear', label: 'Document Year' },
+    { position: 50, value: 'Proce', label: 'Procedure' },
+    { position: 60, value: 'CountDate', label: 'Count Date' },
+    { position: 70, value: 'Warehouse_number', label: 'Warehouse Number' },
+    { position: 80, value: 'StoreType', label: 'Storage Type' },
+    { position: 90, value: 'StorageBin', label: 'Storage Bin' },
+    { position: 100, value: 'Material', label: 'Material' },
+    { position: 110, value: 'MaterialDescription', label: 'Material Description' },
+    { position: 120, value: 'Batch', label: 'Batch' },
+    { position: 130, value: 'SpecialStock', label: 'Special Stock' },
+  //    { position: 140, value: 'SpecialStockNumber', label: 'Supplier’s Account Number' },
+    { position: 150, value: 'Salesorder', label: 'Sales Order' },
+    { position: 160, value: 'SalesOrderItem', label: 'Item no. of Sales Order' },
+    { position: 170, value: 'StockType', label: 'Stock Type' },
+    { position: 180, value: 'BookQty', label: 'Book Quantity' },
+    { position: 190, value: 'BookQtyUom', label: 'Book Qty UoM' },
+    { position: 200, value: 'PdaQty', label: 'PDA Quantity' },
+    { position: 210, value: 'CountedQty', label: 'Counted Quantity' },
+    { position: 220, value: 'CountedQtyUom', label: 'Counted Qty UoM' },
+    { position: 230, value: 'EnteredQtyPi', label: 'Entered Qty in PI' },
+    { position: 240, value: 'EnteredQtyUom', label: 'Entered Qty UoM' },
+    { position: 250, value: 'ZeroCount', label: 'Zero Count' },
+    { position: 260, value: 'DiffQty', label: 'Difference Quantity' },
+    { position: 270, value: 'ApiStatus', label: 'API Status' },
+    { position: 280, value: 'ApiMessage', label: 'API Message' },
+    { position: 290, value: 'PdaDate', label: 'PDA Date' },
+    { position: 300, value: 'PdaTime', label: 'PDA Time' },
+    { position: 310, value: 'Counter', label: 'Counter' },
+    { position: 320, value: 'ApiDate', label: 'API Date' },
+    { position: 330, value: 'ApiTime', label: 'API Time' },
+    { position: 340, value: 'PiStatus', label: 'PI Status' },
+    { position: 350, value: 'UserUpload', label: 'User Upload' },
+    { position: 360, value: 'UploadTime', label: 'Upload Time' },
+    { position: 370, value: 'UploadDate', label: 'Upload Date' },
+    { position: 380, value: 'UploadStatus', label: 'Upload Status' },
+    { position: 390, value: 'UploadMessage', label: 'Upload Message' },
+    { position: 400, value: 'Stt', label: 'Stt' },
+
+    // ==== BUTTON ACTION ====
+    { position: 500, type: #FOR_ACTION, dataAction: 'Count', label: 'Count' },
+    //{ position: 510, type: #FOR_ACTION, dataAction: 'PostAPI', label: 'Post PI' },
+    { position: 520, type: #FOR_ACTION, dataAction: 'CreatePI', label: 'Create PI' }
+  ]
+
+  // Detail
+  @UI.identification: [
+    // ==== BUTTON ACTION ====
+    { position: 10, label: 'Change Count', type: #FOR_ACTION, dataAction: 'UpdateCount' }
+  ]
+
+
+
+
+  //    MÀN HÌNH THAM SỐ
+  @UI.selectionField: [{ position: 10 }]
+  @UI.fieldGroup:     [ { qualifier: 'PARAMS', position: 10 }]
+  @EndUserText.label: 'Kho chi tiết'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'i_ewm_physinvtryitemrow', element: 'EWMWarehouse' } }]
+  Warehouse_number;
+
+  @UI.selectionField: [{ position: 20 }]
+  @UI.fieldGroup: [{ qualifier: 'PARAMS', position: 20 }]
+  @EndUserText.label: 'Khu vực'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'i_ewm_physinvtryitemrow', element: 'EWMStorageType' } }]
+  StoreType;
+
+  @UI.selectionField: [{ position: 30 }]
+  @UI.fieldGroup: [{ qualifier: 'PARAMS', position: 30 }]
+  @EndUserText.label: 'Vị trí'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'i_ewm_physinvtryitemrow', element: 'EWMStorageBin' } }]
+  StorageBin;
+
+  @UI.selectionField: [{ position: 40 }]
+  @UI.fieldGroup: [{ qualifier: 'PARAMS', position: 40 }]
+  @EndUserText.label: 'Chứng từ kiểm kê'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'i_ewm_physinvtryitemrow', element: 'PhysicalInventoryDocNumber' } }]
+  PhysInvDoc;
+
+  @UI.selectionField: [{ position: 50 }]
+  @UI.fieldGroup: [{ qualifier: 'PARAMS', position: 60 }]
+  @EndUserText.label: 'Mã hàng'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'i_ewm_physinvtryitemrow', element: 'Product' } }]
+  Material;
+
+  @UI.selectionField: [{ position: 70 }]
+  @UI.fieldGroup: [{ qualifier: 'PARAMS', position: 70 }]
+  @EndUserText.label: 'Ngày chứng từ'
+  //   @Consumption.valueHelpDefinition: [{ entity: { name: 'i_ewm_physinvtryitemrow', element: 'EWMWarehouse' } }]
+  DocDate;
+
+  @UI.selectionField: [{ position: 80 }]
+  @UI.fieldGroup: [{ qualifier: 'PARAMS', position: 80 }]
+  @EndUserText.label: 'Ngày quét kiểm kê'
+  //   @Consumption.valueHelpDefinition: [{ entity: { name: 'i_ewm_physinvtryitemrow', element: 'EWMWarehouse' } }]
+  PdaDate;
+
+
+
+
+  //   * MÀN HÌNH HIỂN THỊ
+  //  @UI.lineItem: [{ position: 10 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 10 }]
+  @EndUserText.label: 'Nhà máy'
+  Plant;
+
+  //    @UI.lineItem: [{ position: 20 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 20 }]
+  @EndUserText.label: 'Kho'
+  Storage_location;
+
+  //  @UI.lineItem: [{ position: 30 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 30 }]
+  @EndUserText.label: 'Convert SAP No'
+  ConvertSapNo;
+
+  //  @UI.lineItem: [{ position: 40 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 40 }]
+  @EndUserText.label: 'PID'
+  Pid;
+
+  //  @UI.lineItem: [{ position: 50 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 50 }]
+  @EndUserText.label: 'PID Item'
+  Pid_item;
+
+  //  @UI.lineItem: [{ position: 60 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 60 }]
+  @EndUserText.label: 'Document Year'
+  DocumentYear;
+
+  //  @UI.lineItem: [{ position: 70 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 70 }]
+  @EndUserText.label: 'Procedure'
+  Proce;
+
+  //  @UI.lineItem: [{ position: 80 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 80 }]
+  @EndUserText.label: 'Count Date'
+  CountDate;
+
+  //  @UI.lineItem: [{ position:70 }]
+  //  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 70 }]
+  //  @EndUserText.label: 'Count Time'
+  //  CountTime;
+
+
+
+  //
+  //  @UI.lineItem: [{ position: 80 }]
+  //  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 80 }]
+  //  @EndUserText.label: 'Storage Type'
+  //  store_type;
+  //
+  //  @UI.lineItem: [{ position: 90 }]
+  //  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 90 }]
+  //  @EndUserText.label: 'Storage Bin'
+  //  Storage_Bin;
+  //
+  //  @UI.lineItem: [{ position: 100 }]
+  //  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 100 }]
+  //  @EndUserText.label: 'Material'
+  //  material;
+
+  //  @UI.lineItem: [{ position: 110 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 110 }]
+  @EndUserText.label: 'Material Description'
+  MaterialDescription;
+
+  //  @UI.lineItem: [{ position: 120 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 120 }]
+  @EndUserText.label: 'Batch'
+  Batch;
+
+  //  @UI.lineItem: [{ position:  130 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 130 }]
+  @EndUserText.label: 'Special Stock Type'
+  SpecialStock;
+
+  //  @UI.lineItem: [{ position: 140 }]
+  //  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 140 }]
+  //  @EndUserText.label: 'Suppliers Account Number'
+  //  SpecialStockNumber;
+
+  //  @UI.lineItem: [{ position: 150 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 150 }]
+  @EndUserText.label: 'Sales Order'
+  Salesorder;
+
+  //  @UI.lineItem: [{ position: 160 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 170 }]
+  @EndUserText.label: ' Sales Order Item'
+  SalesOrderItem;
+
+
+  //  @UI.lineItem: [{ position: 180 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 180 }]
+  @EndUserText.label: 'Stock Type'
+  StockType;
+
+  @UI.lineItem: [{ position: 190 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 190 }]
+  @EndUserText.label: 'Book Quantity'
+  BookQty;
+
+  //  @UI.lineItem: [{ position: 200 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 200 }]
+  @EndUserText.label: 'Book Qty UoM'
+  BookQtyUom;
+
+  //  @UI.lineItem: [{ position: 210 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 210 }]
+  @EndUserText.label: 'PDA Quantity'
+  PdaQty;
+
+  //  @UI.lineItem: [{ position: 220 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 230 }]
+  @EndUserText.label: 'Counted Quantity'
+  CountedQty;
+
+  @UI.lineItem: [{ position: 240 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 240 }]
+  @EndUserText.label: 'Counted Qty UoM'
+  CountedQtyUom;
+
+  //  @UI.lineItem: [{ position: 250 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 250 }]
+  @EndUserText.label: 'Entered Qty in PI'
+  EnteredQtyPi;
+
+  //  @UI.lineItem: [{ position: 260 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 260 }]
+  @EndUserText.label: 'Entered Qty UoM'
+  EnteredQtyUom;
+
+  @UI.lineItem: [{ position: 270 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 270 }]
+  @EndUserText.label: 'Zero Count'
+  ZeroCount;
+
+  //  @UI.lineItem: [{ position: 280 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 280 }]
+  @EndUserText.label: 'Difference Quantity'
+  DiffQty;
+
+  //  @UI.lineItem: [{ position: 290 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 290 }]
+  @EndUserText.label: 'API Status'
+  ApiStatus;
+
+  //  @UI.lineItem: [{ position: 300 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 300 }]
+  @EndUserText.label: 'API Message'
+  ApiMessage;
+
+  //  @UI.lineItem: [{ position: 250 }]
+  //  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 250 }]
+  //  @EndUserText.label: 'PDA Date'
+  //  pda_date;
+
+  //  @UI.lineItem: [{ position: 310 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 310 }]
+  @EndUserText.label: 'PDA Time'
+  PdaTime;
+
+  //  @UI.lineItem: [{ position: 320 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 320 }]
+  @EndUserText.label: 'Counter'
+  Counter;
+
+  //  @UI.lineItem: [{ position: 330 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 330 }]
+  @EndUserText.label: 'API Date'
+  ApiDate;
+
+  //  @UI.lineItem: [{ position: 340 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 340 }]
+  @EndUserText.label: 'API Time'
+  ApiTime;
+
+  //  @UI.lineItem: [{ position: 350 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 350 }]
+  @EndUserText.label: 'PI Status'
+  PiStatus;
+
+  //  @UI.lineItem: [{ position: 360 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 360 }]
+  @EndUserText.label: 'User Upload'
+  UserUpload;
+
+  //  @UI.lineItem: [{ position: 370 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 370 }]
+  @EndUserText.label: ' Upload Time'
+  UploadTime;
+
+  //  @UI.lineItem: [{ position: 600 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 600 }]
+  @EndUserText.label: ' Upload Date'
+  UploadDate;
+
+  //  @UI.lineItem: [{ position: 700 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 700 }]
+  @EndUserText.label: ' Upload Status'
+  UploadStatus;
+
+  //  @UI.lineItem: [{ position: 800 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 800 }]
+  @EndUserText.label: ' Upload Message'
+  UploadMessage;
+
+
+
+}

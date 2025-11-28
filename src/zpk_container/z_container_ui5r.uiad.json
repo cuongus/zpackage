@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Kế hoạch đóng Container"
+  },
+  "ui5AppDetails": {
+    "appId": "zcontainer"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_726F8F40FEF874C4F3771C06AF3E6DA23EDC52FE_TM",
+    "semanticObject": "z_container",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_726F8F40FEF874C4F3771C06AF3E6DA23EDC52FE_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Kế hoạch đóng Container"
+      }
+    }
+  ]
+}

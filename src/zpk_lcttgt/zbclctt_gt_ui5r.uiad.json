@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Báo cáo lưu chuyển tiền tệ gián tiếp"
+  },
+  "ui5AppDetails": {
+    "appId": "zbclcttgt"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_AB1C23A19B785B13D31BE10D572D975A82DC585D_TM",
+    "semanticObject": "zbclctt_gt",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_AB1C23A19B785B13D31BE10D572D975A82DC585D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Báo cáo lưu chuyển tiền tệ gián tiếp"
+      }
+    }
+  ]
+}

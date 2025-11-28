@@ -1,0 +1,29 @@
+managed implementation in class zbp_i_cfid_temp unique;
+strict ( 2 );
+
+define behavior for ZI_CFID_TEMP //alias <alias_name>
+persistent table ztb_cfid_temp
+lock master
+authorization master ( global )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly : update ) DPostingNumb, PostingNumber, FiscalYear, RowAbs;
+
+  mapping for ztb_cfid_temp
+    {
+
+      DPostingNumb   = d_posting_numb;
+      PostingNumber  = posting_number;
+      FiscalYear     = fiscalyear;
+      RowAbs         = row_abs;
+      FStatus        = f_status;
+      Text1          = text1;
+      Text2          = text2;
+      TransactName   = transact_name;
+      Createtionby   = createtionby;
+      Createtiondate = createtiondate;
+    }
+}

@@ -1,0 +1,9 @@
+@ObjectModel.leadingEntity.name: 'ZC_ZCR_OD_GC02TP'
+define service ZUI_ZCR_OD_GC02 {
+  expose ZC_ZCR_OD_GC02TP as ZCR_OD_GC;
+  expose ZC_ZCR_OD_201TP as ZCR_OD_2;
+  expose ZC_ZCR_OD_21TP as ZCR_OD_21;
+  expose ZC_ZCR_OD_301TP as ZCR_OD_3;
+  expose ZC_ZCR_OD_4TP as ZCR_OD_4;
+  expose I_UNITOFMEASURE as UnitOfMeasure;
+}

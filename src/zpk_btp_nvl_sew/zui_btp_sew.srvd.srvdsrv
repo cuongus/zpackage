@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - btp sew'
+define service ZUI_BTP_SEW {
+  expose ZC_BTP_SEW;
+}

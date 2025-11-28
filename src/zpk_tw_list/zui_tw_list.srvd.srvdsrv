@@ -1,0 +1,4 @@
+@EndUserText.label: 'Khai báo danh sách tổ đội, nhân công'
+define service ZUI_TW_LIST {
+  expose ZC_TW_LIST as Team_and_Worker_List;
+}

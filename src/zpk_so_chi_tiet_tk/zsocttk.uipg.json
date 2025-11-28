@@ -1,0 +1,25 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "launchpach page",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "launchpach page scttk"
+  },
+  "sections": [
+    {
+      "id": "SECTION_1",
+      "visualizations": [
+        {
+          "id": "SECTION_1_VIZ_1",
+          "ladiAssignment": {
+            "ladiId": "ZSCTTK_UI5R",
+            "tileId": "UI5R_6CD1855D2C692302A105B09D5260DDBDC974ADDD_AL"
+          }
+        }
+      ]
+    }
+  ]
+}

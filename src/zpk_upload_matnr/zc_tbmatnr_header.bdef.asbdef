@@ -1,0 +1,36 @@
+projection;
+strict ( 2 );
+extensible;
+//use draft;
+use side effects;
+define behavior for ZC_TBMATNR_HEADER //alias <alias_name>
+extensible
+use etag
+{
+//  use create;
+//  use update;
+  use delete;
+
+//  use action Edit;
+//  use action Activate;
+//  use action Discard;
+//  use action Resume;
+//  use action Prepare;
+
+//   use action Post;
+   use action DownloadFile;
+   use action DownloadFile_1;
+   use action UploadFile;
+   use action UploadFile_1;
+   use action Count;
+
+  use association _dtl { create; }
+}
+
+define behavior for ZC_TBUPLOAD_MATNR //alias <alias_name>
+{
+//  use update;
+//  use delete;
+
+  use association _hdr { }
+}

@@ -1,0 +1,54 @@
+managed implementation in class ZBP_R_TBRP_COL unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBRP_COL alias ZrTbrpCol
+persistent table ZTB_RP_COL
+extensible
+draft table ZTBRP_COL_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   RpID,
+   ColID;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   RpID,
+   ColID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTB_RP_COL corresponding extensible
+  {
+    RpID = rp_id;
+    ColID = col_id;
+    ColDesc = col_desc;
+    ColCond = col_cond;
+    ColCond2 = col_cond2;
+    ColCond3 = col_cond3;
+    ColCond4 = col_cond4;
+    Formula = formula;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+}

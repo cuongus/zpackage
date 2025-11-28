@@ -1,0 +1,15 @@
+unmanaged implementation in class zbp_c_dct unique;
+//strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZC_DCT //alias <alias_name>
+//late numbering
+lock master
+authorization master ( global )
+//etag master <field_name>
+{
+//  create ( authorization : global );
+//  update;
+//  delete;
+  field ( readonly ) CompanyCode, FiscalYear, AccountingDocument, PrintDate, QuyDoi, TyGia, PTSTC, PTTTM, PTTTK, STK, NoiDung;
+  static action btnPrintPDF parameter zbr_param_dct result [1] ZC_BTN_DCT;
+}

@@ -1,0 +1,22 @@
+projection;
+strict ( 2 );
+use draft;
+
+define behavior for ZC_KBNLN_GIACONG alias KBNLNGiaCong
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Activate;
+  use action Discard;
+  use action Edit;
+  use action Resume;
+  use action Prepare;
+
+  use action PrecheckData;
+  use action fileUpload;
+  use action downloadFile;
+
+  use function GetDefaultsForCreate;
+}

@@ -1,0 +1,43 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Đơn giá',
+    typeNamePlural: 'Đơn giá'
+  }
+}
+
+annotate entity ZI_XUAT_QTGC_DONGIA with
+{
+  @UI.hidden: true
+  hdr_id;
+
+  @UI.hidden: true
+  zper;
+
+  @UI.hidden: true
+  datelapbang;
+
+  @UI.lineItem: [{ position: 10 }]
+  @EndUserText.label: 'Số PO'
+  sopo;
+
+  @UI.lineItem: [{ position: 20 }]
+  @EndUserText.label: 'PO Item'
+  poitem;
+
+  @UI.lineItem: [{ position: 30 }]
+  @EndUserText.label: 'Mã hàng'
+  material_id;
+
+  @UI.lineItem: [{ position: 40 }]
+  @EndUserText.label: 'Tên hàng'
+  production_name;
+
+  @UI.lineItem: [{ position: 50 }]
+  @EndUserText.label: 'Công đoạn'
+  congdoan;
+
+  @UI.lineItem: [{ position: 60 }]
+  @EndUserText.label: 'Đơn giá'
+  dongia;
+}

@@ -1,0 +1,213 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'OD bổ sung', 
+    typeNamePlural: 'ZCR_OD_3s', 
+    title: {
+      type: #STANDARD, 
+      label: 'ZCR_OD_3', 
+      value: 'OutboundDeliveryItem'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'OutboundDeliveryItem', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_ZCR_OD_301TP with
+{
+  @UI.facet: [ {
+    id: 'idZCR_OD_3', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Lệnh xuất gia công', 
+    position: 10 
+  }, 
+  {
+    id: 'idZCR_OD_4', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'OD bổ sung', 
+    position: 20 , 
+    targetElement: '_ZCR_OD_4'
+  } ]
+//  @UI.lineItem: [ {
+//    position: 10 , 
+//    importance: #HIGH, 
+//    label: 'PurchaseOrder'
+//  } ]
+//  @UI.identification: [ {
+//    position: 10 , 
+//    label: 'PurchaseOrder'
+//  } ]
+//  PurchaseOrder;
+//  
+//  @UI.lineItem: [ {
+//    position: 20 , 
+//    importance: #HIGH, 
+//    label: 'PurchaseOrderItem'
+//  } ]
+//  @UI.identification: [ {
+//    position: 20 , 
+//    label: 'PurchaseOrderItem'
+//  } ]
+//  PurchaseOrderItem;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'Outbound Delivery'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Outbound Delivery'
+  } ]
+  OutboundDelivery;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH, 
+    label: 'Outbound Delivery Item'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Outbound Delivery Item'
+  } ]
+  OutboundDeliveryItem;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: ' Số lượng đồng bộ '
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: ' Số lượng đồng bộ '
+  } ]
+  YY1_SLDongBo_DLH;
+  
+  @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'Ngày dự kiến xuất hàng'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Ngày dự kiến xuất hàng'
+  } ]
+  PlannedGoodsIssueDate;
+  
+  @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH, 
+    label: 'Ngày dự kiến thu hàng'
+  } ]
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Ngày dự kiến thu hàng'
+  } ]
+  YY1_NgayDuKienThu_DLH;
+  
+  @UI.lineItem: [ {
+    position: 80 , 
+    importance: #HIGH, 
+    label: 'Mã nhà gia công'
+  } ]
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Mã nhà gia công'
+  } ]
+  Supplier;
+  
+  @UI.lineItem: [ {
+    position: 90 , 
+    importance: #HIGH, 
+    label: 'Tên nhà gia công'
+  } ]
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Tên nhà gia công'
+  } ]
+  SupplierName;
+  
+  @UI.lineItem: [ {
+    position: 100 , 
+    importance: #HIGH, 
+    label: 'Mã hàng'
+  } ]
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Mã hàng'
+  } ]
+  Product;
+  
+  @UI.lineItem: [ {
+    position: 110 , 
+    importance: #HIGH, 
+    label: 'Tên hàng'
+  } ]
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Tên hàng'
+  } ]
+  ProductDescription;
+  
+  @UI.lineItem: [ {
+    position: 130 , 
+    importance: #HIGH, 
+    label: 'Số lượng'
+  } ]
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Số lượng'
+  } ]
+  ActualDeliveryQuantity;
+  
+  @UI.lineItem: [ {
+    position: 140 , 
+    importance: #HIGH, 
+    label: 'Mã BTP sau may'
+  } ]
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Mã BTP sau may'
+  } ]
+  mabtp;
+  
+  @UI.lineItem: [ {
+    position: 150 , 
+    importance: #HIGH, 
+    label: 'Tên BTP sau may'
+  } ]
+  @UI.identification: [ {
+    position: 150 , 
+    label: 'Tên BTP sau may'
+  } ]
+  tenbtp;
+  
+  @UI.lineItem: [ {
+    position: 160 , 
+    importance: #HIGH, 
+    label: 'OD gốc'
+  } ]
+  @UI.identification: [ {
+    position: 160 , 
+    label: 'OD gốc'
+  } ]
+  YY1_ODGoc_DLH;
+  
+  @UI.lineItem: [ {
+    position: 170 , 
+    importance: #HIGH, 
+    label: 'Số lượng'
+  } ]
+  @UI.identification: [ {
+    position: 170 , 
+    label: 'Số lượng'
+  } ]
+  SoLuong;
+}

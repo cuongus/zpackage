@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBTYLE_CONFIG'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBTYLE_CONFIG'
+  }
+}
+define service ZUI_TBTYLE_CONFIG_O4 provider contracts odata_v4_ui {
+  expose ZC_TBTYLE_CONFIG;
+}

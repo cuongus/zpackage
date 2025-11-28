@@ -1,0 +1,88 @@
+managed implementation in class ZBP_R_TBAPP unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBAPP alias ZrTbapp
+persistent table ztb_app
+extensible
+draft table ztbapp_d
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+{
+  field ( readonly )
+  Appid,
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt;
+
+  field ( readonly : update )
+  Zapp;
+
+  field ( numbering : managed )
+  Appid;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ztb_app corresponding extensible
+    {
+      Appid         = appid;
+      Zapp          = zapp;
+      Zdesc         = zdesc;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    }
+
+  association _dtl { create ( features : instance ); with draft; }
+
+}
+
+
+define behavior for ZR_TBAPP_FUNC alias ZrTbappFunc
+persistent table ztb_app_func
+draft table ztbapp_func_d
+lock dependent by _hdr
+authorization dependent by _hdr
+{
+  field ( readonly )
+  Appid,
+  Dtlid,
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt
+  ;
+
+  field ( numbering : managed )
+  DtlID;
+
+  update;
+  delete;
+
+  mapping for ztb_app_func corresponding
+    {
+      Appid         = appid;
+      Dtlid         = dtlid;
+      Zfunc         = zfunc;
+      Zdesc         = zdesc;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    }
+
+  association _hdr { with draft; }
+
+}

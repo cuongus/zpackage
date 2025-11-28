@@ -1,0 +1,16 @@
+unmanaged implementation in class zbp_c_barcode unique;
+strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZC_BARCODE //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+//  create ( authorization : global );
+//  update;
+//  delete;
+  field ( readonly ) plant, Document, Document_Item;
+//  action ( features : instance ) btnPrintPDF result [1] ZBR_BARCODE;
+ static action btnPrintPDF parameter ZBR_BARCODE_1 result [1] ZBR_BARCODE;
+}

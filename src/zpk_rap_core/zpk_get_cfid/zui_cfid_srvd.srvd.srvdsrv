@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition CFID'
+define service ZUI_CFID_SRVD {
+  expose ZC_CFID_TEMP;
+}

@@ -1,0 +1,30 @@
+unmanaged implementation in class zbp_cs_knhntw_header unique;
+//strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZCS_KNHNTW_HEADER alias PBKHNHTW_Header
+//late numbering
+lock master
+authorization master ( global )
+etag master lastchangedat
+{
+  create;
+  update;
+  delete;
+  field ( mandatory : create ) companycode, version;
+  field ( readonly : update ) companycode, version;
+  association _Item { create; }
+
+  static action getrawdata parameter ZP_KHNHTW_CR result [1] ZI_FILE_RES ;
+}
+
+define behavior for ZCS_KNHNTW_ITEM alias PBKHNHTW_Item
+//late numbering
+lock dependent by _Header
+authorization dependent by _Header
+etag master lastchangedat
+{
+  update;
+  delete;
+  field ( readonly ) companycode, version;
+  association _Header;
+}

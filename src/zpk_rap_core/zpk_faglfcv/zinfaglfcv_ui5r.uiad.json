@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Service in faglfcv"
+  },
+  "ui5AppDetails": {
+    "appId": "zinfaglfcv"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_F99B6933F26ADAF2F424AF8D46861E93B85A682F_TM",
+    "semanticObject": "zinfaglfcv",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_F99B6933F26ADAF2F424AF8D46861E93B85A682F_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Service in faglfcv"
+      }
+    }
+  ]
+}

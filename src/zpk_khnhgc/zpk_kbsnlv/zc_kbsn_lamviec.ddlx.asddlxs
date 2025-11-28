@@ -1,0 +1,95 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'General',
+                  typeNamePlural: 'Khai báo số ngày làm việc',
+                title: { type: #STANDARD, label: 'WorkCenter', value: 'Workcenter' },
+                                  description: { value: 'WorkCenterText'}
+    }
+}
+annotate entity ZC_KBSN_LAMVIEC with
+{
+
+  @UI.facet          : [
+  {id                : 'Items',
+  purpose            : #STANDARD,
+  position           : 10,
+  label              : 'Items',
+  type               : #IDENTIFICATION_REFERENCE
+  }
+  ]
+
+  //    Uuid;
+  @EndUserText.label: 'Workcenter'
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  Workcenter;
+
+  @EndUserText.label: 'Plant'
+  @UI.selectionField: [{ position: 20 }]
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  Plant;
+
+  @EndUserText.label: 'Week'
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  Week;
+
+  //  @UI.hidden: true
+  //  LWeek;
+
+  @EndUserText.label: 'Year'
+  @UI.selectionField: [{ position: 40 }]
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  Zyear;
+
+  @UI.hidden: true
+  WorkCenterText;
+  @UI.hidden: true
+  PlantName;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Số ngày làm việc'
+  Workingdays;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @Consumption.filter.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedByName;
+
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  @Consumption.filter.hidden: true
+  CreatedAt;
+
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  @Consumption.filter.hidden: true
+  LocalLastChangedBy;
+
+  @UI.hidden: true
+  ChangedByName;
+
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @Consumption.filter.hidden: true
+  LocalLastChangedAt;
+
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  @Consumption.filter.hidden: true
+  LastChangedAt;
+  /* Associations */
+  //    _Plant;
+  //    _PRODUNIVHIERNODETEXT_2;
+  //    _WorkCenter;
+
+}

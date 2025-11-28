@@ -1,0 +1,41 @@
+managed implementation in class zbp_i_kb_nhancong unique;
+strict ( 2 );
+
+define behavior for ZI_KB_NHANCONG //alias bh_i_nhancong
+persistent table ztb_kb_nhancong
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  field ( numbering : managed, readonly ) UuidNhancong;
+  field ( mandatory : create ) WorkerId, WorkCenter, Plant, WorkerName, FromDate, ToDate;
+
+  validation validateWorkerId on save { field WorkerId; create; update; }
+  validation validateDates on save { field FromDate, ToDate; create; update; }
+  validation validateWorkCenter on save { field WorkCenter; create; update; }
+  validation validatePlant on save { field Plant; create; update; }
+  validation validateWorkCenterPlant on save { field WorkCenter, Plant; create; update; }
+   static action UploadFile    parameter ZI_FILE_ABS;
+  static action DownloadFile  result [1] ZI_FILE_ABS;
+
+
+  mapping for ztb_kb_nhancong
+    {
+      UuidNhancong       = uuid_nhancong;
+      WorkerId           = worker_id;
+      WorkCenter         = work_center;
+      Plant              = plant;
+      WorkerName         = worker_name;
+      FromDate           = from_date;
+      ToDate             = to_date;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LastChangedBy      = last_changed_by;
+      LastChangedAt      = last_changed_at;
+      LocalLastChangedAt = local_last_changed_at;
+    }
+}

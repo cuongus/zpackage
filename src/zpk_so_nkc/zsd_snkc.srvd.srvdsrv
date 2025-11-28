@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition'
+define service ZSD_SNKC {
+  expose ZC_SO_NKC;
+}

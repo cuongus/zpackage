@@ -1,0 +1,4 @@
+@EndUserText.label: 'Payment Voucher - Phiếu Chi'
+define service ZSD_PAYMENT_VOUCHER {
+  expose ZC_PAYMENT_VOUCHER;
+}

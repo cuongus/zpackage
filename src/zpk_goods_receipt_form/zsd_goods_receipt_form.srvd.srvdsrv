@@ -1,0 +1,4 @@
+@EndUserText.label: 'Goods Receipt - Phiếu nhập kho'
+define service ZSD_GOODS_RECEIPT_FORM {
+  expose ZC_Goods_Receipt_Form;
+}

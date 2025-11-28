@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition'
+define service ZSD_BC_NANGSUAT {
+  expose ZC_BC_NANGSUAT;
+}

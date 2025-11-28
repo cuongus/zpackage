@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Khai báo thời gian hoạt động nhà cung cấp"
+  },
+  "ui5AppDetails": {
+    "appId": "zsuppliertime"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_38734734F14B65821CB90E2B2289D13AD3BB49B3_TM",
+    "semanticObject": "z_supplier_time",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_38734734F14B65821CB90E2B2289D13AD3BB49B3_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Khai báo thời gian hoạt động nhà cung cấp"
+      }
+    }
+  ]
+}

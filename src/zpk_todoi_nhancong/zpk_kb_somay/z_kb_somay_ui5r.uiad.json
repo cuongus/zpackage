@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Khai báo danh sách máy theo xưởng"
+  },
+  "ui5AppDetails": {
+    "appId": "zkbsomay"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_59D412FE96B8071189366EC62F190E9E6461CE84_TM",
+    "semanticObject": "z_kb_somay",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_59D412FE96B8071189366EC62F190E9E6461CE84_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Khai báo danh sách máy theo xưởng"
+      }
+    }
+  ]
+}

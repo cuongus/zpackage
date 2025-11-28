@@ -1,0 +1,164 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'PO gia công', 
+    typeNamePlural: 'ZCR_OD_GCs', 
+    title: {
+      type: #STANDARD, 
+      label: 'Danh sách PO gia công', 
+      value: 'PurchaseOrder'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'PurchaseOrder', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_ZCR_OD_GC02TP with
+{
+  @UI.facet: [ {
+    id: 'idCollection', 
+    type: #COLLECTION, 
+    label: 'PO gia công', 
+    position: 10 
+  }, 
+  {
+    id: 'idIdentification', 
+    parentId: 'idCollection', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'General Information', 
+    position: 20 
+  }, 
+  {
+    id: 'idZCR_OD_2', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Danh sách lệnh xuất gia công', 
+    position: 30 , 
+    targetElement: '_ZCR_OD_2'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #HIGH, 
+    label: 'PO gia công'
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'PO gia công'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  PurchaseOrder;
+  
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH, 
+    label: 'PurchaseOrder Item'
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'PurchaseOrder Item'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  PurchaseOrderItem;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'Mã BTP sau may'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Mã BTP sau may'
+  } ]
+  Product;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH, 
+    label: 'Tên BTP sau may'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Tên BTP sau may'
+  } ]
+  ProductDescription;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: 'Mã nhà gia công'
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Mã nhà gia công'
+  } ]
+  Supplier;
+  
+  @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'Tên nhà gia công'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Tên nhà gia công'
+  } ]
+  SupplierName;
+  
+  @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH, 
+    label: ' Số lượng trên PO '
+  } ]
+  @UI.identification: [ {
+    position: 70 , 
+    label: ' Số lượng trên PO '
+  } ]
+  OrderQuantity;
+  
+//  @UI.selectionField: [ {
+//    position: 80 
+//  } ]
+//  PurchaseOrderQuantityUnit;
+  
+  @UI.lineItem: [ {
+    position: 90 , 
+    importance: #HIGH, 
+    label: 'Lệnh sản xuất'
+  } ]
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Lệnh sản xuất'
+  } ]
+  OrderID;
+  
+  @UI.lineItem: [ {
+    position: 100 , 
+    importance: #HIGH, 
+    label: 'Sales Order'
+  } ]
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Sales Order'
+  } ]
+  SalesOrder;
+  
+  @UI.lineItem: [ {
+    position: 110 , 
+    importance: #HIGH, 
+    label: 'Sales Order Item'
+  } ]
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Sales Order Item'
+  } ]
+  SalesOrderItem;
+}

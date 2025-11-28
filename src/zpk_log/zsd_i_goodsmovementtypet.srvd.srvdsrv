@@ -1,0 +1,4 @@
+@EndUserText.label: 'I_GoodsMovementTypeT'
+define service Zsd_I_GoodsMovementTypeT {
+  expose zI_GoodsMovementTypeT;
+}

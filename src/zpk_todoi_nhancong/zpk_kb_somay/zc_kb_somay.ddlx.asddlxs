@@ -1,0 +1,52 @@
+@Metadata.layer: #CORE
+
+annotate entity ZC_KB_SOMAY with
+{
+
+  @UI.facet: [ { id:              'KB_SOMAY',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Khai báo danh sách máy theo xưởng',
+                 position:        10 } ]
+
+  @UI: {  lineItem:       [ { position: 10 } ],
+          identification: [ { position: 10 } ],
+          selectionField: [ { position: 10 } ] }
+//  @Consumption.filter: { mandatory: true }
+  @EndUserText.label: 'Work Center'
+  WorkCenter;
+
+  @UI: {  lineItem:       [ { position: 40 } ],
+          identification: [ { position: 40 } ],
+          selectionField: [ { position: 40 } ] }
+  @EndUserText.label: 'Mã Số Máy'
+  MachineId;
+
+  @UI: {  lineItem:       [ { position: 90 } ],
+          identification: [ { position: 90 } ],
+          selectionField: [ { position: 90 } ] }
+  @EndUserText.label: 'Từ Ngày'
+  FromDate;
+
+  @UI: {  lineItem:       [ { position: 100 } ],
+          identification: [ { position: 100 } ],
+          selectionField: [ { position: 100 } ] }
+  @EndUserText.label: 'Đến Ngày'
+  ToDate;
+
+  @EndUserText.label: 'Created By'
+  CreatedBy;
+
+  @EndUserText.label: 'Created At'
+  CreatedAt;
+
+  @EndUserText.label: 'LastChanged By'
+  LastChangedBy;
+
+  @EndUserText.label: 'LastChanged At'
+  LastChangedAt;
+
+  @EndUserText.label: 'Local Last Changed At'
+  LocalLastChangedAt;
+
+}

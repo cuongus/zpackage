@@ -1,0 +1,140 @@
+unmanaged implementation in class zbp_i_inventory_data_root unique;
+//strict ( 2 );
+//with draft;
+define behavior for ZI_INVENTORY_DATA_ROOT //alias <alias_name>
+//late numbering
+//draft table ztb_inventory1_d
+//lock master
+//total etag
+//etag master LastChangedAt
+//lock master total etag LastChangedAt
+authorization master ( global )
+//authorization master ( instance )
+//etag master <field_name>
+//with unmanaged save
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly ) UUID;
+
+  action Count;
+  action PostAPI;
+  action CreatePI;
+
+  action ( features : instance ) UpdateCount parameter zbr_param_updatecount result [1] $self;
+
+  //static action Edit parameter ZI_INVENTORY_EDIT result [0..1] $self;
+  static action UploadFile parameter ZI_FILE_ABS;
+  static action DownloadFile parameter zbr_param_downloadfile result [1] ZI_FILE_ABS;
+
+  //  draft action Activate optimized;
+  //  draft action Discard;
+  //  draft action Edit;
+  //  draft action Resume;
+  //  draft determine action Prepare;
+
+  field ( readonly )
+  Plant,
+  Storage_location,
+  ConvertSapNo,
+  Pid,
+  Pid_item,
+  DocumentYear,
+  Proce,
+  CountDate,
+  Warehouse_number,
+  StorageBin,
+  Material,
+  LineIndexOfPInvItem,
+  PdaDate,
+  DocDate,
+  StoreType,
+  PhysInvDoc,
+  StockType,
+  MaterialDescription,
+  Batch,
+  BookQty,
+  BookQtyUom,
+  EnteredQtyUom,
+  PdaQty,
+  CountedQtyUom,
+  EnteredQtyPi,
+  ZeroCount,
+  DiffQty,
+  ApiStatus,
+  ApiMessage,
+  PdaTime,
+  Counter,
+  ApiDate,
+  ApiTime,
+  PiStatus,
+  UserUpload,
+  UploadTime,
+  UploadDate,
+  UploadStatus,
+  Salesorder,
+  SalesOrderItem,
+  SpecialStockNumber,
+  SpecialStock,
+  UploadMessage;
+
+//  mapping for ztb_inventory
+//    {
+//      uuid                 = Uuid;
+//      pid                  = Pid;
+//      pid_item             = PidItem;
+//      warehouse_number     = WarehouseNumber;
+//      document_year        = DocumentYear;
+//      lineindexofpinvitem  = lineIndexIfPinvitem;
+//      plant                = Plant;
+//      storage_location     = StorageLocation;
+//      storage_bin          = StorageBin;
+//      store_type           = StoreType;
+//      phys_inv_doc         = PhysInvDoc;
+//      material             = Material;
+//      doc_date             = DocDate;
+//      pda_date             = DdaDate;
+//      pi_status            = PiStatus;
+//      convert_sap_no       = ConvertSapNo;
+//      proce                = Proce;
+//      count_date           = CountDate;
+//      count_time           = CountTime;
+//      material_description = MaterialDescription;
+//      batch                = Batch;
+//      stock_type           = StockType;
+//      book_qty             = BookQty;
+//      book_qty_uom         = BookQtyUom;
+//      pda_qty              = PdaQty;
+//      counted_qty          = CountedQty;
+//      counted_qty_uom      = CountedQtyUom;
+//      entered_qty_pi       = EnteredQtyPi;
+//      entered_qty_uom      = EnteredQtyUom;
+//      zero_count           = ZeroCount;
+//      diff_qty             = DiffQty;
+//      api_status           = ApiStatus;
+//      api_message          = ApiMessage;
+//      pda_time             = PdaTime;
+//      counter              = Counter;
+//      api_date             = ApiDate;
+//      api_time             = ApiTime;
+//      physical_item_number = PhysicalItemNumber;
+//      user_upload          = UserUpload;
+//      upload_time          = UploadTime;
+//      upload_date          = UploadSate;
+//      upload_status        = UploadStatus;
+//      upload_message       = UploadMessage;
+//      spe_stok             = SpeStok;
+//      spe_stok_num         = SpeStokNum;
+//      sales_order          = SalesOrder;
+//      sales_order_item     = SalesOrderItem;
+//      created_by           = CreatedBy;
+//      created_at           = CreatedAt;
+//      last_changed_by      = LastChangedBy;
+//      last_changed_at      = LastChangedAt;
+//      edit                 = Edit;
+//      action_type          = ActionType;
+//      quan_demo            = QuanDemo;
+//    }
+}

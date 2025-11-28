@@ -1,0 +1,10 @@
+projection;
+//strict;
+
+define behavior for ZC_TW_LIST alias team_worker_list_c
+use etag
+{
+  use create;
+  use update;
+  use delete;
+}

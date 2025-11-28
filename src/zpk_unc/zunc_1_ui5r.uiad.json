@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Ủy nhiệm chi",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Ủy nhiệm chi"
+  },
+  "ui5AppDetails": {
+    "appId": "zunc.1"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_69C14A5A9650F7171E368CAC300DADB69F2EE77E_TM",
+    "semanticObject": "ZUNC_1",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_69C14A5A9650F7171E368CAC300DADB69F2EE77E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Ủy nhiệm chi"
+      }
+    }
+  ]
+}

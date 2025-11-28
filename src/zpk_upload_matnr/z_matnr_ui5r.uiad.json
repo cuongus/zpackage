@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Upload material"
+  },
+  "ui5AppDetails": {
+    "appId": "zuploadmatnr"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_28BBB87329FDBDF5DF2C3D8D63380C90C4BB2F62_TM",
+    "semanticObject": "z_matnr",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_28BBB87329FDBDF5DF2C3D8D63380C90C4BB2F62_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Upload material"
+      }
+    }
+  ]
+}

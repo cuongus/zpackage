@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_TBTYLE_CONFIG'
+@MappingRole: true
+define role ZC_TBTYLE_CONFIG {
+  grant select on ZC_TBTYLE_CONFIG
+  where INHERITING CONDITIONS FROM ENTITY ZR_TBTYLE_CONFIG REPLACING { ROOT WITH _BaseEntity };
+}

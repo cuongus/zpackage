@@ -1,0 +1,35 @@
+unmanaged implementation in class zbp_jp_c_phieuketoan_2 unique;
+strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZJP_C_PHIEUKETOAN_2 //alias <alias_name>
+//late numbering
+lock master
+authorization master ( global )
+//etag master <field_name>
+{
+  //  create ( authorization : global );
+  //  update;
+  //  delete;
+  field ( readonly ) CompanyCode, AccountingDocument, FiscalYear, Accountant, CreateBy;
+  //  action ( features : instance ) btnPrintPDF parameter zbr_param_pkt result [1] ZI_FILE_ABS;
+  //  action ( features : instance ) btnPrintQueue parameter zbr_param_pkt result [1] ZI_FILE_ABS;
+
+//  action ( features : instance ) btnPrintPDF result [1] ZI_FILE_RES;
+  static action btnPrintPDF parameter zbr_param_pkt result [1] ZI_FILE_RES;
+  action ( features : instance ) btnPrintQueue result [1] ZI_FILE_ABS;
+
+  association _PhieuketoanItems;
+}
+
+define behavior for ZJP_C_PHIEUKETOAN_ITEMS_2 //alias <alias_name>
+//late numbering
+lock dependent by _Phieuketoan
+authorization dependent by _Phieuketoan
+//etag master <field_name>
+{
+  //  update;
+  //  delete;
+  field ( readonly ) CompanyCode, AccountingDocument, FiscalYear, Accountant, CreateBy, LegderGLItem;
+  //  action ( features : instance ) btnPrintPDF result[1] ZI_FILE_ABS;
+  association _Phieuketoan;
+}

@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZC_demo_gen102TP'
+define service ZUI_demo_gen102 {
+  expose ZC_DEMO_GEN102TP as demo_gen1;
+  expose ZC_GEN_RAP1_DTL02TP as gen_rap1_dtl;
+}

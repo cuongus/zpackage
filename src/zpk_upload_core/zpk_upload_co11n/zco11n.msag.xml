@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZCO11N</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Message Class For Upload ZCO11N</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZCO11N</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Does not exist MachineID: {&amp;1}/Shift: {&amp;2}/TeamID: {&amp;3}/Worker: {&amp;4}</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZCO11N</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Data has already been posted.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZCO11N</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Data already exists. Please delete before uploading new data.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,4 @@
+@EndUserText.label: 'zI_ReservationDocumentItem'
+define service Zsd_ReservationDocumentItem {
+  expose zI_ReservationDocumentItem;
+}

@@ -1,0 +1,292 @@
+@Metadata.layer: #CORE
+annotate entity ZI_ReservationDocumentItemTP
+    with 
+{
+    @UI.facet: [ {
+      label: 'General Information',
+      id: 'GeneralInfo',
+      purpose: #STANDARD,
+      position: 10 ,
+      type: #IDENTIFICATION_REFERENCE
+    }]
+
+  @UI.identification: [ {
+  position: 10
+} ]
+  @UI.lineItem: [ {
+    position: 10
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  Reservation;
+
+  @UI.identification: [ {
+  position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 20
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  ReservationItem;
+  
+//    @UI.identification: [ {
+//  position: 20
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 20
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 20
+//  } ]
+//  reservationdate;
+//  @UI.identification: [ {
+//  position: 22
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 22
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 22
+//  } ]
+//  goodsmovementtype;
+//  @UI.identification: [ {
+//  position: 24
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 24
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 24
+//  } ]
+//  resvnverificationcompanycode;
+//  
+//  @UI.identification: [ {
+//  position: 26
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 26
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 26
+//  } ]
+//  costcenter;
+  
+    @UI.identification: [ {
+  position: 22
+  } ]
+  @UI.lineItem: [ {
+    position: 22
+  } ]
+  @UI.selectionField: [ {
+    position: 22
+  } ]
+  GoodsMovementType;
+  
+  @UI.identification: [ {
+  position: 25
+  } ]
+  @UI.lineItem: [ {
+    position: 25
+  } ]
+  @UI.selectionField: [ {
+    position: 25
+  } ]
+  GoodsMovementIsAllowed;
+  
+  @UI.identification: [ {
+  position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 30
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  Plant;
+  @UI.identification: [ {
+  position: 40
+  } ]
+  @UI.lineItem: [ {
+    position: 40
+  } ]
+
+  StorageLocation;
+  @UI.identification: [ {
+  position: 50
+  } ]
+  @UI.lineItem: [ {
+    position: 50
+  } ]
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+  Product;
+  @UI.identification: [ {
+  position: 60
+  } ]
+  @UI.lineItem: [ {
+    position: 60
+  } ]
+  Batch;
+//  @UI.identification: [ {
+//  position: 70
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 70
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 70
+//  } ]
+//  supplier;
+//
+//  @UI.identification: [ {
+//  position: 80
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 80
+//  } ]
+//
+//  resvnitmrequiredqtyinbaseunit;
+//
+//  @UI.identification: [ {
+//  position: 90
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 90
+//  } ]
+//
+//  resvnitmwithdrawnamtincccrcy;
+  
+    @UI.identification: [ {
+  position: 100
+  } ]
+  @UI.lineItem: [ {
+    position: 100
+  } ]
+      ValuationType;
+          @UI.identification: [ {
+  position: 110
+  } ]
+  @UI.lineItem: [ {
+    position: 110
+  } ]
+      EntryUnit;
+          @UI.identification: [ {
+  position: 120
+  } ]
+  @UI.lineItem: [ {
+    position: 120
+  } ]
+      ResvnItmRequiredQtyInEntryUnit;
+    @UI.identification: [ {
+  position: 130
+  } ]
+  @UI.lineItem: [ {
+    position: 130
+  } ]
+      MatlCompRequirementDate;
+          @UI.identification: [ {
+  position: 140
+  } ]
+  @UI.lineItem: [ {
+    position: 140
+  } ]
+      GLAccount;
+          @UI.identification: [ {
+  position: 150
+  } ]
+  @UI.lineItem: [ {
+    position: 150
+  } ]
+      ResvnAccountIsEnteredManually;
+          @UI.identification: [ {
+  position: 155
+  } ]
+  @UI.lineItem: [ {
+    position: 155
+  } ]
+  
+  ResvnItmWithdrawnQtyInBaseUnit;
+  
+            @UI.identification: [ {
+  position: 160
+  } ]
+  @UI.lineItem: [ {
+    position: 160
+  } ]
+      ReservationItemText;
+          @UI.identification: [ {
+  position: 170
+  } ]
+  @UI.lineItem: [ {
+    position: 170
+  } ]
+      GoodsRecipientName;
+          @UI.identification: [ {
+  position: 180
+  } ]
+  @UI.lineItem: [ {
+    position: 180
+  } ]
+      UnloadingPointName;
+          @UI.identification: [ {
+  position: 200
+  } ]
+  @UI.lineItem: [ {
+    position: 200
+  } ]
+      ReservationItmIsMarkedForDeltn;
+          @UI.identification: [ {
+  position: 210
+  } ]
+  @UI.lineItem: [ {
+    position: 210
+  } ]
+      ReservationItemIsFinallyIssued;
+          @UI.identification: [ {
+  position: 220
+  } ]
+  @UI.lineItem: [ {
+    position: 220
+  } ]
+      YY1_SalesOrderItem_RES;
+          @UI.identification: [ {
+  position: 230
+  } ]
+  @UI.lineItem: [ {
+    position: 230
+  } ]
+      YY1_SalesOrderSO_RES;
+          @UI.identification: [ {
+  position: 240
+  } ]
+  @UI.lineItem: [ {
+    position: 240
+  } ]
+      YY1_CaSX_Re_RES;
+          @UI.identification: [ {
+  position: 250
+  } ]
+  @UI.lineItem: [ {
+    position: 250
+  } ]
+      YY1_TeamPlant_RES;
+          @UI.identification: [ {
+  position: 260
+  } ]
+  @UI.lineItem: [ {
+    position: 260
+  } ]
+      YY1_TeamWC_RES;
+          @UI.identification: [ {
+  position: 270
+  } ]
+  @UI.lineItem: [ {
+    position: 270
+  } ]
+      YY1_TeamID_RES;
+    
+}

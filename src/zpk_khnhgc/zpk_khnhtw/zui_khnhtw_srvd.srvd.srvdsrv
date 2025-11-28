@@ -1,0 +1,7 @@
+@EndUserText.label: 'Service Definition KHNHTW'
+define service ZUI_KHNHTW_SRVD {
+  expose ZCS_KNHNTW_HEADER as PBKHNHTW_Header;
+  expose ZCS_KNHNTW_ITEM   as PBKHNHTW_Item;
+  expose I_CompanyCode;
+  expose ZR_LONGWEEK_StdVH;
+}

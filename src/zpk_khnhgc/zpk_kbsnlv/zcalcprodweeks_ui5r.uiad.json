@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Tính toán năng suất tuần"
+  },
+  "ui5AppDetails": {
+    "appId": "zcalcprodweeks"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_72A5E70BC551D0BC68AF4C31DF1E0CA547001C57_TM",
+    "semanticObject": "zcalcprodweeks",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_72A5E70BC551D0BC68AF4C31DF1E0CA547001C57_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Tính toán năng suất tuần"
+      }
+    }
+  ]
+}

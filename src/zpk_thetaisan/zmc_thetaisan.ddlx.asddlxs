@@ -1,0 +1,167 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'Thẻ tài sản',
+                  typeNamePlural: 'Thẻ tài sản',
+                  title: { type: #STANDARD, label: 'Thẻ tài sản', value: 'mainasset' }
+    }
+}
+annotate entity ZC_THETAISAN with
+{
+  @UI.facet: [ { id : 'General',
+                 purpose: #STANDARD,
+                 position: 10,
+                 label : 'Chỉ tiêu',
+                 type  : #IDENTIFICATION_REFERENCE } ]
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem       : [{ position: 10 }]
+  @UI.identification : [{ position: 10 }]
+  @UI.lineItem: [{ label: 'Company' }]
+  @EndUserText.label: 'Company'
+  //  @Consumption.filter.defaultValue: '6710'
+  @Consumption.filter: { mandatory: true, multipleSelections: false, selectionType: #SINGLE }
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+        name: 'I_CompanyCode',
+        element: 'CompanyCode'
+    }
+   }]
+  companycode;
+  @UI.selectionField: [{ position: 20 } ]
+  @UI.lineItem       : [{ position: 20 }]
+  @UI.identification : [{ position: 20 }]
+  @EndUserText.label: 'Main Asset Number'
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+        name: 'ZC_Fixed_Asset_VH',
+        element: 'MasterFixedAsset'
+    }
+   }]
+  mainasset;
+  @UI.selectionField: [{ position: 30 } ]
+  @UI.lineItem       : [{ position: 30 }]
+  @UI.identification : [{ position: 30 }]
+  @EndUserText.label: 'Sub Asset'
+  @Consumption.valueHelpDefinition: [
+  { entity: { name: 'ZC_Fixed_Asset_VH', element: 'FixedAsset' } }
+]
+  subasset;
+  @UI.selectionField: [{ position: 40 } ]
+  //  @UI.lineItem       : [{ position: 40 }]
+  @UI.identification : [{ position: 40 }]
+  //  @UI.lineItem: [{ label: 'Asset Class' }]
+  @EndUserText.label: 'Asset Class'
+  //  @Consumption.filter: {
+  //                        multipleSelections: false,
+  //                        selectionType: #SINGLE
+  //                         }
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+        name: 'I_AssetClass',
+        element: 'AssetClass'
+    }
+   }]
+  assetclass;
+  @UI.selectionField: [{ position: 50 } ]
+  //  @UI.lineItem       : [{ position: 50 }]
+  @UI.identification : [{ position: 50 }]
+  //  @UI.lineItem: [{ label: 'Asset Class' }]
+  @EndUserText.label: 'Cost Center'
+  @Consumption.filter: { mandatory: false ,
+                        multipleSelections: false,
+                        selectionType: #SINGLE
+                                   }
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+        name: 'I_CostCenter',
+        element: 'CostCenter'
+    }
+   }]
+  costcenter;
+
+  //  @UI.selectionField: [{ position: 90 } ]
+  //  @Consumption.filter: {
+  //                         multipleSelections: false,
+  //                         selectionType: #SINGLE
+  //                         }
+  //  @EndUserText.label: 'Kế toán trưởng'
+  //  tenkt;
+  //
+  //  @UI.selectionField: [{ position: 100 } ]
+  //  @Consumption.filter: {
+  //                         multipleSelections: false,
+  //                         selectionType: #SINGLE
+  //                         }
+  //  @EndUserText.label: 'Giám đốc'
+  //  tengd;
+  //  @UI.lineItem       : [{ position: 100 }]
+  //  @UI.identification : [{ position: 100 }]
+  //  @UI.lineItem: [{ label: 'Mã tài sản' }]
+  //  @EndUserText.label: 'Mã tài sản'
+  //  mataisan;
+  @UI.lineItem       : [{ position: 110 }]
+  @UI.identification : [{ position: 110 }]
+  @UI.lineItem: [{ label:'Description' }]
+  @EndUserText.label: 'Description'
+  @UI.selectionField: [{ position: 60 } ]
+  @Consumption.valueHelpDefinition: [
+  { entity: { name: 'ZC_Fixed_Asset_VH', element: 'FixedAssetDescription' } }
+]
+  descrip;
+  
+  @UI.lineItem       : [{ position: 120 }]
+  @UI.identification : [{ position: 120 }]
+  @UI.lineItem: [{ label: 'Addition Description' }]
+  @EndUserText.label: 'Addition Description'
+  @UI.selectionField: [{ position: 70 } ]
+  @Consumption.valueHelpDefinition: [
+  { entity: { name: 'ZC_Fixed_Asset_VH', element: 'AssetAdditionalDescription' } }
+]
+  adddescrip;
+  //  @UI.lineItem       : [{ position: 130 }]
+  //  @UI.identification : [{ position: 130 }]
+  //  @UI.lineItem: [{ label: 'Tên tài sản' }]
+  //  @EndUserText.label: 'Tên tài sản'
+  //  tentaisan;
+  @UI.lineItem       : [{ position: 140 }]
+  @UI.identification : [{ position: 140 }]
+  @UI.lineItem: [{ label: 'Nơi sử dụng' }]
+  @EndUserText.label: 'Nơi sử dụng'
+  noisudung;
+  @UI.lineItem       : [{ position: 150 }]
+  @UI.identification : [{ position: 150 }]
+  @UI.lineItem: [{ label: 'Hiện trạng' }]
+  @EndUserText.label: 'Hiện trạng'
+  hientrang;
+  @UI.lineItem       : [{ position: 160 }]
+  @UI.identification : [{ position: 160 }]
+  @UI.lineItem: [{ label: 'Ngày ghi tăng' }]
+  @EndUserText.label: 'Ngày ghi tăng'
+  ngayghitang;
+  @UI.lineItem       : [{ position: 170 }]
+  @UI.identification : [{ position: 170 }]
+  @UI.lineItem: [{ label: 'Ngày sử dụng' }]
+  @EndUserText.label: 'Ngày sử dụng'
+  ngaysudung;
+  @UI.lineItem       : [{ position: 180 }]
+  @UI.identification : [{ position: 180 }]
+  @UI.lineItem: [{ label: 'Nguyên giá' }]
+  @EndUserText.label: 'Nguyên giá'
+  nguyengia;
+  @UI.lineItem       : [{ position: 190 }]
+  @UI.identification : [{ position: 190 }]
+  @UI.lineItem: [{ label: 'Số tháng KH' }]
+  @EndUserText.label: 'Số tháng KH'
+  sothangkhauhao;
+  @UI.lineItem       : [{ position: 200 }]
+  @UI.identification : [{ position: 200 }]
+  @UI.lineItem: [{ label: 'Cost Center' }]
+  @EndUserText.label: 'Cost Center'
+  costcentertext;
+  @UI.lineItem       : [{ position: 210 }]
+  @UI.identification : [{ position: 210 }]
+  @UI.lineItem: [{ label: 'Asset class' }]
+  @EndUserText.label: 'Asset class'
+  assetclasstext;
+
+}

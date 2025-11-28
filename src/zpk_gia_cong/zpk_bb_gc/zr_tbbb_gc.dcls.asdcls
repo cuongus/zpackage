@@ -1,0 +1,7 @@
+@EndUserText.label: 'ZR_TBBB_GC'
+@MappingRole: true
+define role ZR_TBBB_GC {
+  grant select on ZR_TBBB_GC
+  where true ;
+//   ( CompanyCode  )  = ASPECT pfcg_auth ( 'ZGIACONG', ACTVT = '03', ZBUKRS );
+}

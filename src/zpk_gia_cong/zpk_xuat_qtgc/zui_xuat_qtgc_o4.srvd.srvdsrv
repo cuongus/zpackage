@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Definition for Xuat QTGC'
+define service ZUI_XUAT_QTGC_O4 {
+  expose ZC_XUAT_QTGC_1      as Header;
+  expose ZC_XUAT_QTGC;
+  expose ZC_XUAT_QTGC_DONGIA;
+}

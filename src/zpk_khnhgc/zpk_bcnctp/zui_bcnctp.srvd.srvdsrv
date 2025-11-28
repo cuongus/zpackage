@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition BCNCTP'
+define service ZUI_BCNCTP {
+  expose ZCS_BCNCTP as BCNCTP;
+}

@@ -1,0 +1,12 @@
+projection implementation in class zbp_c_kb_nhancong unique;
+strict ( 2 );
+
+define behavior for ZC_KB_NHANCONG //alias bh_c_nhancong
+{
+  use create;
+  use update;
+  use delete;
+
+
+  use action UploadFile;
+}

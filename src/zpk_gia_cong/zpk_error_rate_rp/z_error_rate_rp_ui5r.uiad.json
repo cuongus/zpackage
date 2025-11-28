@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Bảng khai báo duyệt tỷ lệ lỗi"
+  },
+  "ui5AppDetails": {
+    "appId": "zerrorraterpcasla"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_DF344EA062F91A9EF06A45069460B1D92FA397B3_TM",
+    "semanticObject": "Z_ERROR_RATE_RP",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_DF344EA062F91A9EF06A45069460B1D92FA397B3_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Bảng khai báo duyệt tỷ lệ lỗi"
+      }
+    }
+  ]
+}

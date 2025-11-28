@@ -1,0 +1,4 @@
+@EndUserText.label: 'Template PDF'
+define service ZPDF_TEMPLATE_SRVD {
+  expose ZC_CORE_TB_TEMPPDF as CoreTempPDF;
+}

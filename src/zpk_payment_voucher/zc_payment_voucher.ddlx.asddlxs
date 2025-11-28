@@ -1,0 +1,130 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'Phiếu chi',
+                  typeNamePlural: 'Phiếu chi',
+                  title: { type: #STANDARD, value: 'AccountingDocument' }
+    },
+    presentationVariant: [{ sortOrder: [{ by: 'AccountingDocument', direction: #ASC }] }]
+}
+annotate entity ZC_PAYMENT_VOUCHER with
+{
+  @UI.facet          : [
+     {
+     id                 : 'PhieuChi',
+     purpose            : #STANDARD,
+     position           : 10,
+     isPartOfPreview    : true,
+     label              : 'General',
+     type               : #IDENTIFICATION_REFERENCE
+     }
+     ]
+
+  @UI.identification : [{ position: 10 }
+  //{ label: 'Print PDF', dataAction: 'btnPrintPDF', type: #FOR_ACTION }
+  ]
+  @UI.lineItem       : [{ position: 10 }
+  //{ label: 'Print PDF', dataAction: 'btnPrintPDF', type: #FOR_ACTION }
+  ]
+  @UI.selectionField : [{ position: 10 }]
+  //  @UI.lineItem       : [{ position: 10  }, { label: 'Export to Excel', dataAction: 'btnExportExcel', type: #FOR_ACTION }]
+  CompanyCode;
+
+  @UI.selectionField : [{ position: 20 }]
+  @UI.lineItem       : [{ position: 20  }]
+  @UI.identification : [{ position: 20  }]
+  AccountingDocument;
+
+  @UI.selectionField : [{ position: 30 }]
+  @UI.lineItem       : [{ position: 30  }]
+  @UI.identification : [{ position: 30  }]
+  @Consumption.filter.selectionType: #SINGLE
+  FiscalYear;
+
+  @UI.lineItem       : [{ position: 60  }]
+  @UI.identification : [{ position: 60  }]
+  AccountingDocumentType;
+
+  @UI.selectionField : [{ position: 70 }]
+  @UI.lineItem       : [{ position: 70  }]
+  @UI.identification : [{ position: 70  }]
+  @EndUserText.label: 'Posting Date'
+  PostingDate;
+
+  @UI.lineItem       : [{ position: 120  }]
+  @UI.identification : [{ position: 120  }]
+  TransactionCurrency;
+
+  @UI.lineItem       : [{ position: 130  }]
+  @UI.identification : [{ position: 130  }]
+  @EndUserText.label: 'Business Partner'
+  businesspartner;
+
+  @UI.lineItem       : [{ position: 140  }]
+  @UI.identification : [{ position: 140  }]
+  @EndUserText.label: 'Đối tượng'
+  Doituong;
+
+  @UI.lineItem       : [{ position: 190  }]
+  @UI.identification : [{ position: 190  }]
+  @EndUserText.label: 'Địa Chỉ'
+  DiaChi;
+
+  @UI.lineItem       : [{ position: 150  }]
+  @UI.identification : [{ position: 150  }]
+  @EndUserText.label: 'TK nợ'
+  acc_s;
+
+  @UI.lineItem       : [{ position: 160  }]
+  @UI.identification : [{ position: 160  }]
+  @EndUserText.label: 'TK có'
+  acc_h;
+
+  @UI.lineItem       : [{ position: 170  }]
+  @UI.identification : [{ position: 170  }]
+  @EndUserText.label: 'Diễn giải'
+  Diengiai;
+
+  @UI.lineItem       : [{ position: 180  }]
+  @UI.identification : [{ position: 180  }]
+  @EndUserText.label: 'Số tiền'
+  sotien;
+
+  @UI.lineItem       : [{ position: 250  }]
+  @UI.identification : [{ position: 250  }]
+  CreationUser;
+
+  @UI.lineItem       : [{ position: 260  }]
+  @UI.identification : [{ position: 260  }]
+  CreationDate;
+
+  @UI.lineItem       : [{ position: 270  }]
+  @UI.identification : [{ position: 270  }]
+  CreationTime;
+
+
+  @UI.selectionField : [{ position: 900 }]
+  @EndUserText.label: 'Giám Đốc'
+  @Consumption.filter.selectionType: #SINGLE
+  GeneralDirector;
+  @UI.selectionField : [{ position: 910 }]
+  @EndUserText.label: 'Kế Toán Trưởng'
+  @Consumption.filter.selectionType: #SINGLE
+  ChiefAccountant;
+  @UI.selectionField : [{ position: 920 }]
+  @EndUserText.label: 'Người lập phiếu'
+  @Consumption.filter.selectionType: #SINGLE
+  PreparedBy;
+  @UI.selectionField : [{ position: 930 }]
+  @EndUserText.label: 'Người nhận tiền'
+  @Consumption.filter.selectionType: #SINGLE
+  Receiver;
+  @UI.selectionField : [{ position: 940 }]
+  @EndUserText.label: 'Thủ quỹ'
+  @Consumption.filter.selectionType: #SINGLE
+  Cashier;
+  @UI.selectionField : [{ position: 950 }]
+  @EndUserText.label: 'Họ và tên người nhận tiền'
+  @Consumption.filter.selectionType: #SINGLE
+  name;
+
+}

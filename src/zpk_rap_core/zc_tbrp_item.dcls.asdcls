@@ -1,0 +1,5 @@
+@EndUserText.label: 'ZC_TBRP_ITEM'
+@MappingRole: true
+define role ZC_TBRP_ITEM {
+  grant select on ZC_TBRP_ITEM ;
+}

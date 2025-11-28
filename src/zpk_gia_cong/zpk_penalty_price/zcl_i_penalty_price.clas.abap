@@ -1,0 +1,10 @@
+CLASS zcl_i_penalty_price DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_penalty_price_1.
+
+protected section.
+private section.
+ENDCLASS.
+
+
+
+CLASS ZCL_I_PENALTY_PRICE IMPLEMENTATION.
+ENDCLASS.

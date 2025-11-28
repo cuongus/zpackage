@@ -1,0 +1,84 @@
+managed implementation in class ZBP_R_TBUSER unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBUSER alias ZrTbuser
+persistent table ztb_user
+extensible
+draft table ztbuser_d
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+{
+  field ( readonly )
+  ID,
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt;
+
+  field ( numbering : managed )
+  ID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ztb_user corresponding extensible
+    {
+      ID            = id;
+      Zuser         = zuser;
+      Zname         = zname;
+      Password      = password;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    }
+  association _dtl { create ( features : instance ); with draft; }
+}
+
+
+define behavior for ZR_TBUSER_ROLE alias ZrTbuserRole
+persistent table ztb_user_role
+draft table ztbuser_role_d
+lock dependent by _hdr
+authorization dependent by _hdr
+{
+  field ( readonly )
+  ID,
+  Urid,
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt
+  ;
+
+  field ( numbering : managed )
+  Urid;
+
+  update;
+  delete;
+
+  mapping for ztb_user_role corresponding
+    {
+      ID            = id;
+      Urid          = urid;
+      Zrole         = zrole;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    }
+
+
+  association _hdr { with draft; }
+
+}

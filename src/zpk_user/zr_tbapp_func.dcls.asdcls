@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZR_TBAPP_FUNC'
+@MappingRole: true
+define role ZR_TBAPP_FUNC {
+  grant select on ZR_TBAPP_FUNC
+  where TRUE;
+}

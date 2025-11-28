@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - Khai báo danh sách máy theo xưởng'
+define service ZUI_KB_SOMAY {
+  expose ZC_KB_SOMAY as Khai_Bao_So_May;
+}

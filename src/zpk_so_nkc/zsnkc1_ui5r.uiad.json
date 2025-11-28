@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Sổ nhật ký chung"
+  },
+  "ui5AppDetails": {
+    "appId": "zsnkc1"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_E303C9D184AC87EC6001A156E216D6CA08EBFAE5_TM",
+    "semanticObject": "zsnkc1",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_E303C9D184AC87EC6001A156E216D6CA08EBFAE5_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sổ nhật ký chung"
+      }
+    }
+  ]
+}

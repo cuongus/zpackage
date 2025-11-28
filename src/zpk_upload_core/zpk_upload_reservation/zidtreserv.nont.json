@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Sap Object Node Data Reservation",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZIDTRESERV",
+  "sapObjectType": "ZIDTRESERV",
+  "rootNode": true
+}

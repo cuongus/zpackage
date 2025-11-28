@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition'
+define service ZSD_SCTTK_V2 {
+  expose ZCE_JP_DD_SCTTK;
+}

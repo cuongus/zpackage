@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Sổ chi tiết tài khoản"
+  },
+  "ui5AppDetails": {
+    "appId": "zsocttk"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D94384E8954FA47F4278910D09283FE14E04458C_TM",
+    "semanticObject": "zso_cttk",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D94384E8954FA47F4278910D09283FE14E04458C_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sổ chi tiết tài khoản"
+      }
+    }
+  ]
+}

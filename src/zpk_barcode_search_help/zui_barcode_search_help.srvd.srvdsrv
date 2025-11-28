@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - barcode'
+define service ZUI_BARCODE_SEARCH_HELP {
+  expose ZC_BARCODE_SEARCH_HELP;
+}

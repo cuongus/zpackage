@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZC_ZWeekYear01TP'
+define service ZUI_ZWeekYear01 {
+  expose ZC_ZWEEKYEAR01TP as ZWeekYear;
+  expose ZC_ZWEEKTP as ZWeek;
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Bảng khai báo thông tin Thủ kho và QC"
+  },
+  "ui5AppDetails": {
+    "appId": "zbarcodesearchhelp"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_0770347223A803D67112863350140DA75E0335B7_TM",
+    "semanticObject": "z_barcode_search_help",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_0770347223A803D67112863350140DA75E0335B7_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Bảng khai báo thông tin Thủ kho và QC"
+      }
+    }
+  ]
+}

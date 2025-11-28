@@ -1,0 +1,41 @@
+managed;
+
+
+define behavior for ZI_SUPPLIER_TIME alias Supplier_time
+implementation in class zcl_s_supplier_time unique
+persistent table ztb_supplier
+
+lock master
+
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( numbering : managed, readonly ) LineId;
+
+  field ( mandatory )
+  CodeProcessing,
+  ValidFrom;
+
+  field ( readonly : create )
+  NameProcrssing,
+  YearProcessing;
+
+  validation require on save { create; }
+ determination year on save { create; }
+
+  determination partner_name on modify { create; }
+  validation partner_check on save { create; }
+
+  mapping for ztb_supplier
+    {
+      LineId         = line_id;
+      CodeProcessing = code_processing;
+      NameProcrssing = name_processing;
+      ValidFrom      = valid_from;
+      YearProcessing = year_processing;
+      Note           = note;
+    }
+
+}

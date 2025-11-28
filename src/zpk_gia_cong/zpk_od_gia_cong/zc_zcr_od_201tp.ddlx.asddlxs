@@ -1,0 +1,211 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Lệnh xuất gia công', 
+    typeNamePlural: 'ZCR_OD_2s', 
+    title: {
+      type: #STANDARD, 
+      label: 'Danh sách lệnh xuất gia công', 
+      value: 'OutboundDelivery'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'OutboundDelivery', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_ZCR_OD_201TP with
+{
+  @UI.facet: [ {
+    id: 'idZCR_OD_2', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Thông tin lệnh xuất gia công', 
+    position: 10 
+  }, 
+  {
+    id: 'idZCR_OD_21', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Chi tiết số lượng đồng bộ', 
+    position: 20 , 
+    targetElement: '_ZCR_OD_21'
+  }, 
+  {
+    id: 'idZCR_OD_3', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Chi tiết lệnh xuất gia công', 
+    position: 30 , 
+    targetElement: '_ZCR_OD_3'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #HIGH, 
+    label: 'PO gia công'
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'PO gia công'
+  } ]
+  PurchaseOrder;
+//  
+//  @UI.lineItem: [ {
+//    position: 20 , 
+//    importance: #HIGH, 
+//    label: 'PurchaseOrderItem'
+//  } ]
+//  @UI.identification: [ {
+//    position: 20 , 
+//    label: 'PurchaseOrderItem'
+//  } ]
+//  PurchaseOrderItem;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'Outbound Delivery'
+  }, { type: #FOR_ACTION, dataAction: 'Set_SL_DongBo', label: 'Nhập số lượng đồng bộ' }
+  , { type: #FOR_ACTION, dataAction: 'Update_OD', label: 'Update DO' } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Outbound Delivery'
+  }
+//  , { type: #FOR_ACTION, dataAction: 'Set_SL_DongBo', label: 'Nhập số lượng đồng bộ' } 
+   ]
+  OutboundDelivery;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH, 
+    label: 'Mã BTP sau may'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Mã BTP sau may'
+  } ]
+  Product;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: 'Tên BTP sau may'
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Tên BTP sau may'
+  } ]
+  ProductDescription;
+  
+  @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'Mã nhà gia công'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Mã nhà gia công'
+  } ]
+  Supplier;
+  
+  @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH, 
+    label: 'Tên nhà gia công'
+  } ]
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Tên nhà gia công'
+  } ]
+  SupplierName;
+  
+  @UI.lineItem: [ {
+    position: 80 , 
+    importance: #HIGH, 
+    label: 'Số lượng đồng bộ'
+  } ]
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Số lượng đồng bộ'
+  } ]
+  sldongbo;
+  
+  @UI.lineItem: [ {
+    position: 90 , 
+    importance: #HIGH, 
+    label: 'Số lượng đồng bộ trên DO'
+  } ]
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Số lượng đồng bộ trên DO'
+  } ]
+  YY1_SLDongBo_DLH;
+  
+  @UI.lineItem: [ {
+    position: 100 , 
+    importance: #HIGH, 
+    label: 'Ngày dự kiến xuất hàng '
+  } ]
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Ngày dự kiến xuất hàng '
+  } ]
+  PlannedGoodsIssueDate;
+  
+  @UI.lineItem: [ {
+    position: 110 , 
+    importance: #HIGH, 
+    label: 'Ngày dự kiến thu hàng'
+  } ]
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Ngày dự kiến thu hàng'
+  } ]
+  YY1_NgayDuKienThu_DLH;
+  
+  @UI.lineItem: [ {
+    position: 120 , 
+    importance: #HIGH, 
+    label: 'Trạng thái xuất hàng (hệ thống)'
+  } ]
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Trạng thái xuất hàng (hệ thống)'
+  } ]
+  OverallGoodsMovementStatus;
+  
+    @UI.lineItem: [ {
+    position: 130 , 
+    importance: #HIGH, 
+    label: 'Trạng thái xuất hàng'
+  } ]
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Trạng thái xuất hàng'
+  } ]
+  status;
+//  @UI.lineItem: [ {
+//    position: 130 , 
+//    importance: #HIGH, 
+//    label: 'OrderQuantity'
+//  } ]
+//  @UI.identification: [ {
+//    position: 130 , 
+//    label: 'OrderQuantity'
+//  } ]
+//  OrderQuantity;
+//  
+//  @UI.lineItem: [ {
+//    position: 150 , 
+//    importance: #HIGH, 
+//    label: 'YY1_ODGoc_DLH'
+//  } ]
+//  @UI.identification: [ {
+//    position: 150 , 
+//    label: 'YY1_ODGoc_DLH'
+//  } ]
+//  YY1_ODGoc_DLH;
+}

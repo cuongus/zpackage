@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - upload matnr'
+define service ZUI_UPLOAD_MATNR {
+  expose ZC_UPLOAD_MATNR;
+}

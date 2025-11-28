@@ -1,0 +1,44 @@
+managed;
+
+define behavior for ZI_PENALTY_PRICE_1 alias Penalty_price
+implementation in class zcl_i_penalty_price unique
+persistent table ztb_penalty_1
+
+lock master
+//authorization master ( instance )
+//etag master LineId
+//early numbering
+{
+
+  create;
+  update;
+  delete;
+  field ( numbering : managed, readonly ) LineId;
+
+  //field ( mandatory )
+  //ValidFrom,
+  //ValidTo;
+  field ( mandatory )
+    ErrorCode,
+    ErrorType,
+    PenaltyPrice,
+    ValidFrom,
+     ValidTo ;
+
+  determination defaultdate on modify { create; }
+  validation validateDates on save { create; field ValidFrom, ValidTo; }
+  validation require on save { create;}
+  validation code_period on save { create; }
+
+
+
+  mapping for ztb_penalty_1
+    {
+      ErrorCode    = error_code;
+      ErrorType    = error_type;
+      LineId       = line_id;
+      PenaltyPrice = penalty_price;
+      ValidFrom    = valid_from;
+      ValidTo      = valid_to;
+    }
+}

@@ -1,0 +1,76 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'ZWeekYear', 
+    typeNamePlural: 'ZWeekYears', 
+    title: {
+      type: #STANDARD, 
+      label: 'ZWeekYear', 
+      value: 'Zyear'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Zyear', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_ZWeekYear01TP with
+{
+  @UI.facet: [ {
+    id: 'idCollection', 
+    type: #COLLECTION, 
+    label: 'ZWeekYear', 
+    position: 10 
+  }, 
+  {
+    id: 'idIdentification', 
+    parentId: 'idCollection', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'General Information', 
+    position: 20 
+  }, 
+  {
+    id: 'idZWeek', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'ZWeek', 
+    position: 30 , 
+    targetElement: '_ZWeek'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #HIGH
+  } , { type: #FOR_ACTION, dataAction: 'CreateYearFrToS', label: 'Create year From To' } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Zyear;
+  
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  Zdesc;
+  
+  @UI.hidden: true
+  CreatedBy;
+  
+  @UI.hidden: true
+  CreatedAt;
+  
+  @UI.hidden: true
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedAt;
+}

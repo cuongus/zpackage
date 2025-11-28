@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Service CF_ID"
+  },
+  "ui5AppDetails": {
+    "appId": "zservcfid"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_4200FB5E4E4CC22EC3C2C57B83563B0AC520EB2F_TM",
+    "semanticObject": "zservcfid",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_4200FB5E4E4CC22EC3C2C57B83563B0AC520EB2F_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Service CF_ID"
+      }
+    }
+  ]
+}

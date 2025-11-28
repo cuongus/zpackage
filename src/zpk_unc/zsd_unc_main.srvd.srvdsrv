@@ -1,0 +1,4 @@
+@EndUserText.label: 'Main'
+define service ZSD_UNC_MAIN {
+  expose ZC_UNC_MAIN;
+}

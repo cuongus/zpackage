@@ -1,0 +1,11 @@
+@EndUserText.label: 'Access control ZC_UI_PBKHNH'
+@MappingRole: true
+define role ZC_UI_PBKHNH {
+    grant
+        select
+            on
+                ZC_UI_PBKHNH
+                    where
+                        inheriting conditions from entity ZR_UI_PBKHNH;
+                        
+}

@@ -1,0 +1,39 @@
+unmanaged implementation in class zbp_i_container unique;
+//strict ( 2 );
+
+define behavior for ZI_CONTAINER //alias zicontainer
+//late numbering
+//persistent table ztb_container
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Uuid, Counter;
+
+  //  field ( mandatory : create )
+  //  SalesOrder;
+
+  // determination defaultdate on modify { create; }
+
+//  mapping for ztb_container
+//    {
+//      SalesOrder      = sales_order;
+//      SalesOrderItem  = sales_order_item;
+//      Uuid            = uuid;
+//      Container       = container;
+//      ContainerDate   = container_date;
+//      ContainerNumber = container_number;
+//      ContainerQuan   = container_quan;
+//      ContainerWeek   = container_week;
+//      Counter         = counter;
+//      Note            = note;
+//      OpenQuan        = open_quan;
+//      Plant           = plant;
+//      Week            = week;
+//      SalesOrderQuan  = sales_order_quan;
+//      Stt             = stt;
+//    }
+}

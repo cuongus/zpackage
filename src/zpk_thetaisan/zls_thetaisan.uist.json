@@ -1,0 +1,17 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "ZLS_thetaisan",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "Thẻ tài sản",
+    "sortPriority": 100.0
+  },
+  "pages": [
+    {
+      "name": "ZLP_THETAISAN"
+    }
+  ]
+}

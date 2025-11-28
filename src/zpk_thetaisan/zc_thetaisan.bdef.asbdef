@@ -1,0 +1,16 @@
+unmanaged implementation in class zbp_c_thetaisan unique;
+//strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZC_THETAISAN //alias <alias_name>
+//late numbering
+lock master
+authorization master ( global )
+//etag master <field_name>
+{
+//  create ( authorization : global );
+//  update;
+//  delete;
+  field ( readonly ) companycode, mainasset, subasset, assetclass, costcenter, CCname, CCadrr;
+
+  static action btnPrintPDF parameter zbr_para_tts result [1] ZC_BTN_TTS;
+}

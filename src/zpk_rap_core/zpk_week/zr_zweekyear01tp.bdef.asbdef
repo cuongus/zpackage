@@ -1,0 +1,87 @@
+managed implementation in class ZBP_R_ZWeekYear01TP unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_ZWeekYear01TP alias ZWeekYear
+
+//persistent table ZTB_WEEK_YEAR
+draft table ZZWEEKYEAR00D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+with unmanaged save
+{
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Zyear;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTB_WEEK_YEAR
+  {
+    Zyear = ZYEAR;
+    Zdesc = ZDESC;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+  association _ZWeek { create; with draft; }
+  static action CreateYearFrToS parameter zst_year_fr_to;
+
+}
+
+define behavior for ZR_ZWeekTP alias ZWeek
+implementation in class ZBP_R_ZWeekTP unique
+//persistent table ZTB_WEEK
+draft table ZZWEEK00D
+etag master LastChangedAt
+lock dependent by _ZWeekYear
+authorization dependent by _ZWeekYear
+with unmanaged save
+{
+  field ( readonly )
+   Zyear,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Zweek;
+
+
+  update;
+  delete;
+
+  mapping for ZTB_WEEK
+  {
+    Zyear = ZYEAR;
+    Zweek = ZWEEK;
+    Zdesc = ZDESC;
+    Weeknum = WEEKNUM;
+    Weekchar = WEEKCHAR;
+    Zdatefr = ZDATEFR;
+    Zdateto = ZDATETO;
+    Zper = Zper;
+    Lastweek = LASTWEEK;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+  association _ZWeekYear { with draft; }
+
+}

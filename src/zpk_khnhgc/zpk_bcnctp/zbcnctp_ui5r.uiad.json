@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Báo cáo nhu cầu thành phẩm"
+  },
+  "ui5AppDetails": {
+    "appId": "zbcnctp"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_BF5B1CA0FCD9F7EBBF18932A067F30B4EE10990F_TM",
+    "semanticObject": "zbcnctp",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_BF5B1CA0FCD9F7EBBF18932A067F30B4EE10990F_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Báo cáo nhu cầu thành phẩm"
+      }
+    }
+  ]
+}

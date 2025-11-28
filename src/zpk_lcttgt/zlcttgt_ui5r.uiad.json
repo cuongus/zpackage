@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Lưu chuyển tiền tệ gián tiếp"
+  },
+  "ui5AppDetails": {
+    "appId": "zlcttgt"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_62B04D7947420CAF20F5FEAED764E02A52577F23_TM",
+    "semanticObject": "zlcttgt",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_62B04D7947420CAF20F5FEAED764E02A52577F23_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Lưu chuyển tiền tệ gián tiếp"
+      }
+    }
+  ]
+}

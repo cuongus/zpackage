@@ -1,0 +1,162 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'ZCR_OD_21', 
+    typeNamePlural: 'ZCR_OD_21s', 
+    title: {
+      type: #STANDARD, 
+      label: 'ZCR_OD_21', 
+      value: 'OutboundDeliveryItem'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'OutboundDeliveryItem', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_ZCR_OD_21TP with
+{
+  @UI.facet: [ {
+    id: 'idZCR_OD_21', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'ZCR_OD_21', 
+    position: 10 
+  } ]
+//  @UI.lineItem: [ {
+//    position: 10 , 
+//    importance: #HIGH, 
+//    label: 'PurchaseOrder'
+//  } ]
+//  @UI.identification: [ {
+//    position: 10 , 
+//    label: 'PurchaseOrder'
+//  } ]
+//  PurchaseOrder;
+//  
+//  @UI.lineItem: [ {
+//    position: 20 , 
+//    importance: #HIGH, 
+//    label: 'PurchaseOrderItem'
+//  } ]
+//  @UI.identification: [ {
+//    position: 20 , 
+//    label: 'PurchaseOrderItem'
+//  } ]
+//  PurchaseOrderItem;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'Outbound Delivery'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Outbound Delivery'
+  } ]
+  OutboundDelivery;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH, 
+    label: 'Outbound Delivery Item'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Outbound Delivery Item'
+  } ]
+  OutboundDeliveryItem;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: 'Số lượng đồng bộ'
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Số lượng đồng bộ'
+  } ]
+  sldongbo;
+  
+  @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'Ngày dự kiến xuất hàng '
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Ngày dự kiến xuất hàng '
+  } ]
+  PlannedGoodsIssueDate;
+  
+  @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH, 
+    label: 'Ngày dự kiến thu hàng'
+  } ]
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Ngày dự kiến thu hàng'
+  } ]
+  YY1_NgayDuKienThu_DLH;
+  
+  @UI.lineItem: [ {
+    position: 80 , 
+    importance: #HIGH, 
+    label: 'Mã nhà gia công'
+  } ]
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Mã nhà gia công'
+  } ]
+  Supplier;
+  
+  @UI.lineItem: [ {
+    position: 90 , 
+    importance: #HIGH, 
+    label: 'Tên nhà gia công'
+  } ]
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Tên nhà gia công'
+  } ]
+  SupplierName;
+  
+  @UI.lineItem: [ {
+    position: 100 , 
+    importance: #HIGH, 
+    label: 'Mã hàng'
+  } ]
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Mã hàng'
+  } ]
+  Product;
+  
+  @UI.lineItem: [ {
+    position: 110 , 
+    importance: #HIGH, 
+    label: 'Tên hàng'
+  } ]
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Tên hàng'
+  } ]
+  ProductDescription;
+  
+  @UI.lineItem: [ {
+    position: 130 , 
+    importance: #HIGH, 
+    label: 'Số lượng'
+  } ]
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Số lượng'
+  } ]
+  SoLuong;
+}

@@ -1,0 +1,100 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Code'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Code'
+annotate view ZC_TBTEST1 with
+{
+  @EndUserText.label: 'Code'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Code'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Code;
+  
+  @EndUserText.label: 'Name'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Name'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Name'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Name;
+  
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Createdby;
+  
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  LocalLastChangedAt;
+  
+  @UI.identification: [ {
+    position: 50 
+  } ]
+  @UI.lineItem: [ {
+    position: 50 
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  LastChangedAt;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  LastChangedBy;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 70 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  _BaseEntity;
+}

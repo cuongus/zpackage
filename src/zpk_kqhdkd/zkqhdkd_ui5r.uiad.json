@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Báo cáo kết quả hoạt động sản xuất kinh doanh",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Báo cáo kết quả hoạt động sản xuất kinh doanh"
+  },
+  "ui5AppDetails": {
+    "appId": "kqhdkd.kqhdkd"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_643A6FDD548DD8CD4DA6379CA3BAF2088C8F6233_TM",
+    "semanticObject": "ZKQHDKD",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_643A6FDD548DD8CD4DA6379CA3BAF2088C8F6233_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Báo cáo kết quả hoạt động sản xuất kinh doanh"
+      }
+    }
+  ]
+}

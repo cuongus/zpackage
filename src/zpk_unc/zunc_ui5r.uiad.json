@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Ủy nhiệm chi"
+  },
+  "ui5AppDetails": {
+    "appId": "unc"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_AF9C00AF42A5DEA6254CCB5467FF5F96FE2D0A0A_TM",
+    "semanticObject": "zunc",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_AF9C00AF42A5DEA6254CCB5467FF5F96FE2D0A0A_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Ủy nhiệm chi"
+      }
+    }
+  ]
+}

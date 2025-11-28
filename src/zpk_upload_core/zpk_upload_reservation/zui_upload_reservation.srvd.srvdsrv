@@ -1,0 +1,10 @@
+@EndUserText.label: 'Service definition Upload Reservation'
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_MN_RESERVATION'
+  }
+}
+define service ZUI_UPLOAD_RESERVATION {
+  expose ZC_MN_RESERVATION   as ManageFile;
+  expose ZC_DATA_RESERVATION as DataReservation;
+}

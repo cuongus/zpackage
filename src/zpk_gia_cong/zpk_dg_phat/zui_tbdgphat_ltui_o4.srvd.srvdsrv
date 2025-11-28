@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBDGPHAT_LTUI'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBDGPHAT_LTUI'
+  }
+}
+define service ZUI_TBDGPHAT_LTUI_O4 provider contracts odata_v4_ui {
+  expose ZC_TBDGPHAT_LTUI;
+}

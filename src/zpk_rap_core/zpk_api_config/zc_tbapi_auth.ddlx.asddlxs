@@ -1,0 +1,143 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Systemid'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Systemid'
+annotate view ZC_TBAPI_AUTH with
+{
+  @EndUserText.label: 'Systemid'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Systemid'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Systemid'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Systemid;
+  
+  @EndUserText.label: 'ApiUser'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'ApiUser'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'ApiUser'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  ApiUser;
+  
+  @EndUserText.label: 'ApiPassword'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'ApiPassword'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'ApiPassword'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+    @UI.masked: true
+  ApiPassword;
+  
+  @EndUserText.label: 'ApiUrl'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'ApiUrl'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'ApiUrl'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  ApiUrl;
+  
+  @EndUserText.label: 'ApiToken'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'ApiToken'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'ApiToken'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  ApiToken;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  LastChangedAt;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 100 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  _BaseEntity;
+}

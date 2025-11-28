@@ -1,0 +1,51 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Bảng đơn giá phạt',
+  typeNamePlural: 'Penalty Prices',
+  title: { type: #STANDARD }
+}
+annotate entity ZC_PENALTY_PRICE_1 with
+{
+
+  @UI.facet: [{
+     id: 'MainSection',
+     type: #IDENTIFICATION_REFERENCE,
+     label: 'Bảng đơn giá phạt',
+     position: 10
+   }]
+   
+    @UI.lineItem: [{ hidden: true }]
+  LineId;
+   
+  @UI.lineItem: [{ position: 20 }]
+  @UI.selectionField: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @EndUserText.label:'Mã Lỗi'
+  ErrorCode;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.selectionField: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @EndUserText.label:'Loại Lỗi'
+  ErrorType;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.selectionField: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  @EndUserText.label:'Đơn giá phạt'
+  PenaltyPrice;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.selectionField: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @EndUserText.label:'Từ ngày'
+  ValidFrom;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.selectionField: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @EndUserText.label:'Tới ngày'
+  ValidTo;
+
+ 
+}

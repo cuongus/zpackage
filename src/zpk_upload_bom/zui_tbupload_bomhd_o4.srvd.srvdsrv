@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBUPLOAD_BOMHD'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBUPLOAD_BOMHD'
+  }
+}
+define service ZUI_TBUPLOAD_BOMHD_O4 {
+  expose ZC_TBUPLOAD_BOMHD;
+  expose ZC_TBUPLOAD_BOMIT;
+}

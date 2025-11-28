@@ -1,0 +1,25 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Bảng cân đối kế toán",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "Bảng cân đối kế toán"
+  },
+  "sections": [
+    {
+      "id": "SECTION_0001",
+      "visualizations": [
+        {
+          "id": "SECTION_0001_VIZ_1",
+          "ladiAssignment": {
+            "ladiId": "ZBANGCDKT_UI5R",
+            "tileId": "UI5R_E42C02AF941BA0AA83CF1D71BD53B3EA87FF59EE_AL"
+          }
+        }
+      ]
+    }
+  ]
+}

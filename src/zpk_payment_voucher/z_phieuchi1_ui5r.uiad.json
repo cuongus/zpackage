@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Phiếu Chi"
+  },
+  "ui5AppDetails": {
+    "appId": "zphieuchi1"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_15604A75BD02CFB92166C73C96BD907D4135597D_TM",
+    "semanticObject": "z_phieuchi1",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_15604A75BD02CFB92166C73C96BD907D4135597D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Phiếu Chi"
+      }
+    }
+  ]
+}

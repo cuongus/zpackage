@@ -1,0 +1,118 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'Báo cáo năng suất tháng theo loại túi',
+                  typeNamePlural: 'Báo cáo năng suất tháng theo loại túi',
+                  title: { type: #STANDARD, label: 'Accouting Document', value: 'PRODUNIVHIERARCHYNODE' }
+    }
+}
+annotate entity ZC_BC_NANGSUAT with
+{
+  @UI.facet: [ { id : 'General',
+                 purpose: #STANDARD,
+                 position: 10,
+                 label : 'Năng suất',
+                 type  : #IDENTIFICATION_REFERENCE } ]
+
+  @UI.selectionField: [{ position: 10 }]
+  @Consumption.valueHelpDefinition:[
+      { entity             : { name: 'ZI_SANPHAM', element: 'PRODUNIVHIERARCHYNODE' }
+      }]
+  @UI.lineItem       : [{ position: 10 }]
+  @UI.identification : [{ position: 10 }]
+  @UI.lineItem: [{ label: 'Loại hàng may' }]
+  @EndUserText.label: 'Loại hàng may'
+  PRODUNIVHIERARCHYNODE;
+  
+  @UI.selectionField: [{ position: 20 } ]
+  @Consumption.valueHelpDefinition:[
+      { entity             : { name: 'I_PlantStdVH', element: 'Plant' }
+      }]
+  @UI.lineItem       : [{ position: 30 }]
+  @UI.identification : [{ position: 30 }]
+  @UI.lineItem: [{ label: 'Plant' }]
+  @EndUserText.label: 'Plant'
+  Plant;
+
+  @UI.selectionField: [{ position: 40 } ]
+  @EndUserText.label: 'Tháng'
+  @Consumption.filter: {
+                        mandatory: true,
+                        multipleSelections: false,
+                        selectionType: #SINGLE
+                         }
+  monat;
+  
+  @UI.selectionField: [{ position: 50 } ]
+  @EndUserText.label: 'Năm'
+  @Consumption.filter: {
+                        mandatory: true,
+                        multipleSelections: false,
+                        selectionType: #SINGLE
+                         }
+  gjahr;
+  
+  @UI.lineItem       : [{ position: 20 }]
+  @UI.identification : [{ position: 20 }]
+  @UI.lineItem: [{ label: 'Tên loại hàng may' }]
+  @EndUserText.label: 'Tên loại hàng may'
+  @Consumption.filter.hidden: true
+  PRODUNIVHIERARCHYNODE_txt;
+  
+  @UI.lineItem       : [{ position: 40 }]
+  @UI.identification : [{ position: 40 }]
+  @UI.lineItem: [{ label: 'Plant name' }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: ''
+  plant_txt;
+  
+  @Consumption.filter.hidden: true
+  @UI.lineItem       : [{ position: 50 }]
+  month_01;
+  
+  @Consumption.filter.hidden: true
+  @UI.lineItem       : [{ position: 60 }]
+  month_02;
+  
+  @Consumption.filter.hidden: true
+  @UI.lineItem       : [{ position: 70 }]
+  month_03;
+  
+  @Consumption.filter.hidden: true
+  @UI.lineItem       : [{ position: 80 }]
+  month_04;
+  
+  @Consumption.filter.hidden: true
+  @UI.lineItem       : [{ position: 90 }]
+  month_05;
+  
+  @Consumption.filter.hidden: true
+  @UI.lineItem       : [{ position: 100 }]
+  month_06;
+  
+  @Consumption.filter.hidden: true
+  @UI.lineItem       : [{ position: 110 }]
+  month_07;
+  
+  @Consumption.filter.hidden: true
+  @UI.lineItem       : [{ position: 120 }]
+  month_08;
+  
+  @Consumption.filter.hidden: true
+  @UI.lineItem       : [{ position: 120 }]
+  month_09;
+  
+  @Consumption.filter.hidden: true
+  @UI.lineItem       : [{ position: 130 }]
+  month_10;
+  
+  @Consumption.filter.hidden: true
+  @UI.lineItem       : [{ position: 140 }]
+  month_11;
+  
+  @Consumption.filter.hidden: true
+  @UI.lineItem       : [{ position: 150 }]
+  month_12;
+
+
+
+}

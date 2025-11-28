@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Upload Confirmation Production Order"
+  },
+  "ui5AppDetails": {
+    "appId": "zuploadco11n"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_6382D5F158FE8D3D8704F8A32F147069DEB793FA_TM",
+    "semanticObject": "zuploadco11n",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_6382D5F158FE8D3D8704F8A32F147069DEB793FA_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Upload Confirmation Production Order"
+      }
+    }
+  ]
+}

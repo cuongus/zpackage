@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZR_UIIN_FAGLFCV'
+@MappingRole: true
+define role ZR_UIIN_FAGLFCV {
+  grant select on ZR_UIIN_FAGLFCV
+  where TRUE;
+}

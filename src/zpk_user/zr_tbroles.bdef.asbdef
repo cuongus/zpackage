@@ -1,0 +1,124 @@
+managed implementation in class ZBP_R_TBROLES unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBROLES alias ZrTbroles
+persistent table ZTB_ROLES
+extensible
+draft table ZTBROLES_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   ID,
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( numbering : managed )
+   ID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTB_ROLES corresponding extensible
+  {
+    ID = id;
+    Zrole = zrole;
+    Zdesc = zdesc;
+    Zapp = zapp;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+  association _dtl { create ( features : instance ); with draft; }
+  association _dta { create ( features : instance ); with draft; }
+
+}
+
+
+define behavior for ZR_TBROLES_FUNC alias ZrTbrolesFunc
+persistent table ZTB_ROLES_FUNC
+draft table ZTBROLES_FUNC_D
+lock dependent by _hdr
+authorization dependent by _hdr
+{
+  field ( readonly )
+   ID,
+   Dtlid,
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( numbering : managed )
+  Dtlid;
+
+  update;
+  delete;
+
+   mapping for ZTB_ROLES_FUNC corresponding
+  {
+    ID = id;
+    Dtlid = dtlid;
+    Zfunc = zfunc;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+  association _hdr { with draft; }
+
+}
+
+
+define behavior for ZR_TBROLES_DATA alias ZrTbrolesData
+persistent table ztb_roles_data
+draft table ztbroles_data_d
+lock dependent by _hdr
+authorization dependent by _hdr
+{
+  field ( readonly )
+   ID,
+   Dataid,
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( numbering : managed )
+  Dataid;
+
+  update;
+  delete;
+
+   mapping for ZTB_ROLES_DATA corresponding
+  {
+    ID = id;
+    Dataid = dataid;
+    Werks = werks;
+    Lgort = lgort;
+    workcenter = workcenter;
+    Lgnum = lgnum;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+  association _hdr { with draft; }
+
+}

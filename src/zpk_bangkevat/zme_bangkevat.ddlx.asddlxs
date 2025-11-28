@@ -1,0 +1,181 @@
+@Metadata.layer: #CORE
+@UI: {
+    headerInfo: {
+        typeName: 'Purchase VAT Invoice Register',
+        typeNamePlural: 'Purchase VAT Invoice Registers',
+        title: { type: #STANDARD, label: 'Purchase VAT Invoice Register', value: 'bukrs' }
+    }
+}
+
+annotate entity ZC_BANGKEVAT with
+{
+  /* ===== Facet ===== */
+  @UI.facet: [ { id: 'General',
+                 purpose: #STANDARD,
+                 position: 10,
+                 label: 'Bảng kê hóa đơn GTGT mua vào',
+                 type: #IDENTIFICATION_REFERENCE } ]
+
+  /* ====== Selection Fields ====== */
+  @UI.lineItem: [{ hidden: true }]
+  @UI.selectionField: [{ position: 10 }]
+  @EndUserText.label: 'Company Code'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCode', element: 'CompanyCode' } }]
+  @Consumption.filter: { mandatory: true, multipleSelections: false, selectionType: #SINGLE }
+  bukrs;
+
+  @UI.lineItem: [{ hidden: true }]
+  @UI.selectionField: [{ position: 15 }]
+  @EndUserText.label: 'Fiscal Year'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_FiscalYear', element: 'FiscalYear' } }]
+  @Consumption.filter: { mandatory: true, multipleSelections: false, selectionType: #SINGLE }
+  gjahr;
+
+  @UI.lineItem: [{ hidden: true }]
+  @UI.selectionField: [{ position: 20 }]
+  @EndUserText.label: 'Posting date'
+  //  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_FiscalYear', element: 'FiscalYear' } }]
+  //  @Consumption.filter: { mandatory: true, multipleSelections: true, selectionType: #SINGLE }
+  posting_date;
+
+  //  @UI.selectionField: [{ position: 20 }]
+  //  @EndUserText.label: 'Posting Date'
+  //  posting_date;
+
+  @UI.selectionField: [{ position: 30 }]
+  @EndUserText.label: 'Invoice date'
+  @UI.lineItem: [{ hidden: true }]
+  //  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_FiscalYear', element: 'FiscalYear' } }]
+  //  @Consumption.filter: { mandatory: false, multipleSelections: true, selectionType: #SINGLE }
+  invoice_date;
+  //  @UI.selectionField: [{ position: 30 }]
+  //  @EndUserText.label: 'Invoice Date'
+  //  invoice_date;
+
+  @UI.lineItem: [{ hidden: true }]
+  @UI.selectionField: [{ position: 40 }]
+  @EndUserText.label: 'Document number'
+  //  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_FiscalYear', element: 'FiscalYear' } }]
+  @Consumption.filter: { mandatory: false, multipleSelections: true, selectionType: #SINGLE }
+  docnum;
+
+  //  @UI.selectionField: [{ position: 40 }]
+  //  @EndUserText.label: 'Document Number'
+  //  docnum;
+  @UI.lineItem: [{ hidden: true }]
+  @UI.selectionField: [{ position: 50 }]
+  @EndUserText.label: 'Profit Center'
+  @Consumption.filter: { mandatory: false, multipleSelections: true, selectionType: #SINGLE }
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_ProfitCenter', element: 'ProfitCenter' } }]
+  prctr;
+
+
+
+  /* ====== Line Items ====== */
+  @UI.lineItem: [{ position: 10, label: 'Tháng' }]
+  @UI.identification: [{ position: 10 }]
+  thang;
+
+  @UI.lineItem: [{ position: 20, label: 'Mẫu HĐ' }]
+  @UI.identification: [{ position: 20 }]
+  mauhd;
+
+  @UI.lineItem: [{ position: 30, label: 'Ký hiệu HĐ' }]
+  @UI.identification: [{ position: 30 }]
+  kyhieu_hd;
+
+  @UI.lineItem: [{ position: 40, label: 'Số HĐ' }]
+  @UI.identification: [{ position: 40 }]
+  sohd;
+
+  @UI.lineItem: [{ position: 45, label: 'Số chứng từ' }]
+  @UI.identification: [{ position: 45 }]
+  sochungtu;
+
+  @UI.lineItem: [{ position: 47, label: 'User hạch toán' }]
+  hachtoan_user;
+
+  @UI.lineItem: [{ position: 50, label: 'Ngày' }]
+  @UI.identification: [{ position: 50 }]
+  ngayhd;
+
+  @UI.lineItem: [{ position: 60, label: 'Tên Đ.v - K.hàng' }]
+  @UI.identification: [{ position: 60 }]
+  tendonvi;
+
+  @UI.lineItem: [{ position: 70, label: 'Mã số thuế' }]
+  @UI.identification: [{ position: 70 }]
+  masothue;
+
+  @UI.lineItem: [{ position: 75, label: 'Tax Code' }]
+  @UI.identification: [{ position: 75 }]
+  taxcode;
+
+  @UI.lineItem: [{ position: 80, label: 'Tên hàng' }]
+  @UI.identification: [{ position: 80 }]
+  tenhang;
+
+  @UI.lineItem: [{ position: 90, label: 'Doanh số', importance: #HIGH }]
+  @UI.identification: [{ position: 90 }]
+  doanhso;
+
+  @UI.lineItem: [{ position: 100, label: 'Thuế suất' }]
+  @UI.identification: [{ position: 100 }]
+  thuesuat;
+
+  @UI.lineItem: [{ position: 110, label: 'Tiền thuế GTGT' }]
+  @UI.identification: [{ position: 110 }]
+  thue_gtgt;
+
+  @UI.lineItem: [{ position: 120, label: 'Ghi chú' }]
+  @UI.identification: [{ position: 120 }]
+  ghichu;
+
+  /* ====== Hidden Fields ====== */
+  @UI.hidden: true
+  tong_doanhso;
+
+  @UI.hidden: true
+  tong_thuegtgt;
+
+  @UI.lineItem: [{ hidden: true }]
+  refdoc_fiscal_year;
+  @UI.lineItem: [{ hidden: true }]
+  financial_account_type;
+
+  @UI.lineItem: [{ hidden: true }]
+  currency_code;
+  @UI.lineItem: [{ hidden: true }]
+  monat;
+  @UI.lineItem: [{ hidden: true }]
+  offsetting_account_type;
+  @UI.lineItem: [{ hidden: true }]
+  item;
+  @UI.lineItem: [{ hidden: true }]
+  belnr;
+  //      @UI.lineItem: [{ hidden: true }]
+  //  thang;
+  //
+  //      @UI.lineItem: [{ hidden: true }]
+  //  belnr_d;
+  //      @UI.lineItem: [{ hidden: true }]
+  //  belnr_d;
+  //      @UI.lineItem: [{ hidden: true }]
+  //  belnr_d;
+  //      @UI.lineItem: [{ hidden: true }]
+  //  belnr_d;
+  /* ====== Header Info ====== */
+  @UI.hidden: true
+  @UI.fieldGroup: [{ qualifier: 'HeaderInfo', position: 1, label: 'Tên công ty' }]
+  ten_cty;
+
+  @UI.hidden: true
+  @UI.fieldGroup: [{ qualifier: 'HeaderInfo', position: 2, label: 'Địa chỉ' }]
+  diachi_cty;
+  @UI.hidden: true
+  @UI.fieldGroup: [{ qualifier: 'HeaderInfo', position: 3, label: 'Từ ngày' }]
+  tungay;
+  @UI.hidden: true
+  @UI.fieldGroup: [{ qualifier: 'HeaderInfo', position: 4, label: 'Đến ngày' }]
+  denngay;
+}

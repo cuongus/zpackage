@@ -1,0 +1,101 @@
+managed implementation in class ZBP_R_TBUPLOAD_BOMHD unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_TBUPLOAD_BOMHD alias ZrTbuploadBomhd
+persistent table ztb_upload_bomhd
+draft table ztbpload_bomhd_d
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+{
+  field ( readonly )
+  UUID;
+
+
+  field ( numbering : managed )
+  UUID;
+
+  create ( authorization : global );
+  update;
+  delete;
+  static action UploadFile parameter ZI_FILE_ABS;
+  static action DownloadFile result [1] ZI_FILE_ABS;
+  action Post;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ztb_upload_bomhd corresponding
+    {
+      UUID          = uuid;
+      FileName      = file_name;
+      Attachment    = attachment;
+      Mimetype      = mimetype;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+      Message       = message;
+    }
+
+  association _dtl { create ( features : instance ); with draft; }
+
+}
+
+
+define behavior for ZR_TBUPLOAD_BOMIT alias ZrTbuploadBomit
+persistent table ztb_upload_bomit
+draft table ztbpload_bomit_d
+
+lock dependent by _hdr
+authorization dependent by _hdr
+//with unmanaged save
+//etag master <field_name>
+{
+
+  update;
+  delete;
+  field ( readonly ) UUID, Dtlid;
+
+  field ( numbering : managed )
+  Dtlid;
+
+  mapping for ztb_upload_bomit corresponding
+    {
+      UUID                 = uuid;
+      Dtlid                = dtlid;
+      SalesOrder           = sales_order;
+      SalesOrderItem       = sales_order_item;
+      Matnr                = matnr;
+      Plant                = plant;
+      BomUsage             = bom_usage;
+      MaterialVariant      = material_variant;
+      MaterialStatus       = material_status;
+      HeaderQuan           = header_quan;
+      HeaderUnit           = header_unit;
+      HeaderCategory       = header_category;
+      BomItemNum           = bom_item_num;
+      ItemCategory         = item_category;
+      BomComponent         = bom_component;
+      ComponentQuan        = component_quan;
+      Unit                 = unit;
+      NetScrap             = net_scrap;
+      ScrapInPercen        = scrap_in_percen;
+      Relevancy            = relevancy;
+      SpecialProcurement   = special_procurement;
+      Location             = location;
+      AlternativeitemGroup = alternativeitem_group;
+      Priority             = priority;
+      AlternativeStrategy  = alternative_strategy;
+      AlternativeUsage     = alternative_usage;
+      CreatedBy            = created_by;
+      CreatedAt            = created_at;
+      LastChangedBy        = last_changed_by;
+      LastChangedAt        = last_changed_at;
+    }
+  association _hdr { with draft; }
+}

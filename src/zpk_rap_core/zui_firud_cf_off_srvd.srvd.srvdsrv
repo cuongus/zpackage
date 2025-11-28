@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition FIRUD_CF_OFF'
+define service ZUI_FIRUD_CF_OFF_SRVD {
+  expose ZC_FIRUD_CF_OFF_ODATA;
+}

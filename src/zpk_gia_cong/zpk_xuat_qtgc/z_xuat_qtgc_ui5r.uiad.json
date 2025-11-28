@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Xuất quyết toán gia công"
+  },
+  "ui5AppDetails": {
+    "appId": "zxuatqtgc"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_99C0962999EA359F4DE028E7AD765698A1D0C559_TM",
+    "semanticObject": "z_xuat_qtgc",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_99C0962999EA359F4DE028E7AD765698A1D0C559_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Xuất quyết toán gia công",
+        "subtitle": "{{z_xuat_qtgc-display.flpSubtitle}}"
+      }
+    }
+  ]
+}

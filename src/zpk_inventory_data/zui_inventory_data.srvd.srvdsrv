@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - xử lý dữ liệu kiểm kê'
+define service ZUI_INVENTORY_DATA {
+  expose ZC_INVENTORY_DATA as INVENTORY_DATA;
+}

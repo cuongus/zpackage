@@ -1,0 +1,117 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'FormId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'ReportName'
+annotate entity ZC_XML_FORM_CFG with
+{
+  @UI.facet: [
+  {
+    label: 'General Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  } ,
+
+  {
+      id: 'XMLFormKVMap',
+      purpose: #STANDARD,
+      position: 200,
+      label: 'XML formKV Map',
+      type: #LINEITEM_REFERENCE,
+      targetElement: '_XML_FormKV_Map'
+   },
+
+
+  {
+      id: 'XMLFormTblCFG',
+      purpose: #STANDARD,
+      position: 210,
+      label: 'XML formTable Config',
+      type: #LINEITEM_REFERENCE,
+      targetElement: '_XML_FormTable_CFG'
+  },
+  {
+      id: 'XMLFormRowMap',
+      purpose: #STANDARD,
+      position: 310,
+      label: 'XML formRow Map',
+      type: #LINEITEM_REFERENCE,
+      targetElement: '_XML_FormRow_Map'
+  }
+  ]
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  @EndUserText.label: 'Report ID'
+  FormId;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Report Name'
+  ReportName;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Root Open'
+  RootOpen;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Root Close'
+  RootClose;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Header Open'
+  HeaderOpen;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Header Close'
+  HeaderClose;
+
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Footer Open'
+  FooterOpen;
+
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Footer Close'
+  FooterClose;
+
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @Consumption.filter.hidden: true
+  CreatedBy;
+
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  @Consumption.filter.hidden: true
+  CreatedAt;
+
+  @UI.lineItem: [{ position: 110 }]
+  @UI.identification: [{ position: 110 }]
+  @Consumption.filter.hidden: true
+  LastChangedBy;
+
+  @UI.lineItem: [{ position: 120 }]
+  @UI.identification: [{ position: 120 }]
+  @Consumption.filter.hidden: true
+  LastChangedAt;
+  /* Associations */
+  //  _XML_FormKV_Map;
+  //  _XML_FormRow_Map;
+  //  _XML_FormTable_CFG;
+
+}

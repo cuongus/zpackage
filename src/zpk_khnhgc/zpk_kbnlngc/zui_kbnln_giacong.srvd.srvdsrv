@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition KB NLN Gia Công'
+define service ZUI_KBNLN_GIACONG {
+  expose ZC_KBNLN_GIACONG as KBNLNGiaCong;
+}

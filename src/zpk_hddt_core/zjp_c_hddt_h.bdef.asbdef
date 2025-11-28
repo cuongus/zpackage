@@ -1,0 +1,127 @@
+unmanaged implementation in class zbp_jp_c_hddt_h unique;
+strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZJP_C_HDDT_H alias hddt_headers
+//late numbering
+lock master
+authorization master ( instance )
+//etag master ChangedByUser
+{
+  //  create;
+  //  update;
+  //  delete;
+
+  field ( readonly ) CompanyCode, AccountingDocument, BillingDocument, FiscalYear,
+  CurrencyType, TypeOfDate, testrun, EinvoiceType;
+
+  association _EInvoiceItems;
+
+  //  association _EInvoiceItems;
+
+  action ( features : instance ) Integration result [1] $self;
+  //  action ( features : instance ) Cancel parameter zpr_cancel_einvoice result [1] $self;
+  action ( features : instance ) Search result [1] $self;
+  action ( features : instance ) Adjust parameter zpr_adjust_einvoice result [1] $self
+  { default function GetDefaultsFor_SystemDate_Adj; }
+
+  action ( features : instance ) previewDraft result [1] ZI_FILE_RES;
+  action ( features : instance ) getJson result [1] ZI_FILE_RES;
+
+  action ( features : instance )
+  mapping parameter zpr_mapp_einvoice result [1] $self;
+  //  action ( features : instance ) Replace parameter zpr_replace_einvoice result [1] $self;
+
+  mapping for zjp_a_hddt_h
+    {
+      CompanyCode              = companycode;
+      AccountingDocument       = accountingdocument;
+      BillingDocument          = billingdocument;
+      FiscalYear               = fiscalyear;
+      CurrencyType             = currencytype;
+      TypeOfDate               = typeofdate;
+      testrun                  = testrun;
+      EinvoiceType             = einvoicetype;
+      Usertype                 = usertype;
+      IDSys                    = idsys;
+      PostingDate              = postingdate;
+      DocumentDate             = documentdate;
+      SupplierTax              = suppliertax;
+      Customer                 = customer;
+      PaymentMethod            = paymentmethod;
+      AdjustType               = adjusttype;
+      AccountingDocumentSource = accountingdocumentsource;
+      FiscalYearSource         = fiscalyearsource;
+      EinvoiceForm             = einvoiceform;
+      EinvoiceSerial           = einvoiceserial;
+      EinvoiceNumber           = einvoicenumber;
+      EinvoiceTimeCreate       = einvoicetimecreate;
+      EinvoiceDateCreate       = einvoicedatecreate;
+      EinvoiceDateCancel       = einvoicedatecancel;
+      Link                     = link;
+      MSCQT                    = mscqt;
+      StatusSAP                = statussap;
+      StatusInvRes             = statusinvres;
+      StatusCQTRes             = statuscqtres;
+      MessageType              = messagetype;
+      MessageText              = messagetext;
+      CreatedByUser            = createdbyuser;
+      CreatedDate              = createddate;
+      CreatedTime              = createdtime;
+    }
+}
+
+define behavior for ZJP_C_HDDT_I alias hddt_items
+//late numbering
+lock dependent by _EInvoicesHeaders
+authorization dependent by _EInvoicesHeaders
+//etag master <field_name>
+{
+  //  update;
+  //  delete;
+
+  field ( readonly ) CompanyCode, AccountingDocument,
+  BillingDocument, FiscalYear, AccountingDocumentItem,
+  CurrencyType, TypeOfDate, testrun, EinvoiceType;
+
+
+  association _EInvoicesHeaders;
+
+  mapping for zjp_a_hddt_i
+    {
+      CompanyCode              = companycode;
+      AccountingDocument       = accountingdocument;
+      FiscalYear               = fiscalyear;
+      AdjustType               = adjusttype;
+      AccountingDocumentSource = accountingdocumentsource;
+      FiscalYearSource         = fiscalyearsource;
+      CurrencyType             = currencytype;
+      Usertype                 = usertype;
+      TypeOfDate               = typeofdate;
+      EinvoiceForm             = einvoiceform;
+      EinvoiceSerial           = einvoiceserial;
+      EinvoiceType             = einvoicetype;
+      EinvoiceNumber           = einvoicenumber;
+      testrun                  = testrun;
+      AccountingDocumentItem   = accountingdocumentitem;
+      TaxCode                  = taxcode;
+      TaxPercentage            = taxpercentage;
+      ItemEinvoice             = itemeinvoice;
+      Product                  = product;
+      Longtext                 = longtext;
+      DocumentItemText         = documentitemtext;
+      Quantity                 = quantity;
+      BaseUnit                 = baseunit;
+      UnitofMeasureLongname    = unitofmeasurelongname;
+      CompanyCodeCurrency      = companycodecurrency;
+      priceInCoCodeCrcy        = priceincocodecrcy;
+      AmountInCoCodeCrcy       = amountincocodecrcy;
+      VatAmountInCoCodeCrcy    = vatamountincocodecrcy;
+      TotalAmountInCoCodeCrcy  = totalamountincocodecrcy;
+      TransactionCurrency      = transactioncurrency;
+      priceintransaccrcy       = priceintransaccrcy;
+      AmountInTransacCrcy      = amountintransaccrcy;
+      VatAmountInTransacCrcy   = vatamountintransaccrcy;
+      TotalAmountInTransacCrcy = totalamountintransaccrcy;
+    }
+
+}

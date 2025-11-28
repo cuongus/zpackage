@@ -1,0 +1,10 @@
+@EndUserText.label: 'Service Definition for FI Report'
+define service ZFI_REPORT_SRVD {
+  expose zjp_c_soquytienmat        as SoQuyTienMat;
+  expose ZJP_C_BANGCANDOIPHATSINH  as BangCanDoiPhatSinh;
+  expose ZJP_C_PHIEUKETOAN         as PhieuKeToan;
+  expose ZJP_C_PHIEUKETOAN_ITEMS   as PhieuKeToanItems;
+  expose ZJP_C_PHIEUKETOAN_2       as PhieuKeToan2;
+  expose ZJP_C_PHIEUKETOAN_ITEMS_2 as PhieuKeToanItems2;
+  expose ZJP_C_PKT_PDFDOC          as pktPDF;
+}

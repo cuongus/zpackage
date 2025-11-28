@@ -1,0 +1,18 @@
+ unmanaged implementation in class zbp_goods_receipt_form unique;  // Sửa tên lớp thành zbp_goods_receipt_form
+strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZC_Goods_Receipt_Form  // Thêm alias
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+//  create ( authorization : global );
+//  update;
+//  delete;
+   // Thêm hành động btnPrintPDF
+  field ( readonly ) MaterialDocument, FiscalYear,Shipper,Cashier,Director,Department ;
+
+//   action ( features : instance ) btnPrintPDF result [1] ZC_GOODS_RECEIPT_FORM1 ;
+   static action btnPrintPDF parameter zbr_param_receipt result [1] ZC_GOODS_RECEIPT_FORM1 ;
+}

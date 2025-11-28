@@ -1,0 +1,11 @@
+@EndUserText.label: 'Control ZC_DATA_KB_THUE0'
+@MappingRole: true
+define role ZC_DATA_KB_THUE0 {
+    grant
+        select
+            on
+                ZC_DATA_KB_THUE0
+                    where
+                        inheriting conditions from entity ZI_DATA_KB_THUE0;
+                        
+}

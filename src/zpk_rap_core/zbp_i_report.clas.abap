@@ -1,0 +1,9 @@
+CLASS zbp_i_report DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_report.
+protected section.
+private section.
+ENDCLASS.
+
+
+
+CLASS ZBP_I_REPORT IMPLEMENTATION.
+ENDCLASS.

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Config Serial S-Invoices"
+  },
+  "ui5AppDetails": {
+    "appId": "zjphdserial"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8A198FD1FE26BEEC8AE64579E64E5225F5EA4FAE_TM",
+    "semanticObject": "zjphdserial",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8A198FD1FE26BEEC8AE64579E64E5225F5EA4FAE_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Config Serial S-Invoices"
+      }
+    }
+  ]
+}

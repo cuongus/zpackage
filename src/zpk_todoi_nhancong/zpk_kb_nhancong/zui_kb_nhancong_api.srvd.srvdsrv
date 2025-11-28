@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - Khai báo danh sách nhân công theo xưởng'
+define service ZUI_KB_NHANCONG_API {
+  expose ZC_KB_NHANCONG as Khai_Bao_Nhan_Cong_API;
+}

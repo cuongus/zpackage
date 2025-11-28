@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Delete planned orders"
+  },
+  "ui5AppDetails": {
+    "appId": "zdelplannedorder"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_9A6098710A5CD9C4C7B774209FD4C7F42C779029_TM",
+    "semanticObject": "Z_del_plt_ord",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_9A6098710A5CD9C4C7B774209FD4C7F42C779029_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Delete planned orders"
+      }
+    }
+  ]
+}

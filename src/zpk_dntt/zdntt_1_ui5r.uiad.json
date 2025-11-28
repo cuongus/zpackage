@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Đề nghị thanh toán"
+  },
+  "ui5AppDetails": {
+    "appId": "zdntt"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_42857ED809C2B2929B8B36BBCE2E054B6986AF8D_TM",
+    "semanticObject": "ZDNTT",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_42857ED809C2B2929B8B36BBCE2E054B6986AF8D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Đề nghị thanh toán"
+      }
+    }
+  ]
+}

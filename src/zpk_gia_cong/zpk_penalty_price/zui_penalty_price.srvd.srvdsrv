@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition'
+define service ZUI_PENALTY_PRICE {
+  expose ZC_PENALTY_PRICE_1 as Travel;
+}

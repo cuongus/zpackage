@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Kế hoạch nhận hàng theo tháng"
+  },
+  "ui5AppDetails": {
+    "appId": "zkhnhtt"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_601CF2AD10809716EA65307B3DDB7B9F1568631C_TM",
+    "semanticObject": "Z_KHNHTT",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_601CF2AD10809716EA65307B3DDB7B9F1568631C_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Kế hoạch nhận hàng theo tháng"
+      }
+    }
+  ]
+}

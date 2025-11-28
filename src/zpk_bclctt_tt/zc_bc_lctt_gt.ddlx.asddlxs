@@ -1,0 +1,46 @@
+@Metadata.layer: #CORE
+annotate entity ZC_BC_LCTT_GT with
+{
+  @UI: {
+  selectionField: [{ position: 10 }]
+  }
+  @Consumption.filter.mandatory: true
+        
+  CompanyCode;
+
+  @UI: {
+    selectionField: [{ position: 20 }]
+   }
+   @Consumption.filter.mandatory: true
+  FiscalYear;
+
+  @UI: {
+   selectionField: [{ position: 30 }]
+  }
+  @EndUserText.label: 'Từ kỳ1'
+  @Consumption.filter.mandatory: true
+  per_fr;
+  
+  @UI: {
+   selectionField: [{ position: 40 }]
+  }
+  @EndUserText.label: 'Đến kỳ'
+  @Consumption.filter.mandatory: true
+  per_to;
+    
+  @UI.lineItem: [{ position: 10 , label: 'Chỉ tiêu'}]
+  CHI_TIEU;
+
+  @UI.lineItem: [{ position: 20, label: 'Mã số' }]
+  MA_SO;
+
+  @UI.lineItem: [{ position: 30, label: 'Thuyết minh' }]
+  THUYET_MINH;
+
+  @UI.lineItem: [{ position: 40, label: 'Kỳ này' }]
+  KY_NAY;
+
+  @UI.lineItem: [{ position: 50, label: 'Kỳ trước' }]
+  KY_TRUOC;
+
+}

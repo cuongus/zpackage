@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Bảng cân đối kế toán"
+  },
+  "ui5AppDetails": {
+    "appId": "bcdkt.bcdkt"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_3B7BA2DED81C87ABE401E8ABB57AEC6253F0B998_TM",
+    "semanticObject": "ZBCDKT",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_3B7BA2DED81C87ABE401E8ABB57AEC6253F0B998_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Bảng cân đối kế toán"
+      }
+    }
+  ]
+}

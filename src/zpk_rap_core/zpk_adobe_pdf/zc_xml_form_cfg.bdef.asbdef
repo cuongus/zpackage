@@ -1,0 +1,48 @@
+projection implementation in class zbc_r_xml_form_cfg unique;
+strict ( 2 );
+extensible;
+use draft;
+use side effects;
+define behavior for ZC_XML_FORM_CFG alias XMLFormConfig
+extensible
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Activate;
+  use action Discard;
+  use action Edit;
+  use action Resume;
+  use action Prepare;
+
+  use association _XML_FormRow_Map { create; with draft; }
+  use association _XML_FormTable_CFG { create; with draft; }
+  use association _XML_FormKV_Map { create; with draft; }
+}
+
+define behavior for ZC_XML_FORMROW_MAP alias XMLFormRowMap
+{
+  use update;
+  use delete;
+
+  use association _XML_Form_CFG { with draft; }
+}
+
+define behavior for ZC_XML_FORMTABLE_CFG alias XMLFormTableConfig
+{
+  use update;
+  use delete;
+
+  use association _XML_Form_CFG { with draft; }
+}
+
+define behavior for ZC_XML_FORM_KV_MAP alias XMLFormKVMap
+{
+  use update;
+  use delete;
+
+  use association _XML_Form_CFG { with draft; }
+}

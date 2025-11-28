@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Upload Material Document"
+  },
+  "ui5AppDetails": {
+    "appId": "zuploadmigo"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_C1F6CDAD593087D7E4A2CD27F36401A688DDF972_TM",
+    "semanticObject": "z_migo",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_C1F6CDAD593087D7E4A2CD27F36401A688DDF972_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Upload Material Document"
+      }
+    }
+  ]
+}

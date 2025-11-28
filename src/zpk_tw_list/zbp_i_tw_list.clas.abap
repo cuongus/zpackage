@@ -1,0 +1,9 @@
+CLASS zbp_i_tw_list DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_tw_list.
+protected section.
+private section.
+ENDCLASS.
+
+
+
+CLASS ZBP_I_TW_LIST IMPLEMENTATION.
+ENDCLASS.

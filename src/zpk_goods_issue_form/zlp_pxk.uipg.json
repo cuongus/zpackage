@@ -1,0 +1,25 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "ZLP_pxk",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "Phiếu xuất kho"
+  },
+  "sections": [
+    {
+      "id": "SECTION_1",
+      "visualizations": [
+        {
+          "id": "SECTION_1_VIZ_1",
+          "ladiAssignment": {
+            "ladiId": "ZAPPXK_UI5R",
+            "tileId": "UI5R_FD0F51931BF08A35E9DD65BE83D935AB7B57E9A0_AL"
+          }
+        }
+      ]
+    }
+  ]
+}

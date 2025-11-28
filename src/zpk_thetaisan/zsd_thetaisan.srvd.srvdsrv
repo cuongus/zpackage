@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Define Thẻ Tài Sản'
+define service ZSD_THETAISAN {
+  expose ZC_THETAISAN;
+}

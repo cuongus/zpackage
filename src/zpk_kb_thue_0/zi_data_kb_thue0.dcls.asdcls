@@ -1,0 +1,15 @@
+@EndUserText.label: 'Control ZI_DATA_KB_THUE0'
+@MappingRole: true
+define role ZI_DATA_KB_THUE0 {
+    grant 
+        select
+            on
+                ZI_DATA_KB_THUE0
+                    where
+                // (tuỳ bạn có cần S_TABU_NAM hay không – cho customizing)
+//                ( ) = ASPECT pfcg_auth( 'S_TABU_NAM', ACTVT = '03', TABLE = 'ZI_DATA_KB_THUE0' )
+//                and
+                // lọc theo Companycode của bản ghi khớp với BUKRS trong role người dùng
+                ( Companycode ) = ASPECT pfcg_auth( 'F_BKPF_BUK', ACTVT = '03', BUKRS );
+                        
+}

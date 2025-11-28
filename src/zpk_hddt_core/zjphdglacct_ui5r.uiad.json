@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Config GLAccount S-Invoices"
+  },
+  "ui5AppDetails": {
+    "appId": "zjphdglacct"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_190A15254B31913427ABFCBF5848742B5D7BDCB0_TM",
+    "semanticObject": "zjphdglacct",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_190A15254B31913427ABFCBF5848742B5D7BDCB0_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Config GLAccount S-Invoices"
+      }
+    }
+  ]
+}

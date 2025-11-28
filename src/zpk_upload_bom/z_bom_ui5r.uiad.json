@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Upload Order BOM"
+  },
+  "ui5AppDetails": {
+    "appId": "zbom"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_FB4A17E12984D54A8BA70EDE14956A57D7F510B2_TM",
+    "semanticObject": "z_bom",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_FB4A17E12984D54A8BA70EDE14956A57D7F510B2_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Upload Order BOM"
+      }
+    }
+  ]
+}

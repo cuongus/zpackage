@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - thời gian hoạt động nhà cung cấp'
+define service ZUI_SUPPLIER_TIME {
+  expose ZC_SUPPLIER_TIME as SUPPLIER_TIME;
+}

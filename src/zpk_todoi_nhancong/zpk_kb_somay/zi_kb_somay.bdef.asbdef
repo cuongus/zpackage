@@ -1,0 +1,34 @@
+managed implementation in class zbp_i_kb_somay unique;
+strict ( 2 );
+
+define behavior for ZI_KB_SOMAY //alias <alias_name>
+persistent table ztb_kb_somay
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  field ( numbering : managed, readonly ) UuidSomay;
+  field ( mandatory : create ) WorkCenter, MachineId, FromDate, ToDate;
+
+  validation validateMachineId on save { field MachineId; create; update; }
+  validation validateDates on save { field FromDate, ToDate; create; update; }
+  validation validateWorkCenter on save { field WorkCenter; create; update; }
+
+  mapping for ztb_kb_somay
+    {
+      UuIDSomay          = uuid_somay;
+      WorkCenter         = work_center;
+      MachineId          = machine_id;
+      FromDate           = from_date;
+      ToDate             = to_date;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LastChangedBy      = last_changed_by;
+      LastChangedAt      = last_changed_at;
+      LocalLastChangedAt = local_last_changed_at;
+    }
+}

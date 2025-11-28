@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition'
+define service ZDS_BANGKEVAT {
+  expose ZC_BANGKEVAT;
+}

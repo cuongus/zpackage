@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Node Type ZTBROLES_DATA",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZTBROLES_DATA",
+  "sapObjectType": "ZTBROLES_DATA",
+  "rootNode": true
+}

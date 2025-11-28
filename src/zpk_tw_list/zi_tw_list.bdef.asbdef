@@ -1,0 +1,42 @@
+managed;
+//strict;
+
+define behavior for ZI_TW_LIST alias team_worker_list_i
+implementation in class zbp_i_tw_list unique
+persistent table ztb_tw_list
+lock master
+//authorization master ( instance )
+etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field ( numbering : managed, readonly ) UuID;
+  field ( mandatory : create ) WorkerId, WorkCenter, Plant, Shift, MachineId, TeamId, TeamName, WorkerName, FromDate, ToDate;
+
+  validation validateWorkerId on save { field WorkerId; create; }
+  validation validateDates on save { field FromDate, ToDate; create; }
+
+  determination autoFill on modify { create; update; }
+
+  mapping for ztb_tw_list
+    {
+      UuID               = uuid;
+      WorkerId           = worker_id;
+      WorkCenter         = work_center;
+      Plant              = plant;
+      Shift              = shift;
+      MachineId          = machine_id;
+      TeamId             = team_id;
+      TeamName           = team_name;
+      WorkerName         = worker_name;
+      FromDate           = from_date;
+      ToDate             = to_date;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LastChangedBy      = last_changed_by;
+      LastChangedAt      = last_changed_at;
+      LocalLastChangedAt = local_last_changed_at;
+    }
+}

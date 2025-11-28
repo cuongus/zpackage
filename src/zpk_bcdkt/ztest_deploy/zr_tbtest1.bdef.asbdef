@@ -1,0 +1,46 @@
+managed implementation in class ZBP_R_TBTEST1 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBTEST1 alias ZrTbtest1
+persistent table ZTB_TEST1
+extensible
+draft table ZTBTEST1_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   Code;
+
+  field ( readonly )
+   Createdby,
+   LocalLastChangedAt,
+   LastChangedAt,
+   LastChangedBy;
+
+  field ( readonly : update )
+   Code;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTB_TEST1 corresponding extensible
+  {
+    Code = code;
+    Name = name;
+    Createdby = createdby;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt = last_changed_at;
+    LastChangedBy = last_changed_by;
+  }
+
+}

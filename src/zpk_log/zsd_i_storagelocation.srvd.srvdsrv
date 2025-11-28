@@ -1,0 +1,4 @@
+@EndUserText.label: 'I_StorageLocation'
+define service Zsd_I_StorageLocation {
+  expose zI_StorageLocation;
+}

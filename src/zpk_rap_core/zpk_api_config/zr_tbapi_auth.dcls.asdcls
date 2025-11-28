@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZR_TBAPI_AUTH'
+@MappingRole: true
+define role ZR_TBAPI_AUTH {
+  grant select on ZR_TBAPI_AUTH
+  where TRUE;
+}

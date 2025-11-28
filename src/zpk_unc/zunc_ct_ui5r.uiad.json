@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Ủy nhiệm chi (Chi tiền)"
+  },
+  "ui5AppDetails": {
+    "appId": "zunc.ct"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_C0BB96B560AF0E574DB537CFCAA788E7C55607BC_TM",
+    "semanticObject": "ZUNC_CT",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_C0BB96B560AF0E574DB537CFCAA788E7C55607BC_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Ủy nhiệm chi (Chi tiền)"
+      }
+    }
+  ]
+}

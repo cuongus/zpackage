@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_TBAPI_AUTH'
+@MappingRole: true
+define role ZC_TBAPI_AUTH {
+  grant select on ZC_TBAPI_AUTH
+  where INHERITING CONDITIONS FROM ENTITY ZR_TBAPI_AUTH REPLACING { ROOT WITH _BaseEntity };
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for delete planned order'
+define service ZUI_DEL_PLANNED_ORDER {
+  expose ZC_DEL_PLANNED_ORDER;
+}

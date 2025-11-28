@@ -1,0 +1,17 @@
+unmanaged implementation in class zbp_r_del_planned_order unique;
+//strict ( 2 );
+
+define behavior for ZR_DEL_PLANNED_ORDER alias ZrDelPlannedOrder
+//persistent table plaf
+//lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  //  create ( authorization : global );
+  //  update;
+  //  delete;
+
+  action ( authorization : global ) delete;
+
+  field ( readonly ) planned_Order;
+}

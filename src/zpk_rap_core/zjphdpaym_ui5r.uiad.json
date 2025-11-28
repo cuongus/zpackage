@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Config Payment Method S-Invoices"
+  },
+  "ui5AppDetails": {
+    "appId": "zjphdpaym"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_5E9666C430FA99505D4F25B930C3F03B056B47C5_TM",
+    "semanticObject": "zjphdpaym",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_5E9666C430FA99505D4F25B930C3F03B056B47C5_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Config Payment Method S-Invoices"
+      }
+    }
+  ]
+}

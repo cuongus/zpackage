@@ -1,0 +1,85 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'Ủy nhiệm chi (Điều chuyển tiền)',
+                  typeNamePlural: 'Ủy nhiệm chi( Điều chuyển tiền )'
+    }
+}
+annotate entity ZC_DCT with
+{
+  @UI.facet: [ { id : 'General',
+                 purpose: #STANDARD,
+                 position: 10,
+                 label : 'Chỉ tiêu',
+                 type  : #IDENTIFICATION_REFERENCE } ]
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.identification : [{ position: 5 }]
+  @UI.lineItem: [{ position: 5 }]
+  @Consumption.filter: { mandatory: true, multipleSelections: false, selectionType: #SINGLE }
+  @Consumption.valueHelpDefinition: [{
+    entity: { 
+        name: 'I_CompanyCode',
+        element: 'CompanyCode'
+    }
+   }]
+  CompanyCode;
+  
+  @UI.identification : [{ position: 30 }]
+  @UI.lineItem: [{ position: 10 }]
+  @UI.selectionField: [{ position: 20 }]
+  @Consumption.filter: { multipleSelections: false, selectionType: #SINGLE, mandatory: true }
+  FiscalYear;
+  
+     
+  @UI.selectionField: [{ position: 40 }]
+  @UI.identification : [{ position: 40 }]
+  @UI.lineItem: [{ position: 40 }]
+  @Consumption.valueHelpDefinition: [{
+    entity: { 
+        name: 'ZC_ACCOUNTDOC_STATUS',
+        element: 'AccountingDocument'
+    }
+   }]
+  AccountingDocument;
+  
+  @UI.selectionField: [{ position: 45 }]
+  @EndUserText.label: 'Ngày'
+  @Consumption.filter: { multipleSelections: false, selectionType: #SINGLE }
+  PrintDate;
+  
+  @UI.selectionField: [{ position: 50 }]
+  @EndUserText.label: 'Đề nghị quy đổi ra'
+  @Consumption.filter: { multipleSelections: false, selectionType: #SINGLE }
+  QuyDoi;  
+   
+  @UI.selectionField: [{ position: 60 }]
+  @EndUserText.label: 'Tỷ giá'
+  @Consumption.filter: { multipleSelections: false, selectionType: #SINGLE }
+  TyGia; 
+  
+  @UI.selectionField: [{ position: 70 }]
+  @EndUserText.label: 'Phí trong số tiền chuyển'
+  @Consumption.filter: { multipleSelections: false, selectionType: #SINGLE }
+  PTSTC;
+  
+  @UI.selectionField: [{ position: 80 }]
+  @EndUserText.label: 'Phí thu từ tiền mặt'
+  @Consumption.filter: { multipleSelections: false, selectionType: #SINGLE }
+  PTTTM;
+  
+  @UI.selectionField: [{ position: 90 }]
+  @EndUserText.label: 'Phí thu từ tài khoản'
+  @Consumption.filter: { multipleSelections: false, selectionType: #SINGLE }
+  PTTTK;
+  
+  @UI.selectionField: [{ position: 95 }]
+  @EndUserText.label: 'Số tài khoản ghi nợ'
+  @Consumption.filter: { multipleSelections: false, selectionType: #SINGLE }
+  STK;
+  
+  @UI.selectionField: [{ position: 100 }]
+  @EndUserText.label: 'Nội dung thanh toán'
+  @Consumption.filter: { multipleSelections: false, selectionType: #SINGLE }
+  NoiDung;
+  
+ }

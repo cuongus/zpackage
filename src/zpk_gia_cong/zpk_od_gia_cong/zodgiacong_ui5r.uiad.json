@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Tạo OD gia công"
+  },
+  "ui5AppDetails": {
+    "appId": "zodgiacong"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_B7A05DB3A4DA78A996DB4E6B897CF2F3A085C7DD_TM",
+    "semanticObject": "zodgiacong",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_B7A05DB3A4DA78A996DB4E6B897CF2F3A085C7DD_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Tạo OD gia công"
+      }
+    }
+  ]
+}

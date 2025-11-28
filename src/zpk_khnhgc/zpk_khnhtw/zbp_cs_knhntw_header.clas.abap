@@ -1,0 +1,5 @@
+CLASS zbp_cs_knhntw_header DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zcs_knhntw_header.
+ENDCLASS.
+
+CLASS zbp_cs_knhntw_header IMPLEMENTATION.
+ENDCLASS.

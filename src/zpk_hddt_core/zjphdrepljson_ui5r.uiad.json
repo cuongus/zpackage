@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Map Json S-Invoices"
+  },
+  "ui5AppDetails": {
+    "appId": "zjphdrepljson"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_5B98D833F7B6C2BB0559E48E478AE1179874FAA7_TM",
+    "semanticObject": "zjphdrepljson",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_5B98D833F7B6C2BB0559E48E478AE1179874FAA7_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Map Json S-Invoices"
+      }
+    }
+  ]
+}

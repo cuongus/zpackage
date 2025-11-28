@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition for BKHDVGTT'
+define service ZDS_BKHDVGTT {
+  expose ZC_BKHDVGTT;
+}

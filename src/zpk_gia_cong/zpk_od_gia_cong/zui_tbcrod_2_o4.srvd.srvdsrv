@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBCROD_2'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBCROD_2'
+  }
+}
+define service ZUI_TBCROD_2_O4 provider contracts odata_v4_ui {
+  expose ZC_TBCROD_2;
+}

@@ -1,0 +1,81 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'FormId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'FormId'
+annotate entity ZC_XML_FORMROW_MAP with
+{
+  @UI.facet          : [
+  {id                : 'XMLFormRowMap',
+  purpose            : #STANDARD,
+  position           : 10,
+  label              : 'XML formRow Map',
+  type               : #IDENTIFICATION_REFERENCE
+  }
+  ]
+
+//  @UI.hidden: true
+//  FormId;
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  @EndUserText.label: 'Table Id'
+  TableId;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @EndUserText.label: 'Row Kind'
+  Rowkind;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @EndUserText.label: 'Sequence'
+  Seq;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'XML Name'
+  XmlName;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Source Type'
+  SrcType;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Source Name'
+  SrcName;
+
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  @Consumption.filter.hidden: true
+  @EndUserText.label: 'Format'
+  Fmt;
+
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  @Consumption.filter.hidden: true
+  CreatedBy;
+
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @Consumption.filter.hidden: true
+  CreatedAt;
+
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  @Consumption.filter.hidden: true
+  LastChangedBy;
+
+  @UI.lineItem: [{ position: 110 }]
+  @UI.identification: [{ position: 110 }]
+  @Consumption.filter.hidden: true
+  LastChangedAt;
+  /* Associations */
+  //  _XML_Form_CFG;
+
+}

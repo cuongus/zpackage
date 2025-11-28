@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Thẻ tài sản"
+  },
+  "ui5AppDetails": {
+    "appId": "zthets"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_3AF36C9E45946C52FA1BCBB5F0DA9EC4AE8C6B6A_TM",
+    "semanticObject": "ZTHETS",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_3AF36C9E45946C52FA1BCBB5F0DA9EC4AE8C6B6A_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Thẻ tài sản"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+CLASS zbp_jp_r_hd_config DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zjp_r_hd_config.
+protected section.
+private section.
+ENDCLASS.
+
+
+
+CLASS ZBP_JP_R_HD_CONFIG IMPLEMENTATION.
+ENDCLASS.

@@ -1,0 +1,78 @@
+managed with additional save implementation in class zbp_i_data_kb_thue0 unique;
+strict ( 2 );
+
+with draft;
+define behavior for ZI_DATA_KB_THUE0 alias DataKBThue0
+persistent table zui_kb_thue0
+draft table zud_kb_thue0
+etag master Changeddate
+lock master total etag Changeddate
+authorization master ( global )
+early numbering
+{
+  create ( features : global, precheck ) { default function GetDefaultsForCreate; }
+  update ( features : global, precheck );
+  delete ( features : global, precheck );
+
+  field ( readonly ) Uuid, Documentnumber, Createdbyuser, Createddate, Changedbyuser, Changeddate;
+
+  field ( mandatory : create ) Companycode, Type, Mauhd, Documentreferenceid,
+  Invoicedate, Postingdate, Itemtext, DoanhSoNguyenTe, Doanhsovnd, LoaiTienTe;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  determination Numbering on save { create; }
+
+  determination SetDefaultVND on modify { create; }
+
+  determination CalculatePrice on modify { field DoanhSoNguyenTe, Doanhsovnd, Quantity; }
+
+  side effects
+  { field DoanhSoNguyenTe affects field DonGiaNguyenTe;
+    field Doanhsovnd affects field DonGiaVND;
+    field Quantity affects field DonGiaNguyenTe, field DonGiaVND;
+  }
+  internal action ReCalcPrice;
+
+  validation CheckDuplicate on save { field Companycode, Documentreferenceid, Invoicedate, Supplier; create; update; }
+
+  validation CheckRequired on save { field Customer, Supplier; create; update; }
+
+  static action fileUpload parameter ZI_FILE_ABS result [0..*] ZR_KBT0_UPLOAD;
+
+  static action downloadFile result [1] ZI_FILE_ABS;
+
+  mapping for zui_kb_thue0 corresponding
+    {
+      Uuid                = uuid;
+      Documentnumber      = documentnumber;
+      Companycode         = companycode;
+      Type                = type;
+      Mauhd               = mauhd;
+      Documentreferenceid = documentreferenceid;
+      Postingdate         = postingdate;
+      Invoicedate         = invoicedate;
+      Supplier            = supplier;
+      Customer            = customer;
+      Itemtext            = itemtext;
+      Quantity            = quantity;
+      BaseUnit            = baseunit;
+      Doanhsovnd          = doanhsovnd;
+      DonGiaVND           = dongiavnd;
+      LoaiTienVND         = loaitienvnd;
+      DoanhSoNguyenTe     = doanhsonguyente;
+      DonGiaNguyenTe      = dongianguyente;
+      LoaiTienTe          = loaitiente;
+      TenMaVangLai        = tenmavanglai;
+      MSTMavangLai        = mstmavanglai;
+      Note                = note;
+      Createdbyuser       = createdbyuser;
+      Createddate         = createddate;
+      Changedbyuser       = changedbyuser;
+      Changeddate         = changeddate;
+    }
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition KB Thuế 0%'
+define service ZUI_KB_THUE0 {
+  expose ZC_DATA_KB_THUE0 as DataKBThue0;
+}

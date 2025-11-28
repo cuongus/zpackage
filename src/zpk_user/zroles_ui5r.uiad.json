@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Roles manager"
+  },
+  "ui5AppDetails": {
+    "appId": "zroles"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_3E1E19355B8A1B9CE8ABAB9D117ABB887B7A49B1_TM",
+    "semanticObject": "zroles",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_3E1E19355B8A1B9CE8ABAB9D117ABB887B7A49B1_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Roles manager"
+      }
+    }
+  ]
+}

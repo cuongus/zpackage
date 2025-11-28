@@ -1,0 +1,14 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBROLES'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBROLES'
+  }
+}
+define service ZUI_TBROLES_O4
+  provider contracts odata_v4_ui {
+  expose ZC_TBROLES;
+  expose ZC_TBROLES_FUNC;
+  expose ZC_TBROLES_DATA;
+}

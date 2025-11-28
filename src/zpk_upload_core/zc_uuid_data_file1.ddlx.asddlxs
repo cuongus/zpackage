@@ -1,0 +1,173 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Preview',
+    typeNamePlural: 'Preview Data'
+  }
+}
+annotate entity ZC_UUID_DATA_FILE1 with
+{
+
+  @UI.facet          : [
+  {id                : 'Preview',
+  purpose            : #STANDARD,
+  position           : 10,
+  label              : 'Preview',
+  type               : #IDENTIFICATION_REFERENCE
+  }
+  ]
+
+  @UI.hidden: true
+  Uuid;
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  UserUuid;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  EndUser;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  DocSeqNo;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  CompanyCode;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  Reference;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  DocumentDate;
+
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  PostingDate;
+
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  TaxDetDate;
+
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  DocumentType;
+
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  DocHeaderText;
+
+  @UI.lineItem: [{ position: 110 }]
+  @UI.identification: [{ position: 110 }]
+  Currency;
+
+  @UI.lineItem: [{ position: 120 }]
+  @UI.identification: [{ position: 120 }]
+  TranslationDate;
+
+  @UI.lineItem: [{ position: 130 }]
+  @UI.identification: [{ position: 130 }]
+  ExchangeRate;
+
+  @UI.lineItem: [{ position: 140 }]
+  @UI.identification: [{ position: 140 }]
+  Customer;
+
+  @UI.lineItem: [{ position: 150 }]
+  @UI.identification: [{ position: 150 }]
+  Vendor;
+
+  @UI.lineItem: [{ position: 160 }]
+  @UI.identification: [{ position: 160 }]
+  GlAccount;
+
+  @UI.lineItem: [{ position: 170 }]
+  @UI.identification: [{ position: 170 }]
+  TransactionAmount;
+
+  @UI.lineItem: [{ position: 180 }]
+  @UI.identification: [{ position: 180 }]
+  LocalAmount;
+
+  @UI.lineItem: [{ position: 190 }]
+  @UI.identification: [{ position: 190 }]
+  PaymentBlock;
+  //    BaselineDate;
+  //    CashDiscBase;
+  //    CashDiscDays1;
+  //    CdPercent1;
+  //    CashDiscDays2;
+  //    CdPercent2;
+  //    PaymentMethod;
+  //    PmtSupplement;
+  //    PaymentReference;
+  //    PartnerBankType;
+  //    HouseBank;
+  //    AccountId;
+  //    ReasonCode;
+  //    NetPmtTermPeriod;
+  //    ReconAccount;
+  //    Title;
+  //    Name1;
+  //    Name2;
+  //    Name3;
+  //    Name4;
+  //    Street;
+  //    City;
+  //    PostalCode;
+  //    CountryRegion;
+  //    Region;
+  //    EmailAddress;
+  //    BankCountry;
+  //    BankKey;
+  //    BankAccount;
+  //    BankControlKey;
+  //    TaxType;
+  //    TaxNumberType;
+  //    TaxNumber1;
+  //    TaxNumber2;
+  //    TaxNumber3;
+  //    TaxNumber4;
+  //    TaxNumber5;
+  //    NaturalPerson;
+  //    ItemText;
+  //    TaxCode;
+  //    TaxCtryRegion;
+  //    Assignment;
+  //    RefKey1;
+  //    RefKey2;
+  //    RefKey3;
+  //    ValueDate;
+  //    CostCenter;
+  //    ProfitCenter;
+  //    OrderNo;
+  //    ReasonCode2;
+  //    WbsElement;
+  //    FunctionalArea;
+  //    TaxCountry;
+  //    TaxAmount;
+  //    TaxBaseTranCurr;
+  //    TaxAmountLocal;
+  //    TaxBaseLocal;
+  //    TaxItemText;
+  //    ProviderContract;
+  //    ContractItem;
+  //    Customer2;
+  //    CustomerGroup;
+  //    Industry;
+  //    CountryRegionKey;
+  //    SalesOrg;
+  //    DistChannel;
+  //    Division;
+  //    BillingType;
+  //    Createdbyuser;
+  //    Createddate;
+  //    Changedbyuser;
+  //    Changeddate;
+  //    /* Associations */
+  ////    _File;
+
+}

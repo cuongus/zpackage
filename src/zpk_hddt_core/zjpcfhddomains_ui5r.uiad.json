@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Config Domains S-Invoices"
+  },
+  "ui5AppDetails": {
+    "appId": "zjpcfhddomains"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_9038521B377F404B51CEDF10D5F685036D2CE963_TM",
+    "semanticObject": "zjpcfhddomains",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_9038521B377F404B51CEDF10D5F685036D2CE963_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Config Domains S-Invoices"
+      }
+    }
+  ]
+}

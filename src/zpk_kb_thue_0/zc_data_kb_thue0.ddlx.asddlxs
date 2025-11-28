@@ -1,0 +1,169 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'Khai báo thuế 0%',
+                  typeNamePlural: 'Khai báo thuế 0%',
+                  title: { type: #STANDARD, label: 'Documentreferenceid', value: 'Documentreferenceid' },
+                  description: { value: 'ItemText'}
+    }
+}
+annotate entity ZC_DATA_KB_THUE0 with
+{
+  @UI.facet          : [
+  {id                : 'Items',
+  purpose            : #STANDARD,
+  position           : 10,
+  label              : 'Items',
+  type               : #IDENTIFICATION_REFERENCE
+  }
+  ]
+
+
+  //  Uuid;
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  Documentnumber;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @UI.selectionField: [{ position: 20 }]
+  Companycode;
+
+  @UI.hidden: true
+  CompanyCodeName;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @UI.selectionField: [{ position: 30 }]
+  Type;
+
+  @UI.hidden: true
+  TypeDescription;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  @EndUserText.label: 'Mẫu hóa đơn'
+  Mauhd;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @EndUserText.label: 'Document Reference ID'
+  Documentreferenceid;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @UI.selectionField: [{ position: 60 }]
+  @EndUserText.label: 'Posting Date'
+  Postingdate;
+
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  @UI.selectionField: [{ position: 70 }]
+  @EndUserText.label: 'Invoice Date'
+  Invoicedate;
+
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  @UI.selectionField: [{ position: 80 }]
+  Supplier;
+
+  @UI.hidden: true
+  SupplierName;
+
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @UI.selectionField: [{ position: 90 }]
+  Customer;
+
+  @UI.hidden: true
+  CustomerName;
+
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  @EndUserText.label: 'Itemtext'
+  Itemtext;
+
+  @UI.lineItem: [{ position: 110 }]
+  @UI.identification: [{ position: 110 }]
+  @EndUserText.label: 'Số lượng'
+  @Consumption.filter.hidden: true
+  Quantity;
+
+  @UI.lineItem: [{ position: 120 }]
+  @UI.identification: [{ position: 120 }]
+  @EndUserText.label: 'ĐVT'
+  @UI.hidden: true
+  BaseUnit;
+
+  @UI.lineItem: [{ position: 130 }]
+  @UI.identification: [{ position: 130 }]
+  @EndUserText.label: 'Doanh số quy đổi ra VND'
+  @Consumption.filter.hidden: true
+  Doanhsovnd;
+
+  @UI.lineItem: [{ position: 140 }]
+  @UI.identification: [{ position: 140 }]
+  @EndUserText.label: 'Đơn giá VND'
+  @Consumption.filter.hidden: true
+  DonGiaVND;
+
+  @UI.lineItem: [{ position: 150 }]
+  @UI.identification: [{ position: 150 }]
+  @EndUserText.label: 'Loại tiền VND'
+  @UI.hidden: true
+  LoaiTienVND;
+
+  @UI.lineItem: [{ position: 160 }]
+  @UI.identification: [{ position: 160 }]
+  @EndUserText.label: 'Doanh số nguyên tệ'
+  @Consumption.filter.hidden: true
+  DoanhSoNguyenTe;
+
+  @UI.lineItem: [{ position: 170 }]
+  @UI.identification: [{ position: 170 }]
+  @EndUserText.label: 'Đơn giá nguyên tệ'
+  @Consumption.filter.hidden: true
+  DonGiaNguyenTe;
+
+  @UI.lineItem: [{ position: 180 }]
+  @UI.identification: [{ position: 180 }]
+  @EndUserText.label: 'Loại tiền tệ'
+  @UI.hidden: true
+  LoaiTienTe;
+
+  @UI.lineItem: [{ position: 190 }]
+  @UI.identification: [{ position: 190 }]
+  @EndUserText.label: 'Tên mã vãng lai'
+  TenMaVangLai;
+
+  @UI.lineItem: [{ position: 200 }]
+  @UI.identification: [{ position: 200 }]
+  @EndUserText.label: 'MST mã vãng lai'
+  MSTMavangLai;
+
+  @UI.lineItem: [{ position: 210 }]
+  @UI.identification: [{ position: 210 }]
+  @EndUserText.label: 'Ghi chú'
+  Note;
+
+  @UI.lineItem: [{ position: 220 }]
+  @UI.identification: [{ position: 220 }]
+  @EndUserText.label: 'Created By User'
+  Createdbyuser;
+
+  @UI.lineItem: [{ position: 230 }]
+  @UI.identification: [{ position: 230 }]
+  @EndUserText.label: 'Created Date'
+  Createddate;
+
+  @UI.lineItem: [{ position: 240 }]
+  @UI.identification: [{ position: 240 }]
+  @EndUserText.label: 'Changed By User'
+  Changedbyuser;
+
+  @UI.lineItem: [{ position: 250 }]
+  @UI.identification: [{ position: 250 }]
+  @EndUserText.label: 'Changed Date'
+  Changeddate;
+
+}

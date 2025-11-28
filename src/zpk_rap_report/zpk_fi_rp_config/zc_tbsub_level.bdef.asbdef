@@ -1,0 +1,22 @@
+projection implementation in class ZBP_C_TBSUB_LEVEL unique;
+strict ( 2 );
+extensible;
+use draft;
+use side effects;
+define behavior for ZC_TBSUB_LEVEL alias ZcTbsubLevel
+extensible
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+  use action Upload;
+  use action Download;
+
+}

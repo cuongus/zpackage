@@ -1,0 +1,103 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'General',
+                  typeNamePlural: 'Khai báo năng lực nhà gia công',
+                title: { type: #STANDARD, label: 'Loại hàng may', value: 'HierarchyNode' },
+                                  description: { value: 'Description'}
+    }
+}
+annotate entity ZC_KBNLN_GIACONG with
+{
+  @UI.facet          : [
+  {id                : 'Items',
+  purpose            : #STANDARD,
+  position           : 10,
+  label              : 'Items',
+  type               : #IDENTIFICATION_REFERENCE
+  }
+  ]
+
+  //  Uuid;
+
+  @EndUserText.label: 'Workcenter'
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  Workcenter;
+
+  @EndUserText.label: 'Loại hàng may'
+  @UI.selectionField: [{ position: 20 }]
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  ProdUnivHierarchynode;
+
+  @UI.hidden: true
+  HierarchyNode;
+
+  @EndUserText.label: 'Plant'
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  Plant;
+
+  @EndUserText.label: 'Năng suất ngày'
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  Dailyproductivity;
+
+  @EndUserText.label: 'Từ ngày'
+  @UI.selectionField: [{ position: 50 }]
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  Fromdate;
+
+  @EndUserText.label: 'Đến ngày'
+  @UI.selectionField: [{ position: 60 }]
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  Todate;
+
+  @UI.hidden: true
+  WorkCenterText;
+  @UI.hidden: true
+  PlantName;
+  @UI.hidden: true
+  Description;
+
+  @EndUserText.label: 'Created By'
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedByName;
+
+  @EndUserText.label: 'Created At'
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  CreatedAt;
+
+  @EndUserText.label: 'Local Changed By'
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  LocalLastChangedBy;
+
+  @UI.hidden: true
+  ChangedByName;
+
+  @EndUserText.label: 'Local Changed At'
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  LocalLastChangedAt;
+
+  @EndUserText.label: 'Last Changed By'
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  LastChangedAt;
+
+  /* Associations */
+  //  _Plant;
+  //  _PRODUNIVHIERNODETEXT_2;
+  //  _WorkCenter;
+
+}

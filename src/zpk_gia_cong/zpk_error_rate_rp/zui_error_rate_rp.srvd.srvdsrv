@@ -1,0 +1,4 @@
+@EndUserText.label: 'Error rate report - Service Definition'
+define service ZUI_ERROR_RATE_RP {
+  expose ZC_ERROR_RATE_RP as ErrorRateReport;
+}

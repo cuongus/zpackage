@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition'
+define service ZSD_DCT {
+  expose ZC_DCT;
+}

@@ -1,0 +1,102 @@
+managed implementation in class ZBP_R_TBYEAR unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBYEAR alias ZrTbyear
+//persistent table ztb_year
+extensible
+draft table ztbyear_d
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+with unmanaged save
+{
+  field ( mandatory : create )
+  Zyear;
+
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt,
+  Zdesc;
+
+  field ( readonly : update )
+  Zyear;
+
+
+  create;
+ update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ztb_year corresponding extensible
+    {
+      Zyear         = zyear;
+      Zdesc         = zdesc;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    }
+
+//  action CreateYearFrTo(features:instance) parameter zst_year_fr_to result [1] $self;
+  action(features:global) CreateYearFrTo parameter zst_year_fr_to;// result [1] $self;
+  static action CreateYearFrToS parameter zst_year_fr_to;
+  association _dtl { create ( features : instance ); with draft; }
+
+}
+
+define behavior for ZR_TBPERIOD alias ZrTbperiod
+//persistent table ZTB_PERIOD
+draft table ZTBPERIOD_D
+lock dependent by _hdr
+authorization dependent by _hdr
+with unmanaged save
+{
+  field ( mandatory : create )
+  Zyear,
+  Zper;
+
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt;
+
+  field ( readonly : update )
+  zmonth,
+  Zdesc,
+  zdatefr,
+  zdateto,
+  LastPer,
+  Zyear,
+  Zper;
+
+
+ update;
+  delete;
+
+
+  mapping for ztb_period corresponding
+    {
+      Zyear         = zyear;
+      Zper          = zper;
+      Zdesc         = zdesc;
+      zmonth = zmonth;
+      zdatefr = zdatefr;
+      zdateto = zdateto;
+      lastper = lastper;
+      CreatedBy     = created_by;
+      CreatedAt     = created_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    }
+
+  association _hdr { with draft; }
+}

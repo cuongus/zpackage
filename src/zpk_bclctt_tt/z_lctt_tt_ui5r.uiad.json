@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Báo cáo lưu chuyển tiền tệ trực tiếp",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Báo cáo lưu chuyển tiền tệ trực tiếp"
+  },
+  "ui5AppDetails": {
+    "appId": "zlctttt"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_05E95F70E91F2B14EC6745FAFB6EE08566C48BE8_TM",
+    "semanticObject": "z_lctt_tt",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_05E95F70E91F2B14EC6745FAFB6EE08566C48BE8_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Báo cáo lưu chuyển tiền tệ trực tiếp"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Node Type ZTBSUB_LEVEL",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZTBSUB_LEVEL",
+  "sapObjectType": "ZTBSUB_LEVEL",
+  "rootNode": true
+}

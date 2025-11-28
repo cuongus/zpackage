@@ -1,0 +1,4 @@
+@EndUserText.label: 'Login'
+define service Zsd_login {
+  expose ZC_LOGIN;
+}

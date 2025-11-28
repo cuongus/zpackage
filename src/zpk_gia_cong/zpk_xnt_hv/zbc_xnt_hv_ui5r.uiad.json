@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Báo cáo NXT (kiểm tra số lượng vét)"
+  },
+  "ui5AppDetails": {
+    "appId": "zbcxnthv"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_70D03161F0E16F4719FF14203623CC71B5CEB7E5_TM",
+    "semanticObject": "zbc_xnt_hv",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_70D03161F0E16F4719FF14203623CC71B5CEB7E5_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Báo cáo NXT (kiểm tra số lượng vét)"
+      }
+    }
+  ]
+}

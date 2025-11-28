@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Config Taxcode S-Invoices"
+  },
+  "ui5AppDetails": {
+    "appId": "zjphdtaxcode"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_71D4042B59C119C43F0B91C0E9D345DF2334482D_TM",
+    "semanticObject": "zjphdtaxcode",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_71D4042B59C119C43F0B91C0E9D345DF2334482D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Config Taxcode S-Invoices"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "ZLP_thetaisan",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "Thẻ tài sản"
+  },
+  "sections": [
+    {
+      "id": "SECTION_1",
+      "visualizations": [
+        {
+          "id": "SECTION_1_VIZ_1",
+          "ladiAssignment": {
+            "ladiId": "ZUI5THETAISAN_UI5R",
+            "tileId": "UI5R_DDEDBF236F824EFD68E1A9C61E5D58E4553FB3DD_AL"
+          }
+        }
+      ]
+    }
+  ]
+}

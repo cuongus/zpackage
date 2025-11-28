@@ -1,0 +1,51 @@
+managed implementation in class ZBP_R_TBAPI_AUTH unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBAPI_AUTH alias ZrTbapiAuth
+persistent table ZTB_API_AUTH
+extensible
+draft table ZTBAPI_AUTH_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   Systemid,
+   ApiUser;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Systemid,
+   ApiUser;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTB_API_AUTH corresponding extensible
+  {
+    Systemid = systemid;
+    ApiUser = api_user;
+    ApiPassword = api_password;
+    ApiUrl = api_url;
+    ApiToken = api_token;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+}

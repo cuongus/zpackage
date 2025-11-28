@@ -1,0 +1,64 @@
+@Metadata.layer: #CORE
+
+annotate entity ZC_KB_NHANCONG with
+{
+
+  @UI.facet: [ { id:              'KB_NHANCONG',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Khai báo danh sách nhân công theo xưởng',
+                 position:        10 } ]
+
+  @UI: {  lineItem:       [ { position: 10 } ],
+          identification: [ { position: 10 } ],
+          selectionField: [ { position: 10 } ] }
+//  @Consumption.filter: { mandatory: true }
+  @EndUserText.label: 'Work Center'
+  WorkCenter;
+
+  @UI: {  lineItem:       [ { position: 20 } ],
+          identification: [ { position: 20 } ],
+          selectionField: [ { position: 20 } ] }
+  @EndUserText.label: 'Plant'
+  Plant;
+
+  @UI: {  lineItem:       [ { position: 70 } ],
+          identification: [ { position: 70 } ],
+          selectionField: [ { position: 70 } ] }
+  @EndUserText.label: 'Mã Nhân Công'
+  WorkerId;
+
+  @UI: {  lineItem:       [ { position: 80 } ],
+          identification: [ { position: 80 } ],
+          selectionField: [ { position: 80 } ] }
+  @EndUserText.label: 'Tên Nhân Công'
+  WorkerName;
+
+  @UI: {  lineItem:       [ { position: 90 } ],
+          identification: [ { position: 90 } ],
+          selectionField: [ { position: 90 } ] }
+  @EndUserText.label: 'Từ Ngày'
+  FromDate;
+
+  @UI: {  lineItem:       [ { position: 100 } ],
+          identification: [ { position: 100 } ],
+          selectionField: [ { position: 100 } ] }
+  @EndUserText.label: 'Đến Ngày'
+  ToDate;
+
+  @EndUserText.label: 'Created By'
+  CreatedBy;
+
+  @EndUserText.label: 'Created At'
+  CreatedAt;
+
+  @EndUserText.label: 'LastChanged By'
+  LastChangedBy;
+
+  @EndUserText.label: 'LastChanged At'
+  LastChangedAt;
+
+  @EndUserText.label: 'Local Last Changed At'
+  LocalLastChangedAt;
+
+}

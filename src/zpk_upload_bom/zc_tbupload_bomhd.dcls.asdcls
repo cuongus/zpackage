@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_TBUPLOAD_BOMHD'
+@MappingRole: true
+define role ZC_TBUPLOAD_BOMHD {
+  grant select on ZC_TBUPLOAD_BOMHD
+  where INHERITING CONDITIONS FROM ENTITY ZR_TBUPLOAD_BOMHD ;
+}

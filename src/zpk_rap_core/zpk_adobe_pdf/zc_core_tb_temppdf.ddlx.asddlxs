@@ -1,0 +1,54 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'Upload Template PDF',
+                  typeNamePlural: 'Upload Template PDF',
+                  title: { type: #STANDARD, value: 'Id' }
+    },
+    presentationVariant: [{ sortOrder: [{ by: 'Id', direction: #ASC },
+                                        { by: 'Lastchangedat', direction: #ASC }] }]
+}
+annotate entity ZC_CORE_TB_TEMPPDF with
+{
+  @UI.facet          : [
+     {
+     id                 : 'UploadTemplatePDF',
+     purpose            : #STANDARD,
+     position           : 10,
+     isPartOfPreview    : true,
+     label              : 'General',
+     type               : #IDENTIFICATION_REFERENCE
+     }
+     ]
+
+  @UI.selectionField : [{ position: 10 }]
+  @UI.lineItem       : [{ position: 10  }]
+  @UI.identification : [{ position: 10  }]
+  @EndUserText.label: 'ID Template'
+  Id;
+  
+  @UI.lineItem       : [{ position: 20  }]
+  @UI.identification : [{ position: 20  }]
+  @EndUserText.label: 'File Type'
+  FileType;
+
+  @UI.lineItem       : [{ position: 30  }]
+  @UI.identification : [{ position: 30  }]
+  @EndUserText.label: 'File Name'
+  FileName;
+
+  @UI.lineItem       : [{ position: 40  }]
+  @UI.identification : [{ position: 40  }]
+  @EndUserText.label: 'File Content'
+  FileContent;
+    
+  @UI.lineItem       : [{ position: 50  }]
+  @UI.identification : [{ position: 50  }]
+  @EndUserText.label: 'Last change by user'
+  Lastchangeby;
+  
+  @UI.lineItem       : [{ position: 60  }]
+  @UI.identification : [{ position: 60  }]
+  @EndUserText.label: 'Last change by user'
+  Lastchangedat;
+
+}

@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TBTEST1'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TBTEST1'
+  }
+}
+define service ZUI_TBTEST1_O4 {
+  expose ZC_TBTEST1;
+}

@@ -1,0 +1,161 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Bảng theo dõi đồng bộ BTP/NVL may',
+//  typeNamePlural: 'Penalty Prices',
+  title: { type: #STANDARD }
+}
+annotate entity ZC_CONTAINER with
+{
+
+  @UI.facet: [
+    { label: 'Kết quả hiển thị', id: 'RESULT',  position: 20, type: #FIELDGROUP_REFERENCE,targetQualifier: 'RESULT' }
+   ]
+
+
+   //"Selection Parameters"
+
+  @UI.selectionField: [{ position: 10 }]
+  @EndUserText.label: 'Plant'
+  Plant;
+
+  @UI.selectionField: [{ position: 20 }]
+  @EndUserText.label: 'Product Hierarchy'
+  ProductHierarchy;
+
+  @UI.selectionField: [{ position: 30 }]
+  @EndUserText.label: 'Doc Date'
+  Docdate;
+  
+//  @UI.selectionField: [{ position: 40 }]
+//  @EndUserText.label: 'Edit'
+//  Edit;
+
+  //"Display Data"
+//  @UI.selectionField: [{ position: 10 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10 }]
+  @EndUserText.label: 'Sales Order'
+  SalesOrder;
+
+//  @UI.selectionField: [{ position: 20 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 20 }]
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @EndUserText.label: 'Sales Order Item'
+  SalesOrderItem;
+
+//  @UI.selectionField: [{ position: 30 }]
+//  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 30 }]
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @EndUserText.label: ' Counter'
+  Counter;
+
+//  @UI.selectionField: [{ position: 40 }]
+//  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 40 }]
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  @EndUserText.label: ' Sales Order Quantity'
+  SalesOrderQuan;
+
+//  @UI.selectionField: [{ position: 50 }]
+//  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 50 }]
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @EndUserText.label: ' Open Quantity'
+  OpenQuan;
+
+//  @UI.selectionField: [{ position: 40 }]
+//  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 40 }]
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @EndUserText.label: ' Uom'
+  Uom;
+
+//  @UI.selectionField: [{ position: 40 }]
+//  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 40 }]
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 60 }]
+  @EndUserText.label: 'Tuần giao hàng'
+  Week;
+
+//  @UI.selectionField: [{ position: 40 }]
+//  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 40 }]
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  @EndUserText.label: ' Tuần đóng Container'
+  ContainerWeek;
+
+//  @UI.selectionField: [{ position: 40 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 90 }]
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @EndUserText.label: ' Ngày đóng Container'
+  ContainerDate;
+
+//  @UI.selectionField: [{ position: 40 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 100 }]
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  @EndUserText.label: 'Số Container'
+  ContainerNumber;
+
+//  @UI.selectionField: [{ position: 40 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 110 }]
+  @UI.lineItem: [{ position: 110 }]
+  @UI.identification: [{ position: 110 }]
+  @EndUserText.label: 'Số Chì'
+  Container;
+
+//  @UI.selectionField: [{ position: 40 }]
+//  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 40 }]
+  @UI.lineItem: [{ position: 120 }]
+  @UI.identification: [{ position: 120 }]
+  @EndUserText.label: 'Số lượng đóng Container'
+  ContainerQuan;
+
+//  @UI.selectionField: [{ position: 40 }]
+  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 40 }]
+  @UI.lineItem: [{ position: 130 }]
+  @UI.identification: [{ position: 130 }]
+  @EndUserText.label: 'Ghi chú'
+  Note;
+
+//  @UI.selectionField: [{ position: 40 }]
+//
+//  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 40 }]
+//  @UI.lineItem: [{ position: 130 }]
+//  @UI.identification: [{ position: 130 }]
+//  @EndUserText.label: 'Stt'
+//  Stt;
+//
+////  @UI.selectionField: [{ position: 40 }]
+////
+////  @UI.fieldGroup: [{ qualifier: 'RESULT', position: 50 }]
+//  @UI.lineItem: [{ position: 140 }]
+//  @UI.identification: [{ position: 140 }]
+//  @EndUserText.label: 'Uuid'
+//  Uuid;
+//  
+//  @UI.lineItem: [{ position: 150 }]
+//  @UI.identification: [{ position: 150 }]
+//  @EndUserText.label: 'matnr'
+//  Matnr;
+
+
+
+  //    @UI.lineItem: [{ position: 100 }]
+  //    CreatedBy;
+  //
+  //    @UI.lineItem: [{ position: 110 }]
+  //    CreatedAt;
+  //
+  //    @UI.lineItem: [{ position: 120 }]
+  //    LastChangedBy;
+  //
+  //    @UI.lineItem: [{ position: 130 }]
+  //    LastChangedAt;
+
+
+}

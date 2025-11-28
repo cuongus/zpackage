@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition BCTP'
+define service ZSD_BCTP {
+  expose ZDD_BCTP;
+}

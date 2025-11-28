@@ -1,0 +1,50 @@
+managed with additional save implementation in class zbp_r_ui_pbkhnh unique;
+strict ( 2 );
+
+with draft;
+define behavior for ZR_UI_PBKHNH alias DataPBKHNH
+persistent table zui_pbkhnh
+draft table zud_pbkhnh
+
+authorization master ( global )
+etag master LastChangedAt
+lock master total etag LastChangedAt
+
+early numbering
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Uuid;
+
+  field ( mandatory : create ) Companycode, Version, Producthierarchy3, Plant, Week, Zyear;
+
+  field ( readonly : update ) Companycode, Version, Producthierarchy3, Plant;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  static action savedata parameter zi_file_res result [1] zi_file_res;
+
+  mapping for zui_pbkhnh
+    {
+      uuid               = uuid;
+      version            = version;
+      versionname        = versionname;
+      companycode        = companycode;
+      producthierarchy3  = producthierarchy3;
+      plant              = plant;
+      zyear              = zyear;
+      week               = week;
+      lweek              = lweek;
+      receivingplan      = receivingplan;
+      createdby          = created_by;
+      createdat          = created_at;
+      locallastchangedby = local_last_changed_by;
+      locallastchangedat = local_last_changed_at;
+      lastchangedat      = last_changed_at;
+    }
+}

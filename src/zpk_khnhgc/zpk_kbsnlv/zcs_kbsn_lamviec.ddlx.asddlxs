@@ -1,0 +1,593 @@
+@Metadata.layer: #CORE
+
+@UI:{
+    headerInfo: { typeName: 'Tính toán năng suất tuần',
+                  typeNamePlural: 'Tính toán năng suất tuần',
+                  title: { type: #STANDARD, value: 'hierarchynode' }
+    }
+}
+
+annotate entity ZCS_KBSN_LAMVIEC with
+{
+
+  @UI.facet          : [
+     {
+     id                 : 'General',
+     purpose            : #STANDARD,
+     position           : 10,
+     isPartOfPreview    : true,
+     label              : 'General',
+     type               : #IDENTIFICATION_REFERENCE
+     }
+     ]
+
+
+  @UI.lineItem: [{ position:  1 }]
+  @UI.identification: [{ position: 1 }]
+  @UI.selectionField: [{ position: 1 }]
+  workcenter;
+
+  @UI.lineItem: [{ position:  2 }]
+  @UI.identification: [{ position: 2 }]
+  @UI.selectionField: [{ position: 2 }]
+  @EndUserText.label: 'Loại hàng may'
+  hierarchynode;
+
+  @UI.lineItem: [{ position:  3 }]
+  @UI.identification: [{ position: 3 }]
+  @UI.selectionField: [{ position: 3 }]
+  plant;
+
+  @UI.lineItem: [{ position:  4 }]
+  @UI.identification: [{ position: 4 }]
+  @UI.selectionField: [{ position: 4 }]
+  @EndUserText.label: 'Week'
+  week;
+
+  @UI.lineItem: [{ position:  5 }]
+  @UI.identification: [{ position: 5 }]
+  @UI.selectionField: [{ position: 5 }]
+  @EndUserText.label: 'Year'
+  Zyear;
+
+  @UI.lineItem: [{ position:  6 }]
+  @UI.identification: [{ position: 6 }]
+  @Consumption.filter.hidden: true
+  w1workingdays;
+
+  @UI.lineItem: [{ position:  7 }]
+  @UI.identification: [{ position: 7 }]
+  @Consumption.filter.hidden: true
+  w1dailyproductivity;
+
+  @UI.lineItem: [{ position:  8 }]
+  @UI.identification: [{ position: 8 }]
+  @Consumption.filter.hidden: true
+  w2workingdays;
+
+  @UI.lineItem: [{ position:  9 }]
+  @UI.identification: [{ position: 9 }]
+  @Consumption.filter.hidden: true
+  w2dailyproductivity;
+
+  @UI.lineItem: [{ position:  10 }]
+  @UI.identification: [{ position: 10 }]
+  @Consumption.filter.hidden: true
+  w3workingdays;
+
+  @UI.lineItem: [{ position:  11 }]
+  @UI.identification: [{ position: 11 }]
+  @Consumption.filter.hidden: true
+  w3dailyproductivity;
+
+  @UI.lineItem: [{ position:  12 }]
+  @UI.identification: [{ position: 12 }]
+  @Consumption.filter.hidden: true
+  w4workingdays;
+
+  @UI.lineItem: [{ position:  13 }]
+  @UI.identification: [{ position: 13 }]
+  @Consumption.filter.hidden: true
+  w4dailyproductivity;
+
+  @UI.lineItem: [{ position:  14 }]
+  @UI.identification: [{ position: 14 }]
+  @Consumption.filter.hidden: true
+  w5workingdays;
+
+  @UI.lineItem: [{ position:  15 }]
+  @UI.identification: [{ position: 15 }]
+  @Consumption.filter.hidden: true
+  w5dailyproductivity;
+
+  @UI.lineItem: [{ position:  16 }]
+  @UI.identification: [{ position: 16 }]
+  @Consumption.filter.hidden: true
+  w6workingdays;
+
+  @UI.lineItem: [{ position:  17 }]
+  @UI.identification: [{ position: 17 }]
+  @Consumption.filter.hidden: true
+  w6dailyproductivity;
+
+  @UI.lineItem: [{ position:  18 }]
+  @UI.identification: [{ position: 18 }]
+  @Consumption.filter.hidden: true
+  w7workingdays;
+
+  @UI.lineItem: [{ position:  19 }]
+  @UI.identification: [{ position: 19 }]
+  @Consumption.filter.hidden: true
+  w7dailyproductivity;
+
+  @UI.lineItem: [{ position:  20 }]
+  @UI.identification: [{ position: 20 }]
+  @Consumption.filter.hidden: true
+  w8workingdays;
+
+  @UI.lineItem: [{ position:  21 }]
+  @UI.identification: [{ position: 21 }]
+  @Consumption.filter.hidden: true
+  w8dailyproductivity;
+
+  @UI.lineItem: [{ position:  22 }]
+  @UI.identification: [{ position: 22 }]
+  @Consumption.filter.hidden: true
+  w9workingdays;
+
+  @UI.lineItem: [{ position:  23 }]
+  @UI.identification: [{ position: 23 }]
+  @Consumption.filter.hidden: true
+  w9dailyproductivity;
+
+  @UI.lineItem: [{ position:  24 }]
+  @UI.identification: [{ position: 24 }]
+  @Consumption.filter.hidden: true
+  w10workingdays;
+
+  @UI.lineItem: [{ position:  25 }]
+  @UI.identification: [{ position: 25 }]
+  @Consumption.filter.hidden: true
+  w10dailyproductivity;
+
+  @UI.lineItem: [{ position:  26 }]
+  @UI.identification: [{ position: 26 }]
+  @Consumption.filter.hidden: true
+  w11workingdays;
+
+  @UI.lineItem: [{ position:  27 }]
+  @UI.identification: [{ position: 27 }]
+  @Consumption.filter.hidden: true
+  w11dailyproductivity;
+
+  @UI.lineItem: [{ position:  28 }]
+  @UI.identification: [{ position: 28 }]
+  @Consumption.filter.hidden: true
+  w12workingdays;
+
+  @UI.lineItem: [{ position:  29 }]
+  @UI.identification: [{ position: 29 }]
+  @Consumption.filter.hidden: true
+  w12dailyproductivity;
+
+  @UI.lineItem: [{ position:  30 }]
+  @UI.identification: [{ position: 30 }]
+  @Consumption.filter.hidden: true
+  w13workingdays;
+
+  @UI.lineItem: [{ position:  31 }]
+  @UI.identification: [{ position: 31 }]
+  @Consumption.filter.hidden: true
+  w13dailyproductivity;
+
+  @UI.lineItem: [{ position:  32 }]
+  @UI.identification: [{ position: 32 }]
+  @Consumption.filter.hidden: true
+  w14workingdays;
+
+  @UI.lineItem: [{ position:  33 }]
+  @UI.identification: [{ position: 33 }]
+  @Consumption.filter.hidden: true
+  w14dailyproductivity;
+
+  @UI.lineItem: [{ position:  34 }]
+  @UI.identification: [{ position: 34 }]
+  @Consumption.filter.hidden: true
+  w15workingdays;
+
+  @UI.lineItem: [{ position:  35 }]
+  @UI.identification: [{ position: 35 }]
+  @Consumption.filter.hidden: true
+  w15dailyproductivity;
+
+  @UI.lineItem: [{ position:  36 }]
+  @UI.identification: [{ position: 36 }]
+  @Consumption.filter.hidden: true
+  w16workingdays;
+
+  @UI.lineItem: [{ position:  37 }]
+  @UI.identification: [{ position: 37 }]
+  @Consumption.filter.hidden: true
+  w16dailyproductivity;
+
+  @UI.lineItem: [{ position:  38 }]
+  @UI.identification: [{ position: 38 }]
+  @Consumption.filter.hidden: true
+  w17workingdays;
+
+  @UI.lineItem: [{ position:  39 }]
+  @UI.identification: [{ position: 39 }]
+  @Consumption.filter.hidden: true
+  w17dailyproductivity;
+
+  @UI.lineItem: [{ position:  40 }]
+  @UI.identification: [{ position: 40 }]
+  @Consumption.filter.hidden: true
+  w18workingdays;
+
+  @UI.lineItem: [{ position:  41 }]
+  @UI.identification: [{ position: 41 }]
+  @Consumption.filter.hidden: true
+  w18dailyproductivity;
+
+  @UI.lineItem: [{ position:  42 }]
+  @UI.identification: [{ position: 42 }]
+  @Consumption.filter.hidden: true
+  w19workingdays;
+
+  @UI.lineItem: [{ position:  43 }]
+  @UI.identification: [{ position: 43 }]
+  @Consumption.filter.hidden: true
+  w19dailyproductivity;
+
+  @UI.lineItem: [{ position:  44 }]
+  @UI.identification: [{ position: 44 }]
+  @Consumption.filter.hidden: true
+  w20workingdays;
+
+  @UI.lineItem: [{ position:  45 }]
+  @UI.identification: [{ position: 45 }]
+  @Consumption.filter.hidden: true
+  w20dailyproductivity;
+
+  @UI.lineItem: [{ position:  46 }]
+  @UI.identification: [{ position: 46 }]
+  @Consumption.filter.hidden: true
+  w21workingdays;
+
+  @UI.lineItem: [{ position:  47 }]
+  @UI.identification: [{ position: 47 }]
+  @Consumption.filter.hidden: true
+  w21dailyproductivity;
+
+  @UI.lineItem: [{ position:  48 }]
+  @UI.identification: [{ position: 48 }]
+  @Consumption.filter.hidden: true
+  w22workingdays;
+
+  @UI.lineItem: [{ position:  49 }]
+  @UI.identification: [{ position: 49 }]
+  @Consumption.filter.hidden: true
+  w22dailyproductivity;
+
+  @UI.lineItem: [{ position:  50 }]
+  @UI.identification: [{ position: 50 }]
+  @Consumption.filter.hidden: true
+  w23workingdays;
+
+  @UI.lineItem: [{ position:  51 }]
+  @UI.identification: [{ position: 51 }]
+  @Consumption.filter.hidden: true
+  w23dailyproductivity;
+
+  @UI.lineItem: [{ position:  52 }]
+  @UI.identification: [{ position: 52 }]
+  @Consumption.filter.hidden: true
+  w24workingdays;
+
+  @UI.lineItem: [{ position:  53 }]
+  @UI.identification: [{ position: 53 }]
+  @Consumption.filter.hidden: true
+  w24dailyproductivity;
+
+  @UI.lineItem: [{ position:  54 }]
+  @UI.identification: [{ position: 54 }]
+  @Consumption.filter.hidden: true
+  w25workingdays;
+
+  @UI.lineItem: [{ position:  55 }]
+  @UI.identification: [{ position: 55 }]
+  @Consumption.filter.hidden: true
+  w25dailyproductivity;
+
+  @UI.lineItem: [{ position:  56 }]
+  @UI.identification: [{ position: 56 }]
+  @Consumption.filter.hidden: true
+  w26workingdays;
+
+  @UI.lineItem: [{ position:  57 }]
+  @UI.identification: [{ position: 57 }]
+  @Consumption.filter.hidden: true
+  w26dailyproductivity;
+
+  @UI.lineItem: [{ position:  58 }]
+  @UI.identification: [{ position: 58 }]
+  @Consumption.filter.hidden: true
+  w27workingdays;
+
+  @UI.lineItem: [{ position:  59 }]
+  @UI.identification: [{ position: 59 }]
+  @Consumption.filter.hidden: true
+  w27dailyproductivity;
+
+  @UI.lineItem: [{ position:  60 }]
+  @UI.identification: [{ position: 60 }]
+  @Consumption.filter.hidden: true
+  w28workingdays;
+
+  @UI.lineItem: [{ position:  61 }]
+  @UI.identification: [{ position: 61 }]
+  @Consumption.filter.hidden: true
+  w28dailyproductivity;
+
+  @UI.lineItem: [{ position:  62 }]
+  @UI.identification: [{ position: 62 }]
+  @Consumption.filter.hidden: true
+  w29workingdays;
+
+  @UI.lineItem: [{ position:  63 }]
+  @UI.identification: [{ position: 63 }]
+  @Consumption.filter.hidden: true
+  w29dailyproductivity;
+
+  @UI.lineItem: [{ position:  64 }]
+  @UI.identification: [{ position: 64 }]
+  @Consumption.filter.hidden: true
+  w30workingdays;
+
+  @UI.lineItem: [{ position:  65 }]
+  @UI.identification: [{ position: 65 }]
+  @Consumption.filter.hidden: true
+  w30dailyproductivity;
+
+  @UI.lineItem: [{ position:  66 }]
+  @UI.identification: [{ position: 66 }]
+  @Consumption.filter.hidden: true
+  w31workingdays;
+
+  @UI.lineItem: [{ position:  67 }]
+  @UI.identification: [{ position: 67 }]
+  @Consumption.filter.hidden: true
+  w31dailyproductivity;
+
+  @UI.lineItem: [{ position:  68 }]
+  @UI.identification: [{ position: 68 }]
+  @Consumption.filter.hidden: true
+  w32workingdays;
+
+  @UI.lineItem: [{ position:  69 }]
+  @UI.identification: [{ position: 69 }]
+  @Consumption.filter.hidden: true
+  w32dailyproductivity;
+
+  @UI.lineItem: [{ position:  71 }]
+  @UI.identification: [{ position: 71 }]
+  @Consumption.filter.hidden: true
+  w33workingdays;
+
+  @UI.lineItem: [{ position:  72 }]
+  @UI.identification: [{ position: 72 }]
+  @Consumption.filter.hidden: true
+  w33dailyproductivity;
+
+  @UI.lineItem: [{ position:  73 }]
+  @UI.identification: [{ position: 73 }]
+  @Consumption.filter.hidden: true
+  w34workingdays;
+
+  @UI.lineItem: [{ position:  74 }]
+  @UI.identification: [{ position: 74 }]
+  @Consumption.filter.hidden: true
+  w34dailyproductivity;
+
+  @UI.lineItem: [{ position:  75 }]
+  @UI.identification: [{ position: 75 }]
+  @Consumption.filter.hidden: true
+  w35workingdays;
+
+  @UI.lineItem: [{ position:  76 }]
+  @UI.identification: [{ position: 76 }]
+  @Consumption.filter.hidden: true
+  w35dailyproductivity;
+
+  @UI.lineItem: [{ position:  77 }]
+  @UI.identification: [{ position: 77 }]
+  @Consumption.filter.hidden: true
+  w36workingdays;
+
+  @UI.lineItem: [{ position:  78 }]
+  @UI.identification: [{ position: 78 }]
+  @Consumption.filter.hidden: true
+  w36dailyproductivity;
+
+  @UI.lineItem: [{ position:  79 }]
+  @UI.identification: [{ position: 79 }]
+  @Consumption.filter.hidden: true
+  w37workingdays;
+
+  @UI.lineItem: [{ position:  80 }]
+  @UI.identification: [{ position: 80 }]
+  @Consumption.filter.hidden: true
+  w37dailyproductivity;
+
+  @UI.lineItem: [{ position:  81 }]
+  @UI.identification: [{ position: 81 }]
+  @Consumption.filter.hidden: true
+  w38workingdays;
+
+  @UI.lineItem: [{ position:  82 }]
+  @UI.identification: [{ position: 82 }]
+  @Consumption.filter.hidden: true
+  w38dailyproductivity;
+
+  @UI.lineItem: [{ position:  83 }]
+  @UI.identification: [{ position: 83 }]
+  @Consumption.filter.hidden: true
+  w39workingdays;
+
+  @UI.lineItem: [{ position:  84 }]
+  @UI.identification: [{ position: 84 }]
+  @Consumption.filter.hidden: true
+  w39dailyproductivity;
+
+  @UI.lineItem: [{ position:  85 }]
+  @UI.identification: [{ position: 85 }]
+  @Consumption.filter.hidden: true
+  w40workingdays;
+
+  @UI.lineItem: [{ position:  86 }]
+  @UI.identification: [{ position: 86 }]
+  @Consumption.filter.hidden: true
+  w40dailyproductivity;
+
+  @UI.lineItem: [{ position:  87 }]
+  @UI.identification: [{ position: 87 }]
+  @Consumption.filter.hidden: true
+  w41workingdays;
+
+  @UI.lineItem: [{ position:  88 }]
+  @UI.identification: [{ position: 88 }]
+  @Consumption.filter.hidden: true
+  w41dailyproductivity;
+
+  @UI.lineItem: [{ position:  89 }]
+  @UI.identification: [{ position: 89 }]
+  @Consumption.filter.hidden: true
+  w42workingdays;
+
+  @UI.lineItem: [{ position:  90 }]
+  @UI.identification: [{ position: 90 }]
+  @Consumption.filter.hidden: true
+  w42dailyproductivity;
+
+  @UI.lineItem: [{ position:  91 }]
+  @UI.identification: [{ position: 91 }]
+  @Consumption.filter.hidden: true
+  w43workingdays;
+
+  @UI.lineItem: [{ position:  92 }]
+  @UI.identification: [{ position: 92 }]
+  @Consumption.filter.hidden: true
+  w43dailyproductivity;
+
+  @UI.lineItem: [{ position:  93 }]
+  @UI.identification: [{ position: 93 }]
+  @Consumption.filter.hidden: true
+  w44workingdays;
+
+  @UI.lineItem: [{ position:  94 }]
+  @UI.identification: [{ position: 94 }]
+  @Consumption.filter.hidden: true
+  w44dailyproductivity;
+
+  @UI.lineItem: [{ position:  95 }]
+  @UI.identification: [{ position: 95 }]
+  @Consumption.filter.hidden: true
+  w45workingdays;
+
+  @UI.lineItem: [{ position:  96 }]
+  @UI.identification: [{ position: 96 }]
+  @Consumption.filter.hidden: true
+  w45dailyproductivity;
+
+  @UI.lineItem: [{ position:  97 }]
+  @UI.identification: [{ position: 97 }]
+  @Consumption.filter.hidden: true
+  w46workingdays;
+
+  @UI.lineItem: [{ position:  98 }]
+  @UI.identification: [{ position: 98 }]
+  @Consumption.filter.hidden: true
+  w46dailyproductivity;
+
+  @UI.lineItem: [{ position:  99 }]
+  @UI.identification: [{ position: 99 }]
+  @Consumption.filter.hidden: true
+  w47workingdays;
+
+  @UI.lineItem: [{ position:  100 }]
+  @UI.identification: [{ position: 100 }]
+  @Consumption.filter.hidden: true
+  w47dailyproductivity;
+
+  @UI.lineItem: [{ position:  101 }]
+  @UI.identification: [{ position: 101 }]
+  @Consumption.filter.hidden: true
+  w48workingdays;
+
+  @UI.lineItem: [{ position:  102 }]
+  @UI.identification: [{ position: 102 }]
+  @Consumption.filter.hidden: true
+  w48dailyproductivity;
+
+  @UI.lineItem: [{ position:  103 }]
+  @UI.identification: [{ position: 103 }]
+  @Consumption.filter.hidden: true
+  w49workingdays;
+
+  @UI.lineItem: [{ position:  104 }]
+  @UI.identification: [{ position: 104 }]
+  @Consumption.filter.hidden: true
+  w49dailyproductivity;
+
+  @UI.lineItem: [{ position:  105 }]
+  @UI.identification: [{ position: 105 }]
+  @Consumption.filter.hidden: true
+  w50workingdays;
+
+  @UI.lineItem: [{ position:  106 }]
+  @UI.identification: [{ position: 106 }]
+  @Consumption.filter.hidden: true
+  w50dailyproductivity;
+
+  @UI.lineItem: [{ position:  107 }]
+  @UI.identification: [{ position: 107 }]
+  @Consumption.filter.hidden: true
+  w51workingdays;
+
+  @UI.lineItem: [{ position:  108 }]
+  @UI.identification: [{ position: 108 }]
+  @Consumption.filter.hidden: true
+  w51dailyproductivity;
+
+  @UI.lineItem: [{ position:  109 }]
+  @UI.identification: [{ position: 109 }]
+  @Consumption.filter.hidden: true
+  w52workingdays;
+
+  @UI.lineItem: [{ position:  110 }]
+  @UI.identification: [{ position: 110 }]
+  @Consumption.filter.hidden: true
+  w52dailyproductivity;
+
+  @UI.lineItem: [{ position:  111 }]
+  @UI.identification: [{ position: 111 }]
+  @Consumption.filter.hidden: true
+  w53workingdays;
+
+  @UI.lineItem: [{ position:  112 }]
+  @UI.identification: [{ position: 112 }]
+  @Consumption.filter.hidden: true
+  w53dailyproductivity;
+
+  @UI.lineItem: [{ position:  113 }]
+  @UI.identification: [{ position: 113 }]
+  @Consumption.filter.hidden: true
+  w54workingdays;
+
+  @UI.lineItem: [{ position:  114 }]
+  @UI.identification: [{ position: 114 }]
+  @Consumption.filter.hidden: true
+  w54dailyproductivity;
+
+}

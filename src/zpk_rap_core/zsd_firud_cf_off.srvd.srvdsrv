@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZSD_FIRUD_CF_OFF'
+define service ZSD_FIRUD_CF_OFF {
+  expose ZC_i_firud_cf_off;
+}

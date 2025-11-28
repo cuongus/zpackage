@@ -1,0 +1,52 @@
+managed;
+//with draft;
+strict;
+define behavior for ZI_ERROR_RATE_RP alias ErrorRateRP
+implementation in class ZBP_ERROR_RATE_RP unique
+persistent table ztb_error_rate
+//draft table ztb_error_rate_d
+lock master //total etag LastChangedAt
+authorization master ( global )
+//etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field ( numbering : managed, readonly ) UuID;
+  field ( mandatory : create ) ErrorCode, ErrorDescription, ErrorRateFrom, DeductionPercent;
+
+  determination modifydates on modify { create; }
+
+  validation validateErrorCode on save { field ErrorCode, ErrorDescription, ValidFrom, ValidTo; create; }
+  validation validateDates on save { field ValidFrom, ValidTo; create; }
+  validation existedValue on save { field ErrorCode, ErrorRateFrom, DeductionPercent, ValidFrom, ValidTo; create; }
+  action ( features : instance ) Copy;
+//   result [1] $self;
+  side effects
+  {
+    action Copy affects $self;
+  }
+  //  draft determine action Prepare
+  //  {
+  //    validation validateErrorCode;
+  //    validation validateDates;
+  //    validation existedValue;
+  //  }
+
+  mapping for ztb_error_rate
+    {
+      UuID               = Uuid;
+      ErrorCode          = Error_Code;
+      ErrorDescription   = Error_Description;
+      ErrorRateFrom      = Error_Rate_From;
+      DeductionPercent   = Deduction_Percent;
+      ValidFrom          = Valid_From;
+      ValidTo            = Valid_To;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LastChangedBy      = last_changed_by;
+      LastChangedAt      = last_changed_at;
+      LocalLastChangedAt = local_last_changed_at;
+    }
+}

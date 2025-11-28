@@ -1,0 +1,155 @@
+managed implementation in class zbp_r_user_upload_fi unique;
+strict ( 2 );
+
+with draft;
+define behavior for ZR_USER_UPLOAD_FI alias file
+persistent table zuser_upload_fi
+draft table zuser_upload_d
+etag master Changedbyuser
+lock master total etag Changedbyuser
+authorization master ( global )
+early numbering
+//
+{
+  create ;
+  update ( features : instance );
+  delete ( features : instance );
+
+  field ( readonly ) Uuid, EndUser, Createdbyuser, Createddate, Changedbyuser, Changeddate;
+  association _previewData { create; with draft; }
+
+  determination getExcelData on save { field Filename; }
+  determination setStatusToOpen on modify { create; }
+
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for zuser_upload_fi
+    {
+      Uuid          = uuid;
+      EndUser       = end_user;
+      ZCount        = zcnt;
+      Status        = status;
+      Attachment    = attachment;
+      Mimetype      = mimetype;
+      Filename      = filename;
+      Createdbyuser = createdbyuser;
+      Createddate   = createddate;
+      Changedbyuser = changedbyuser;
+      Changeddate   = changeddate;
+    }
+}
+
+define behavior for ZI_UUID_DATA_FILE1 alias previewData
+persistent table zuuid_data_file1
+draft table zdata_file_d
+lock dependent by _File
+authorization dependent by _File
+etag master Changedbyuser
+{
+  update;
+  delete;
+  field ( numbering : managed, readonly ) Uuid;
+  field ( readonly ) UserUuid, EndUser;
+  association _File { with draft; }
+
+  mapping for zuuid_data_file1
+    {
+      Uuid              = uuid;
+      UserUuid          = user_uuid;
+      EndUser           = end_user;
+      DocSeqNo          = doc_seq_no;
+      CompanyCode       = company_code;
+      Reference         = reference;
+      DocumentDate      = document_date;
+      PostingDate       = posting_date;
+      TaxDetDate        = tax_det_date;
+      DocumentType      = document_type;
+      DocHeaderText     = doc_header_text;
+      Currency          = currency;
+      TranslationDate   = translation_date;
+      ExchangeRate      = exchange_rate;
+      Customer          = customer;
+      Vendor            = vendor;
+      GlAccount         = gl_account;
+      TransactionAmount = transaction_amount;
+      LocalAmount       = local_amount;
+      PaymentBlock      = payment_block;
+      BaselineDate      = baseline_date;
+      CashDiscBase      = cash_disc_base;
+      CashDiscDays1     = cash_disc_days1;
+      CdPercent1        = cd_percent1;
+      CashDiscDays2     = cash_disc_days2;
+      CdPercent2        = cd_percent2;
+      PaymentMethod     = payment_method;
+      PmtSupplement     = pmt_supplement;
+      PaymentReference  = payment_reference;
+      PartnerBankType   = partner_bank_type;
+      HouseBank         = house_bank;
+      AccountId         = account_id;
+      ReasonCode        = reason_code;
+      NetPmtTermPeriod  = net_pmt_term_period;
+      ReconAccount      = recon_account;
+      Title             = title;
+      Name1             = name1;
+      Name2             = name2;
+      Name3             = name3;
+      Name4             = name4;
+      Street            = street;
+      City              = city;
+      PostalCode        = postal_code;
+      CountryRegion     = country_region;
+      Region            = region;
+      EmailAddress      = email_address;
+      BankCountry       = bank_country;
+      BankKey           = bank_key;
+      BankAccount       = bank_account;
+      BankControlKey    = bank_control_key;
+      TaxType           = tax_type;
+      TaxNumberType     = tax_number_type;
+      TaxNumber1        = tax_number1;
+      TaxNumber2        = tax_number2;
+      TaxNumber3        = tax_number3;
+      TaxNumber4        = tax_number4;
+      TaxNumber5        = tax_number5;
+      NaturalPerson     = natural_person;
+      ItemText          = item_text;
+      TaxCode           = tax_code;
+      TaxCtryRegion     = tax_ctry_region;
+      Assignment        = assignment;
+      RefKey1           = ref_key1;
+      RefKey2           = ref_key2;
+      RefKey3           = ref_key3;
+      ValueDate         = value_date;
+      CostCenter        = cost_center;
+      ProfitCenter      = profit_center;
+      OrderNo           = order_no;
+      ReasonCode2       = reason_code_2;
+      WbsElement        = wbs_element;
+      FunctionalArea    = functional_area;
+      TaxCountry        = tax_country;
+      TaxAmount         = tax_amount;
+      TaxBaseTranCurr   = tax_base_tran_curr;
+      TaxAmountLocal    = tax_amount_local;
+      TaxBaseLocal      = tax_base_local;
+      TaxItemText       = tax_item_text;
+      ProviderContract  = provider_contract;
+      ContractItem      = contract_item;
+      Customer2         = customer2;
+      CustomerGroup     = customer_group;
+      Industry          = industry;
+      CountryRegionKey  = country_region_key;
+      SalesOrg          = sales_org;
+      DistChannel       = dist_channel;
+      Division          = division;
+      BillingType       = billing_type;
+      Createdbyuser     = createdbyuser;
+      Createddate       = createddate;
+      Changedbyuser     = changedbyuser;
+      Changeddate       = changeddate;
+    }
+}

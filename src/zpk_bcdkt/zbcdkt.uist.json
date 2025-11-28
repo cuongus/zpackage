@@ -1,0 +1,17 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "bảng cân đối kế toán",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "Bảng cân đối kế toán",
+    "sortPriority": 100.0
+  },
+  "pages": [
+    {
+      "name": "ZBCDKT"
+    }
+  ]
+}

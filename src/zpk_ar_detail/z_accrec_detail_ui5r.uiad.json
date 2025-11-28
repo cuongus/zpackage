@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Báo cáo chi tiết công nợ phải thu",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Báo cáo chi tiết công nợ phải thu"
+  },
+  "ui5AppDetails": {
+    "appId": "zaccrecdetail"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8F1B785E56D477EFFA600569DA694A9F9AF9FCD7_TM",
+    "semanticObject": "z_accrec_detail",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8F1B785E56D477EFFA600569DA694A9F9AF9FCD7_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Báo cáo chi tiết công nợ phải thu"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_UIIN_FAGLFCV'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_UIIN_FAGLFCV'
+  }
+}
+define service ZUI_UIIN_FAGLFCV_O4 provider contracts odata_v4_ui {
+  expose ZC_UIIN_FAGLFCV;
+}

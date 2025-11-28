@@ -1,0 +1,17 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Space Template - Khai báo danh sách tổ đội, nhân công",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "Khai báo danh sách tổ đội, nhân công",
+    "sortPriority": 100.0
+  },
+  "pages": [
+    {
+      "name": "Z_TW_LIST"
+    }
+  ]
+}

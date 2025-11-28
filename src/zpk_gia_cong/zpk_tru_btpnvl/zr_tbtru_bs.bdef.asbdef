@@ -1,0 +1,179 @@
+managed implementation in class ZBP_R_TBTRU_BS unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TBTRU_BS alias ZrTbtruBs
+//persistent table ZTB_TRU_BS
+extensible
+draft table ZTBTRU_BS_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+with unmanaged save
+{
+  field ( readonly )
+  HdrID,
+  Zperdesc,
+  Sumdatetime,
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt;
+
+  field ( numbering : managed )
+  HdrID;
+
+  field ( mandatory : create )
+  Zper, Bukrs, lan, ngaylapbang;
+
+  field ( readonly : update )
+  Zper, Bukrs;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+   draft determine action Prepare
+  {
+    validation check_data;
+  }
+
+    validation check_data on save { create; update; }
+
+  mapping for ZTB_TRU_BS corresponding extensible
+  {
+    HdrID = hdr_id;
+    Zper = zper;
+    Bukrs = bukrs;
+    Lan = lan;
+    Ngaylapbang = ngaylapbang;
+    Zperdesc = zperdesc;
+    Sumdate = sumdate;
+    Sumdatetime = sumdatetime;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+   association _dtl { create ( features : instance ); with draft; }
+   association _dt1 { create ( features : instance ); with draft; }
+
+    action(features:instance) UpdateData result [1] $self;
+
+}
+
+
+define behavior for ZR_TBTRU_BS_DTL alias ZrTbtruBSDtl
+//persistent table ZTB_XETDUYET_DTL
+draft table ztbtru_bs_dtl_d
+lock dependent by _hdr
+authorization dependent by _hdr
+with unmanaged save
+{
+   field ( readonly )
+  HdrID,
+  DtlID,
+  SupplierName,
+  ProductName,
+  Supplier,
+  Material,
+  Charcvalue,
+  Thieu,
+  Thua,
+  Nhap,
+  Slduocphep,
+  Sltru,
+  Dongiatru,
+  Tongtientru,
+  Materialbaseunit,
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt;
+
+
+
+  field ( numbering : managed )
+  DtlID;
+
+  update;
+  delete;
+
+  mapping for ztb_tru_bs_dtl corresponding
+  {
+    HdrID = hdr_id;
+    DtlID = dtl_id;
+    Supplier = supplier;
+    Material = material;
+    Charcvalue = charcvalue;
+    Thieu = thieu;
+    Thua = thua;
+    Nhap = nhap;
+    Duocphep = duocphep;
+    Slduocphep = slduocphep;
+    Sltru = sltru;
+    Dongiatru = dongiatru;
+    Tongtientru = tongtientru;
+    Materialbaseunit = materialbaseunit;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+  association _hdr { with draft; }
+
+}
+
+
+
+define behavior for ZR_TBTRU_BS_DT1 alias ZrTbtruBSDt1
+//persistent table ZTB_XETDUYET_DTL
+draft table ztbtru_bs_dt1_d
+lock dependent by _hdr
+authorization dependent by _hdr
+with unmanaged save
+{
+   field ( readonly )
+  HdrID,
+  DtlID,
+  SupplierName,
+  Supplier,
+  ct04,
+  ct05,
+  ct05a,
+  ct05b,
+  ct06,
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt;
+
+
+
+  field ( numbering : managed )
+  DtlID;
+
+  update;
+  delete;
+
+  mapping for ztb_tru_bs_dt1 corresponding
+  {
+    HdrID = hdr_id;
+    DtlID = dtl_id;
+    Supplier = supplier;
+    ct04 = ct04;
+    ct05b = ct05b;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+  association _hdr { with draft; }
+
+}

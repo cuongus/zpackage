@@ -1,0 +1,309 @@
+@Metadata.layer: #CORE
+annotate entity ZCS_BCNCTP with
+{
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  ProductHierarchy3;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @UI.selectionField: [{ position: 20 }]
+  ProductHierarchy4;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @UI.selectionField: [{ position: 30 }]
+  Plant;
+
+  @UI.hidden: true
+  ProductHierarchy3Name;
+  @UI.hidden: true
+  ProductHierarchy4Name;
+  @UI.hidden: true
+  PlantName;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  @UI.selectionField: [{ position: 40 }]
+  Week;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @UI.selectionField: [{ position: 50 }]
+  @EndUserText.label: 'Year'
+  Zyear;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @Consumption.filter.hidden: true
+  W1OrderQuantity;
+
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  @Consumption.filter.hidden: true
+  W2OrderQuantity;
+
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  @Consumption.filter.hidden: true
+  W3OrderQuantity;
+
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @Consumption.filter.hidden: true
+  W4OrderQuantity;
+
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  @Consumption.filter.hidden: true
+  W5OrderQuantity;
+
+  @UI.lineItem: [{ position: 110 }]
+  @UI.identification: [{ position: 110 }]
+  @Consumption.filter.hidden: true
+  W6OrderQuantity;
+
+  @UI.lineItem: [{ position: 120 }]
+  @UI.identification: [{ position: 120 }]
+  @Consumption.filter.hidden: true
+  W7OrderQuantity;
+
+  @UI.lineItem: [{ position: 130 }]
+  @UI.identification: [{ position: 130 }]
+  @Consumption.filter.hidden: true
+  W8OrderQuantity;
+
+  @UI.lineItem: [{ position: 140 }]
+  @UI.identification: [{ position: 140 }]
+  @Consumption.filter.hidden: true
+  W9OrderQuantity;
+
+  @UI.lineItem: [{ position: 150 }]
+  @UI.identification: [{ position: 150 }]
+  @Consumption.filter.hidden: true
+  W10OrderQuantity;
+
+  @UI.lineItem: [{ position: 160 }]
+  @UI.identification: [{ position: 160 }]
+  @Consumption.filter.hidden: true
+  W11OrderQuantity;
+
+  @UI.lineItem: [{ position: 170 }]
+  @UI.identification: [{ position: 170 }]
+  @Consumption.filter.hidden: true
+  W12OrderQuantity;
+
+  @UI.lineItem: [{ position: 180 }]
+  @UI.identification: [{ position: 180 }]
+  @Consumption.filter.hidden: true
+  W13OrderQuantity;
+
+  @UI.lineItem: [{ position: 190 }]
+  @UI.identification: [{ position: 190 }]
+  @Consumption.filter.hidden: true
+  W14OrderQuantity;
+
+  @UI.lineItem: [{ position: 200 }]
+  @UI.identification: [{ position: 200 }]
+  @Consumption.filter.hidden: true
+  W15OrderQuantity;
+
+  @UI.lineItem: [{ position: 210 }]
+  @UI.identification: [{ position: 210 }]
+  @Consumption.filter.hidden: true
+  W16OrderQuantity;
+
+  @UI.lineItem: [{ position: 220 }]
+  @UI.identification: [{ position: 220 }]
+  @Consumption.filter.hidden: true
+  W17OrderQuantity;
+
+  @UI.lineItem: [{ position: 230 }]
+  @UI.identification: [{ position: 230 }]
+  @Consumption.filter.hidden: true
+  W18OrderQuantity;
+
+  @UI.lineItem: [{ position: 240 }]
+  @UI.identification: [{ position: 240 }]
+  @Consumption.filter.hidden: true
+  W19OrderQuantity;
+
+  @UI.lineItem: [{ position: 250 }]
+  @UI.identification: [{ position: 250 }]
+  @Consumption.filter.hidden: true
+  W20OrderQuantity;
+
+  @UI.lineItem: [{ position: 260 }]
+  @UI.identification: [{ position: 260 }]
+  @Consumption.filter.hidden: true
+  W21OrderQuantity;
+
+  @UI.lineItem: [{ position: 270 }]
+  @UI.identification: [{ position: 270 }]
+  @Consumption.filter.hidden: true
+  W22OrderQuantity;
+
+  @UI.lineItem: [{ position: 280 }]
+  @UI.identification: [{ position: 280 }]
+  @Consumption.filter.hidden: true
+  W23OrderQuantity;
+
+  @UI.lineItem: [{ position: 290 }]
+  @UI.identification: [{ position: 290 }]
+  @Consumption.filter.hidden: true
+  W24OrderQuantity;
+
+  @UI.lineItem: [{ position: 300 }]
+  @UI.identification: [{ position: 300 }]
+  @Consumption.filter.hidden: true
+  W25OrderQuantity;
+
+  @UI.lineItem: [{ position: 310 }]
+  @UI.identification: [{ position: 310 }]
+  @Consumption.filter.hidden: true
+  W26OrderQuantity;
+
+  @UI.lineItem: [{ position: 320 }]
+  @UI.identification: [{ position: 320 }]
+  @Consumption.filter.hidden: true
+  W27OrderQuantity;
+
+  @UI.lineItem: [{ position: 330 }]
+  @UI.identification: [{ position: 330 }]
+  @Consumption.filter.hidden: true
+  W28OrderQuantity;
+
+  @UI.lineItem: [{ position: 340 }]
+  @UI.identification: [{ position: 340 }]
+  @Consumption.filter.hidden: true
+  W29OrderQuantity;
+
+  @UI.lineItem: [{ position: 350 }]
+  @UI.identification: [{ position: 350 }]
+  @Consumption.filter.hidden: true
+  W30OrderQuantity;
+
+  @UI.lineItem: [{ position: 360 }]
+  @UI.identification: [{ position: 360 }]
+  @Consumption.filter.hidden: true
+  W31OrderQuantity;
+
+  @UI.lineItem: [{ position: 370 }]
+  @UI.identification: [{ position: 370 }]
+  @Consumption.filter.hidden: true
+  W32OrderQuantity;
+
+  @UI.lineItem: [{ position: 380 }]
+  @UI.identification: [{ position: 380 }]
+  @Consumption.filter.hidden: true
+  W33OrderQuantity;
+
+  @UI.lineItem: [{ position: 390 }]
+  @UI.identification: [{ position: 390 }]
+  @Consumption.filter.hidden: true
+  W34OrderQuantity;
+
+  @UI.lineItem: [{ position: 400 }]
+  @UI.identification: [{ position: 400 }]
+  @Consumption.filter.hidden: true
+  W35OrderQuantity;
+
+  @UI.lineItem: [{ position: 410 }]
+  @UI.identification: [{ position: 410 }]
+  @Consumption.filter.hidden: true
+  W36OrderQuantity;
+
+  @UI.lineItem: [{ position: 420 }]
+  @UI.identification: [{ position: 420 }]
+  @Consumption.filter.hidden: true
+  W37OrderQuantity;
+
+  @UI.lineItem: [{ position: 430 }]
+  @UI.identification: [{ position: 430 }]
+  @Consumption.filter.hidden: true
+  W38OrderQuantity;
+
+  @UI.lineItem: [{ position: 440 }]
+  @UI.identification: [{ position: 440 }]
+  @Consumption.filter.hidden: true
+  W39OrderQuantity;
+
+  @UI.lineItem: [{ position: 450 }]
+  @UI.identification: [{ position: 450 }]
+  @Consumption.filter.hidden: true
+  W40OrderQuantity;
+
+  @UI.lineItem: [{ position: 460 }]
+  @UI.identification: [{ position: 460 }]
+  @Consumption.filter.hidden: true
+  W41OrderQuantity;
+
+  @UI.lineItem: [{ position: 470 }]
+  @UI.identification: [{ position: 470 }]
+  @Consumption.filter.hidden: true
+  W42OrderQuantity;
+
+  @UI.lineItem: [{ position: 480 }]
+  @UI.identification: [{ position: 480 }]
+  @Consumption.filter.hidden: true
+  W43OrderQuantity;
+
+  @UI.lineItem: [{ position: 490 }]
+  @UI.identification: [{ position: 490 }]
+  @Consumption.filter.hidden: true
+  W44OrderQuantity;
+
+  @UI.lineItem: [{ position: 500 }]
+  @UI.identification: [{ position: 500 }]
+  @Consumption.filter.hidden: true
+  W45OrderQuantity;
+
+  @UI.lineItem: [{ position: 510 }]
+  @UI.identification: [{ position: 510 }]
+  @Consumption.filter.hidden: true
+  W46OrderQuantity;
+
+  @UI.lineItem: [{ position: 520 }]
+  @UI.identification: [{ position: 520 }]
+  @Consumption.filter.hidden: true
+  W47OrderQuantity;
+
+  @UI.lineItem: [{ position: 530 }]
+  @UI.identification: [{ position: 530 }]
+  @Consumption.filter.hidden: true
+  W48OrderQuantity;
+
+  @UI.lineItem: [{ position: 540 }]
+  @UI.identification: [{ position: 540 }]
+  @Consumption.filter.hidden: true
+  W49OrderQuantity;
+
+  @UI.lineItem: [{ position: 550 }]
+  @UI.identification: [{ position: 550 }]
+  @Consumption.filter.hidden: true
+  W50OrderQuantity;
+
+  @UI.lineItem: [{ position: 560 }]
+  @UI.identification: [{ position: 560 }]
+  @Consumption.filter.hidden: true
+  W51OrderQuantity;
+
+  @UI.lineItem: [{ position: 570 }]
+  @UI.identification: [{ position: 570 }]
+  @Consumption.filter.hidden: true
+  W52OrderQuantity;
+
+  @UI.lineItem: [{ position: 580 }]
+  @UI.identification: [{ position: 580 }]
+  @Consumption.filter.hidden: true
+  W53OrderQuantity;
+
+  @UI.lineItem: [{ position: 590 }]
+  @UI.identification: [{ position: 590 }]
+  @Consumption.filter.hidden: true
+  W54OrderQuantity;
+
+
+
+}

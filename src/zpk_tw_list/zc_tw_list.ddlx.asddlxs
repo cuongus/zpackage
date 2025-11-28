@@ -1,0 +1,86 @@
+@Metadata.layer: #CORE
+annotate view ZC_TW_LIST with
+{
+
+  @UI.facet: [ { id:              'TWList',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Team Work List',
+                 position:        10 } ]
+
+  @UI: {  lineItem:       [ { position: 10 } ],
+          identification: [ { position: 10 } ],
+          selectionField: [ { position: 10 } ] }
+  @EndUserText.label: 'Work Center'
+  WorkCenter;
+
+  @UI: {  lineItem:       [ { position: 20 } ],
+          identification: [ { position: 20 } ],
+          selectionField: [ { position: 20 } ] }
+  @EndUserText.label: 'Plant'
+  Plant;
+
+  @UI: {  lineItem:       [ { position: 30 } ],
+          identification: [ { position: 30 } ],
+          selectionField: [ { position: 30 } ] }
+  @EndUserText.label: 'Ca Làm Việc'
+  Shift;
+
+  @UI: {  lineItem:       [ { position: 40 } ],
+          identification: [ { position: 40 } ],
+          selectionField: [ { position: 40 } ] }
+  @EndUserText.label: 'Mã Số Máy'
+  MachineId;
+
+  @UI: {  lineItem:       [ { position: 50 } ],
+          identification: [ { position: 50 } ],
+          selectionField: [ { position: 50 } ] }
+  @EndUserText.label: 'Mã tổ'
+  TeamId;
+
+  @UI: {  lineItem:       [ { position: 60 } ],
+          identification: [ { position: 60 } ],
+          selectionField: [ { position: 60 } ] }
+  @EndUserText.label: 'Tổ Sản Xuất'
+  TeamName;
+
+  @UI: {  lineItem:       [ { position: 70 } ],
+          identification: [ { position: 70 } ],
+          selectionField: [ { position: 70 } ] }
+  @EndUserText.label: 'Mã Nhân Công'
+  WorkerId;
+
+  @UI: {  lineItem:       [ { position: 80 } ],
+          identification: [ { position: 80 } ],
+          selectionField: [ { position: 80 } ] }
+  @EndUserText.label: 'Tên Nhân Công'
+  WorkerName;
+
+  @UI: {  lineItem:       [ { position: 90 } ],
+          identification: [ { position: 90 } ],
+          selectionField: [ { position: 90 } ] }
+  @EndUserText.label: 'Từ Ngày'
+  FromDate;
+
+  @UI: {  lineItem:       [ { position: 100 } ],
+          identification: [ { position: 100 } ],
+          selectionField: [ { position: 100 } ] }
+  @EndUserText.label: 'Đến Ngày'
+  ToDate;
+
+  @EndUserText.label: 'Created By'
+  CreatedBy;
+
+  @EndUserText.label: 'Created At'
+  CreatedAt;
+
+  @EndUserText.label: 'LastChanged By'
+  LastChangedBy;
+
+ @EndUserText.label: 'LastChanged At'
+  LastChangedAt;
+
+  @EndUserText.label: 'Local Last Changed At'
+  LocalLastChangedAt;
+
+}

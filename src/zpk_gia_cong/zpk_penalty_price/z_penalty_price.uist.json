@@ -1,0 +1,17 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Launchpad Space",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "Travep App",
+    "sortPriority": 100.0
+  },
+  "pages": [
+    {
+      "name": "Z_PENALTY_PRICE"
+    }
+  ]
+}

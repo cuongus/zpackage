@@ -1,0 +1,127 @@
+@Metadata.layer: #CORE
+@UI:{
+    headerInfo: { typeName: 'Kết quả hoạt động kinh doanh',
+                  typeNamePlural: 'Kết quả hoạt động kinh doanh',
+                  title: { type: #STANDARD, label: 'Accouting Document', value: 'HierarchyNode_TXT' }
+    }
+}
+annotate entity ZC_KQHDKD with
+{
+  @UI.facet: [ { id : 'General',
+                 purpose: #STANDARD,
+                 position: 10,
+                 label : 'Chỉ tiêu',
+                 type  : #IDENTIFICATION_REFERENCE } ]
+
+  @UI.selectionField: [{ position: 10 }]
+  @Consumption.filter: { mandatory: false, multipleSelections: false, selectionType: #SINGLE }
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+        name: 'I_CompanyCode',
+        element: 'CompanyCode'
+    }
+   }]
+  bukrs;
+  @UI.selectionField: [{ position: 20 } ]
+  @EndUserText.label: 'Profit Center'
+  @Consumption.filter: { mandatory: false ,
+                        multipleSelections: false,
+                        selectionType: #SINGLE
+                                   }
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+        name: 'I_ProfitCenter',
+        element: 'ProfitCenter'
+    }
+   }]
+  prctr;
+  @UI.selectionField: [{ position: 30 } ]
+  @Consumption.filter: { mandatory: true,
+                        multipleSelections: false,
+                        selectionType: #SINGLE
+                         }
+  gjahr;
+  @UI.selectionField: [{ position: 40 } ]
+  @EndUserText.label: 'Tháng'
+  @Consumption.filter.defaultValue: '01'
+  @Consumption.filter: {
+                        multipleSelections: false,
+                        selectionType: #SINGLE
+                         }
+  monat;
+  @EndUserText.label: 'Loại báo cáo'
+  @UI.selectionField: [{ position: 50 } ]
+  @Consumption.filter: { mandatory: true,
+                         multipleSelections: false,
+                         selectionType: #SINGLE
+                         }
+  @Consumption.filter.defaultValue: '01'
+  @Consumption.valueHelpDefinition: [{ entity:
+  {name: 'ZI_DOMAIN_FIX_VAL_LOAIBC' , element: 'value_low' },
+  distinctValues: true
+  }]
+  type;
+
+
+  @UI.selectionField: [{ position: 80 } ]
+  @Consumption.filter: {
+                         multipleSelections: false,
+                         selectionType: #SINGLE
+                         }
+  @EndUserText.label: 'Người lập biểu'
+  tenNL;
+
+  @UI.selectionField: [{ position: 90 } ]
+  @Consumption.filter: {
+                         multipleSelections: false,
+                         selectionType: #SINGLE
+                         }
+  @EndUserText.label: 'Kế toán trưởng'
+  tenKT;
+
+  @UI.selectionField: [{ position: 100 } ]
+  @Consumption.filter: {
+                         multipleSelections: false,
+                         selectionType: #SINGLE
+                         }
+  @EndUserText.label: 'Giám đốc'
+  tenGD;
+
+
+  @UI.lineItem       : [{ position: 10 }]
+  @UI.identification : [{ position: 10 }]
+  @UI.lineItem: [{ label: 'Item' }]
+  @EndUserText.label: 'Item'
+  HierarchyNode;
+  @UI.lineItem       : [{ position: 20 }]
+  @UI.identification : [{ position: 20 }]
+  @UI.lineItem: [{ label:'Tên chỉ tiêu' }]
+  @EndUserText.label: 'Tên chỉ tiêu'
+  HierarchyNode_TXT;
+  @UI.lineItem       : [{ position: 30 }]
+  @UI.identification : [{ position: 30 }]
+  @UI.lineItem: [{ label: 'GL Account' }]
+  @EndUserText.label: 'GL Account'
+  glaccount;
+  @UI.lineItem       : [{ position: 40 }]
+  @UI.identification : [{ position: 40 }]
+  @UI.lineItem: [{ label: 'Số kỳ này' }]
+  @EndUserText.label: 'Số kỳ này'
+  sokynay;
+  @UI.lineItem       : [{ position: 50 }]
+  @UI.identification : [{ position: 50 }]
+  @UI.lineItem: [{ label: 'Số kỳ trước' }]
+  @EndUserText.label: 'Số kỳ trước'
+  sokytruoc;
+  @UI.lineItem       : [{ position: 60 }]
+  @UI.identification : [{ position: 60 }]
+  @UI.lineItem: [{ label: 'LK kỳ này' }]
+  @EndUserText.label: 'LK kỳ này'
+  lkkynay;
+  @UI.lineItem       : [{ position: 70 }]
+  @UI.identification : [{ position: 70 }]
+  @UI.lineItem: [{ label: 'LK kỳ trước' }]
+  @EndUserText.label: 'LK kỳ trước'
+  lkkytruoc;
+
+}
